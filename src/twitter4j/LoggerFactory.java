@@ -1,6 +1,5 @@
 package twitter4j;
 
-public abstract class LoggerFactory
-{
-    public abstract Logger getLogger(final Class<?> p0);
+public abstract class LoggerFactory {
+	public abstract Logger getLogger(final Class<?> p0);
 }
