@@ -3,6 +3,7 @@ package me.cangasso.main;
 import java.util.ArrayList;
 
 import com.github.caaarlowsz.kitpvpapi.KitPvP;
+import com.github.caaarlowsz.kitpvpapi.KitPvPAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandExecutor;
@@ -163,6 +164,7 @@ public class CookiePvP extends JavaPlugin implements KitPvP {
 	@Override
 	public void onEnable() {
 		super.onEnable();
+		KitPvPAPI.setInstance(this);
 
 		// TODO: Remover quando melhorar a classe principal
 		this.enable();
