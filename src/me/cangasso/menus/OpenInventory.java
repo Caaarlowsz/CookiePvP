@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 import me.cangasso.API.API;
 import me.cangasso.API.KitdiarioAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfKitdiario;
+import me.cangasso.configuraÃ§Ã£o.cfKitdiario;
 
 public class OpenInventory implements Listener {
 	@EventHandler
@@ -20,7 +20,7 @@ public class OpenInventory implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Seletor de KITS"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Seletor de KITS"))) {
 			KitsMenu.inventory(p);
 			p.playSound(p.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 		}
@@ -33,7 +33,7 @@ public class OpenInventory implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Seletor de WARPS"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Seletor de WARPS"))) {
 			p.playSound(p.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 			WarpsMenu.inventory(p);
 		}
@@ -46,7 +46,7 @@ public class OpenInventory implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Kit PADRAO"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Kit PADRAO"))) {
 			p.playSound(p.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 			PadraoMenu.inventory(p);
 		}
@@ -59,9 +59,9 @@ public class OpenInventory implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Kit DIARIO"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Kit DIARIO"))) {
 			if (cfKitdiario.pegargrupo().get("kitdiario." + p.getUniqueId() + ".hora") != null) {
-				p.sendMessage("§cVoc\u00ea j\u00e1 utilizou o seu kit di\u00e1rio!");
+				p.sendMessage("ï¿½cVoc\u00ea j\u00e1 utilizou o seu kit di\u00e1rio!");
 			} else if (cfKitdiario.pegargrupo().get("kitdiario." + p.getUniqueId() + ".hora") == null) {
 				p.playSound(p.getLocation(), Sound.EXPLODE, 20.0f, 20.0f);
 				KitdiarioAPI.kitdiario(p);

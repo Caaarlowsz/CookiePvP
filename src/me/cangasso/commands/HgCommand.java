@@ -12,7 +12,7 @@ public class HgCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if ((cmd.getName().equalsIgnoreCase("hg") || cmd.getName().equalsIgnoreCase("hungergames"))
 				&& args.length == 0) {
-			API.sendMsg((CommandSender) p, "§cNenhum servidor de HardcoreGames foi encontrado!");
+			API.sendMsg((CommandSender) p, "ï¿½cNenhum servidor de HardcoreGames foi encontrado!");
 		}
 		return false;
 	}

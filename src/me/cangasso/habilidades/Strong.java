@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Strong implements Listener {
 	public static HashMap<Player, ItemStack[]> salvarArmadura;
@@ -34,33 +34,33 @@ public class Strong implements Listener {
 		if (KitAPI.getKit(p) == "Strong" && CooldownAPI.Cooldown.containsKey(p.getName())
 				&& p.getItemInHand().getType() == Material.WATCH) {
 			e.setCancelled(true);
-			p.sendMessage("§8§l<§e§l!§8§l> §7Seu cooldown acaba em " + CooldownAPI.Cooldown + " §7segundos!");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Seu cooldown acaba em " + CooldownAPI.Cooldown + " ï¿½7segundos!");
 		} else if (KitAPI.getKit(p) == "Strong" && !CooldownAPI.Cooldown.containsKey(p.getName())
 				&& p.getItemInHand().getType() == Material.WATCH) {
 			Strong.salvarInventario.put(p, p.getInventory().getContents());
 			Strong.salvarArmadura.put(p, p.getInventory().getArmorContents());
 			p.getInventory().setArmorContents((ItemStack[]) null);
 			final ItemStack Peito = new ItemStack(Material.IRON_CHESTPLATE);
-			final ItemStack Cal\u00e7a = new ItemStack(Material.IRON_LEGGINGS);
+			final ItemStack CalÃ§a = new ItemStack(Material.IRON_LEGGINGS);
 			final ItemStack Bota = new ItemStack(Material.IRON_BOOTS);
 			final ItemStack Capacete = new ItemStack(Material.IRON_HELMET);
 			final ItemStack Espada = new ItemStack(Material.STONE_SWORD);
 			Espada.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 			p.getInventory().setChestplate(Peito);
-			p.getInventory().setLeggings(Cal\u00e7a);
+			p.getInventory().setLeggings(CalÃ§a);
 			p.getInventory().setHelmet(Capacete);
 			p.getInventory().setBoots(Bota);
 			p.getInventory().setItem(0, Espada);
 			p.updateInventory();
 			CooldownAPI.addCooldown(p, 60);
-			p.sendMessage("§fAgora voc\u00ea est\u00e1 §7§lFULLIRON §fpor §a§l10 segundos§f.");
+			p.sendMessage("ï¿½fAgora voc\u00ea est\u00e1 ï¿½7ï¿½lFULLIRON ï¿½fpor ï¿½aï¿½l10 segundosï¿½f.");
 			Strong.fulliron.add(p);
 			if (Strong.fulliron.contains(p)) {
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						if (Strong.fulliron.contains(p)) {
-							p.sendMessage("§aA sua armadura voltou ao normal!");
+							p.sendMessage("ï¿½aA sua armadura voltou ao normal!");
 							p.getInventory().setArmorContents((ItemStack[]) null);
 							p.closeInventory();
 							p.getInventory().remove(Material.IRON_CHESTPLATE);
@@ -73,7 +73,7 @@ public class Strong implements Listener {
 								final ItemStack Espada = new ItemStack(Material.WOOD_SWORD);
 								Espada.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 								final ItemMeta kEspada = Espada.getItemMeta();
-								kEspada.setDisplayName("§eEspada");
+								kEspada.setDisplayName("ï¿½eEspada");
 								Espada.setItemMeta(kEspada);
 								p.getInventory().setItem(0, Espada);
 							}

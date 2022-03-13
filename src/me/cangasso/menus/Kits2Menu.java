@@ -11,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.cangasso.commands.GiveAllCommand;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
 
 public class Kits2Menu {
 	public static ItemStack criarItemMenu(final Material material, final String nome, final String[] habilidade) {
@@ -26,45 +26,45 @@ public class Kits2Menu {
 
 	public static void inventory(final Player p) {
 		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 54,
-				"§7\u27b3 §a§lSEUS KITS §8(p\u00e1g. 2)");
+				"ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS ï¿½8(p\u00e1g. 2)");
 		final ItemStack maiskits = new ItemStack(Material.getMaterial(351), 1, (short) 1);
 		final ItemMeta kmaiskits = maiskits.getItemMeta();
-		kmaiskits.setDisplayName("§7\u27b3 §c§lPAGINA ANTERIOR");
+		kmaiskits.setDisplayName("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR");
 		maiskits.setItemMeta(kmaiskits);
 		final ItemStack kits = new ItemStack(Material.getMaterial(54));
 		final ItemMeta kkits = kits.getItemMeta();
-		kkits.setDisplayName("§7\u27b3 §a§lSEUS KITS");
+		kkits.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS");
 		kits.setItemMeta(kkits);
 		final ItemStack lojadekits = new ItemStack(Material.getMaterial(388));
 		final ItemMeta klojadekits = lojadekits.getItemMeta();
-		klojadekits.setDisplayName("§7\u27b3 §2§lLOJA DE KITS");
+		klojadekits.setDisplayName("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS");
 		lojadekits.setItemMeta(klojadekits);
 		final ItemStack padraokit = new ItemStack(Material.getMaterial(351), 1, (short) 6);
 		final ItemMeta kpadraokit = padraokit.getItemMeta();
-		kpadraokit.setDisplayName("§7\u27b3 §3§lKIT PADRAO");
-		kpadraokit.setLore(Arrays.asList("§7Facilite seu modo de jogo", "§7usando o sistema §e§lPADRAO KIT.", " "));
+		kpadraokit.setDisplayName("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO");
+		kpadraokit.setLore(Arrays.asList("ï¿½7Facilite seu modo de jogo", "ï¿½7usando o sistema ï¿½eï¿½lPADRAO KIT.", " "));
 		padraokit.setItemMeta(kpadraokit);
 		final ItemStack todososkits = new ItemStack(Material.getMaterial(399));
 		final ItemMeta ktodososkits = todososkits.getItemMeta();
-		ktodososkits.setDisplayName("§7\u27b3 §9§lTODOS OS KITS");
+		ktodososkits.setDisplayName("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS");
 		todososkits.setItemMeta(ktodososkits);
 		final ItemStack ConfigureKit = new ItemStack(Material.getMaterial(131));
 		final ItemMeta kConfigureKit = ConfigureKit.getItemMeta();
-		kConfigureKit.setDisplayName("§7\u27b3 §6§lCUSTOM KIT");
-		kConfigureKit.setLore(Arrays.asList("§c§l[§4§lEM BREVE§c§l] ", "§7Configure seu kit",
-				"§7para uma melhor jogabilidade.", " "));
+		kConfigureKit.setDisplayName("ï¿½7\u27b3 ï¿½6ï¿½lCUSTOM KIT");
+		kConfigureKit.setLore(Arrays.asList("ï¿½cï¿½l[ï¿½4ï¿½lEM BREVEï¿½cï¿½l] ", "ï¿½7Configure seu kit",
+				"ï¿½7para uma melhor jogabilidade.", " "));
 		ConfigureKit.setItemMeta(kConfigureKit);
 		final ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 1);
 		final ItemMeta kvidro = vidro.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro);
 		final ItemStack vidro2 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 0);
 		final ItemMeta kvidro2 = vidro.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro2);
 		final ItemStack cake = new ItemStack(Material.COOKIE);
 		final ItemMeta kcake = cake.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie!");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookie!");
 		vidro.setItemMeta(kcake);
 		menu.setItem(0, padraokit);
 		menu.setItem(8, padraokit);
@@ -100,23 +100,23 @@ public class Kits2Menu {
 		menu.setItem(4, kits);
 		menu.setItem(5, lojadekits);
 		menu.setItem(27, maiskits);
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.strong") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.strong") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Helper")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Dono")
 				|| GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "§7\u27b3 §6§lStrong",
-					new String[] { "§a§lHABILIDADE: §7Fi\tque Full Iron por alguns instantes!" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "ï¿½7\u27b3 ï¿½6ï¿½lStrong",
+					new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Fi\tque Full Iron por alguns instantes!" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.sumo") || cfGrupo.ChecarGrupo(p, "Helper")
+		if (cfPermissÃ£o.getPermissao(p, "kit.sumo") || cfGrupo.ChecarGrupo(p, "Helper")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.APPLE, "§7\u27b3 §6§lSumo",
-					new String[] { "§a§lHABILIDADE: §7Jogue seus inimigos", "§7para o alto utilizando seu peso" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.APPLE, "ï¿½7\u27b3 ï¿½6ï¿½lSumo",
+					new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Jogue seus inimigos", "ï¿½7para o alto utilizando seu peso" }) });
 		}
 		p.openInventory(menu);
 	}

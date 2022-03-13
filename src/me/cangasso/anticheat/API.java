@@ -48,7 +48,7 @@ public class API {
 		ITALIC = ChatColor.ITALIC;
 		UNDERLINE = ChatColor.UNDERLINE;
 		STRIKETHROUGH = ChatColor.STRIKETHROUGH;
-		API.PrefixStaffer = API.GRAY + "» " + API.GRAY;
+		API.PrefixStaffer = API.GRAY + "ï¿½ " + API.GRAY;
 	}
 
 	public static void sendStaffer(final Player Jogador, final String Menssagem) {

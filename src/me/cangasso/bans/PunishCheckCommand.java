@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class PunishCheckCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -18,12 +18,12 @@ public class PunishCheckCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(jogador, "Admin") && !cfGrupo.ChecarGrupo(jogador, "Mod+")
 					&& !cfGrupo.ChecarGrupo(jogador, "Mod") && !cfGrupo.ChecarGrupo(jogador, "Dono")) {
 				API.sendMsg((CommandSender) jogador,
-						"§4§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½4ï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
 				API.sendMsg((CommandSender) jogador,
-						"§fO §c§l/bancheck §fserve para checar o hist\u00f3rico de puni\u00e7\u00f5es de um certo jogador. Use: §6§l/bancheck <nickname>§f!");
+						"ï¿½fO ï¿½cï¿½l/bancheck ï¿½fserve para checar o hist\u00f3rico de puniÃ§\u00f5es de um certo jogador. Use: ï¿½6ï¿½l/bancheck <nickname>ï¿½f!");
 				API.sendSound(jogador, Sound.NOTE_PLING, 10);
 				return true;
 			}
@@ -32,7 +32,7 @@ public class PunishCheckCommand implements CommandExecutor {
 				final OfflinePlayer checkoff = Bukkit.getOfflinePlayer(args[0]);
 				if (Config.getConfig().getJogadores().get("Jogadores." + checkoff.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + checkoff.getName() + " §fnunca entrou no servidor!");
+							"ï¿½fO jogador ï¿½6ï¿½l" + checkoff.getName() + " ï¿½fnunca entrou no servidor!");
 					API.sendSound(jogador, Sound.NOTE_PLING, 10);
 					return true;
 				}
@@ -41,61 +41,61 @@ public class PunishCheckCommand implements CommandExecutor {
 							&& Config.getConfig().getTempBans().get("TempBans." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getIpBans().get("IPBans." + checkoff.getUniqueId()) == null) {
 						API.sendMsg((CommandSender) jogador,
-								"§cN\u00e3o h\u00e1 hist\u00f3rico de puni\u00e7\u00f5es registradas neste nickname.");
+								"ï¿½cNÃ£o h\u00e1 hist\u00f3rico de puniÃ§\u00f5es registradas neste nickname.");
 						return true;
 					}
 					if (Config.getConfig().getBans().get("Bans." + checkoff.getUniqueId()) != null
 							&& Config.getConfig().getTempBans().get("TempBans." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getIpBans().get("IPBans." + checkoff.getUniqueId()) == null) {
 						API.sendMsg((CommandSender) jogador,
-								"§aChecando informa\u00e7\u00f5es de " + checkoff.getName());
+								"ï¿½aChecando informaÃ§\u00f5es de " + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§f: §a§lSIM");
-						API.sendMsg((CommandSender) jogador, "§7Banido por: §5§l"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½f: ï¿½aï¿½lSIM");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½5ï¿½l"
 								+ Config.getConfig().getBans().get("Bans." + checkoff.getUniqueId() + ".Banido por"));
-						API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l"
 								+ Config.getConfig().getBans().get("Bans." + checkoff.getUniqueId() + ".Motivo"));
-						API.sendMsg((CommandSender) jogador, "§7Data do banimento: §a" + Config.getConfig().getBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½a" + Config.getConfig().getBans()
 								.get("Bans." + checkoff.getUniqueId() + ".Data do banimento"));
-						API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§f: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP§7: §c§lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½f: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIPï¿½7: ï¿½cï¿½lNAO");
 						return true;
 					}
 					if (Config.getConfig().getBans().get("Bans." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getTempBans().get("TempBans." + checkoff.getUniqueId()) != null
 							&& Config.getConfig().getIpBans().get("IPBans." + checkoff.getUniqueId()) == null) {
 						API.sendMsg((CommandSender) jogador,
-								"§aChecando informa\u00e7\u00f5es de " + checkoff.getName());
+								"ï¿½aChecando informaÃ§\u00f5es de " + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§7: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§7: §a§lSIM");
-						API.sendMsg((CommandSender) jogador, "§7Banido por: §5§l" + Config.getConfig().getTempBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½aï¿½lSIM");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½5ï¿½l" + Config.getConfig().getTempBans()
 								.get("TempBans." + checkoff.getUniqueId() + ".Banido por"));
-						API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l" + Config.getConfig().getTempBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l" + Config.getConfig().getTempBans()
 								.get("TempBans." + checkoff.getUniqueId() + ".Motivo"));
-						API.sendMsg((CommandSender) jogador, "§7Expira em: §a" + Config.getConfig().getTempBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Expira em: ï¿½a" + Config.getConfig().getTempBans()
 								.get("TempBans." + checkoff.getUniqueId() + ".Tempo do Ban"));
-						API.sendMsg((CommandSender) jogador, "§7Data do banimento: §e" + Config.getConfig()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½e" + Config.getConfig()
 								.getTempBans().get("TempBans." + checkoff.getUniqueId() + ".Data do banimento"));
-						API.sendMsg((CommandSender) jogador, "§7Banido §8IP§7: §c§lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½8IPï¿½7: ï¿½cï¿½lNAO");
 						return true;
 					}
 					if (Config.getConfig().getBans().get("Bans." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getTempBans().get("TempBans." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getIpBans().get("IPBans." + checkoff.getUniqueId()) != null) {
 						API.sendMsg((CommandSender) jogador,
-								"§aChecando informa\u00e7\u00f5es de " + checkoff.getName());
+								"ï¿½aChecando informaÃ§\u00f5es de " + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§7: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§7: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP§7: §a§lSIM");
-						API.sendMsg((CommandSender) jogador, "§7Banido por: §e§l" + Config.getConfig().getIpBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIPï¿½7: ï¿½aï¿½lSIM");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½eï¿½l" + Config.getConfig().getIpBans()
 								.get("IPBans." + checkoff.getUniqueId() + ".Banido por"));
-						API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l"
 								+ Config.getConfig().getIpBans().get("IPBans." + checkoff.getUniqueId() + ".Motivo"));
-						API.sendMsg((CommandSender) jogador, "§7Data do banimento: §a" + Config.getConfig().getIpBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½a" + Config.getConfig().getIpBans()
 								.get("IPBans." + checkoff.getUniqueId() + ".Data do banimento"));
-						API.sendMsg((CommandSender) jogador, "§7IP banido: §8" + Config.getConfig().getIpBans()
+						API.sendMsg((CommandSender) jogador, "ï¿½7IP banido: ï¿½8" + Config.getConfig().getIpBans()
 								.get("IPBans." + checkoff.getUniqueId() + ".IP do Jogador"));
 						return true;
 					}
@@ -104,61 +104,61 @@ public class PunishCheckCommand implements CommandExecutor {
 			if (Config.getConfig().getBans().get("Bans." + check.getUniqueId()) == null
 					&& Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId()) == null
 					&& Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId()) == null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, " ");
-				API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP§7: §c§lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIPï¿½7: ï¿½cï¿½lNAO");
 				return true;
 			}
 			if (Config.getConfig().getBans().get("Bans." + check.getUniqueId()) != null
 					&& Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId()) == null
 					&& Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId()) == null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, " ");
-				API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§7: §a§lSIM");
-				API.sendMsg((CommandSender) jogador, "§7Banido por: §5§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½aï¿½lSIM");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½5ï¿½l"
 						+ Config.getConfig().getBans().get("Bans." + check.getUniqueId() + ".Banido por"));
 				API.sendMsg((CommandSender) jogador,
-						"§7Motivo: §6§l" + Config.getConfig().getBans().get("Bans." + check.getUniqueId() + ".Motivo"));
-				API.sendMsg((CommandSender) jogador, "§7Data do banimento: §a"
+						"ï¿½7Motivo: ï¿½6ï¿½l" + Config.getConfig().getBans().get("Bans." + check.getUniqueId() + ".Motivo"));
+				API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½a"
 						+ Config.getConfig().getBans().get("Bans." + check.getUniqueId() + ".Data do banimento"));
-				API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP§7: §c§lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIPï¿½7: ï¿½cï¿½lNAO");
 				return true;
 			}
 			if (Config.getConfig().getBans().get("Bans." + check.getUniqueId()) == null
 					&& Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId()) != null
 					&& Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId()) == null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
-				API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido §9§lTEMPORARIAMENTE§7: §a§lSIM");
-				API.sendMsg((CommandSender) jogador, "§7Banido por: §5§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTE: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½aï¿½lSIM");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½5ï¿½l"
 						+ Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId() + ".Banido por"));
-				API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l "
+				API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l "
 						+ Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId() + ".Motivo"));
-				API.sendMsg((CommandSender) jogador, "§7Expira em: §a"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Expira em: ï¿½a"
 						+ Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId() + ".Tempo do Ban"));
-				API.sendMsg((CommandSender) jogador, "§7Data do banimento: §e" + Config.getConfig().getTempBans()
+				API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½e" + Config.getConfig().getTempBans()
 						.get("TempBans." + check.getUniqueId() + ".Data do banimento"));
-				API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP§7: §c§lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIPï¿½7: ï¿½cï¿½lNAO");
 				return true;
 			}
 			if (Config.getConfig().getBans().get("Bans." + check.getUniqueId()) == null
 					&& Config.getConfig().getTempBans().get("TempBans." + check.getUniqueId()) == null
 					&& Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId()) != null) {
-				API.sendMsg((CommandSender) jogador, "§eChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½eChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, " ");
-				API.sendMsg((CommandSender) jogador, "§7Banido §4§lPERMANENTEMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido §9§LTEMPORARIAMENTE: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Banido por §8§lIP: §a§lSIM");
-				API.sendMsg((CommandSender) jogador, "§7Banido por: §5§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido ï¿½9ï¿½LTEMPORARIAMENTE: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por ï¿½8ï¿½lIP: ï¿½aï¿½lSIM");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Banido por: ï¿½5ï¿½l"
 						+ Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId() + ".Banido por"));
-				API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l"
 						+ Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId() + ".Motivo"));
-				API.sendMsg((CommandSender) jogador, "§7Data do banimento: §a"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Data do banimento: ï¿½a"
 						+ Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId() + ".Data do banimento"));
-				API.sendMsg((CommandSender) jogador, "§7IP banido: §8"
+				API.sendMsg((CommandSender) jogador, "ï¿½7IP banido: ï¿½8"
 						+ Config.getConfig().getIpBans().get("IPBans." + check.getUniqueId() + ".IP do Jogador"));
 				return true;
 			}
@@ -168,12 +168,12 @@ public class PunishCheckCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(jogador, "Admin") && !cfGrupo.ChecarGrupo(jogador, "Mod+")
 					&& !cfGrupo.ChecarGrupo(jogador, "Mod")) {
 				API.sendMsg((CommandSender) jogador,
-						"§cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
 				API.sendMsg((CommandSender) jogador,
-						"§fO §b§l/mutecheck §fserve para checar o hist\u00f3rico de puni\u00e7\u00f5es de um certo jogador. Use: §b§l/mutecheck <nickname>§f!");
+						"ï¿½fO ï¿½bï¿½l/mutecheck ï¿½fserve para checar o hist\u00f3rico de puniÃ§\u00f5es de um certo jogador. Use: ï¿½bï¿½l/mutecheck <nickname>ï¿½f!");
 				API.sendSound(jogador, Sound.NOTE_PLING, 10);
 				return true;
 			}
@@ -182,46 +182,46 @@ public class PunishCheckCommand implements CommandExecutor {
 				final OfflinePlayer checkoff = Bukkit.getOfflinePlayer(args[0]);
 				if (Config.getConfig().getJogadores().get("Jogadores." + checkoff.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + checkoff.getName() + " §fnunca entrou no servidor!");
+							"ï¿½fO jogador ï¿½6ï¿½l" + checkoff.getName() + " ï¿½fnunca entrou no servidor!");
 					API.sendSound(jogador, Sound.NOTE_PLING, 10);
 					return true;
 				}
 				if (Config.getConfig().getJogadores().get("Jogadores." + checkoff.getUniqueId()) != null) {
 					if (Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getTempMute().get("TempMute." + checkoff.getUniqueId()) == null) {
-						API.sendMsg((CommandSender) jogador, "§a" + checkoff.getName());
+						API.sendMsg((CommandSender) jogador, "ï¿½a" + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE§7: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE: §c§lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTE: ï¿½cï¿½lNAO");
 						return true;
 					}
 					if (Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId()) != null
 							&& Config.getConfig().getTempMute().get("TempMute." + checkoff.getUniqueId()) == null) {
-						API.sendMsg((CommandSender) jogador, "§7Checando informacoes de " + checkoff.getName());
+						API.sendMsg((CommandSender) jogador, "ï¿½7Checando informacoes de " + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE§7: §a§lSIM");
-						API.sendMsg((CommandSender) jogador, "§7Mutado por: §5§l"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½aï¿½lSIM");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado por: ï¿½5ï¿½l"
 								+ Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId() + ".Mutado por"));
-						API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l"
 								+ Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId() + ".Motivo"));
-						API.sendMsg((CommandSender) jogador, "§7Data do mute: §e"
+						API.sendMsg((CommandSender) jogador, "ï¿½7Data do mute: ï¿½e"
 								+ Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId() + ".Data do mute"));
-						API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE§7: §c§lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½cï¿½lNAO");
 						return true;
 					}
 					if (Config.getConfig().getMute().get("Mute." + checkoff.getUniqueId()) == null
 							&& Config.getConfig().getTempMute().get("TempMute." + checkoff.getUniqueId()) != null) {
-						API.sendMsg((CommandSender) jogador, "§7Checando informacoes de " + checkoff.getName());
+						API.sendMsg((CommandSender) jogador, "ï¿½7Checando informacoes de " + checkoff.getName());
 						API.sendMsg((CommandSender) jogador, " ");
-						API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE§7: §c§lNAO");
-						API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE§7: §a§lSIM");
-						API.sendMsg((CommandSender) jogador, "§7Mutado por: §5§l" + Config.getConfig().getTempMute()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½aï¿½lSIM");
+						API.sendMsg((CommandSender) jogador, "ï¿½7Mutado por: ï¿½5ï¿½l" + Config.getConfig().getTempMute()
 								.get("TempMute." + checkoff.getUniqueId() + ".Mutado por"));
-						API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l" + Config.getConfig().getTempMute()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l" + Config.getConfig().getTempMute()
 								.get("TempMute." + checkoff.getUniqueId() + ".Motivo"));
-						API.sendMsg((CommandSender) jogador, "§7Expira em: §a" + Config.getConfig().getTempMute()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Expira em: ï¿½a" + Config.getConfig().getTempMute()
 								.get("TempMute." + checkoff.getUniqueId() + ".Tempo do Mute"));
-						API.sendMsg((CommandSender) jogador, "§7Data do mute: §e" + Config.getConfig().getTempMute()
+						API.sendMsg((CommandSender) jogador, "ï¿½7Data do mute: ï¿½e" + Config.getConfig().getTempMute()
 								.get("TempMute." + checkoff.getUniqueId() + ".Data do mute"));
 						return true;
 					}
@@ -229,39 +229,39 @@ public class PunishCheckCommand implements CommandExecutor {
 			}
 			if (Config.getConfig().getMute().get("Mute." + check.getUniqueId()) == null
 					&& Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId()) == null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, "");
-				API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE§7: §c§lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½cï¿½lNAO");
 				return true;
 			}
 			if (Config.getConfig().getMute().get("Mute." + check.getUniqueId()) != null
 					&& Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId()) == null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, " ");
-				API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE: §a§lSIM");
-				API.sendMsg((CommandSender) jogador, "§7Mutado por: §5§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTE: ï¿½aï¿½lSIM");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado por: ï¿½5ï¿½l"
 						+ Config.getConfig().getMute().get("Mute." + check.getUniqueId() + ".Mutado por"));
 				API.sendMsg((CommandSender) jogador,
-						"§7Motivo: §6§l" + Config.getConfig().getMute().get("Mute." + check.getUniqueId() + ".Motivo"));
-				API.sendMsg((CommandSender) jogador, "§7Data do mute: §a"
+						"ï¿½7Motivo: ï¿½6ï¿½l" + Config.getConfig().getMute().get("Mute." + check.getUniqueId() + ".Motivo"));
+				API.sendMsg((CommandSender) jogador, "ï¿½7Data do mute: ï¿½a"
 						+ Config.getConfig().getMute().get("Mute." + check.getUniqueId() + ".Data do mute"));
-				API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE: §c§lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTE: ï¿½cï¿½lNAO");
 				return true;
 			}
 			if (Config.getConfig().getMute().get("Mute." + check.getUniqueId()) == null
 					&& Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId()) != null) {
-				API.sendMsg((CommandSender) jogador, "§aChecando informa\u00e7\u00f5es de " + check.getName());
+				API.sendMsg((CommandSender) jogador, "ï¿½aChecando informaÃ§\u00f5es de " + check.getName());
 				API.sendMsg((CommandSender) jogador, " ");
-				API.sendMsg((CommandSender) jogador, "§7Mutado §4§lPERMANENTEMENTE§7: §c§lNAO");
-				API.sendMsg((CommandSender) jogador, "§7Mutado §9§lTEMPORARIAMENTE§7: §a§lSIM");
-				API.sendMsg((CommandSender) jogador, "§7Mutado por: §5§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½4ï¿½lPERMANENTEMENTEï¿½7: ï¿½cï¿½lNAO");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado ï¿½9ï¿½lTEMPORARIAMENTEï¿½7: ï¿½aï¿½lSIM");
+				API.sendMsg((CommandSender) jogador, "ï¿½7Mutado por: ï¿½5ï¿½l"
 						+ Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId() + ".Mutado por"));
-				API.sendMsg((CommandSender) jogador, "§7Motivo: §6§l"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Motivo: ï¿½6ï¿½l"
 						+ Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId() + ".Motivo"));
-				API.sendMsg((CommandSender) jogador, "§7Expira em: §a"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Expira em: ï¿½a"
 						+ Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId() + ".Tempo do Mute"));
-				API.sendMsg((CommandSender) jogador, "§7Data do mute: §e"
+				API.sendMsg((CommandSender) jogador, "ï¿½7Data do mute: ï¿½e"
 						+ Config.getConfig().getTempMute().get("TempMute." + check.getUniqueId() + ".Data do mute"));
 				return true;
 			}

@@ -10,12 +10,12 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Ninja implements Listener {
 	public static HashMap<Player, Player> a;
 	public static HashMap<Player, Long> b;
-	public static Main plugin;
+	public static CookiePvP plugin;
 
 	static {
 		Ninja.a = new HashMap<Player, Player>();
@@ -40,7 +40,7 @@ public class Ninja implements Listener {
 		if (paramPlayerToggleSneakEvent.isSneaking() && KitAPI.getKit(localPlayer1) == "Ninja"
 				&& CooldownAPI.Cooldown.containsKey(localPlayer1.getName())) {
 			localPlayer1.sendMessage(
-					"§8§l<§e§l!§8§l> §7Seu cooldown acaba em " + CooldownAPI.Cooldown(localPlayer1) + " §7segundos!");
+					"ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Seu cooldown acaba em " + CooldownAPI.Cooldown(localPlayer1) + " ï¿½7segundos!");
 			return;
 		}
 		if (paramPlayerToggleSneakEvent.isSneaking() && KitAPI.getKit(localPlayer1) == "Ninja"
@@ -48,12 +48,12 @@ public class Ninja implements Listener {
 			final Player localPlayer2 = Ninja.a.get(localPlayer1);
 			if (localPlayer2 != null && !localPlayer2.isDead()) {
 				if (Gladiator.noExecut.contains(localPlayer2)) {
-					localPlayer1.sendMessage("§cEste jogador est\u00e1 em um duelo nas alturas!");
+					localPlayer1.sendMessage("ï¿½cEste jogador est\u00e1 em um duelo nas alturas!");
 					return;
 				}
 				if (Gladiator.noExecut.contains(localPlayer1)) {
 					localPlayer1.sendMessage(
-							"§cVoc\u00ea n\u00e3o pode utilizar o kit Ninja durante um duelo no Gladiator!");
+							"ï¿½cVoc\u00ea n\u00e3o pode utilizar o kit Ninja durante um duelo no Gladiator!");
 					return;
 				}
 				if (Ninja.b.get(localPlayer1) != null) {
@@ -65,7 +65,7 @@ public class Ninja implements Listener {
 					CooldownAPI.addCooldown(localPlayer1, 7);
 					Ninja.b.put(localPlayer1, System.currentTimeMillis() + 10000L);
 				} else {
-					localPlayer1.sendMessage("§cO \u00faltimo jogador hitado est\u00e1 muito longe!");
+					localPlayer1.sendMessage("ï¿½cO \u00faltimo jogador hitado est\u00e1 muito longe!");
 				}
 			}
 		}

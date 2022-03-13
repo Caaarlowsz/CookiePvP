@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.ArraysAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class SpecCommand implements CommandExecutor {
 	public static void setON(final Player p) {
@@ -36,26 +36,26 @@ public class SpecCommand implements CommandExecutor {
 		if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente") && !cfGrupo.ChecarGrupo(p, "Admin")
 				&& !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Mod")
 				&& !cfGrupo.ChecarGrupo(p, "Trial")) {
-			p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+			p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 			return true;
 		}
 		if (Args.length == 0) {
-			p.sendMessage("§cUse §c§l/spec §c(on | off)");
+			p.sendMessage("ï¿½cUse ï¿½cï¿½l/spec ï¿½c(on | off)");
 			return true;
 		}
 		if (!Args[0].equalsIgnoreCase("on")) {
 			if (Args[0].equalsIgnoreCase("off")) {
-				p.sendMessage("§a§lSPEC §7Os espectadores foram: §cDESATIVADOS");
+				p.sendMessage("ï¿½aï¿½lSPEC ï¿½7Os espectadores foram: ï¿½cDESATIVADOS");
 				ArraysAPI.Spec.remove(p);
 				setON(p);
 			}
 			return false;
 		}
 		if (ArraysAPI.Spec.contains(p)) {
-			p.sendMessage("§cVoc\u00ea j\u00e1 est\u00e1 com os specs ativados");
+			p.sendMessage("ï¿½cVoc\u00ea j\u00e1 est\u00e1 com os specs ativados");
 			return true;
 		}
-		p.sendMessage("§a§lSPEC §7Os espectadores foram: §aATIVADOS");
+		p.sendMessage("ï¿½aï¿½lSPEC ï¿½7Os espectadores foram: ï¿½aATIVADOS");
 		ArraysAPI.Spec.add(p);
 		setOFF(p);
 		return false;

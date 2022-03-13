@@ -1,4 +1,4 @@
-package me.cangasso.configura\u00e7\u00e3o;
+package me.cangasso.configuração;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class cfPermiss\u00e3o {
+public class cfPermissão {
 	private static FileConfiguration player_permissao;
 	private static File playerpermissao;
 
@@ -16,25 +16,25 @@ public class cfPermiss\u00e3o {
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}
-		cfPermiss\u00e3o.playerpermissao = new File(plugin.getDataFolder(), "permiss\u00f5es.yml");
-		if (cfPermiss\u00e3o.playerpermissao.exists()) {
+		cfPermissão.playerpermissao = new File(plugin.getDataFolder(), "permiss\u00f5es.yml");
+		if (cfPermissão.playerpermissao.exists()) {
 			try {
-				cfPermiss\u00e3o.playerpermissao.createNewFile();
+				cfPermissão.playerpermissao.createNewFile();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		cfPermiss\u00e3o.player_permissao = (FileConfiguration) YamlConfiguration
-				.loadConfiguration(cfPermiss\u00e3o.playerpermissao);
+		cfPermissão.player_permissao = (FileConfiguration) YamlConfiguration
+				.loadConfiguration(cfPermissão.playerpermissao);
 	}
 
 	public static FileConfiguration pegarpermissao() {
-		return cfPermiss\u00e3o.player_permissao;
+		return cfPermissão.player_permissao;
 	}
 
 	public static void salvarconfiguracao() {
 		try {
-			cfPermiss\u00e3o.player_permissao.save(cfPermiss\u00e3o.playerpermissao);
+			cfPermissão.player_permissao.save(cfPermissão.playerpermissao);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

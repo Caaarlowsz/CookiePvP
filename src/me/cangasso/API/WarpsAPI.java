@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffectType;
 
-import me.cangasso.configura\u00e7\u00e3o.WarpsConfig;
+import me.cangasso.configuraÃ§Ã£o.WarpsConfig;
 
 public class WarpsAPI implements Listener {
 	public static ArrayList<String> segundos;
@@ -25,7 +25,7 @@ public class WarpsAPI implements Listener {
 		final Player p = e.getPlayer();
 		if (WarpsAPI.segundos.contains(p.getName())) {
 			WarpsAPI.segundos.remove(p.getName());
-			p.sendMessage("§cVoc\u00ea n\u00e3o deve se mover! Teleporte §c§lCANCELADO§c!");
+			p.sendMessage("ï¿½cVoc\u00ea nÃ£o deve se mover! Teleporte ï¿½cï¿½lCANCELADOï¿½c!");
 			p.removePotionEffect(PotionEffectType.SLOW);
 			p.removePotionEffect(PotionEffectType.BLINDNESS);
 		}
@@ -52,7 +52,7 @@ public class WarpsAPI implements Listener {
 			final Location loc = new Location(world, x, y, z, Yaw, Pitch);
 			p.teleport(loc);
 		} else {
-			p.sendMessage("§6§lCookie§f§lNetwork §7» §fEssa §6§lWARP §fainda n\u00e3o foi setada!");
+			p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fEssa ï¿½6ï¿½lWARP ï¿½fainda nÃ£o foi setada!");
 		}
 	}
 }

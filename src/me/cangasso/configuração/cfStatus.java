@@ -1,4 +1,4 @@
-package me.cangasso.configura\u00e7\u00e3o;
+package me.cangasso.configuração;
 
 import java.io.File;
 
@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import me.cangasso.API.TopKillStreak;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class cfStatus {
@@ -18,7 +18,7 @@ public class cfStatus {
 	public static FileConfiguration cfile;
 
 	public cfStatus() {
-		final Plugin plugin = Main.getPlugin();
+		final Plugin plugin = CookiePvP.getPlugin();
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}

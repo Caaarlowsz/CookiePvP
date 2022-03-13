@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.spigotmc.ProtocolInjector;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import net.minecraft.server.v1_7_R4.ChatSerializer;
 import net.minecraft.server.v1_7_R4.IChatBaseComponent;
 import net.minecraft.server.v1_7_R4.Packet;
@@ -24,14 +24,14 @@ public class TabAPI implements Listener {
 	@EventHandler
 	void TabDoServidor(final PlayerJoinEvent evento) {
 		final Player jogador = evento.getPlayer();
-		Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final PlayerConnection connect = ((CraftPlayer) jogador).getHandle().playerConnection;
 				final IChatBaseComponent top = ChatSerializer.a(
-						"{'extra': [{text: '', color: 'aqua'}],'color': gold, 'text': '              §6§lKITPVP              '}");
+						"{'extra': [{text: '', color: 'aqua'}],'color': gold, 'text': '              ï¿½6ï¿½lKITPVP              '}");
 				final IChatBaseComponent bottom = ChatSerializer.a(
-						"{'extra': [{'color': 'aqua', 'text': '  \n§6§lINFORMA\u00c7\u00d5ES  \n        §7Loja do servidor: §7[EM BREVE] \n§7Twitter do servidor: §b@_McCookie ', 'underline': 'true'}], 'color': 'gold', 'text': ''}");
+						"{'extra': [{'color': 'aqua', 'text': '  \nï¿½6ï¿½lINFORMA\u00c7\u00d5ES  \n        ï¿½7Loja do servidor: ï¿½7[EM BREVE] \nï¿½7Twitter do servidor: ï¿½b@_McCookie ', 'underline': 'true'}], 'color': 'gold', 'text': ''}");
 				if (((CraftPlayer) jogador).getHandle().playerConnection.networkManager.getVersion() < TabAPI.VERSION) {
 					return;
 				}

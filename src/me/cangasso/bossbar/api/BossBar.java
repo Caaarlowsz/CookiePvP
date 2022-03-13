@@ -9,7 +9,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import me.cangasso.bossbar.ClassBuilder;
 import me.cangasso.bossbar.NMSClass;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class BossBar extends BukkitRunnable {
 	protected static int ENTITY_DISTANCE;
@@ -44,7 +44,7 @@ public class BossBar extends BukkitRunnable {
 		}
 		if (timeout > 0) {
 			this.healthMinus = this.getMaxHealth() / timeout;
-			this.runTaskTimer(Main.getPlugin(), 20L, 20L);
+			this.runTaskTimer(CookiePvP.getPlugin(), 20L, 20L);
 		}
 	}
 

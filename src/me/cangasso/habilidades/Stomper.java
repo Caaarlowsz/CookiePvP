@@ -56,7 +56,7 @@ public class Stomper implements Listener {
 						|| event.getAction() == Action.RIGHT_CLICK_AIR)) {
 			event.setCancelled(true);
 			if (CooldownAPI.Cooldown.containsKey(p.getName())) {
-				p.sendMessage("§fO seu §3§lCOOLDOWN §facaba em: §c§l" + CooldownAPI.Cooldown(p) + "s");
+				p.sendMessage("ï¿½fO seu ï¿½3ï¿½lCOOLDOWN ï¿½facaba em: ï¿½cï¿½l" + CooldownAPI.Cooldown(p) + "s");
 			} else {
 				final Vector vector = p.getEyeLocation().getDirection();
 				vector.multiply(0.0f);

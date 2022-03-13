@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class API {
 	public static ArrayList<Player> Online;
@@ -62,13 +62,13 @@ public class API {
 	}
 
 	public static void feastSpawnMin(final int timer) {
-		sendBC(ChatColor.GRAY + "§fO §e§lFeast ir\u00e1 spawnar em " + ChatColor.RED + ChatColor.BOLD + timer
-				+ ChatColor.GRAY + "§f minuto(s)" + ChatColor.GRAY + "§f!");
+		sendBC(ChatColor.GRAY + "ï¿½fO ï¿½eï¿½lFeast ir\u00e1 spawnar em " + ChatColor.RED + ChatColor.BOLD + timer
+				+ ChatColor.GRAY + "ï¿½f minuto(s)" + ChatColor.GRAY + "ï¿½f!");
 	}
 
 	public static void feastSpawnSeg(final int timer) {
-		sendBC(ChatColor.GRAY + "§fO §e§lFeast ir\u00e1 spawnar em " + ChatColor.RED + ChatColor.BOLD + timer
-				+ ChatColor.GRAY + "§f segundo(s)" + ChatColor.GRAY + "§f!");
+		sendBC(ChatColor.GRAY + "ï¿½fO ï¿½eï¿½lFeast ir\u00e1 spawnar em " + ChatColor.RED + ChatColor.BOLD + timer
+				+ ChatColor.GRAY + "ï¿½f segundo(s)" + ChatColor.GRAY + "ï¿½f!");
 	}
 
 	public static String getFormato(final int number) {

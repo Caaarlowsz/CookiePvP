@@ -24,10 +24,10 @@ import me.cangasso.API.TopKillStreak;
 import me.cangasso.API.WarpsAPI;
 import me.cangasso.bans.Config;
 import me.cangasso.commands.AdminCommand;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class eEvents implements Listener {
@@ -54,8 +54,8 @@ public class eEvents implements Listener {
 				(Object) cfStatus.getDeaths(p));
 		Config.getConfig().saveJogadores();
 		p.setWalkSpeed(0.2f);
-		Prote\u00e7\u00e3o.setImortal(p, true);
-		Prote\u00e7\u00e3o.isImortal(p);
+		ProteÃ§Ã£o.setImortal(p, true);
+		ProteÃ§Ã£o.isImortal(p);
 		p.getInventory().clear();
 		p.getInventory().setArmorContents((ItemStack[]) null);
 		p.setGameMode(GameMode.ADVENTURE);
@@ -64,8 +64,8 @@ public class eEvents implements Listener {
 		ArraysAPI.Admin.remove(p);
 		API.setWarp(p, "Spawn");
 		WarpsAPI.Ir(p, "Spawn");
-		API.mandarTitulo(p, "§6§lCookie§f§lNetwork");
-		API.mandarSubTitulo(p, "§eSeja bem-vindo, §f" + p.getName());
+		API.mandarTitulo(p, "ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
+		API.mandarSubTitulo(p, "ï¿½eSeja bem-vindo, ï¿½f" + p.getName());
 		API.checarPermissao(p);
 		API.checarGrupo(p);
 		API.corGrupo(p);
@@ -81,7 +81,7 @@ public class eEvents implements Listener {
 		p.setHealth(20.0);
 		p.setMaxHealth(20.0);
 		sScoreAPI.scoreboard(p);
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				API.sendItems(p);
@@ -91,17 +91,17 @@ public class eEvents implements Listener {
 			p.sendMessage(" ");
 		}
 		p.sendMessage(
-				"§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-");
+				"ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-");
 		p.sendMessage(" ");
-		p.sendMessage("§8§l<§c§l!§8§l> §7Seja bem-vindo ao §6§lCookie§f§lNetwork§7, §6§l" + p.getName() + "§7!");
+		p.sendMessage("ï¿½8ï¿½l<ï¿½cï¿½l!ï¿½8ï¿½l> ï¿½7Seja bem-vindo ao ï¿½6ï¿½lCookieï¿½fï¿½lNetworkï¿½7, ï¿½6ï¿½l" + p.getName() + "ï¿½7!");
 		p.sendMessage(
-				"§8§l<§c§l!§8§l> §7Fique por dentro de nossas novidades atrav\u00e9s de nosso Twitter §b§l@_McCookie§7.");
+				"ï¿½8ï¿½l<ï¿½cï¿½l!ï¿½8ï¿½l> ï¿½7Fique por dentro de nossas novidades atrav\u00e9s de nosso Twitter ï¿½bï¿½l@_McCookieï¿½7.");
 		p.sendMessage(" ");
-		p.sendMessage("§8§l<§e§l!§8§l> §7Temos atualmente §e§l" + Bukkit.getOnlinePlayers().length
-				+ "§7 jogadores conectados em nosso §6§lKitPvP§7.");
+		p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Temos atualmente ï¿½eï¿½l" + Bukkit.getOnlinePlayers().length
+				+ "ï¿½7 jogadores conectados em nosso ï¿½6ï¿½lKitPvPï¿½7.");
 		p.sendMessage(" ");
 		p.sendMessage(
-				"§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-§b§m-§f§m-");
+				"ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-ï¿½bï¿½m-ï¿½fï¿½m-");
 		if (cfGrupo.ChecarGrupo(p, "Dono") || cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Trial")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Helper")) {
@@ -126,13 +126,13 @@ public class eEvents implements Listener {
 		final Player d = e.getEntity().getKiller();
 		WarpsAPI.Ir(p, "Spawn");
 		API.setWarp(p, "Spawn");
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				p.spigot().respawn();
 			}
 		}, 1L);
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				API.sendItems(p);
@@ -143,9 +143,9 @@ public class eEvents implements Listener {
 			API.setWarp(p, "Spawn");
 			KitAPI.removeKits(p);
 			if (d != null) {
-				p.sendMessage("§7Voc\u00ea morreu para o jogador: §c§l" + d.getName());
-				d.sendMessage("§7Voc\u00ea matou o jogador: §a§l" + p.getName());
-				d.sendMessage("§7(§a+100XP\u2b06§7)");
+				p.sendMessage("ï¿½7Voc\u00ea morreu para o jogador: ï¿½cï¿½l" + d.getName());
+				d.sendMessage("ï¿½7Voc\u00ea matou o jogador: ï¿½aï¿½l" + p.getName());
+				d.sendMessage("ï¿½7(ï¿½a+100XP\u2b06ï¿½7)");
 				cfStatus.setKills(d);
 				cfStatus.setDeaths(p);
 				cfStatus.setMoney(d, 100);
@@ -157,65 +157,65 @@ public class eEvents implements Listener {
 				e.setDeathMessage((String) null);
 				e.getDrops().clear();
 				if (TopKillStreak.getKsTop(p) == 5) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l5");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l5");
 				}
 				if (TopKillStreak.getKsTop(p) == 10) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l10");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l10");
 				}
 				if (TopKillStreak.getKsTop(p) == 15) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l15");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l15");
 				}
 				if (TopKillStreak.getKsTop(p) == 20) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l20");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l20");
 				}
 				if (TopKillStreak.getKsTop(p) == 25) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l25");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l25");
 				}
 				if (TopKillStreak.getKsTop(p) == 30) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l30");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l30");
 				}
 				if (TopKillStreak.getKsTop(p) == 35) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l35");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l35");
 				}
 				if (TopKillStreak.getKsTop(p) == 40) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l40");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l40");
 				}
 				if (TopKillStreak.getKsTop(p) == 45) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l45");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l45");
 				}
 				if (TopKillStreak.getKsTop(p) == 50) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l50");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l50");
 				}
 				if (TopKillStreak.getKsTop(p) == 55) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l55");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l55");
 				}
 				if (TopKillStreak.getKsTop(p) == 60) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l60");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l60");
 				}
 				if (TopKillStreak.getKsTop(p) == 65) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l65");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l65");
 				}
 				if (TopKillStreak.getKsTop(p) == 70) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l70");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l70");
 				}
 				if (TopKillStreak.getKsTop(p) == 75) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l75");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l75");
 				}
 				if (TopKillStreak.getKsTop(p) == 80) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l80");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l80");
 				}
 				if (TopKillStreak.getKsTop(p) == 85) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l85");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l85");
 				}
 				if (TopKillStreak.getKsTop(p) == 90) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l90");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l90");
 				}
 				if (TopKillStreak.getKsTop(p) == 95) {
-					Bukkit.broadcastMessage("§a§l" + d.getName() + " §fest\u00e1 com um §6§lKILLSTREAK §fde §a§l95");
+					Bukkit.broadcastMessage("ï¿½aï¿½l" + d.getName() + " ï¿½fest\u00e1 com um ï¿½6ï¿½lKILLSTREAK ï¿½fde ï¿½aï¿½l95");
 				}
 				if (TopKillStreak.getKsTop(p) == 100) {
 					Bukkit.broadcastMessage(
-							"§a§l" + d.getName() + " §falcan\u00e7ou o §6§lKILLSTREAK §fm\u00e1ximo de §a§l100§f!");
+							"ï¿½aï¿½l" + d.getName() + " ï¿½falcanÃ§ou o ï¿½6ï¿½lKILLSTREAK ï¿½fm\u00e1ximo de ï¿½aï¿½l100ï¿½f!");
 				} else {
 					e.setDeathMessage((String) null);
 					e.getDrops().clear();
@@ -248,7 +248,7 @@ public class eEvents implements Listener {
 		final HelpTopic t = Bukkit.getServer().getHelpMap().getHelpTopic(msg);
 		if (t == null) {
 			e.setCancelled(true);
-			p.sendMessage("§4§l(!) §cComando desconhecido");
+			p.sendMessage("ï¿½4ï¿½l(!) ï¿½cComando desconhecido");
 		}
 	}
 

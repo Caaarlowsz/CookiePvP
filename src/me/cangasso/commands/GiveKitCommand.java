@@ -6,8 +6,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
 
 public class GiveKitCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -15,155 +15,155 @@ public class GiveKitCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("givekit")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§fUtilize §6§l/givekit §6(jogador) (kit)§f.");
+				p.sendMessage("ï¿½fUtilize ï¿½6ï¿½l/givekit ï¿½6(jogador) (kit)ï¿½f.");
 				return true;
 			}
 			if (args.length == 2) {
 				final String kit = args[1];
 				final Player k = Bukkit.getPlayer(args[0]);
 				if (kit.equalsIgnoreCase("pvp")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lPVP §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lPVP§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.pvp", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lPVP ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lPVPï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.pvp", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("archer")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lARCHER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lARCHER§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.archer", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lARCHER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lARCHERï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.archer", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("kangaroo")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lKANGAROO §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lKANGAROO§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.kangaroo", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lKANGAROO ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lKANGAROOï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.kangaroo", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("fisherman")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lFISHERMAN §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lFISHERMAN§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.fisherman", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lFISHERMAN ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lFISHERMANï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.fisherman", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("cactus")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lCACTUS §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lCACTUS§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.cactus", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lCACTUS ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lCACTUSï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.cactus", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("monk")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lMONK §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lMONK§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lMONK ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lMONKï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("ninja")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lNINJA §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lNINJA§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.ninja", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lNINJA ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lNINJAï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.ninja", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("phantom")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lPHANTOM §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lPHANTOM§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.phantom", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lPHANTOM ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lPHANTOMï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.phantom", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("grappler")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lGRAPPLER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lGRAPPLER§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.grappler", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lGRAPPLER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lGRAPPLERï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.grappler", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("viper")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lVIPER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lVIPER§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.viper", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lVIPER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lVIPERï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.viper", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("snail")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lSNAIL §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lSNAIL7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.snail", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lSNAIL ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lSNAIL7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.snail", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("hulk")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lHULK §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lHULK§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.hulk", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lHULK ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lHULKï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.hulk", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("timelord")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lTIMELORD §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lTIMELORD§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.timelord", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lTIMELORD ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lTIMELORDï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.timelord", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("thor")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lTHOR §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§6§lNew§f§lPvP §6» §7Voce ganhou o KIT §6Thor");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.thor", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lTHOR ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½6ï¿½lNewï¿½fï¿½lPvP ï¿½6ï¿½ ï¿½7Voce ganhou o KIT ï¿½6Thor");
+					cfPermissÃ£o.setarPermissao(k, "kit.thor", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("switcher")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lSWITCHER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lSWITCHER§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.switcher", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lSWITCHER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lSWITCHERï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.switcher", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("gladiator")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lGLADIATOR §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lGLADIATOR§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.gladiator", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lGLADIATOR ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lGLADIATORï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.gladiator", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("stomper")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lSTOMPER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lSTOMPER");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.stomper", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lSTOMPER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lSTOMPER");
+					cfPermissÃ£o.setarPermissao(k, "kit.stomper", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("magma")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lMAGMA §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lMAGMA§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.magma", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lMAGMA ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lMAGMAï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.magma", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("grandpa")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lGRANDPA §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lGRANDPA§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.grandpa", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lGRANDPA ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lGRANDPAï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.grandpa", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("ajnin")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lAJNIN §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lAJNIN§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.ajnin", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lAJNIN ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lAJNINï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.ajnin", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("firelauncher")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lFIRELAUNCHER §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lFIRELAUNCHER§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.firelauncher", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lFIRELAUNCHER ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lFIRELAUNCHERï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.firelauncher", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("strong")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lSTRONG §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lSTRONG§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.strong", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lSTRONG ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lSTRONGï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.strong", "true");
 					return true;
 				}
 				if (kit.equalsIgnoreCase("sumo")) {
-					p.sendMessage("§7Voc\u00ea aplicou o kit §6§lSUMO §7para o jogador: §6§l" + k.getName());
-					k.sendMessage("§7Voc\u00ea recebeu o kit: §6§lSUMO§7!");
-					cfPermiss\u00e3o.setarPermissao(k, "kit.sumo", "true");
+					p.sendMessage("ï¿½7Voc\u00ea aplicou o kit ï¿½6ï¿½lSUMO ï¿½7para o jogador: ï¿½6ï¿½l" + k.getName());
+					k.sendMessage("ï¿½7Voc\u00ea recebeu o kit: ï¿½6ï¿½lSUMOï¿½7!");
+					cfPermissÃ£o.setarPermissao(k, "kit.sumo", "true");
 					return true;
 				}
-				p.sendMessage("§cEsse kit n\u00e3o existe!");
+				p.sendMessage("ï¿½cEsse kit nÃ£o existe!");
 				return true;
 			}
 		}

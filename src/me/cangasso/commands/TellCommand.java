@@ -12,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 import me.cangasso.API.ArraysAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfConfig;
+import me.cangasso.configuraÃ§Ã£o.cfConfig;
 
 public class TellCommand implements CommandExecutor, Listener {
 	public static ArrayList<Player> cooldown;
@@ -27,7 +27,7 @@ public class TellCommand implements CommandExecutor, Listener {
 		if (TellCommand.cooldown.contains(p) && TellCommand.cooldown.contains(p)
 				&& e.getMessage().toLowerCase().startsWith("/tell")) {
 			e.setCancelled(true);
-			p.sendMessage("§cAguarde antes de enviar outra mensagem...");
+			p.sendMessage("ï¿½cAguarde antes de enviar outra mensagem...");
 		}
 	}
 
@@ -35,49 +35,49 @@ public class TellCommand implements CommandExecutor, Listener {
 		final Player p = (Player) Sender;
 		if (Cmd.getName().equalsIgnoreCase("tell")) {
 			if (Args.length == 0) {
-				p.sendMessage("§cUtilize o comando §c§l/tell <jogador> <mensagem> §c| §c§l/tell §c(on | off)");
+				p.sendMessage("ï¿½cUtilize o comando ï¿½cï¿½l/tell <jogador> <mensagem> ï¿½c| ï¿½cï¿½l/tell ï¿½c(on | off)");
 				return true;
 			}
 			if (Args[0].equalsIgnoreCase("on")) {
-				if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell")
+				if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell")
 						.equals("Desativado")) {
-					p.sendMessage("§aSeu tell foi ativado.");
-					cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell",
+					p.sendMessage("ï¿½aSeu tell foi ativado.");
+					cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell",
 							(Object) "Ativado");
 					cfConfig.salvarconfiguracao();
 				} else {
-					p.sendMessage("§cO seu tell j\u00e1 est\u00e1 ativado!");
+					p.sendMessage("ï¿½cO seu tell j\u00e1 est\u00e1 ativado!");
 				}
 				return true;
 			}
 			if (Args[0].equalsIgnoreCase("off")) {
-				if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell")
+				if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell")
 						.equals("Ativado")) {
-					p.sendMessage("§cSeu tell foi desativado.");
-					cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell",
+					p.sendMessage("ï¿½cSeu tell foi desativado.");
+					cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell",
 							(Object) "Desativado");
 					cfConfig.salvarconfiguracao();
 				} else {
-					p.sendMessage("§cO seu tell j\u00e1 est\u00e1 desativado!");
+					p.sendMessage("ï¿½cO seu tell j\u00e1 est\u00e1 desativado!");
 				}
 				return true;
 			}
 			final Player tell = Bukkit.getPlayer(Args[0]);
 			if (tell == null) {
-				p.sendMessage("§cJogador offline!");
+				p.sendMessage("ï¿½cJogador offline!");
 				return true;
 			}
 			if (tell == p) {
-				p.sendMessage("§c\u00c9 imposs\u00edvel enviar mensagens a si mesmo!");
+				p.sendMessage("ï¿½c\u00c9 imposs\u00edvel enviar mensagens a si mesmo!");
 				return true;
 			}
-			if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + tell.getUniqueId() + ".Tell")
+			if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + tell.getUniqueId() + ".Tell")
 					.equals("Desativado")) {
-				p.sendMessage("§7Este jogador est\u00e1 com o tell §c§lDESATIVADO§7. Tente novamente mais tarde.");
+				p.sendMessage("ï¿½7Este jogador est\u00e1 com o tell ï¿½cï¿½lDESATIVADOï¿½7. Tente novamente mais tarde.");
 				return true;
 			}
 			if (ArraysAPI.Admin.contains(tell)) {
-				p.sendMessage("§cJogador offline!");
+				p.sendMessage("ï¿½cJogador offline!");
 				return true;
 			}
 			String message = " ";
@@ -88,8 +88,8 @@ public class TellCommand implements CommandExecutor, Listener {
 					message = Args[i];
 				}
 			}
-			p.sendMessage("§7[§a§lVoc\u00ea §7-> §a§l" + tell.getName() + "§7] " + message);
-			tell.sendMessage("§7[§a§l" + p.getName() + "§7-> §a§lVoc\u00ea§7] " + message);
+			p.sendMessage("ï¿½7[ï¿½aï¿½lVoc\u00ea ï¿½7-> ï¿½aï¿½l" + tell.getName() + "ï¿½7] " + message);
+			tell.sendMessage("ï¿½7[ï¿½aï¿½l" + p.getName() + "ï¿½7-> ï¿½aï¿½lVoc\u00eaï¿½7] " + message);
 		}
 		return false;
 	}

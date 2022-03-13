@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class CooldownAPI {
 	public static HashMap<String, Long> Cooldown;
@@ -17,7 +17,7 @@ public class CooldownAPI {
 
 	public static void addCooldown(final Player jogador, final int Tempo) {
 		CooldownAPI.Cooldown.put(jogador.getName(), System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(Tempo));
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				CooldownAPI.tirarCooldown(jogador);

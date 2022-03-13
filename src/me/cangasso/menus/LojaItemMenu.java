@@ -17,14 +17,14 @@ import me.cangasso.API.API;
 
 public class LojaItemMenu implements Listener {
 	public static void setarInventario(final Player p) {
-		final Inventory inv = Bukkit.createInventory((InventoryHolder) null, 27, "§7Lojas dos §9§lservidores§7.");
+		final Inventory inv = Bukkit.createInventory((InventoryHolder) null, 27, "ï¿½7Lojas dos ï¿½9ï¿½lservidoresï¿½7.");
 		final ItemStack kits = new ItemStack(Material.DIAMOND_SWORD);
 		final ItemMeta kitsm = kits.getItemMeta();
-		kitsm.setDisplayName("§fLoja de §6§lKITS");
+		kitsm.setDisplayName("ï¿½fLoja de ï¿½6ï¿½lKITS");
 		kits.setItemMeta(kitsm);
 		final ItemStack site = new ItemStack(Material.EMERALD);
 		final ItemMeta sitem = site.getItemMeta();
-		sitem.setDisplayName("§fLoja §a§lONLINE");
+		sitem.setDisplayName("ï¿½fLoja ï¿½aï¿½lONLINE");
 		site.setItemMeta(sitem);
 		inv.setItem(11, kits);
 		inv.setItem(15, site);
@@ -38,7 +38,7 @@ public class LojaItemMenu implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Loja"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Loja"))) {
 			setarInventario(p);
 		}
 	}
@@ -46,7 +46,7 @@ public class LojaItemMenu implements Listener {
 	@EventHandler
 	public void clicarInv(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7Lojas dos §9§lservidores§7.")) {
+		if (e.getInventory().getTitle().equals("ï¿½7Lojas dos ï¿½9ï¿½lservidoresï¿½7.")) {
 			if (e.getCurrentItem().getType() == Material.AIR) {
 				e.setCancelled(true);
 				return;
@@ -61,7 +61,7 @@ public class LojaItemMenu implements Listener {
 				p.closeInventory();
 				p.sendMessage(" ");
 				p.sendMessage(
-						"§6§lCookie§f§lNetwork §7» §fCompre pacotes de §a§lVIP §fou §6§lKITS §facessando: §6§lmc-cookie.com.br");
+						"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fCompre pacotes de ï¿½aï¿½lVIP ï¿½fou ï¿½6ï¿½lKITS ï¿½facessando: ï¿½6ï¿½lmc-cookie.com.br");
 				p.sendMessage(" ");
 			}
 		}

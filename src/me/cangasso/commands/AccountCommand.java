@@ -17,7 +17,7 @@ public class AccountCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("account") || cmd.getName().equalsIgnoreCase("acc")) {
 			if (args.length == 0) {
-				p.sendMessage("§8§l<§e§l!§8§l> §7Argumento correto: §6§l/account §7(jogador)");
+				p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Argumento correto: ï¿½6ï¿½l/account ï¿½7(jogador)");
 				API.sendSound(p, Sound.NOTE_PLING, 10);
 				return true;
 			}
@@ -25,34 +25,34 @@ public class AccountCommand implements CommandExecutor {
 			if (acc == null) {
 				final OfflinePlayer off = Bukkit.getOfflinePlayer(args[0]);
 				if (Config.getConfig().getJogadores().get("Jogadores." + off.getUniqueId()) == null) {
-					API.sendMsg((CommandSender) p, "§6§lCookie§f§lNetwork §7» §fO jogador §9§l" + off.getName()
-							+ "§f nunca entrou no servidor!");
+					API.sendMsg((CommandSender) p, "ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO jogador ï¿½9ï¿½l" + off.getName()
+							+ "ï¿½f nunca entrou no servidor!");
 					API.sendSound(p, Sound.NOTE_PLING, 10);
 					return true;
 				}
 				if (Config.getConfig().getJogadores().get("Jogadores." + off.getUniqueId()) != null) {
-					API.sendMsg((CommandSender) p, "§e§m>------- §f §l§kIII §f §6§lACCOUNT §f §l§kIII §e§m-------<");
+					API.sendMsg((CommandSender) p, "ï¿½eï¿½m>------- ï¿½f ï¿½lï¿½kIII ï¿½f ï¿½6ï¿½lACCOUNT ï¿½f ï¿½lï¿½kIII ï¿½eï¿½m-------<");
 					API.sendMsg((CommandSender) p, " ");
 					API.sendMsg((CommandSender) p,
-							"§fO jogador §6§l" + off.getName()
-									+ " §fest\u00e1 atualmente §c§lOFFLINE §fem nossos servidores" + "§f. Na liga "
+							"ï¿½fO jogador ï¿½6ï¿½l" + off.getName()
+									+ " ï¿½fest\u00e1 atualmente ï¿½cï¿½lOFFLINE ï¿½fem nossos servidores" + "ï¿½f. Na liga "
 									+ AccountUtils.getRankOffline((OfflinePlayer) acc) + " "
 									+ AccountUtils.getRankNomeOffline((OfflinePlayer) acc)
-									+ "§f. Grupo atual do jogador: " + AccountUtils.getGrupo((OfflinePlayer) acc));
+									+ "ï¿½f. Grupo atual do jogador: " + AccountUtils.getGrupo((OfflinePlayer) acc));
 					API.sendMsg((CommandSender) p, " ");
-					API.sendMsg((CommandSender) p, "§e§m>------- §f §l§kIII §f §6§lACCOUNT §f §l§kIII §e§m-------<");
+					API.sendMsg((CommandSender) p, "ï¿½eï¿½m>------- ï¿½f ï¿½lï¿½kIII ï¿½f ï¿½6ï¿½lACCOUNT ï¿½f ï¿½lï¿½kIII ï¿½eï¿½m-------<");
 				}
 			}
 			if (acc != null) {
-				API.sendMsg((CommandSender) p, "§e§m>------- §f §l§kIII §f §6§lACCOUNT §f §l§kIII §e§m-------<");
+				API.sendMsg((CommandSender) p, "ï¿½eï¿½m>------- ï¿½f ï¿½lï¿½kIII ï¿½f ï¿½6ï¿½lACCOUNT ï¿½f ï¿½lï¿½kIII ï¿½eï¿½m-------<");
 				API.sendMsg((CommandSender) p, " ");
 				API.sendMsg((CommandSender) p,
-						"§fO jogador §6§l" + acc.getName() + " §fest\u00e1 atualmente §a§lONLINE §fem nossos servidores"
-								+ "§f. Na liga " + AccountUtils.getRankOffline((OfflinePlayer) acc) + " "
-								+ AccountUtils.getRankNomeOffline((OfflinePlayer) acc) + "§f. Grupo atual do jogador: "
+						"ï¿½fO jogador ï¿½6ï¿½l" + acc.getName() + " ï¿½fest\u00e1 atualmente ï¿½aï¿½lONLINE ï¿½fem nossos servidores"
+								+ "ï¿½f. Na liga " + AccountUtils.getRankOffline((OfflinePlayer) acc) + " "
+								+ AccountUtils.getRankNomeOffline((OfflinePlayer) acc) + "ï¿½f. Grupo atual do jogador: "
 								+ AccountUtils.getGrupo((OfflinePlayer) acc));
 				API.sendMsg((CommandSender) p, " ");
-				API.sendMsg((CommandSender) p, "§e§m>------- §f §l§kIII §f §6§lACCOUNT §f §l§kIII §e§m-------<");
+				API.sendMsg((CommandSender) p, "ï¿½eï¿½m>------- ï¿½f ï¿½lï¿½kIII ï¿½f ï¿½6ï¿½lACCOUNT ï¿½f ï¿½lï¿½kIII ï¿½eï¿½m-------<");
 			}
 		}
 		return false;

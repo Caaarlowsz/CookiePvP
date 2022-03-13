@@ -12,7 +12,7 @@ public class IpCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if ((cmd.getName().equalsIgnoreCase("ip") || cmd.getName().equalsIgnoreCase("servidor")) && args.length == 0) {
 			API.sendMsg((CommandSender) p, " ");
-			API.sendMsg((CommandSender) p, "§7Voc\u00ea est\u00e1 conectado ao: §b§lpvp.mc-cookie.com.br ");
+			API.sendMsg((CommandSender) p, "ï¿½7Voc\u00ea est\u00e1 conectado ao: ï¿½bï¿½lpvp.mc-cookie.com.br ");
 			API.sendMsg((CommandSender) p, " ");
 		}
 		return false;

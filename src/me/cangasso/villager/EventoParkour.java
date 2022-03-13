@@ -14,7 +14,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import me.cangasso.API.API;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
+import me.cangasso.invencivel.Prote√ß√£o;
 
 public class EventoParkour implements Listener {
 	@EventHandler
@@ -22,7 +22,7 @@ public class EventoParkour implements Listener {
 		final Player p = e.getPlayer();
 		if (VillagerParkour.noParkour.contains(p)) {
 			e.setCancelled(true);
-			p.sendMessage("ßcVoc\u00ea n\u00e3o pode executar comandos enquanto estiver no Parkour!");
+			p.sendMessage("ÔøΩcVoc\u00ea n√£o pode executar comandos enquanto estiver no Parkour!");
 		}
 	}
 
@@ -30,9 +30,9 @@ public class EventoParkour implements Listener {
 	public void protect(final PlayerMoveEvent e) {
 		final Player p = e.getPlayer();
 		if (e.getTo().getBlock().getRelative(BlockFace.DOWN).getType() == Material.WATER
-				&& Prote\u00e7\u00e3o.isImortal(p) && API.getWarp(p) == "FPS") {
-			p.sendMessage("ßcVoc\u00ea perdeu a sua prote\u00e7\u00e3o!");
-			Prote\u00e7\u00e3o.setImortal(p, false);
+				&& Prote√ß√£o.isImortal(p) && API.getWarp(p) == "FPS") {
+			p.sendMessage("ÔøΩcVoc\u00ea perdeu a sua prote√ß√£o!");
+			Prote√ß√£o.setImortal(p, false);
 		}
 	}
 
@@ -46,7 +46,7 @@ public class EventoParkour implements Listener {
 			VillagerParkour.noParkour.remove(p);
 			p.getInventory().clear();
 			p.getInventory().setArmorContents((ItemStack[]) null);
-			p.sendMessage("ßcVoc\u00ea saiu do Parkour!");
+			p.sendMessage("ÔøΩcVoc\u00ea saiu do Parkour!");
 			p.removePotionEffect(PotionEffectType.INVISIBILITY);
 			Player[] onlinePlayers;
 			for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
@@ -63,7 +63,7 @@ public class EventoParkour implements Listener {
 		if (e.getTo().getBlock().getRelative(BlockFace.DOWN).getType() == Material.WATER && API.getWarp(p) == "Spawn"
 				&& VillagerParkour.noParkour.contains(p)) {
 			WarpsAPI.Ir(p, "Parkour");
-			p.sendMessage("ß7Voc\u00ea ßcßlFALHOUß7, tente novamente!");
+			p.sendMessage("ÔøΩ7Voc\u00ea ÔøΩcÔøΩlFALHOUÔøΩ7, tente novamente!");
 		}
 	}
 }

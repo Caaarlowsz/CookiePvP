@@ -11,9 +11,9 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import me.cangasso.API.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class CombatLog implements Listener {
@@ -25,12 +25,12 @@ public class CombatLog implements Listener {
 
 	public static String getCombat(final Player p) {
 		if (CombatLog.combat.contains(p)) {
-			return "§a§lSIM";
+			return "ï¿½aï¿½lSIM";
 		}
 		if (!CombatLog.combat.contains(p)) {
-			return "§c§lNAO";
+			return "ï¿½cï¿½lNAO";
 		}
-		return "§c§lNAO";
+		return "ï¿½cï¿½lNAO";
 	}
 
 	@EventHandler
@@ -42,7 +42,7 @@ public class CombatLog implements Listener {
 				if (!CombatLog.combat.contains(p)) {
 					CombatLog.combat.add(p);
 					sScoreAPI.scoreboard(p);
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							CombatLog.combat.remove(p);
@@ -53,7 +53,7 @@ public class CombatLog implements Listener {
 				if (!CombatLog.combat.contains(k)) {
 					CombatLog.combat.add(k);
 					sScoreAPI.scoreboard(k);
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							CombatLog.combat.remove(k);

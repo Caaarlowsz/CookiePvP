@@ -8,16 +8,16 @@ public class ColorSigns implements Listener {
 	@EventHandler
 	public void aoEscrever(final SignChangeEvent e) {
 		if (e.getLine(0).contains("&")) {
-			e.setLine(0, e.getLine(0).replace("&", "§"));
+			e.setLine(0, e.getLine(0).replace("&", "ï¿½"));
 		}
 		if (e.getLine(1).contains("&")) {
-			e.setLine(1, e.getLine(1).replace("&", "§"));
+			e.setLine(1, e.getLine(1).replace("&", "ï¿½"));
 		}
 		if (e.getLine(2).contains("&")) {
-			e.setLine(2, e.getLine(2).replace("&", "§"));
+			e.setLine(2, e.getLine(2).replace("&", "ï¿½"));
 		}
 		if (e.getLine(3).contains("&")) {
-			e.setLine(3, e.getLine(3).replace("&", "§"));
+			e.setLine(3, e.getLine(3).replace("&", "ï¿½"));
 		}
 	}
 }

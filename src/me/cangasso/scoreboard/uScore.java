@@ -38,7 +38,7 @@ public class uScore {
 
 	private String substituir(String message) {
 		while (this.Scores.containsKey(message)) {
-			message = String.valueOf(message) + "\u00c2§r";
+			message = String.valueOf(message) + "\u00c2ï¿½r";
 		}
 		if (message.length() > 60) {
 			message = message.substring(0, 69);

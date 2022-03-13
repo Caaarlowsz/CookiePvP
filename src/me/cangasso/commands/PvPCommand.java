@@ -10,7 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class PvPCommand implements CommandExecutor, Listener {
 	public static boolean pvp;
@@ -25,30 +25,30 @@ public class PvPCommand implements CommandExecutor, Listener {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")) {
 				API.sendMsg((CommandSender) p,
-						"§cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando.");
+						"ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando.");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§fUtilize §a§l/pvp §a(on | off)");
+				p.sendMessage("ï¿½fUtilize ï¿½aï¿½l/pvp ï¿½a(on | off)");
 				return true;
 			}
 			if (args.length == 1 && args[0].equalsIgnoreCase("on")) {
 				if (PvPCommand.pvp) {
-					p.sendMessage("§fO §6§lPVP §fj\u00e1 est\u00e1 ativado!");
+					p.sendMessage("ï¿½fO ï¿½6ï¿½lPVP ï¿½fj\u00e1 est\u00e1 ativado!");
 					return true;
 				}
 				PvPCommand.pvp = true;
-				p.sendMessage("§fVoc\u00ea §a§lATIVOU §fo pvp!");
-				Bukkit.broadcastMessage("§7O §6§lPVP §7foi §a§lATIVADO §7por: §6§l" + p.getName() + "§7.");
+				p.sendMessage("ï¿½fVoc\u00ea ï¿½aï¿½lATIVOU ï¿½fo pvp!");
+				Bukkit.broadcastMessage("ï¿½7O ï¿½6ï¿½lPVP ï¿½7foi ï¿½aï¿½lATIVADO ï¿½7por: ï¿½6ï¿½l" + p.getName() + "ï¿½7.");
 				return true;
 			} else if (args[0].equalsIgnoreCase("off")) {
 				if (!PvPCommand.pvp) {
-					p.sendMessage("§fO §a§lPVP §fj\u00e1 est\u00e1 desativado!");
+					p.sendMessage("ï¿½fO ï¿½aï¿½lPVP ï¿½fj\u00e1 est\u00e1 desativado!");
 					return true;
 				}
 				PvPCommand.pvp = false;
-				p.sendMessage("§fVoc\u00ea §c§lDESATIVOU §fo pvp!");
-				Bukkit.broadcastMessage("§7O §6§lPVP §7foi §c§lDESATIVADO §7por: §6§l" + p.getName() + "§7.");
+				p.sendMessage("ï¿½fVoc\u00ea ï¿½cï¿½lDESATIVOU ï¿½fo pvp!");
+				Bukkit.broadcastMessage("ï¿½7O ï¿½6ï¿½lPVP ï¿½7foi ï¿½cï¿½lDESATIVADO ï¿½7por: ï¿½6ï¿½l" + p.getName() + "ï¿½7.");
 				return true;
 			}
 		}

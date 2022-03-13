@@ -1,4 +1,4 @@
-package me.cangasso.configura\u00e7\u00e3o;
+package me.cangasso.configuração;
 
 import java.io.File;
 import java.io.IOException;

@@ -31,7 +31,7 @@ public class Hulk implements Listener {
 		if (p.getItemInHand().getType() == Material.AIR && KitAPI.getKit(p) == "Hulk"
 				&& CooldownAPI.Cooldown.containsKey(p.getName()) && p.getPassenger() == null
 				&& r.getPassenger() == null) {
-			p.sendMessage("§8§l<§e§l!§8§l> §7Seu cooldown acaba em " + CooldownAPI.Cooldown + " §7segundos!");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Seu cooldown acaba em " + CooldownAPI.Cooldown + " ï¿½7segundos!");
 		}
 	}
 

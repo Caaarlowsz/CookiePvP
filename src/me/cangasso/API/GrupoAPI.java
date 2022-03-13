@@ -4,10 +4,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfTempGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfTempGrupo;
 import me.cangasso.events.CorGrupo;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class GrupoAPI {
@@ -25,33 +25,33 @@ public class GrupoAPI {
 		cfTempGrupo.salvarconfiguracao();
 		checarVip(p);
 		if (cfGrupo.ChecarGrupo(p, "DONO")) {
-			CorGrupo.setarTag(p, "§4§l");
+			CorGrupo.setarTag(p, "ï¿½4ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "GERENTE")) {
-			CorGrupo.setarTag(p, "§3§l");
+			CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "ADMIN")) {
-			CorGrupo.setarTag(p, "§c§l");
+			CorGrupo.setarTag(p, "ï¿½cï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "MOD+")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "MOD")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "TRIAL")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "YOUTUBER+")) {
-			CorGrupo.setarTag(p, "§3§l");
+			CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "HELPER")) {
-			CorGrupo.setarTag(p, "§d§l");
+			CorGrupo.setarTag(p, "ï¿½dï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "YOUTUBER")) {
-			CorGrupo.setarTag(p, "§b§l");
+			CorGrupo.setarTag(p, "ï¿½bï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "S-PRO")) {
-			CorGrupo.setarTag(p, "§e§l");
+			CorGrupo.setarTag(p, "ï¿½eï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "PRO")) {
-			CorGrupo.setarTag(p, "§6§l");
+			CorGrupo.setarTag(p, "ï¿½6ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "MVP")) {
-			CorGrupo.setarTag(p, "§9§l");
+			CorGrupo.setarTag(p, "ï¿½9ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "LIGHT")) {
-			CorGrupo.setarTag(p, "§a§l");
+			CorGrupo.setarTag(p, "ï¿½aï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "MEMBRO")) {
-			CorGrupo.setarTag(p, "§7§l");
+			CorGrupo.setarTag(p, "ï¿½7ï¿½l");
 		}
 		sScoreAPI.scoreboard(p);
 		p.chat("/tag " + cfGrupo.pegargrupo().get("grupos." + p.getUniqueId() + ".grupo"));
@@ -71,7 +71,7 @@ public class GrupoAPI {
 	}
 
 	public static void checarVip(final Player p) {
-		Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				if (cfTempGrupo.pegargrupo().get("tempgrupos." + p.getUniqueId() + ".Dia") != null
@@ -117,14 +117,14 @@ public class GrupoAPI {
 												.PegarCalendario(CalendarioAPI.Calendario.Segundo)
 										&& (cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 												|| cfGrupo.ChecarGrupo(p, "Light"))))) {
-					API.mandarTitulo(p, "§6§lCookie§f§lNetwork");
-					API.mandarSubTitulo(p, "§7Seu VIP [§6§l"
-							+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "§7] expirou");
+					API.mandarTitulo(p, "ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
+					API.mandarSubTitulo(p, "ï¿½7Seu VIP [ï¿½6ï¿½l"
+							+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "ï¿½7] expirou");
 					cfGrupo.salvarconfiguracao();
 					Bukkit.getConsoleSender().sendMessage(
-							"§6§lCookie§f§lNetwork §7» §fO Vip do jogador §6§l" + p.getName() + " §fexpirou.");
-					p.sendMessage("§6§lCookie§f§lNetwork §7» §fO seu Vip §7(§d§l"
-							+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "§7) §fexpirou");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO Vip do jogador ï¿½6ï¿½l" + p.getName() + " ï¿½fexpirou.");
+					p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO seu Vip ï¿½7(ï¿½dï¿½l"
+							+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "ï¿½7) ï¿½fexpirou");
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Nick", (Object) null);
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".grupo", (Object) null);
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Dia", (Object) null);
@@ -139,42 +139,42 @@ public class GrupoAPI {
 						final Player todos = onlinePlayers[i];
 						if (cfGrupo.ChecarGrupo(todos, "Dono") || cfGrupo.ChecarGrupo(todos, "Gerente")
 								|| cfGrupo.ChecarGrupo(todos, "Admin")) {
-							todos.sendMessage("§6§lCookie§f§lNetwork §6» §7O VIP [§6§l"
+							todos.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½6ï¿½ ï¿½7O VIP [ï¿½6ï¿½l"
 									+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo")
-									+ "§7] do jogador §6" + p.getName() + " §7expirou");
+									+ "ï¿½7] do jogador ï¿½6" + p.getName() + " ï¿½7expirou");
 						}
 					}
 					cfGrupo.setarGrupo(p, "MEMBRO");
 					if (cfGrupo.ChecarGrupo(p, "DONO")) {
-						CorGrupo.setarTag(p, "§4§l");
+						CorGrupo.setarTag(p, "ï¿½4ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "GERENTE")) {
-						CorGrupo.setarTag(p, "§c§l");
+						CorGrupo.setarTag(p, "ï¿½cï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "ADMIN")) {
-						CorGrupo.setarTag(p, "§c§l");
+						CorGrupo.setarTag(p, "ï¿½cï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "MOD+")) {
-						CorGrupo.setarTag(p, "§5§l");
+						CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "MOD")) {
-						CorGrupo.setarTag(p, "§5§l");
+						CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "TRIAL")) {
-						CorGrupo.setarTag(p, "§5§l");
+						CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "YOUTUBER+")) {
-						CorGrupo.setarTag(p, "§3§l");
+						CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "BUILDER")) {
-						CorGrupo.setarTag(p, "§2§l");
+						CorGrupo.setarTag(p, "ï¿½2ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "HELPER")) {
-						CorGrupo.setarTag(p, "§e§l");
+						CorGrupo.setarTag(p, "ï¿½eï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "YOUTUBER")) {
-						CorGrupo.setarTag(p, "§b§l");
+						CorGrupo.setarTag(p, "ï¿½bï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "S-PRO")) {
-						CorGrupo.setarTag(p, "§e§l");
+						CorGrupo.setarTag(p, "ï¿½eï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "PRO")) {
-						CorGrupo.setarTag(p, "§6§l");
+						CorGrupo.setarTag(p, "ï¿½6ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "MVP")) {
-						CorGrupo.setarTag(p, "§9§l");
+						CorGrupo.setarTag(p, "ï¿½9ï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "LIGHT")) {
-						CorGrupo.setarTag(p, "§a§l");
+						CorGrupo.setarTag(p, "ï¿½aï¿½l");
 					} else if (cfGrupo.ChecarGrupo(p, "MEMBRO")) {
-						CorGrupo.setarTag(p, "§7§l");
+						CorGrupo.setarTag(p, "ï¿½7ï¿½l");
 					}
 					sScoreAPI.scoreboard(p);
 					p.chat("/tag normal");
@@ -184,7 +184,7 @@ public class GrupoAPI {
 	}
 
 	public static void checarVipOffline(final OfflinePlayer p) {
-		Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				if ((cfTempGrupo.pegargrupo().getInt("tempgrupos." + p.getUniqueId() + ".Dia") < CalendarioAPI
@@ -221,7 +221,7 @@ public class GrupoAPI {
 								|| cfGrupo.ChecarGrupo(p, "Light"))) {
 					cfGrupo.salvarconfiguracao();
 					Bukkit.getConsoleSender().sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7O VIP do jogador §6" + p.getName() + " §7expirou");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7O VIP do jogador ï¿½6" + p.getName() + " ï¿½7expirou");
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Nick", (Object) null);
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".grupo", (Object) null);
 					cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Dia", (Object) null);
@@ -236,9 +236,9 @@ public class GrupoAPI {
 						final Player todos = onlinePlayers[i];
 						if (cfGrupo.ChecarGrupo(todos, "Dono") || cfGrupo.ChecarGrupo(todos, "Gerente")
 								|| cfGrupo.ChecarGrupo(todos, "Admin")) {
-							todos.sendMessage("§6§lCookie§f§lNetwork §7» §7O VIP [§6§l"
+							todos.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7O VIP [ï¿½6ï¿½l"
 									+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo")
-									+ "§7] do jogador §6" + p.getName() + " §7expirou");
+									+ "ï¿½7] do jogador ï¿½6" + p.getName() + " ï¿½7expirou");
 						}
 					}
 					cfGrupo.setarGrupo(p, "Membro");

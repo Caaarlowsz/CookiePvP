@@ -12,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class ScCommand implements Listener, CommandExecutor {
 	public static ArrayList<String> staff;
@@ -34,7 +34,7 @@ public class ScCommand implements Listener, CommandExecutor {
 						|| cfGrupo.ChecarGrupo(online, "Mod") || cfGrupo.ChecarGrupo(online, "Trial")
 						|| cfGrupo.ChecarGrupo(online, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Helper")
 						|| this.isStaffChatting(online)) {
-					online.sendMessage("§8(§6§lSTAFF§8) " + p.getDisplayName() + " §8» §7" + e.getMessage());
+					online.sendMessage("ï¿½8(ï¿½6ï¿½lSTAFFï¿½8) " + p.getDisplayName() + " ï¿½8ï¿½ ï¿½7" + e.getMessage());
 				}
 			}
 		}
@@ -50,15 +50,15 @@ public class ScCommand implements Listener, CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Trial") && !cfGrupo.ChecarGrupo(p, "Youtuber+")
 					&& !cfGrupo.ChecarGrupo(p, "Helper")) {
 				API.sendMsg((CommandSender) p,
-						"§4§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½4ï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (this.isStaffChatting(p)) {
 				ScCommand.staff.remove(p.getName());
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fVoc\u00ea §c§lsaiu §fdo chat da staff!");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea ï¿½cï¿½lsaiu ï¿½fdo chat da staff!");
 			} else {
 				ScCommand.staff.add(p.getName());
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fVoc\u00ea §a§lentrou §fno chat da staff!");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea ï¿½aï¿½lentrou ï¿½fno chat da staff!");
 			}
 		}
 		return true;

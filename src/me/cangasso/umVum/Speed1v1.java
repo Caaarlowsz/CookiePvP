@@ -12,7 +12,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Speed1v1 implements Listener {
 	public static boolean Partida1;
@@ -46,16 +46,16 @@ public class Speed1v1 implements Listener {
 				Speed1v1.Nome = p.getName();
 				Speed1v1.Partida1 = true;
 				p.getInventory().removeItem(new ItemStack[] { Join1v1.Cinza });
-				p.sendMessage("§aVoc\u00ea entrou na fila para o 1v1 r\u00e1pido.");
+				p.sendMessage("ï¿½aVoc\u00ea entrou na fila para o 1v1 r\u00e1pido.");
 				Speed1v1.Iniciou.add(p);
 				this.Trocar(p);
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						Speed1v1.NeginhoSegundos.add(p);
 					}
 				}, 2L);
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						if (Speed1v1.NeginhoSegundos.contains(p)) {
@@ -68,7 +68,7 @@ public class Speed1v1 implements Listener {
 							p.getInventory().removeItem(new ItemStack[] { Join1v1.Verde3 });
 							if (!Events1v1.inPvP.contains(p)) {
 								p.updateInventory();
-								p.sendMessage("§cNenhum duelo foi encontrado!");
+								p.sendMessage("ï¿½cNenhum duelo foi encontrado!");
 								p.getInventory().setItem(5, Join1v1.Cinza);
 							}
 						}
@@ -96,7 +96,7 @@ public class Speed1v1 implements Listener {
 				Speed1v1.Nome = "";
 				Speed1v1.Iniciou.remove(p);
 				Speed1v1.NeginhoSegundos.remove(p);
-				p.sendMessage("§cVoc\u00ea saiu da fila de 1v1 r\u00e1pido.");
+				p.sendMessage("ï¿½cVoc\u00ea saiu da fila de 1v1 r\u00e1pido.");
 				p.getInventory().setItem(5, Join1v1.Cinza);
 				return;
 			}

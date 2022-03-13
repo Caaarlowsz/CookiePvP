@@ -20,7 +20,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import me.cangasso.API.API;
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class VillagerParkour implements CommandExecutor, Listener {
 	public static ArrayList<Player> noParkour;
@@ -36,7 +36,7 @@ public class VillagerParkour implements CommandExecutor, Listener {
 				cfGrupo.ChecarGrupo(p, "Admin");
 			}
 			final Villager v = (Villager) p.getLocation().getWorld().spawnEntity(p.getLocation(), EntityType.VILLAGER);
-			v.setCustomName("§8\u2022 §6§lPARKOUR §8\u2022");
+			v.setCustomName("ï¿½8\u2022 ï¿½6ï¿½lPARKOUR ï¿½8\u2022");
 			v.setCustomNameVisible(true);
 			v.setProfession(Villager.Profession.BLACKSMITH);
 		}
@@ -48,17 +48,17 @@ public class VillagerParkour implements CommandExecutor, Listener {
 		if (e.getRightClicked() instanceof Villager && !ArraysAPI.Admin.contains(e.getPlayer())) {
 			final Player p = e.getPlayer();
 			final Villager v = (Villager) e.getRightClicked();
-			if (v.getCustomName().equals("§8\u2022 §6§lPARKOUR §8\u2022")) {
+			if (v.getCustomName().equals("ï¿½8\u2022 ï¿½6ï¿½lPARKOUR ï¿½8\u2022")) {
 				e.setCancelled(true);
 				if (VillagerParkour.noParkour.contains(p)) {
-					p.sendMessage("§cVoc\u00ea j\u00e1 est\u00e1 no Parkour!");
+					p.sendMessage("ï¿½cVoc\u00ea j\u00e1 est\u00e1 no Parkour!");
 					e.setCancelled(true);
 					return;
 				}
 				if (!VillagerParkour.noParkour.contains(p)) {
 					final ItemStack Sair = new ItemStack(Material.BED);
 					final ItemMeta kSair = Sair.getItemMeta();
-					kSair.setDisplayName("§8\u2022 §6§lSAIR \u2022");
+					kSair.setDisplayName("ï¿½8\u2022 ï¿½6ï¿½lSAIR \u2022");
 					Sair.setItemMeta(kSair);
 					p.setAllowFlight(false);
 					VillagerParkour.noParkour.add(p);

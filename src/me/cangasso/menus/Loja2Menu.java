@@ -10,8 +10,8 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
 
 public class Loja2Menu {
 	public static ItemStack criarItemMenu(final Material material, final String nome, final String[] habilidade) {
@@ -25,37 +25,37 @@ public class Loja2Menu {
 
 	public static void inventory(final Player p) {
 		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 54,
-				"§7\u27b3 §2§lLOJA DE KITS §8(p\u00e1g. 2)");
+				"ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS ï¿½8(p\u00e1g. 2)");
 		final ItemStack maiskits = new ItemStack(Material.getMaterial(351), 1, (short) 1);
 		final ItemMeta kmaiskits = maiskits.getItemMeta();
-		kmaiskits.setDisplayName("§7\u27b3 §c§lPAGINA ANTERIOR");
+		kmaiskits.setDisplayName("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR");
 		maiskits.setItemMeta(kmaiskits);
 		final ItemStack kits = new ItemStack(Material.getMaterial(54));
 		final ItemMeta kkits = kits.getItemMeta();
-		kkits.setDisplayName("§7\u27b3 §a§lSEUS KITS");
+		kkits.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS");
 		kits.setItemMeta(kkits);
 		final ItemStack lojadekits = new ItemStack(Material.getMaterial(388));
 		final ItemMeta klojadekits = lojadekits.getItemMeta();
-		klojadekits.setDisplayName("§7\u27b3 §2§lLOJA DE KITS");
+		klojadekits.setDisplayName("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS");
 		lojadekits.setItemMeta(klojadekits);
 		final ItemStack padraokit = new ItemStack(Material.getMaterial(351), 1, (short) 6);
 		final ItemMeta kpadraokit = padraokit.getItemMeta();
-		kpadraokit.setDisplayName("§7\u27b3 §3§lKIT PADRAO");
-		kpadraokit.setLore(Arrays.asList("§7Facilite seu modo de jogo", "§7usando o sistema §e§lPADRAO KIT.", " "));
+		kpadraokit.setDisplayName("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO");
+		kpadraokit.setLore(Arrays.asList("ï¿½7Facilite seu modo de jogo", "ï¿½7usando o sistema ï¿½eï¿½lPADRAO KIT.", " "));
 		padraokit.setItemMeta(kpadraokit);
 		final ItemStack todososkits = new ItemStack(Material.getMaterial(399));
 		final ItemMeta ktodososkits = todososkits.getItemMeta();
-		ktodososkits.setDisplayName("§7\u27b3 §9§lTODOS OS KITS");
+		ktodososkits.setDisplayName("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS");
 		todososkits.setItemMeta(ktodososkits);
 		final ItemStack ConfigureKit = new ItemStack(Material.getMaterial(131));
 		final ItemMeta kConfigureKit = ConfigureKit.getItemMeta();
-		kConfigureKit.setDisplayName("§7\u27b3 §6§lCUSTOM KIT");
-		kConfigureKit.setLore(Arrays.asList("§c§l[§4§lEM BREVE§c§l] ", "§7Configure seu kit",
-				"§7para uma melhor jogabilidade.", " "));
+		kConfigureKit.setDisplayName("ï¿½7\u27b3 ï¿½6ï¿½lCUSTOM KIT");
+		kConfigureKit.setLore(Arrays.asList("ï¿½cï¿½l[ï¿½4ï¿½lEM BREVEï¿½cï¿½l] ", "ï¿½7Configure seu kit",
+				"ï¿½7para uma melhor jogabilidade.", " "));
 		ConfigureKit.setItemMeta(kConfigureKit);
 		final ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 14);
 		final ItemMeta kvidro = vidro.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro);
 		menu.setItem(0, padraokit);
 		menu.setItem(8, padraokit);
@@ -93,38 +93,38 @@ public class Loja2Menu {
 		menu.setItem(27, maiskits);
 		if (cfGrupo.ChecarGrupo(p, "Membro") || cfGrupo.ChecarGrupo(p, "Light") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Trial")) {
-			if (!cfPermiss\u00e3o.getPermissao(p, "kit.strong")) {
-				menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "§cStrong §c§l30.000",
-						new String[] { "§7Fique fulliron por 10s" }) });
+			if (!cfPermissÃ£o.getPermissao(p, "kit.strong")) {
+				menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "ï¿½cStrong ï¿½cï¿½l30.000",
+						new String[] { "ï¿½7Fique fulliron por 10s" }) });
 			} else {
 				menu.remove(Material.WATCH);
 			}
-			if (!cfPermiss\u00e3o.getPermissao(p, "kit.sumo")) {
-				menu.addItem(new ItemStack[] { criarItemMenu(Material.APPLE, "§cSumo §c§l15.000",
-						new String[] { "§7Voc\u00ea \u00e9 t\u00e3o gordo que joga ", "§7seus inimigos pro alto" }) });
+			if (!cfPermissÃ£o.getPermissao(p, "kit.sumo")) {
+				menu.addItem(new ItemStack[] { criarItemMenu(Material.APPLE, "ï¿½cSumo ï¿½cï¿½l15.000",
+						new String[] { "ï¿½7Voc\u00ea \u00e9 tÃ£o gordo que joga ", "ï¿½7seus inimigos pro alto" }) });
 			} else {
 				menu.remove(Material.APPLE);
 			}
 		}
 		final ItemStack PossuiTodos = new ItemStack(Material.MAGMA_CREAM);
 		final ItemMeta kPossuiTodos = kits.getItemMeta();
-		kPossuiTodos.setDisplayName("§4§l(!) §cVoc\u00ea j\u00e1 possui todos os kits!");
+		kPossuiTodos.setDisplayName("ï¿½4ï¿½l(!) ï¿½cVoc\u00ea j\u00e1 possui todos os kits!");
 		PossuiTodos.setItemMeta(kPossuiTodos);
 		if (cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono")) {
 			menu.setItem(31, PossuiTodos);
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.monk") && cfPermiss\u00e3o.getPermissao(p, "kit.ninja")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.phantom") && cfPermiss\u00e3o.getPermissao(p, "kit.grappler")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.viper") && cfPermiss\u00e3o.getPermissao(p, "kit.snail")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.hulk") && cfPermiss\u00e3o.getPermissao(p, "kit.timelord")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.thor") && cfPermiss\u00e3o.getPermissao(p, "kit.switcher")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.gladiator")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.endermage") && cfPermiss\u00e3o.getPermissao(p, "kit.stomper")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.firelauncher")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.strong") && cfPermiss\u00e3o.getPermissao(p, "kit.sumo")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.magma") && cfPermiss\u00e3o.getPermissao(p, "kit.grandpa")
-				&& cfPermiss\u00e3o.getPermissao(p, "kit.ajnin")) {
+		if (cfPermissÃ£o.getPermissao(p, "kit.monk") && cfPermissÃ£o.getPermissao(p, "kit.ninja")
+				&& cfPermissÃ£o.getPermissao(p, "kit.phantom") && cfPermissÃ£o.getPermissao(p, "kit.grappler")
+				&& cfPermissÃ£o.getPermissao(p, "kit.viper") && cfPermissÃ£o.getPermissao(p, "kit.snail")
+				&& cfPermissÃ£o.getPermissao(p, "kit.hulk") && cfPermissÃ£o.getPermissao(p, "kit.timelord")
+				&& cfPermissÃ£o.getPermissao(p, "kit.thor") && cfPermissÃ£o.getPermissao(p, "kit.switcher")
+				&& cfPermissÃ£o.getPermissao(p, "kit.gladiator")
+				&& cfPermissÃ£o.getPermissao(p, "kit.endermage") && cfPermissÃ£o.getPermissao(p, "kit.stomper")
+				&& cfPermissÃ£o.getPermissao(p, "kit.firelauncher")
+				&& cfPermissÃ£o.getPermissao(p, "kit.strong") && cfPermissÃ£o.getPermissao(p, "kit.sumo")
+				&& cfPermissÃ£o.getPermissao(p, "kit.magma") && cfPermissÃ£o.getPermissao(p, "kit.grandpa")
+				&& cfPermissÃ£o.getPermissao(p, "kit.ajnin")) {
 			menu.setItem(31, PossuiTodos);
 		}
 		p.openInventory(menu);

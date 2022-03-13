@@ -13,7 +13,7 @@ public class NametagUtils {
 				for (int length = (array2 = chars).length, i = 0; i < length; ++i) {
 					final char c = array2[i];
 					if (c == array[t + 1]) {
-						array[t] = '§';
+						array[t] = 'ï¿½';
 					}
 				}
 			}

@@ -2,15 +2,15 @@ package me.cangasso.accutils;
 
 import org.bukkit.OfflinePlayer;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
+import me.cangasso.configura√ß√£o.cfGrupo;
+import me.cangasso.configura√ß√£o.cfStatus;
 import net.md_5.bungee.api.ChatColor;
 
 public class AccountUtils {
 	public static String getRankOffline(final OfflinePlayer p) {
 		final double a = cfStatus.getKillsOff(p);
 		if (a <= 100.0) {
-			return "ßf\u268a";
+			return "ÔøΩf\u268a";
 		}
 		if (a <= 200.0) {
 			return ChatColor.GREEN + "\u268c";
@@ -19,116 +19,116 @@ public class AccountUtils {
 			return ChatColor.YELLOW + "\u2630";
 		}
 		if (a <= 400.0) {
-			return "ß1\u2725";
+			return "ÔøΩ1\u2725";
 		}
 		if (a <= 500.0) {
-			return "ß7\u272f";
+			return "ÔøΩ7\u272f";
 		}
 		if (a <= 600.0) {
-			return "ß6\u272a";
+			return "ÔøΩ6\u272a";
 		}
 		if (a <= 700.0) {
-			return ChatColor.AQUA + "ßb\u2748";
+			return ChatColor.AQUA + "ÔøΩb\u2748";
 		}
 		if (a <= 800.0) {
-			return "ß2\u2738";
+			return "ÔøΩ2\u2738";
 		}
 		if (a <= 900.0) {
 			return ChatColor.RED + "\u2739";
 		}
 		if (a <= 1000.0) {
-			return "ß3\u2737";
+			return "ÔøΩ3\u2737";
 		}
 		if (a <= 1500.0) {
-			return "ß4\u2742";
+			return "ÔøΩ4\u2742";
 		}
-		return "ß4\u2742";
+		return "ÔøΩ4\u2742";
 	}
 
 	public static String getRankNomeOffline(final OfflinePlayer p) {
 		final double a = cfStatus.getKillsOff(p);
 		if (a <= 100.0) {
-			return "ßfNOOB";
+			return "ÔøΩfNOOB";
 		}
 		if (a <= 200.0) {
-			return "ßaINICIANTE";
+			return "ÔøΩaINICIANTE";
 		}
 		if (a <= 300.0) {
-			return "ßeAPRENDIZ";
+			return "ÔøΩeAPRENDIZ";
 		}
 		if (a <= 400.0) {
-			return "ß1EXPERT";
+			return "ÔøΩ1EXPERT";
 		}
 		if (a <= 500.0) {
-			return "ß7SILVER";
+			return "ÔøΩ7SILVER";
 		}
 		if (a <= 600.0) {
-			return "ß6GOLD";
+			return "ÔøΩ6GOLD";
 		}
 		if (a <= 700.0) {
-			return "ßbDIAMOND";
+			return "ÔøΩbDIAMOND";
 		}
 		if (a <= 800.0) {
-			return "ß2EMERALD";
+			return "ÔøΩ2EMERALD";
 		}
 		if (a <= 900.0) {
-			return "ßcRUBY";
+			return "ÔøΩcRUBY";
 		}
 		if (a <= 1000.0) {
-			return "ß3SAFIRA";
+			return "ÔøΩ3SAFIRA";
 		}
 		if (a <= 1500.0) {
-			return "ß4LENDARIO";
+			return "ÔøΩ4LENDARIO";
 		}
-		return "ß4LENDARIO";
+		return "ÔøΩ4LENDARIO";
 	}
 
 	public static String getGrupo(final OfflinePlayer p) {
 		if (cfGrupo.ChecarGrupo(p, "Membro")) {
-			return "ß7ßlMEMBRO";
+			return "ÔøΩ7ÔøΩlMEMBRO";
 		}
 		if (cfGrupo.ChecarGrupo(p, "light")) {
-			return "ßaßlVIP";
+			return "ÔøΩaÔøΩlVIP";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Mvp")) {
-			return "ß9ßlMVP";
+			return "ÔøΩ9ÔøΩlMVP";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Pro")) {
-			return "ß6ßlPRO";
+			return "ÔøΩ6ÔøΩlPRO";
 		}
 		if (cfGrupo.ChecarGrupo(p, "S-Pro")) {
-			return "ßeßlSEMIYT";
+			return "ÔøΩeÔøΩlSEMIYT";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Youtuber")) {
-			return "ßbßlYOUTUBER";
+			return "ÔøΩbÔøΩlYOUTUBER";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Youtuber+")) {
-			return "ß3ßlYOUTUBER+";
+			return "ÔøΩ3ÔøΩlYOUTUBER+";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Helper")) {
-			return "ßdßlHELPER";
+			return "ÔøΩdÔøΩlHELPER";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Builder")) {
-			return "ß2ßlBUILDER";
+			return "ÔøΩ2ÔøΩlBUILDER";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Trial")) {
-			return "ßdßlTRIAL";
+			return "ÔøΩdÔøΩlTRIAL";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Mod")) {
-			return "ß5ßlMOD";
+			return "ÔøΩ5ÔøΩlMOD";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Mod+")) {
-			return "ß5ßlMOD+";
+			return "ÔøΩ5ÔøΩlMOD+";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Gerente")) {
-			return "ßcßlGERENTE";
+			return "ÔøΩcÔøΩlGERENTE";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Admin")) {
-			return "ßcßlADMIN";
+			return "ÔøΩcÔøΩlADMIN";
 		}
 		if (cfGrupo.ChecarGrupo(p, "Dono")) {
-			return "ß4ßlDONO";
+			return "ÔøΩ4ÔøΩlDONO";
 		}
-		return "ß4ßlDONO";
+		return "ÔøΩ4ÔøΩlDONO";
 	}
 }

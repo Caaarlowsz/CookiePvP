@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class BarInicio implements Listener {
 	protected static BarInicio instance;
@@ -52,7 +52,7 @@ public class BarInicio implements Listener {
 			public void run() {
 				bar.setVisible(true);
 			}
-		}.runTaskLater(Main.getPlugin(), 2L);
+		}.runTaskLater(CookiePvP.getPlugin(), 2L);
 	}
 
 	@EventHandler
@@ -66,7 +66,7 @@ public class BarInicio implements Listener {
 					}
 					bar.updateMovement();
 				}
-			}.runTaskLater(Main.getPlugin(), 0L);
+			}.runTaskLater(CookiePvP.getPlugin(), 0L);
 		}
 	}
 }

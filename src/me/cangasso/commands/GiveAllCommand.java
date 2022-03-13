@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class GiveAllCommand implements CommandExecutor {
 	public static boolean fullkit;
@@ -17,22 +17,22 @@ public class GiveAllCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
 		final Player p = (Player) Sender;
 		if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")) {
-			p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+			p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 			return true;
 		}
 		if (Args.length == 0) {
-			p.sendMessage("§fUtilize §2§l/giveall §2(fullkit)§f!");
+			p.sendMessage("ï¿½fUtilize ï¿½2ï¿½l/giveall ï¿½2(fullkit)ï¿½f!");
 			return true;
 		}
 		if (!Args[0].equalsIgnoreCase("fullkit")) {
 			return false;
 		}
 		if (GiveAllCommand.fullkit) {
-			p.sendMessage("§cO FullKit j\u00e1 est\u00e1 liberado!");
+			p.sendMessage("ï¿½cO FullKit j\u00e1 est\u00e1 liberado!");
 			return true;
 		}
-		p.sendMessage("§fVoc\u00ea ativou o §2§lFULLKIT §fpara todos!");
-		Bukkit.broadcastMessage("§fO benef\u00edcio de §6§lFULLKIT §ffoi ativado para todos os jogadores, aroveite!");
+		p.sendMessage("ï¿½fVoc\u00ea ativou o ï¿½2ï¿½lFULLKIT ï¿½fpara todos!");
+		Bukkit.broadcastMessage("ï¿½fO benef\u00edcio de ï¿½6ï¿½lFULLKIT ï¿½ffoi ativado para todos os jogadores, aroveite!");
 		return GiveAllCommand.fullkit = true;
 	}
 }

@@ -15,7 +15,7 @@ import org.bukkit.util.Vector;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class FireLauncher implements Listener {
 	public static ArrayList<Player> inFire;
@@ -30,13 +30,13 @@ public class FireLauncher implements Listener {
 		if (p.getItemInHand().getType() == Material.BLAZE_POWDER && KitAPI.getKit(p) == "FireLauncher"
 				&& CooldownAPI.Cooldown.containsKey(p.getName())) {
 			e.setCancelled(true);
-			p.sendMessage("§8§l<§e§l!§8§l> §7Seu cooldown acaba em §7§l" + CooldownAPI.Cooldown + " §7segundos!");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Seu cooldown acaba em ï¿½7ï¿½l" + CooldownAPI.Cooldown + " ï¿½7segundos!");
 		} else if (p.getItemInHand().getType() == Material.BLAZE_POWDER && KitAPI.getKit(p) == "FireLauncher"
 				&& !CooldownAPI.Cooldown.containsKey(p.getName())) {
-			p.sendMessage("§aVoc\u00ea ativou a sua habilidade!");
+			p.sendMessage("ï¿½aVoc\u00ea ativou a sua habilidade!");
 			CooldownAPI.addCooldown(p, 35);
 			FireLauncher.inFire.add(p);
-			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (FireLauncher.inFire.contains(p)) {
@@ -54,7 +54,7 @@ public class FireLauncher implements Listener {
 						final Player t = (Player) s;
 						t.getPlayer().getWorld().playEffect(t.getPlayer().getLocation(), Effect.SMOKE, 9999999,
 								9999999);
-						t.sendMessage("§7Voc\u00ea est\u00e1 sendo atacado por um §2§lFirelauncher§7!");
+						t.sendMessage("ï¿½7Voc\u00ea est\u00e1 sendo atacado por um ï¿½2ï¿½lFirelauncherï¿½7!");
 						final Vector vector = t.getLocation().getDirection();
 						vector.multiply(0.0f);
 						vector.setY(1.2f);

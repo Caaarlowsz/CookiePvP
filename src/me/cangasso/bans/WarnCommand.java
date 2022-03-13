@@ -13,8 +13,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import me.cangasso.API.HorarioAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.main.CookiePvP;
 
 public class WarnCommand implements CommandExecutor {
 	public static HashMap<Player, String> Aviso;
@@ -26,7 +26,7 @@ public class WarnCommand implements CommandExecutor {
 	}
 
 	public WarnCommand() {
-		final Plugin plugin = Main.getPlugin();
+		final Plugin plugin = CookiePvP.getPlugin();
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}
@@ -57,20 +57,20 @@ public class WarnCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Admin")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§7Use §4§l/aviso §7(jogador) (aviso)");
+				p.sendMessage("ï¿½7Use ï¿½4ï¿½l/aviso ï¿½7(jogador) (aviso)");
 				return true;
 			}
 			final Player aviso = Bukkit.getPlayer(args[0]);
 			if (aviso == null) {
-				p.sendMessage("§7O jogador §a§l" + args[0] + " §7est\u00e1 offline.");
+				p.sendMessage("ï¿½7O jogador ï¿½aï¿½l" + args[0] + " ï¿½7est\u00e1 offline.");
 				return true;
 			}
 			if (aviso.getName() == p.getName()) {
-				p.sendMessage("§4§l(!) §cVoc\u00ea nao pode enviar avisos para si mesmo.");
+				p.sendMessage("ï¿½4ï¿½l(!) ï¿½cVoc\u00ea nao pode enviar avisos para si mesmo.");
 				return true;
 			}
 			String motivo = "";
@@ -80,8 +80,8 @@ public class WarnCommand implements CommandExecutor {
 			if (WarnCommand.Aviso.get(aviso) == "0") {
 				WarnCommand.Aviso.put(aviso, "1");
 				final double l = WarnCommand.kAvisos.getDouble("Jogadores advertidos");
-				API.sendBC("§7O jogador §c§l" + aviso.getName() + " §7recebeu uma advert\u00eancia de §a§l"
-						+ p.getName() + "§7. Motivo: §6§l" + motivo + "§7. §4§l(1/3)");
+				API.sendBC("ï¿½7O jogador ï¿½cï¿½l" + aviso.getName() + " ï¿½7recebeu uma advert\u00eancia de ï¿½aï¿½l"
+						+ p.getName() + "ï¿½7. Motivo: ï¿½6ï¿½l" + motivo + "ï¿½7. ï¿½4ï¿½l(1/3)");
 				WarnCommand.kAvisos.set("Jogadores advertidos", (Object) (l + 1.0));
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Nome", (Object) aviso.getName());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Advertido por", (Object) p.getName());
@@ -93,14 +93,14 @@ public class WarnCommand implements CommandExecutor {
 			} else if (WarnCommand.Aviso.get(aviso) == "1") {
 				WarnCommand.Aviso.put(aviso, "2");
 				final double l = WarnCommand.kAvisos.getDouble("Jogadores advertidos");
-				API.sendBC("§c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
+				API.sendBC("ï¿½c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
 						+ "(2/3)");
 				API.sendMsg((CommandSender) p,
-						"§aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(2/3)");
-				API.sendStaff("§7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
+						"ï¿½aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(2/3)");
+				API.sendStaff("ï¿½7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
 						+ " pelo motivo " + motivo + "(2/3)");
 				API.sendMsg((CommandSender) aviso,
-						"§cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(2/3");
+						"ï¿½cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(2/3");
 				WarnCommand.kAvisos.set("Jogadores advertidos", (Object) (l + 1.0));
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Nome", (Object) aviso.getName());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Advertido por", (Object) p.getName());
@@ -112,14 +112,14 @@ public class WarnCommand implements CommandExecutor {
 			} else if (WarnCommand.Aviso.get(aviso) == "2") {
 				WarnCommand.Aviso.put(aviso, "3");
 				final double l = WarnCommand.kAvisos.getDouble("Jogadores advertidos");
-				API.sendBC("§c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
+				API.sendBC("ï¿½c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
 						+ "(3/3)");
 				API.sendMsg((CommandSender) p,
-						"§aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(3/3)");
-				API.sendStaff("§7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
+						"ï¿½aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(3/3)");
+				API.sendStaff("ï¿½7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
 						+ " pelo motivo " + motivo + "(3/3)");
 				API.sendMsg((CommandSender) aviso,
-						"§cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(3/3");
+						"ï¿½cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(3/3");
 				WarnCommand.kAvisos.set("Jogadores advertidos", (Object) (l + 1.0));
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Nome", (Object) aviso.getName());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Advertido por", (Object) p.getName());
@@ -131,14 +131,14 @@ public class WarnCommand implements CommandExecutor {
 			} else if (WarnCommand.Aviso.get(aviso) == "3") {
 				WarnCommand.Aviso.put(aviso, "4");
 				final double l = WarnCommand.kAvisos.getDouble("Jogadores advertidos");
-				API.sendBC("§c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
+				API.sendBC("ï¿½c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
 						+ "(4/3)");
 				API.sendMsg((CommandSender) p,
-						"§aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(4/3)");
-				API.sendStaff("§7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
+						"ï¿½aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(4/3)");
+				API.sendStaff("ï¿½7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
 						+ " pelo motivo " + motivo + "(4/3)");
 				API.sendMsg((CommandSender) aviso,
-						"§cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(4/3");
+						"ï¿½cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(4/3");
 				WarnCommand.kAvisos.set("Jogadores advertidos", (Object) (l + 1.0));
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Nome", (Object) aviso.getName());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Advertido por", (Object) p.getName());
@@ -147,31 +147,31 @@ public class WarnCommand implements CommandExecutor {
 						(Object) HorarioAPI.getHorario());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Avisos", (Object) "3");
 				Save();
-				Bukkit.getScheduler().scheduleAsyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleAsyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 					@Override
 					public void run() {
-						API.sendBC("§c" + aviso.getName()
+						API.sendBC("ï¿½c" + aviso.getName()
 								+ " foi kickado do servidor por exceder o numero maximo de avisos (4/3)");
-						API.sendMsg((CommandSender) p, "§aO jogador " + p.getName()
+						API.sendMsg((CommandSender) p, "ï¿½aO jogador " + p.getName()
 								+ " foi kickado do servidor por exceder o numero maximo de avisos (4/3)");
-						API.sendStaff("§7O jogador " + aviso.getName()
+						API.sendStaff("ï¿½7O jogador " + aviso.getName()
 								+ " foi kickado do servidor por exceder o numero maximo de avisos (4/3)");
-						aviso.kickPlayer("§cVoce foi §c§nkickado§c do servidor.\n§cJogador kickado: " + aviso.getName()
-								+ "\n" + "§cKickado por: " + p.getName() + "\n"
-								+ "§cMotivo: Exceder o numero maximo de avisos (4/3)");
+						aviso.kickPlayer("ï¿½cVoce foi ï¿½cï¿½nkickadoï¿½c do servidor.\nï¿½cJogador kickado: " + aviso.getName()
+								+ "\n" + "ï¿½cKickado por: " + p.getName() + "\n"
+								+ "ï¿½cMotivo: Exceder o numero maximo de avisos (4/3)");
 					}
 				}, 20L);
 			} else if (WarnCommand.Aviso.get(aviso) == "4") {
 				WarnCommand.Aviso.put(aviso, "5");
 				final double l = WarnCommand.kAvisos.getDouble("Jogadores advertidos");
-				API.sendBC("§c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
+				API.sendBC("ï¿½c" + aviso.getName() + " recebeu uma advertencia de " + p.getName() + " por " + motivo
 						+ "(5/3)");
 				API.sendMsg((CommandSender) p,
-						"§aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(5/3)");
-				API.sendStaff("§7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
+						"ï¿½aVoce deu uma advertencia a " + aviso.getName() + " por " + motivo + "(5/3)");
+				API.sendStaff("ï¿½7O staffer " + p.getName() + " deu uma advertencia ao jogador " + aviso.getName()
 						+ " pelo motivo " + motivo + "(5/3)");
 				API.sendMsg((CommandSender) aviso,
-						"§cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(5/3");
+						"ï¿½cVoce recebeu uma advertencia de " + p.getName() + " por " + motivo + "(5/3");
 				WarnCommand.kAvisos.set("Jogadores advertidos", (Object) (l + 1.0));
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Nome", (Object) aviso.getName());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Advertido por", (Object) p.getName());
@@ -180,21 +180,21 @@ public class WarnCommand implements CommandExecutor {
 						(Object) HorarioAPI.getHorario());
 				WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId() + ".Avisos", (Object) "3");
 				Save();
-				Bukkit.getScheduler().scheduleAsyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleAsyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 					@Override
 					public void run() {
-						API.sendBC("§c" + aviso.getName()
+						API.sendBC("ï¿½c" + aviso.getName()
 								+ " foi banido temporariamente do servidor por exceder o numero maximo de avisos (5/3)");
-						API.sendMsg((CommandSender) p, "§aO jogador " + p.getName()
+						API.sendMsg((CommandSender) p, "ï¿½aO jogador " + p.getName()
 								+ " foi banido temporariamente do servidor por exceder o numero maximo de avisos (5/3)");
-						API.sendStaff("§7O jogador " + aviso.getName()
+						API.sendStaff("ï¿½7O jogador " + aviso.getName()
 								+ " foi banido temporariamente do servidor por exceder o numero maximo de avisos (5/3)");
-						aviso.kickPlayer("§cVoce foi §c§nbanido temporariamente§c do servidor.\n§cJogador banido: "
-								+ aviso.getName() + "\n" + "§cBanido por: " + p.getName() + "\n"
-								+ "§cMotivo: Exceder o numero maximo de avisos (5/3)" + "\n"
-								+ "§cDuracao do banimento: 1 dia" + "\n" + "Data do banimento: "
-								+ HorarioAPI.getHorario() + "\n" + "§cVenda de UNBANS em: §c§nloja.cakekits.tk" + "\n"
-								+ "§cFoi banido injustamente? Contate-nos via Twitter (§c§n@CakeKitsMC§c)");
+						aviso.kickPlayer("ï¿½cVoce foi ï¿½cï¿½nbanido temporariamenteï¿½c do servidor.\nï¿½cJogador banido: "
+								+ aviso.getName() + "\n" + "ï¿½cBanido por: " + p.getName() + "\n"
+								+ "ï¿½cMotivo: Exceder o numero maximo de avisos (5/3)" + "\n"
+								+ "ï¿½cDuracao do banimento: 1 dia" + "\n" + "Data do banimento: "
+								+ HorarioAPI.getHorario() + "\n" + "ï¿½cVenda de UNBANS em: ï¿½cï¿½nloja.cakekits.tk" + "\n"
+								+ "ï¿½cFoi banido injustamente? Contate-nos via Twitter (ï¿½cï¿½n@CakeKitsMCï¿½c)");
 						Config.getConfig().getTempBans().set("TempBans." + aviso.getUniqueId() + ".Nome",
 								(Object) aviso.getName());
 						Config.getConfig().getTempBans().set("TempBans." + aviso.getUniqueId() + ".Banido por",
@@ -206,7 +206,7 @@ public class WarnCommand implements CommandExecutor {
 						Config.getConfig().getTempBans().set("TempBans." + aviso.getUniqueId() + ".Data do banimento",
 								(Object) HorarioAPI.getHorario());
 						Config.getConfig().saveTempBans();
-						Bukkit.getScheduler().scheduleAsyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+						Bukkit.getScheduler().scheduleAsyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 							@Override
 							public void run() {
 								if (Config.getConfig().getTempBans().get("TempBans." + aviso.getUniqueId()) != null) {
@@ -215,8 +215,8 @@ public class WarnCommand implements CommandExecutor {
 									WarnCommand.kAvisos.set("Advertencias." + aviso.getUniqueId(), (Object) null);
 									WarnCommand.Aviso.put(aviso, "0");
 									Config.getConfig().saveTempBans();
-									API.sendBC("§cO jogador " + aviso.getName() + " foi desbanido automaticamente");
-									API.sendStaff("§7O jogador " + aviso.getName() + " foi desbanido automaticamente");
+									API.sendBC("ï¿½cO jogador " + aviso.getName() + " foi desbanido automaticamente");
+									API.sendStaff("ï¿½7O jogador " + aviso.getName() + " foi desbanido automaticamente");
 								}
 							}
 						}, 1728000L);
@@ -224,7 +224,7 @@ public class WarnCommand implements CommandExecutor {
 				}, 20L);
 			}
 			if (args.length == 1) {
-				p.sendMessage("§7Use §4§l/aviso §7(jogador) (aviso)");
+				p.sendMessage("ï¿½7Use ï¿½4ï¿½l/aviso ï¿½7(jogador) (aviso)");
 				return true;
 			}
 		}

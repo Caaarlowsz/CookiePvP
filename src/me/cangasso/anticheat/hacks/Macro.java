@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import me.cangasso.anticheat.Utills;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Macro implements Listener {
 	@EventHandler
@@ -38,12 +38,12 @@ public class Macro implements Listener {
 				Utills.ClicksMacro.remove(Jogador);
 				Utills.MacroClicks.remove(Jogador);
 			}
-		}.runTaskLater(Main.getPlugin(), 20L);
+		}.runTaskLater(CookiePvP.getPlugin(), 20L);
 		if (Utills.MacroClicks.get(Jogador) >= 45) {
 			Utills.Macro = MacroTalvez.getMenssagem().replace("nick", Jogador.getName())
 					.replace("avisos", new StringBuilder().append(Utills.AvisosMacro.get(Jogador)).toString())
 					.replace("clicks", new StringBuilder().append(Utills.ClicksMacro.get(Jogador)).toString());
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (Utills.Macro != null) {
@@ -62,7 +62,7 @@ public class Macro implements Listener {
 			Utills.Macro = MacroProvavelmente.getMenssagem().replace("nick", Jogador.getName())
 					.replace("avisos", new StringBuilder().append(Utills.AvisosMacro.get(Jogador)).toString())
 					.replace("clicks", new StringBuilder().append(Utills.ClicksMacro.get(Jogador)).toString());
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (Utills.Macro != null) {
@@ -81,7 +81,7 @@ public class Macro implements Listener {
 			Utills.Macro = MacroDefinitivamente.getMenssagem().replace("nick", Jogador.getName())
 					.replace("avisos", new StringBuilder().append(Utills.AvisosMacro.get(Jogador)).toString())
 					.replace("clicks", new StringBuilder().append(Utills.ClicksMacro.get(Jogador)).toString());
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (Utills.Macro != null) {

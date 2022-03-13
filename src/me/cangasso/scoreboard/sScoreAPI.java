@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 
 import me.cangasso.API.KitAPI;
 import me.cangasso.check.CheckUtils;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
 import net.md_5.bungee.api.ChatColor;
 
 public class sScoreAPI {
@@ -21,7 +21,7 @@ public class sScoreAPI {
 	public static String getRank(final Player p) {
 		final double a = cfStatus.getKills(p);
 		if (a <= 100.0) {
-			return "§f\u268a";
+			return "ï¿½f\u268a";
 		}
 		if (a <= 200.0) {
 			return ChatColor.GREEN + "\u268c";
@@ -30,159 +30,159 @@ public class sScoreAPI {
 			return ChatColor.YELLOW + "\u2630";
 		}
 		if (a <= 400.0) {
-			return "§1\u2725";
+			return "ï¿½1\u2725";
 		}
 		if (a <= 500.0) {
-			return "§7\u272f";
+			return "ï¿½7\u272f";
 		}
 		if (a <= 600.0) {
-			return "§6\u272a";
+			return "ï¿½6\u272a";
 		}
 		if (a <= 700.0) {
-			return ChatColor.AQUA + "§b\u2748";
+			return ChatColor.AQUA + "ï¿½b\u2748";
 		}
 		if (a <= 800.0) {
-			return "§2\u2738";
+			return "ï¿½2\u2738";
 		}
 		if (a <= 900.0) {
 			return ChatColor.RED + "\u2739";
 		}
 		if (a <= 1000.0) {
-			return "§3\u2737";
+			return "ï¿½3\u2737";
 		}
 		if (a <= 1500.0) {
-			return "§4\u2742";
+			return "ï¿½4\u2742";
 		}
-		return "§4\u2742";
+		return "ï¿½4\u2742";
 	}
 
 	public static String getRankConfig(final Player p) {
 		final double a = cfStatus.getKills(p);
 		if (a <= 100.0) {
-			return "§fNOOB";
+			return "ï¿½fNOOB";
 		}
 		if (a <= 200.0) {
-			return "§aINICIANTE";
+			return "ï¿½aINICIANTE";
 		}
 		if (a <= 300.0) {
-			return "§eAPRENDIZ";
+			return "ï¿½eAPRENDIZ";
 		}
 		if (a <= 400.0) {
-			return "§1EXPERT";
+			return "ï¿½1EXPERT";
 		}
 		if (a <= 500.0) {
-			return "§7SILVER";
+			return "ï¿½7SILVER";
 		}
 		if (a <= 600.0) {
-			return "§6GOLD";
+			return "ï¿½6GOLD";
 		}
 		if (a <= 700.0) {
-			return "§bDIAMOND";
+			return "ï¿½bDIAMOND";
 		}
 		if (a <= 800.0) {
-			return "§2EMERALD";
+			return "ï¿½2EMERALD";
 		}
 		if (a <= 900.0) {
-			return "§cRUBY";
+			return "ï¿½cRUBY";
 		}
 		if (a <= 1000.0) {
-			return "§3SAFIRA";
+			return "ï¿½3SAFIRA";
 		}
 		if (a <= 1500.0) {
-			return "§4LENDARIO";
+			return "ï¿½4LENDARIO";
 		}
-		return "§4LENDARIO";
+		return "ï¿½4LENDARIO";
 	}
 
 	public static String getNomeRank(final Player p) {
 		final double a = cfStatus.getKills(p);
 		if (a <= 100.0) {
-			return "§fNOOB";
+			return "ï¿½fNOOB";
 		}
 		if (a <= 200.0) {
-			return "§aINICIANTE";
+			return "ï¿½aINICIANTE";
 		}
 		if (a <= 300.0) {
-			return "§eAPRENDIZ";
+			return "ï¿½eAPRENDIZ";
 		}
 		if (a <= 400.0) {
-			return "§1EXPERT";
+			return "ï¿½1EXPERT";
 		}
 		if (a <= 500.0) {
-			return "§7SILVER";
+			return "ï¿½7SILVER";
 		}
 		if (a <= 600.0) {
-			return "§6GOLD";
+			return "ï¿½6GOLD";
 		}
 		if (a <= 700.0) {
-			return "§bDIAMOND";
+			return "ï¿½bDIAMOND";
 		}
 		if (a <= 800.0) {
-			return "§2EMERALD";
+			return "ï¿½2EMERALD";
 		}
 		if (a <= 900.0) {
-			return "§CRUBY";
+			return "ï¿½CRUBY";
 		}
 		if (a <= 1000.0) {
-			return "§3SAFIRA";
+			return "ï¿½3SAFIRA";
 		}
 		if (a <= 1500.0) {
-			return "§4LENDARIO";
+			return "ï¿½4LENDARIO";
 		}
-		return "§4LENDARIO";
+		return "ï¿½4LENDARIO";
 	}
 
 	public static String getNomeRankConfig(final Player p) {
 		final double a = cfStatus.getKills(p);
 		if (a <= 100.0) {
-			return "§fNOOB";
+			return "ï¿½fNOOB";
 		}
 		if (a <= 200.0) {
-			return "§aINICIANTE";
+			return "ï¿½aINICIANTE";
 		}
 		if (a <= 300.0) {
-			return "§eAPRENDIZ";
+			return "ï¿½eAPRENDIZ";
 		}
 		if (a <= 400.0) {
-			return "§1EXPERT";
+			return "ï¿½1EXPERT";
 		}
 		if (a <= 500.0) {
-			return "§7SILVER";
+			return "ï¿½7SILVER";
 		}
 		if (a <= 600.0) {
-			return "§6GOLD";
+			return "ï¿½6GOLD";
 		}
 		if (a <= 700.0) {
-			return "§bDIAMOND";
+			return "ï¿½bDIAMOND";
 		}
 		if (a <= 800.0) {
-			return "§2EMERALD";
+			return "ï¿½2EMERALD";
 		}
 		if (a <= 900.0) {
-			return "§cRUBY";
+			return "ï¿½cRUBY";
 		}
 		if (a <= 1000.0) {
-			return "§3SAFIRA";
+			return "ï¿½3SAFIRA";
 		}
 		if (a <= 1500.0) {
-			return "§4LENDARIO";
+			return "ï¿½4LENDARIO";
 		}
-		return "§4LENDARIO";
+		return "ï¿½4LENDARIO";
 	}
 
 	public static void scoreboard(final Player p) {
-		final uScore scoreboard = new uScore("§6§l> §e§lKITPVP §6§l<");
-		scoreboard.addLine("    §7pvp.mc-cookie.com.br", 12);
+		final uScore scoreboard = new uScore("ï¿½6ï¿½l> ï¿½eï¿½lKITPVP ï¿½6ï¿½l<");
+		scoreboard.addLine("    ï¿½7pvp.mc-cookie.com.br", 12);
 		scoreboard.addLine("", 11);
-		scoreboard.addLine(" §7Grupo: " + CheckUtils.Grupo(p), 10);
-		scoreboard.addLine(" §7XP: §b" + cfStatus.getMoney(p), 9);
-		scoreboard.addLine(" §7Elo: " + getRank(p) + " " + getNomeRank(p), 8);
-		scoreboard.addLine(" §b ", 7);
-		scoreboard.addLine(" §7Kills: §b" + cfStatus.getKills(p), 6);
-		scoreboard.addLine(" §7Deaths: §b" + cfStatus.getDeaths(p), 5);
-		scoreboard.addLine(" §7KillStreak: §b" + cfStatus.getKillStreak(p), 4);
-		scoreboard.addLine("§g ", 3);
-		scoreboard.addLine(" §7Kit: §b" + KitAPI.getKitAntes(p), 2);
+		scoreboard.addLine(" ï¿½7Grupo: " + CheckUtils.Grupo(p), 10);
+		scoreboard.addLine(" ï¿½7XP: ï¿½b" + cfStatus.getMoney(p), 9);
+		scoreboard.addLine(" ï¿½7Elo: " + getRank(p) + " " + getNomeRank(p), 8);
+		scoreboard.addLine(" ï¿½b ", 7);
+		scoreboard.addLine(" ï¿½7Kills: ï¿½b" + cfStatus.getKills(p), 6);
+		scoreboard.addLine(" ï¿½7Deaths: ï¿½b" + cfStatus.getDeaths(p), 5);
+		scoreboard.addLine(" ï¿½7KillStreak: ï¿½b" + cfStatus.getKillStreak(p), 4);
+		scoreboard.addLine("ï¿½g ", 3);
+		scoreboard.addLine(" ï¿½7Kit: ï¿½b" + KitAPI.getKitAntes(p), 2);
 		scoreboard.addLine(" ", 1);
 		if (sScoreAPI.Score.contains(p)) {
 			scoreboard.setScoreboard();

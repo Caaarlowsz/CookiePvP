@@ -6,31 +6,31 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.ArraysAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class MonitorarCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
 		final Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("monitorar")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")) {
-				p.sendMessage("§cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando.");
+				p.sendMessage("ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando.");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§cUso correto: /monitorar <on | off>.");
+				p.sendMessage("ï¿½cUso correto: /monitorar <on | off>.");
 				return true;
 			}
 			if (args[0].equalsIgnoreCase("on")) {
 				ArraysAPI.Monitor.add(p);
 				cfGrupo.ChecarGrupo(p, "Dono");
-				p.sendMessage("§dVoc\u00ea entrou no modo MONITOR");
-				p.sendMessage("§dVoc\u00ea est\u00e1 invis\u00edvel para GERENTE e abaixo!");
+				p.sendMessage("ï¿½dVoc\u00ea entrou no modo MONITOR");
+				p.sendMessage("ï¿½dVoc\u00ea est\u00e1 invis\u00edvel para GERENTE e abaixo!");
 				return true;
 			}
 			if (args[0].equalsIgnoreCase("off")) {
 				ArraysAPI.Monitor.remove(p);
-				p.sendMessage("§5§oVoc\u00ea saiu do modo MONITOR");
-				p.sendMessage("§5§oVoc\u00ea est\u00e1 vis\u00edvel para todos os jogadores!");
+				p.sendMessage("ï¿½5ï¿½oVoc\u00ea saiu do modo MONITOR");
+				p.sendMessage("ï¿½5ï¿½oVoc\u00ea est\u00e1 vis\u00edvel para todos os jogadores!");
 				return true;
 			}
 		}

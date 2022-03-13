@@ -8,7 +8,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import me.cangasso.API.API;
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfConfig;
+import me.cangasso.configuração.cfConfig;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class eMoveSpawn implements Listener {
@@ -48,7 +48,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "PvP") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "PvP") {
 				KitAPI.setKitAntes(p, "PvP");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "PvP");
@@ -57,7 +57,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Archer") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Archer") {
 				KitAPI.setKitAntes(p, "Archer");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Archer");
@@ -66,7 +66,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "FireLauncher") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "FireLauncher") {
 				KitAPI.setKitAntes(p, "FireLauncher");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "FireLauncher");
@@ -75,7 +75,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Strong") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Strong") {
 				KitAPI.setKitAntes(p, "Strong");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Strong");
@@ -84,7 +84,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Forcefield") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Forcefield") {
 				KitAPI.setKitAntes(p, "Forcefield");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Forcefield");
@@ -93,7 +93,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Sumo") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Sumo") {
 				KitAPI.setKitAntes(p, "Sumo");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Sumo");
@@ -102,7 +102,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Kangaroo") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Kangaroo") {
 				KitAPI.setKitAntes(p, "Kangaroo");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Kangaroo");
@@ -111,7 +111,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Fisherman") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Fisherman") {
 				KitAPI.setKitAntes(p, "Fisherman");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Fisherman");
@@ -120,7 +120,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Cactus") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Cactus") {
 				KitAPI.setKitAntes(p, "Cactus");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Cactus");
@@ -129,7 +129,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Monk") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Monk") {
 				KitAPI.setKitAntes(p, "Monk");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Monk");
@@ -138,7 +138,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Ninja") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Ninja") {
 				KitAPI.setKitAntes(p, "Ninja");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Ninja");
@@ -147,7 +147,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Phantom") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Phantom") {
 				KitAPI.setKitAntes(p, "Phantom");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Phantom");
@@ -156,7 +156,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Grappler") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Grappler") {
 				KitAPI.setKitAntes(p, "Grappler");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Grappler");
@@ -165,7 +165,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Viper") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Viper") {
 				KitAPI.setKitAntes(p, "Viper");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Viper");
@@ -174,7 +174,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Snail") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Snail") {
 				KitAPI.setKitAntes(p, "Snail");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Snail");
@@ -183,7 +183,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Hulk") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Hulk") {
 				KitAPI.setKitAntes(p, "Hulk");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Hulk");
@@ -192,7 +192,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Timelord") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Timelord") {
 				KitAPI.setKitAntes(p, "Timelord");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Timelord");
@@ -201,7 +201,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Thor") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Thor") {
 				KitAPI.setKitAntes(p, "Thor");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Thor");
@@ -210,7 +210,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Switcher") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Switcher") {
 				KitAPI.setKitAntes(p, "Switcher");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Switcher");
@@ -219,7 +219,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Gladiator") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Gladiator") {
 				KitAPI.setKitAntes(p, "Gladiator");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Gladiator");
@@ -228,7 +228,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Stomper") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Stomper") {
 				KitAPI.setKitAntes(p, "Stomper");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Stomper");
@@ -237,7 +237,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Magma") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Magma") {
 				KitAPI.setKitAntes(p, "Magma");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Magma");
@@ -246,7 +246,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Grandpa") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Grandpa") {
 				KitAPI.setKitAntes(p, "Grandpa");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Grandpa");
@@ -255,7 +255,7 @@ public class eMoveSpawn implements Listener {
 				return;
 			}
 			if (KitAPI.getKitAntes(p) == "Nenhum" && cfConfig.pegarconfig()
-					.get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == "Ajnin") {
+					.get("configuração." + p.getUniqueId() + ".PadraoKit") == "Ajnin") {
 				KitAPI.setKitAntes(p, "Ajnin");
 				sScoreAPI.scoreboard(p);
 				KitAPI.darKit(p, "Ajnin");

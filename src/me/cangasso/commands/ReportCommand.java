@@ -12,8 +12,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.ChatInterativo;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.main.CookiePvP;
 
 public class ReportCommand implements CommandExecutor {
 	public ArrayList<String> reported;
@@ -29,7 +29,7 @@ public class ReportCommand implements CommandExecutor {
 				final Player target = p.getServer().getPlayer(Args[0]);
 				if (target != null) {
 					if (this.reported.contains(p.getName())) {
-						p.sendMessage("§6§lCookie§f§lNetwork §7» §fAguarde para reportar novamente.");
+						p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fAguarde para reportar novamente.");
 						return true;
 					}
 					if (target == p) {
@@ -38,7 +38,7 @@ public class ReportCommand implements CommandExecutor {
 					final String reportMsg = StringUtils.join((Object[]) Arrays.copyOfRange(Args, 1, Args.length), " ");
 					this.reported.add(p.getName());
 					p.sendMessage(
-							"§aO seu reporte foi enviado com sucesso! Assim que poss\u00edvel, um membro da equipe ir\u00e1 verifica-lo.");
+							"ï¿½aO seu reporte foi enviado com sucesso! Assim que poss\u00edvel, um membro da equipe ir\u00e1 verifica-lo.");
 					Player[] onlinePlayers;
 					for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 						final Player s = onlinePlayers[i];
@@ -48,18 +48,18 @@ public class ReportCommand implements CommandExecutor {
 								|| cfGrupo.ChecarGrupo(s, "Mod") || cfGrupo.ChecarGrupo(s, "Trial")
 								|| cfGrupo.ChecarGrupo(s, "Youtuber+")) {
 							s.getPlayer().playSound(p.getPlayer().getLocation(), Sound.ANVIL_USE, 5.0f, 5.0f);
-							s.sendMessage("§4§m->--------------------------<-");
-							s.sendMessage("        §6» §f§lREPORT §6«                     ");
-							s.sendMessage("§4§m->--------------------------<-");
-							s.sendMessage("§6\u25cf §fJogador reportado: §7" + target.getName());
-							s.sendMessage("§6\u25cf §fReportado por: §7" + p.getName());
-							s.sendMessage("§6\u25cf §fMotivo: §7" + reportMsg);
-							s.sendMessage("§6\u25cf §fServidor: §7KitPvP ");
-							s.sendMessage("§4§m->--------------------------<-");
+							s.sendMessage("ï¿½4ï¿½m->--------------------------<-");
+							s.sendMessage("        ï¿½6ï¿½ ï¿½fï¿½lREPORT ï¿½6ï¿½                     ");
+							s.sendMessage("ï¿½4ï¿½m->--------------------------<-");
+							s.sendMessage("ï¿½6\u25cf ï¿½fJogador reportado: ï¿½7" + target.getName());
+							s.sendMessage("ï¿½6\u25cf ï¿½fReportado por: ï¿½7" + p.getName());
+							s.sendMessage("ï¿½6\u25cf ï¿½fMotivo: ï¿½7" + reportMsg);
+							s.sendMessage("ï¿½6\u25cf ï¿½fServidor: ï¿½7KitPvP ");
+							s.sendMessage("ï¿½4ï¿½m->--------------------------<-");
 							ChatInterativo.Comando(s.getName(),
-									"§fClique §b§l§nAQUI §fpara teleportar at\u00e9 o jogador.",
-									"/tp " + target.getName(), "§eClique! §8(bot\u00e3o esquerdo)");
-							Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(),
+									"ï¿½fClique ï¿½bï¿½lï¿½nAQUI ï¿½fpara teleportar at\u00e9 o jogador.",
+									"/tp " + target.getName(), "ï¿½eClique! ï¿½8(botÃ£o esquerdo)");
+							Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(),
 									(Runnable) new Runnable() {
 										@Override
 										public void run() {
@@ -69,10 +69,10 @@ public class ReportCommand implements CommandExecutor {
 						}
 					}
 				} else {
-					p.sendMessage("§cO jogador em quest\u00e3o est\u00e1 offline ou nunca entrou no servidor!");
+					p.sendMessage("ï¿½cO jogador em questÃ£o est\u00e1 offline ou nunca entrou no servidor!");
 				}
 			} else {
-				p.sendMessage("§fUtilize §9§l/report (jogador) (motivo)§f!");
+				p.sendMessage("ï¿½fUtilize ï¿½9ï¿½l/report (jogador) (motivo)ï¿½f!");
 			}
 		}
 		return false;

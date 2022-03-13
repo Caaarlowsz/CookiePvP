@@ -11,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.cangasso.commands.GiveAllCommand;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
 
 public class PadraoMenu {
 	public static ItemStack criarItemMenu(final Material material, final String nome, final String[] habilidade) {
@@ -26,33 +26,33 @@ public class PadraoMenu {
 
 	public static void inventory(final Player p) {
 		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 54,
-				"§7\u27b3 §3§lKIT PADRAO §8(p\u00e1g. 1)");
+				"ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO ï¿½8(p\u00e1g. 1)");
 		final ItemStack Voltar = new ItemStack(Material.CARPET, 1, (short) 14);
 		final ItemMeta kVoltar = Voltar.getItemMeta();
-		kVoltar.setDisplayName("§c§lVOLTAR");
-		kVoltar.setLore(Arrays.asList("§7volte para o menu", "§7dos kits que voc\u00ea possui", " "));
+		kVoltar.setDisplayName("ï¿½cï¿½lVOLTAR");
+		kVoltar.setLore(Arrays.asList("ï¿½7volte para o menu", "ï¿½7dos kits que voc\u00ea possui", " "));
 		Voltar.setItemMeta(kVoltar);
 		final ItemStack PQ = new ItemStack(Material.SLIME_BALL);
 		final ItemMeta kPQ = PQ.getItemMeta();
-		kPQ.setDisplayName("§7\u27b3 §3§lKIT PADRAO");
-		kPQ.setLore(Arrays.asList("§7Para que voc\u00ea n\u00e3o precise ficar", "§7escolhendo toda hora um kit",
-				"§7criamos o kit padrao."));
+		kPQ.setDisplayName("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO");
+		kPQ.setLore(Arrays.asList("ï¿½7Para que voc\u00ea nÃ£o precise ficar", "ï¿½7escolhendo toda hora um kit",
+				"ï¿½7criamos o kit padrao."));
 		PQ.setItemMeta(kPQ);
 		final ItemStack maiskits = new ItemStack(Material.getMaterial(351), 1, (short) 10);
 		final ItemMeta kmaiskits = maiskits.getItemMeta();
-		kmaiskits.setDisplayName("§7\u27b3 §a§lPROXIMA PAGINA");
+		kmaiskits.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lPROXIMA PAGINA");
 		maiskits.setItemMeta(kmaiskits);
 		final ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 1);
 		final ItemMeta kvidro = vidro.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro);
 		final ItemStack vidro2 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 0);
 		final ItemMeta kvidro2 = vidro2.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro2);
 		final ItemStack cake = new ItemStack(Material.COOKIE);
 		final ItemMeta kcake = cake.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie!");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookie!");
 		vidro.setItemMeta(kcake);
 		menu.setItem(0, Voltar);
 		menu.setItem(8, Voltar);
@@ -95,8 +95,8 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.STONE_SWORD, "§aPvP",
-					new String[] { "§7O Unico kit que possui", "§7espada de pedra" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.STONE_SWORD, "ï¿½aPvP",
+					new String[] { "ï¿½7O Unico kit que possui", "ï¿½7espada de pedra" }) });
 		}
 		if (cfGrupo.ChecarGrupo(p, "Membro") || cfGrupo.ChecarGrupo(p, "Helper") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
@@ -105,8 +105,8 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.BOW, "§aArcher",
-					new String[] { "§7Vire um arqueiro e de", "§7flechadas em seus ininimigos" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.BOW, "ï¿½aArcher",
+					new String[] { "ï¿½7Vire um arqueiro e de", "ï¿½7flechadas em seus ininimigos" }) });
 		}
 		if (cfGrupo.ChecarGrupo(p, "Membro") || cfGrupo.ChecarGrupo(p, "Helper") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Mvp") || cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro")
@@ -115,8 +115,8 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREWORK, "§aKangaroo",
-					new String[] { "§7Use seu firework para", "§7da double jumps" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREWORK, "ï¿½aKangaroo",
+					new String[] { "ï¿½7Use seu firework para", "ï¿½7da double jumps" }) });
 		}
 		if (cfGrupo.ChecarGrupo(p, "Membro") || cfGrupo.ChecarGrupo(p, "Helper") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
@@ -126,7 +126,7 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
 			menu.addItem(new ItemStack[] {
-					criarItemMenu(Material.FISHING_ROD, "§aFisherman", new String[] { "§7Pesque seus inimigos" }) });
+					criarItemMenu(Material.FISHING_ROD, "ï¿½aFisherman", new String[] { "ï¿½7Pesque seus inimigos" }) });
 		}
 		if (cfGrupo.ChecarGrupo(p, "Membro") || cfGrupo.ChecarGrupo(p, "Helper") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
@@ -135,60 +135,60 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.CACTUS, "§aCactus",
-					new String[] { "§7Vire um cactu e", "§7devolva o dano em seu inimigo" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.CACTUS, "ï¿½aCactus",
+					new String[] { "ï¿½7Vire um cactu e", "ï¿½7devolva o dano em seu inimigo" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.monk") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.monk") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.BLAZE_ROD, "§aMonk",
-					new String[] { "§7Confuda o inventraio de", "§7seus inimigos" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.BLAZE_ROD, "ï¿½aMonk",
+					new String[] { "ï¿½7Confuda o inventraio de", "ï¿½7seus inimigos" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.ninja") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.ninja") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.COMPASS, "§aNinja",
-					new String[] { "§7Aperte shift para teleportar ao", "§7ultimo jogador hitado" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.COMPASS, "ï¿½aNinja",
+					new String[] { "ï¿½7Aperte shift para teleportar ao", "ï¿½7ultimo jogador hitado" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.phantom") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.phantom") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.FEATHER, "§aPhantom",
-					new String[] { "§7Use a pena para virar", "§7um passaro e voar" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.FEATHER, "ï¿½aPhantom",
+					new String[] { "ï¿½7Use a pena para virar", "ï¿½7um passaro e voar" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.grappler") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.grappler") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.LEASH, "§aGrappler",
-					new String[] { "§7Use seu la\u00e7o para se", "§7locomover pelo mapa" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.LEASH, "ï¿½aGrappler",
+					new String[] { "ï¿½7Use seu laÃ§o para se", "ï¿½7locomover pelo mapa" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.viper") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.viper") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.SPIDER_EYE, "§aViper",
-					new String[] { "§7Invenene seus inimigos", "§7ao bater neles" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.SPIDER_EYE, "ï¿½aViper",
+					new String[] { "ï¿½7Invenene seus inimigos", "ï¿½7ao bater neles" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.snail") || cfGrupo.ChecarGrupo(p, "Light")
+		if (cfPermissÃ£o.getPermissao(p, "kit.snail") || cfGrupo.ChecarGrupo(p, "Light")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Trial") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
@@ -196,92 +196,92 @@ public class PadraoMenu {
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.light || GiveAllCommand.mvp || GiveAllCommand.pro) {
 			menu.addItem(new ItemStack[] {
-					criarItemMenu(Material.STRING, "§aSnail", new String[] { "§7Deixe seus inimigos lerdos" }) });
+					criarItemMenu(Material.STRING, "ï¿½aSnail", new String[] { "ï¿½7Deixe seus inimigos lerdos" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.hulk") || cfGrupo.ChecarGrupo(p, "Mvp")
+		if (cfPermissÃ£o.getPermissao(p, "kit.hulk") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.SADDLE, "§aHulk",
-					new String[] { "§7Puxe seus inimigos para carcunda", "§7e critique eles" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.SADDLE, "ï¿½aHulk",
+					new String[] { "ï¿½7Puxe seus inimigos para carcunda", "ï¿½7e critique eles" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.timelord") || cfGrupo.ChecarGrupo(p, "Mvp")
+		if (cfPermissÃ£o.getPermissao(p, "kit.timelord") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "§aTimelord",
-					new String[] { "§7Congele os players de", "§7sua volta" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "ï¿½aTimelord",
+					new String[] { "ï¿½7Congele os players de", "ï¿½7sua volta" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.thor") || cfGrupo.ChecarGrupo(p, "Mvp")
+		if (cfPermissÃ£o.getPermissao(p, "kit.thor") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.WOOD_AXE, "§aThor",
-					new String[] { "§7Vire o thor e lan\u00e7e raios", "§7em seus inimigos" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.WOOD_AXE, "ï¿½aThor",
+					new String[] { "ï¿½7Vire o thor e lanÃ§e raios", "ï¿½7em seus inimigos" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.switcher") || cfGrupo.ChecarGrupo(p, "Mvp")
+		if (cfPermissÃ£o.getPermissao(p, "kit.switcher") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.SNOW_BALL, "§aSwitcher",
-					new String[] { "§7Troque de lugar com seus inimigos ao", "§7acertar uma bola de neve nele" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.SNOW_BALL, "ï¿½aSwitcher",
+					new String[] { "ï¿½7Troque de lugar com seus inimigos ao", "ï¿½7acertar uma bola de neve nele" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.gladiator") || cfGrupo.ChecarGrupo(p, "Mvp")
+		if (cfPermissÃ£o.getPermissao(p, "kit.gladiator") || cfGrupo.ChecarGrupo(p, "Mvp")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+")
 				|| cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Youtuber+")
 				|| cfGrupo.ChecarGrupo(p, "Admin") || cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit
 				|| GiveAllCommand.mvp || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_FENCE, "§aGladiator",
-					new String[] { "§7Puxe seus inimigos para", "§7um 1v1 na jaula" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_FENCE, "ï¿½aGladiator",
+					new String[] { "ï¿½7Puxe seus inimigos para", "ï¿½7um 1v1 na jaula" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.stomper") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.stomper") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_BOOTS, "§aStomper",
-					new String[] { "§7Ao cair em cima de seus", "§7inimigos esmague-os" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_BOOTS, "ï¿½aStomper",
+					new String[] { "ï¿½7Ao cair em cima de seus", "ï¿½7inimigos esmague-os" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.magma") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.magma") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIRE, "§aMagma",
-					new String[] { "§7Ao bater em seu inimigo", "§7tenha chan\u00e7e de colocar fogo nele" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIRE, "ï¿½aMagma",
+					new String[] { "ï¿½7Ao bater em seu inimigo", "ï¿½7tenha chanÃ§e de colocar fogo nele" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.grandpa") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.grandpa") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.STICK, "§aGrandpa",
-					new String[] { "§7Jogue seu inimigo longe", "§7usando seu stick" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.STICK, "ï¿½aGrandpa",
+					new String[] { "ï¿½7Jogue seu inimigo longe", "ï¿½7usando seu stick" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.ajnin") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.ajnin") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.NETHER_STAR, "§aAjnin", new String[] {
-					"§7Ao apertar shift o ultimo", "§7jogador hitado \u00e9 teleportado a voc\u00ea" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.NETHER_STAR, "ï¿½aAjnin", new String[] {
+					"ï¿½7Ao apertar shift o ultimo", "ï¿½7jogador hitado \u00e9 teleportado a voc\u00ea" }) });
 		}
-		if (cfPermiss\u00e3o.getPermissao(p, "kit.firelauncher") || cfGrupo.ChecarGrupo(p, "Pro")
+		if (cfPermissÃ£o.getPermissao(p, "kit.firelauncher") || cfGrupo.ChecarGrupo(p, "Pro")
 				|| cfGrupo.ChecarGrupo(p, "Builder") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Gerente")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Dono") || GiveAllCommand.fullkit || GiveAllCommand.pro) {
-			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREBALL, "§aFireLauncher",
-					new String[] { "§7Use seu kit para", "§7queimar seus inimigos" }) });
+			menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREBALL, "ï¿½aFireLauncher",
+					new String[] { "ï¿½7Use seu kit para", "ï¿½7queimar seus inimigos" }) });
 		}
 		p.openInventory(menu);
 	}

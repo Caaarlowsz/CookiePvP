@@ -11,9 +11,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configuração.cfGrupo;
+import me.cangasso.invencivel.Proteção;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class CmdsSpeed implements CommandExecutor {
@@ -53,7 +53,7 @@ public class CmdsSpeed implements CommandExecutor {
 					final ItemStack Espada = new ItemStack(Material.DIAMOND_SWORD);
 					Espada.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1);
 					final ItemMeta Espada2 = Espada.getItemMeta();
-					Espada2.setDisplayName("�5�oEspada");
+					Espada2.setDisplayName("�5�oEspada");
 					Espada.setItemMeta(Espada2);
 					p.getInventory().addItem(new ItemStack[] { Espada });
 					Player2.getInventory().addItem(new ItemStack[] { Espada });
@@ -67,8 +67,8 @@ public class CmdsSpeed implements CommandExecutor {
 					p.getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
 					sScoreAPI.scorenull(p);
 					sScoreAPI.scorenull(Player2);
-					Prote\u00e7\u00e3o.setImortal(Player2, false);
-					Prote\u00e7\u00e3o.setImortal(p, false);
+					Proteção.setImortal(Player2, false);
+					Proteção.setImortal(p, false);
 					for (int i = 1; i < 9; ++i) {
 						final ItemStack Fisherman = new ItemStack(Material.MUSHROOM_SOUP);
 						p.getInventory().addItem(new ItemStack[] { Fisherman });
@@ -83,7 +83,7 @@ public class CmdsSpeed implements CommandExecutor {
 							Speed1v1.Iniciou.remove(Player2);
 							Speed1v1.Partida1 = false;
 						}
-						Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+						Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 							@Override
 							public void run() {
 								Player[] onlinePlayers;
@@ -97,7 +97,7 @@ public class CmdsSpeed implements CommandExecutor {
 								}
 							}
 						}, 2L);
-						Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+						Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 							@Override
 							public void run() {
 								if (Events1v1.congelar.contains(p)) {
@@ -108,7 +108,7 @@ public class CmdsSpeed implements CommandExecutor {
 								}
 							}
 						}, 20L);
-						Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+						Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 							@Override
 							public void run() {
 								if (Events1v1.congelar.contains(p)) {
@@ -119,7 +119,7 @@ public class CmdsSpeed implements CommandExecutor {
 								}
 							}
 						}, 40L);
-						Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+						Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 							@Override
 							public void run() {
 								if (Events1v1.congelar.contains(p)) {

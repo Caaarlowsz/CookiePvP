@@ -7,21 +7,21 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.ArraysAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.main.CookiePvP;
 
 public class HelpopCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
 		final Player p = (Player) Sender;
 		if (ArraysAPI.CooldownDica.contains(p)) {
-			p.sendMessage("§c§l(!) §cAguarde para executar este comando novamente!");
+			p.sendMessage("ï¿½cï¿½l(!) ï¿½cAguarde para executar este comando novamente!");
 			return true;
 		}
 		if (Args.length == 0) {
-			p.sendMessage("§8§l<§e§l!§8§l> §7Argumento correto: /duvida §c§l(d\u00favida)");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Argumento correto: /duvida ï¿½cï¿½l(d\u00favida)");
 			return true;
 		}
-		p.sendMessage("§aSua d\u00favida foi enviada. Assim que poss\u00edvel voc\u00ea ser\u00e1 respondido!");
+		p.sendMessage("ï¿½aSua d\u00favida foi enviada. Assim que poss\u00edvel voc\u00ea ser\u00e1 respondido!");
 		String dica = " ";
 		for (int i = 0; i < Args.length; ++i) {
 			if (i == Args.length - 1) {
@@ -31,7 +31,7 @@ public class HelpopCommand implements CommandExecutor {
 			}
 		}
 		ArraysAPI.CooldownDica.add(p);
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				if (ArraysAPI.CooldownDica.contains(p)) {
@@ -46,15 +46,15 @@ public class HelpopCommand implements CommandExecutor {
 					|| cfGrupo.ChecarGrupo(p, "Helper") || cfGrupo.ChecarGrupo(s, "Gerente")
 					|| cfGrupo.ChecarGrupo(s, "Admin") || cfGrupo.ChecarGrupo(s, "Mod+")
 					|| cfGrupo.ChecarGrupo(s, "Mod") || cfGrupo.ChecarGrupo(s, "Trial")) {
-				s.sendMessage("§d§m>-------------------------<");
-				s.sendMessage("               §6» §f§lDUVIDA §6«     ");
-				s.sendMessage("§d§m>-------------------------<");
+				s.sendMessage("ï¿½dï¿½m>-------------------------<");
+				s.sendMessage("               ï¿½6ï¿½ ï¿½fï¿½lDUVIDA ï¿½6ï¿½     ");
+				s.sendMessage("ï¿½dï¿½m>-------------------------<");
 				s.sendMessage(" ");
-				s.sendMessage("§6\u2022 §fJogador: §7" + p.getName());
-				s.sendMessage("§6\u2022 §fD\u00favida: §7" + dica);
-				s.sendMessage("§6\u2022 §fIP: §7KitPvP ");
+				s.sendMessage("ï¿½6\u2022 ï¿½fJogador: ï¿½7" + p.getName());
+				s.sendMessage("ï¿½6\u2022 ï¿½fD\u00favida: ï¿½7" + dica);
+				s.sendMessage("ï¿½6\u2022 ï¿½fIP: ï¿½7KitPvP ");
 				s.sendMessage(" ");
-				s.sendMessage("§d§m>-------------------------<");
+				s.sendMessage("ï¿½dï¿½m>-------------------------<");
 			}
 		}
 		return false;

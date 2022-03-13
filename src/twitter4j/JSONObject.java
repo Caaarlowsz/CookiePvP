@@ -409,7 +409,7 @@ public class JSONObject {
 				break;
 			}
 			default: {
-				if (c < ' ' || (c >= '\u0080' && c < ' ') || (c >= '\u2000' && c < '\u2100')) {
+				if (c < ' ' || (c >= '\u0080' && c < 'ï¿½') || (c >= '\u2000' && c < '\u2100')) {
 					final String hhhh = "000" + Integer.toHexString(c);
 					sb.append("\\u").append(hhhh.substring(hhhh.length() - 4));
 					break;

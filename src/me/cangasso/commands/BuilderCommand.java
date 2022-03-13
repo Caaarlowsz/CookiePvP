@@ -20,9 +20,9 @@ import org.bukkit.inventory.ItemStack;
 import me.cangasso.API.API;
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configura√ß√£o.cfGrupo;
+import me.cangasso.invencivel.Prote√ß√£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class BuilderCommand implements CommandExecutor, Listener {
@@ -43,14 +43,14 @@ public class BuilderCommand implements CommandExecutor, Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ßaTroca Rapida"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ÔøΩaTroca Rapida"))) {
 			Player[] onlinePlayers;
 			for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 				final Player todos = onlinePlayers[i];
 				todos.showPlayer(p);
 				p.showPlayer(todos);
 			}
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					ArraysAPI.Admin.add(p);
@@ -67,14 +67,14 @@ public class BuilderCommand implements CommandExecutor, Listener {
 				&& p.getItemInHand().getType() == Material.MUSHROOM_SOUP && ArraysAPI.Admin.contains(p)) {
 			final Player t = (Player) e.getRightClicked();
 			if (ArraysAPI.Checando.contains(t)) {
-				p.sendMessage("ß4ßl(!) ßcAcesso negado!");
+				p.sendMessage("ÔøΩ4ÔøΩl(!) ÔøΩcAcesso negado!");
 				return;
 			}
 			BuilderCommand.inventario.put(t, t.getInventory().getContents());
 			t.getInventory().clear();
 			t.setHealth(0.5);
 			ArraysAPI.Checando.add(t);
-			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					ArraysAPI.Checando.remove(t);
@@ -87,7 +87,7 @@ public class BuilderCommand implements CommandExecutor, Listener {
 		}
 		if (p.getItemInHand().getType() == Material.IRON_FENCE && ArraysAPI.Admin.contains(p)) {
 			final Player t = (Player) e.getRightClicked();
-			p.sendMessage("ßaßl(!) ß7Voc\u00ea prendeu o jogador: ß6ßl" + t.getName());
+			p.sendMessage("ÔøΩaÔøΩl(!) ÔøΩ7Voc\u00ea prendeu o jogador: ÔøΩ6ÔøΩl" + t.getName());
 			t.getLocation().add(0.0, 13.0, 0.0).getBlock().setType(Material.BEDROCK);
 			t.getLocation().add(0.0, 11.0, 1.0).getBlock().setType(Material.BEDROCK);
 			t.getLocation().add(1.0, 11.0, 0.0).getBlock().setType(Material.BEDROCK);
@@ -110,7 +110,7 @@ public class BuilderCommand implements CommandExecutor, Listener {
 					&& !cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Builder")
 					&& !cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("ßcßl(!) ßcVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ÔøΩcÔøΩl(!) ÔøΩcVoc\u00ea n√£o possui permiss√£o para executar este comando!");
 				return true;
 			}
 			if (!ArraysAPI.Admin.contains(p)) {
@@ -120,9 +120,9 @@ public class BuilderCommand implements CommandExecutor, Listener {
 				BuilderCommand.inventario.put(p, p.getInventory().getContents());
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				Prote\u00e7\u00e3o.setImortal(p, false);
-				p.sendMessage("ß2ßlBUILDER: ßfModo Builder: ßaATIVADO");
-				API.sendWarn("ß7ßo[" + p.getName() + "ß7ßo entrou no modo BUILDER]");
+				Prote√ß√£o.setImortal(p, false);
+				p.sendMessage("ÔøΩ2ÔøΩlBUILDER: ÔøΩfModo Builder: ÔøΩaATIVADO");
+				API.sendWarn("ÔøΩ7ÔøΩo[" + p.getName() + "ÔøΩ7ÔøΩo entrou no modo BUILDER]");
 				KitAPI.setKitAntes(p, "Admin");
 				API.setWarp(p, "Admin");
 				p.setHealth(20.0);
@@ -140,8 +140,8 @@ public class BuilderCommand implements CommandExecutor, Listener {
 			}
 			if (ArraysAPI.Admin.contains(p)) {
 				ArraysAPI.Admin.remove(p);
-				p.sendMessage("ß2ßlBUILDER: ßfModo Builder: ßcDESATIVADO");
-				API.sendWarn("ß7ßo[" + p.getName() + "ß7ßo saiu do modo BUILDER]");
+				p.sendMessage("ÔøΩ2ÔøΩlBUILDER: ÔøΩfModo Builder: ÔøΩcDESATIVADO");
+				API.sendWarn("ÔøΩ7ÔøΩo[" + p.getName() + "ÔøΩ7ÔøΩo saiu do modo BUILDER]");
 				KitAPI.setKitAntes(p, BuilderCommand.kit.get(p));
 				API.setWarp(p, BuilderCommand.warp.get(p));
 				p.setGameMode(GameMode.SURVIVAL);

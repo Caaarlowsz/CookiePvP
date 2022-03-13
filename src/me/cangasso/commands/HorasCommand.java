@@ -11,9 +11,9 @@ public class HorasCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
 		final Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("horas") && args.length == 0) {
-			p.sendMessage("§7Checando hor\u00e1rio atual do §a§lBrasil ");
+			p.sendMessage("ï¿½7Checando hor\u00e1rio atual do ï¿½aï¿½lBrasil ");
 			p.sendMessage(" ");
-			p.sendMessage("§7Data e hor\u00e1rio atual: §6§l" + HorarioAPI.getHorario());
+			p.sendMessage("ï¿½7Data e hor\u00e1rio atual: ï¿½6ï¿½l" + HorarioAPI.getHorario());
 			p.sendMessage(" ");
 			return true;
 		}

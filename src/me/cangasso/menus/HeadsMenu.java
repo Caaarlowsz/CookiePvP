@@ -16,106 +16,106 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import me.cangasso.API.API;
 import me.cangasso.API.HatAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class HeadsMenu implements Listener {
 	public static void setarInventario(final Player p) {
-		final Inventory inv = Bukkit.createInventory((InventoryHolder) null, 54, "§7\u27b3 §b§lHEADS");
+		final Inventory inv = Bukkit.createInventory((InventoryHolder) null, 54, "ï¿½7\u27b3 ï¿½bï¿½lHEADS");
 		final ItemStack vidro = new ItemStack(Material.GLASS);
 		final ItemMeta vidrom = vidro.getItemMeta();
-		vidrom.setDisplayName("§6\u27a2 §a§lVIDRO");
+		vidrom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lVIDRO");
 		vidro.setItemMeta(vidrom);
 		final ItemStack beacon = new ItemStack(Material.BEACON);
 		final ItemMeta beaconm = vidro.getItemMeta();
-		beaconm.setDisplayName("§6\u27a2 §a§lBEACON");
+		beaconm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBEACON");
 		beacon.setItemMeta(beaconm);
 		final ItemStack pedra = new ItemStack(Material.STONE);
 		final ItemMeta pedram = pedra.getItemMeta();
-		pedram.setDisplayName("§6\u27a2 §a§lPEDRA");
+		pedram.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lPEDRA");
 		pedra.setItemMeta(pedram);
 		final ItemStack bedrock = new ItemStack(Material.BEDROCK);
 		final ItemMeta bedrockm = bedrock.getItemMeta();
-		bedrockm.setDisplayName("§6\u27a2 §a§lBEDROCK");
+		bedrockm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBEDROCK");
 		bedrock.setItemMeta(bedrockm);
 		final ItemStack areia = new ItemStack(Material.SAND);
 		final ItemMeta areiam = areia.getItemMeta();
-		areiam.setDisplayName("§6\u27a2 §a§lAREIA");
+		areiam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lAREIA");
 		areia.setItemMeta(areiam);
 		final ItemStack esponja = new ItemStack(Material.SPONGE);
 		final ItemMeta esponjam = esponja.getItemMeta();
-		esponjam.setDisplayName("§6\u27a2 §a§lESPONJA");
+		esponjam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lESPONJA");
 		esponja.setItemMeta(esponjam);
 		final ItemStack lapislazuli = new ItemStack(Material.LAPIS_BLOCK);
 		final ItemMeta lapislazulim = lapislazuli.getItemMeta();
-		lapislazulim.setDisplayName("§6\u27a2 §a§lLAPIS LAZULI");
+		lapislazulim.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lLAPIS LAZULI");
 		lapislazuli.setItemMeta(lapislazulim);
 		final ItemStack la = new ItemStack(Material.WOOL);
 		final ItemMeta lam = la.getItemMeta();
-		lam.setDisplayName("§6\u27a2 §a§lL\u00c3");
+		lam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lL\u00c3");
 		la.setItemMeta(lam);
 		final ItemStack ouro = new ItemStack(Material.GOLD_BLOCK);
 		final ItemMeta ourom = ouro.getItemMeta();
-		ourom.setDisplayName("§6\u27a2 §a§lBLOCO DE OURO");
+		ourom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE OURO");
 		ouro.setItemMeta(ourom);
 		final ItemStack ferro = new ItemStack(Material.IRON_BLOCK);
 		final ItemMeta ferrom = ferro.getItemMeta();
-		ferrom.setDisplayName("§6\u27a2 §a§lBLOCO DE FERRO");
+		ferrom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE FERRO");
 		ferro.setItemMeta(ferrom);
 		final ItemStack tijolo = new ItemStack(Material.BRICK);
 		final ItemMeta tijolom = tijolo.getItemMeta();
-		tijolom.setDisplayName("§6\u27a2 §a§lTIJOLO");
+		tijolom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lTIJOLO");
 		tijolo.setItemMeta(tijolom);
 		final ItemStack estante = new ItemStack(Material.BOOKSHELF);
 		final ItemMeta estantem = estante.getItemMeta();
-		estantem.setDisplayName("§6\u27a2 §a§lESTANTE");
+		estantem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lESTANTE");
 		estante.setItemMeta(estantem);
 		final ItemStack pedramusgo = new ItemStack(Material.MOSSY_COBBLESTONE);
 		final ItemMeta pedramusgom = pedramusgo.getItemMeta();
-		pedramusgom.setDisplayName("§6\u27a2 §a§lPEDRA DE MUSGO");
+		pedramusgom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lPEDRA DE MUSGO");
 		pedramusgo.setItemMeta(pedramusgom);
 		final ItemStack obsidian = new ItemStack(Material.OBSIDIAN);
 		final ItemMeta obsidianm = obsidian.getItemMeta();
-		obsidianm.setDisplayName("§6\u27a2 §a§lOBSIDIAN");
+		obsidianm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lOBSIDIAN");
 		obsidian.setItemMeta(obsidianm);
 		final ItemStack diamante = new ItemStack(Material.DIAMOND_BLOCK);
 		final ItemMeta diamantem = diamante.getItemMeta();
-		diamantem.setDisplayName("§6\u27a2 §a§lBLOCO DE DIAMANTE");
+		diamantem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE DIAMANTE");
 		diamante.setItemMeta(diamantem);
 		final ItemStack gelo = new ItemStack(Material.ICE);
 		final ItemMeta gelom = gelo.getItemMeta();
-		gelom.setDisplayName("§6\u27a2 §a§lGELO");
+		gelom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lGELO");
 		gelo.setItemMeta(gelom);
 		final ItemStack neve = new ItemStack(Material.SNOW_BLOCK);
 		final ItemMeta nevem = neve.getItemMeta();
-		nevem.setDisplayName("§6\u27a2 §a§lBLOCO DE NEVE");
+		nevem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE NEVE");
 		neve.setItemMeta(nevem);
 		final ItemStack nether = new ItemStack(Material.NETHERRACK);
 		final ItemMeta netherm = nether.getItemMeta();
-		netherm.setDisplayName("§6\u27a2 §a§lROCHA DO NETHER");
+		netherm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lROCHA DO NETHER");
 		nether.setItemMeta(netherm);
 		final ItemStack glow = new ItemStack(Material.GLOWSTONE);
 		final ItemMeta glowm = glow.getItemMeta();
-		glowm.setDisplayName("§6\u27a2 §a§lGLOWSTONE");
+		glowm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lGLOWSTONE");
 		glow.setItemMeta(glowm);
 		final ItemStack abobora = new ItemStack(Material.JACK_O_LANTERN);
 		final ItemMeta aboboram = abobora.getItemMeta();
-		aboboram.setDisplayName("§6\u27a2 §a§lABOBORA");
+		aboboram.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lABOBORA");
 		abobora.setItemMeta(aboboram);
 		final ItemStack esmeralda = new ItemStack(Material.EMERALD_BLOCK);
 		final ItemMeta esmeraldam = esmeralda.getItemMeta();
-		esmeraldam.setDisplayName("§6\u27a2 §a§lBLOCO DE ESMERALDA");
+		esmeraldam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE ESMERALDA");
 		esmeralda.setItemMeta(esmeraldam);
 		final ItemStack sair = new ItemStack(Material.getMaterial(351), 1, (short) 1);
 		final ItemMeta sairm = esmeralda.getItemMeta();
-		sairm.setDisplayName("§c§lSAIR DO MENU");
+		sairm.setDisplayName("ï¿½cï¿½lSAIR DO MENU");
 		sair.setItemMeta(sairm);
 		final ItemStack remover = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 14);
 		final ItemMeta removerm = remover.getItemMeta();
-		removerm.setDisplayName("§c§lREMOVER HEAD");
+		removerm.setDisplayName("ï¿½cï¿½lREMOVER HEAD");
 		remover.setItemMeta(removerm);
 		final ItemStack vidros = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 14);
 		final ItemMeta vidrosm = vidros.getItemMeta();
-		vidrosm.setDisplayName("§6§lCookie§f§lNetwork");
+		vidrosm.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidros.setItemMeta(vidrosm);
 		inv.setItem(1, vidro);
 		inv.setItem(2, beacon);
@@ -150,14 +150,14 @@ public class HeadsMenu implements Listener {
 				&& e.getAction() == Action.RIGHT_CLICK_AIR)
 				|| (e.getAction() == Action.RIGHT_CLICK_BLOCK && p.getItemInHand().hasItemMeta()
 						&& p.getItemInHand().getItemMeta().hasDisplayName()
-						&& p.getItemInHand().getItemMeta().getDisplayName().equals("§6» §7Heads"))) {
+						&& p.getItemInHand().getItemMeta().getDisplayName().equals("ï¿½6ï¿½ ï¿½7Heads"))) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")
 					&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 					&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 					&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 			} else {
 				setarInventario(p);
 				p.playSound(p.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
@@ -169,90 +169,90 @@ public class HeadsMenu implements Listener {
 	public void clicarInv(final InventoryClickEvent e) {
 		final ItemStack vidro = new ItemStack(Material.GLASS);
 		final ItemMeta vidrom = vidro.getItemMeta();
-		vidrom.setDisplayName("§6\u27a2 §a§lVIDRO");
+		vidrom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lVIDRO");
 		vidro.setItemMeta(vidrom);
 		final ItemStack beacon = new ItemStack(Material.BEACON);
 		final ItemMeta beaconm = vidro.getItemMeta();
-		beaconm.setDisplayName("§6\u27a2 §a§lBEACON");
+		beaconm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBEACON");
 		beacon.setItemMeta(beaconm);
 		final ItemStack pedra = new ItemStack(Material.STONE);
 		final ItemMeta pedram = pedra.getItemMeta();
-		pedram.setDisplayName("§6\u27a2 §a§lPEDRA");
+		pedram.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lPEDRA");
 		pedra.setItemMeta(pedram);
 		final ItemStack bedrock = new ItemStack(Material.BEDROCK);
 		final ItemMeta bedrockm = bedrock.getItemMeta();
-		bedrockm.setDisplayName("§6\u27a2 §a§lBEDROCK");
+		bedrockm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBEDROCK");
 		bedrock.setItemMeta(bedrockm);
 		final ItemStack areia = new ItemStack(Material.SAND);
 		final ItemMeta areiam = areia.getItemMeta();
-		areiam.setDisplayName("§6\u27a2 §a§lAREIA");
+		areiam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lAREIA");
 		areia.setItemMeta(areiam);
 		final ItemStack esponja = new ItemStack(Material.SPONGE);
 		final ItemMeta esponjam = esponja.getItemMeta();
-		esponjam.setDisplayName("§6\u27a2 §a§lESPONJA");
+		esponjam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lESPONJA");
 		esponja.setItemMeta(esponjam);
 		final ItemStack lapislazuli = new ItemStack(Material.LAPIS_BLOCK);
 		final ItemMeta lapislazulim = lapislazuli.getItemMeta();
-		lapislazulim.setDisplayName("§6\u27a2 §a§lLAPIS LAZULI");
+		lapislazulim.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lLAPIS LAZULI");
 		lapislazuli.setItemMeta(lapislazulim);
 		final ItemStack la = new ItemStack(Material.WOOL);
 		final ItemMeta lam = la.getItemMeta();
-		lam.setDisplayName("§6\u27a2 §a§lL\u00c3");
+		lam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lL\u00c3");
 		la.setItemMeta(lam);
 		final ItemStack ouro = new ItemStack(Material.GOLD_BLOCK);
 		final ItemMeta ourom = ouro.getItemMeta();
-		ourom.setDisplayName("§6\u27a2 §a§lBLOCO DE OURO");
+		ourom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE OURO");
 		ouro.setItemMeta(ourom);
 		final ItemStack ferro = new ItemStack(Material.IRON_BLOCK);
 		final ItemMeta ferrom = ferro.getItemMeta();
-		ferrom.setDisplayName("§6\u27a2 §a§lBLOCO DE FERRO");
+		ferrom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE FERRO");
 		ferro.setItemMeta(ferrom);
 		final ItemStack tijolo = new ItemStack(Material.BRICK);
 		final ItemMeta tijolom = tijolo.getItemMeta();
-		tijolom.setDisplayName("§6\u27a2 §a§lTIJOLO");
+		tijolom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lTIJOLO");
 		tijolo.setItemMeta(tijolom);
 		final ItemStack estante = new ItemStack(Material.BOOKSHELF);
 		final ItemMeta estantem = estante.getItemMeta();
-		estantem.setDisplayName("§6\u27a2 §a§lESTANTE");
+		estantem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lESTANTE");
 		estante.setItemMeta(estantem);
 		final ItemStack pedramusgo = new ItemStack(Material.MOSSY_COBBLESTONE);
 		final ItemMeta pedramusgom = pedramusgo.getItemMeta();
-		pedramusgom.setDisplayName("§6\u27a2 §a§lPEDRA DE MUSGO");
+		pedramusgom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lPEDRA DE MUSGO");
 		pedramusgo.setItemMeta(pedramusgom);
 		final ItemStack obsidian = new ItemStack(Material.OBSIDIAN);
 		final ItemMeta obsidianm = obsidian.getItemMeta();
-		obsidianm.setDisplayName("§6\u27a2 §a§lOBSIDIAN");
+		obsidianm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lOBSIDIAN");
 		obsidian.setItemMeta(obsidianm);
 		final ItemStack diamante = new ItemStack(Material.DIAMOND_BLOCK);
 		final ItemMeta diamantem = diamante.getItemMeta();
-		diamantem.setDisplayName("§6\u27a2 §a§lBLOCO DE DIAMANTE");
+		diamantem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE DIAMANTE");
 		diamante.setItemMeta(diamantem);
 		final ItemStack gelo = new ItemStack(Material.ICE);
 		final ItemMeta gelom = gelo.getItemMeta();
-		gelom.setDisplayName("§6\u27a2 §a§lGELO");
+		gelom.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lGELO");
 		gelo.setItemMeta(gelom);
 		final ItemStack neve = new ItemStack(Material.SNOW_BLOCK);
 		final ItemMeta nevem = neve.getItemMeta();
-		nevem.setDisplayName("§6\u27a2 §a§lBLOCO DE NEVE");
+		nevem.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE NEVE");
 		neve.setItemMeta(nevem);
 		final ItemStack nether = new ItemStack(Material.NETHERRACK);
 		final ItemMeta netherm = nether.getItemMeta();
-		netherm.setDisplayName("§6\u27a2 §a§lROCHA DO NETHER");
+		netherm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lROCHA DO NETHER");
 		nether.setItemMeta(netherm);
 		final ItemStack glow = new ItemStack(Material.GLOWSTONE);
 		final ItemMeta glowm = glow.getItemMeta();
-		glowm.setDisplayName("§6\u27a2 §a§lGLOWSTONE");
+		glowm.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lGLOWSTONE");
 		glow.setItemMeta(glowm);
 		final ItemStack abobora = new ItemStack(Material.JACK_O_LANTERN);
 		final ItemMeta aboboram = abobora.getItemMeta();
-		aboboram.setDisplayName("§6\u27a2 §a§lABOBORA");
+		aboboram.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lABOBORA");
 		abobora.setItemMeta(aboboram);
 		final ItemStack esmeralda = new ItemStack(Material.EMERALD_BLOCK);
 		final ItemMeta esmeraldam = esmeralda.getItemMeta();
-		esmeraldam.setDisplayName("§6\u27a2 §a§lBLOCO DE ESMERALDA");
+		esmeraldam.setDisplayName("ï¿½6\u27a2 ï¿½aï¿½lBLOCO DE ESMERALDA");
 		esmeralda.setItemMeta(esmeraldam);
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equalsIgnoreCase("§7\u27b3 §b§lHEADS")) {
+		if (e.getInventory().getTitle().equalsIgnoreCase("ï¿½7\u27b3 ï¿½bï¿½lHEADS")) {
 			if (e.getCurrentItem().getType() == Material.GLASS) {
 				if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 						&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
@@ -260,14 +260,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(vidro);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lVIDRO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lVIDRO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.BEACON) {
@@ -277,14 +277,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(beacon);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBEACON");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBEACON");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.STONE) {
@@ -294,14 +294,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(pedra);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lPEDRA");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lPEDRA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.MOSSY_COBBLESTONE) {
@@ -311,14 +311,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(pedramusgo);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lPEDRA DE MUSGO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lPEDRA DE MUSGO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.SAND) {
@@ -328,14 +328,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(areia);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lAREIA");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lAREIA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.LAPIS_BLOCK) {
@@ -345,14 +345,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(lapislazuli);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lLAPIS LAZULI");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lLAPIS LAZULI");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.IRON_BLOCK) {
@@ -362,14 +362,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(ferro);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBLOCO DE FERRO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBLOCO DE FERRO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.GOLD_BLOCK) {
@@ -379,14 +379,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(ouro);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBLOCO DE OURO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBLOCO DE OURO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.DIAMOND_BLOCK) {
@@ -396,14 +396,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(diamante);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBLOCO DE DIAMANTE");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBLOCO DE DIAMANTE");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.EMERALD_BLOCK) {
@@ -413,7 +413,7 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
@@ -421,7 +421,7 @@ public class HeadsMenu implements Listener {
 				p.getInventory().setHelmet(esmeralda);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
 				p.sendMessage(
-						"§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBLOCO DE ESMERALDA");
+						"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBLOCO DE ESMERALDA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.SPONGE) {
@@ -431,14 +431,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(esponja);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lESPONJA");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lESPONJA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.BEDROCK) {
@@ -448,14 +448,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(bedrock);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBEDROCK");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBEDROCK");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.WOOL) {
@@ -465,14 +465,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(la);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lL\u00c3");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lL\u00c3");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.BOOKSHELF) {
@@ -482,14 +482,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(estante);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lESPONJA");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lESPONJA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.OBSIDIAN) {
@@ -499,14 +499,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(obsidian);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lOBSIDIAN");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lOBSIDIAN");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.JACK_O_LANTERN) {
@@ -516,14 +516,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(abobora);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lABOBORA");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lABOBORA");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.GLOWSTONE) {
@@ -533,14 +533,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(glow);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lGLOWSTONE");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lGLOWSTONE");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.NETHERRACK) {
@@ -550,14 +550,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(nether);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lROCHA DO NETHER");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lROCHA DO NETHER");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.SNOW_BLOCK) {
@@ -567,14 +567,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(neve);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lBLOCO DE NEVE");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lBLOCO DE NEVE");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.ICE) {
@@ -584,14 +584,14 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(gelo);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lGELO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lGELO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else if (e.getCurrentItem().getType() == Material.BRICK) {
@@ -601,18 +601,18 @@ public class HeadsMenu implements Listener {
 						&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 						&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 						&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-					p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar uma cabe\u00e7a!");
+					p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar uma cabeÃ§a!");
 					p.closeInventory();
 					e.setCancelled(true);
 					return;
 				}
 				p.getInventory().setHelmet(tijolo);
 				me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fA sua cabe\u00e7a foi alterada para: §6§lTIJOLO");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fA sua cabeÃ§a foi alterada para: ï¿½6ï¿½lTIJOLO");
 				p.closeInventory();
 				e.setCancelled(true);
 			} else {
-				if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§c§lSAIR DO MENU")) {
+				if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cï¿½lSAIR DO MENU")) {
 					me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
 					p.closeInventory();
 					e.setCancelled(true);
@@ -626,14 +626,14 @@ public class HeadsMenu implements Listener {
 							&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 							&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
 						p.sendMessage(
-								"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar esta a\u00e7\u00e3o!");
+								"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar esta aÃ§Ã£o!");
 						p.closeInventory();
 						e.setCancelled(true);
 						return;
 					}
 					HatAPI.removeHat(p);
 					me.cangasso.bans.API.sendSound(p, Sound.LEVEL_UP, 10);
-					p.sendMessage("§aCabe\u00e7a removida com sucesso!");
+					p.sendMessage("ï¿½aCabeÃ§a removida com sucesso!");
 					p.closeInventory();
 					e.setCancelled(true);
 				}

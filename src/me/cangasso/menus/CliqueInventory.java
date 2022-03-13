@@ -7,33 +7,33 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 import me.cangasso.API.PadraoAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfConfig;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
+import me.cangasso.configuraÃ§Ã£o.cfConfig;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
 
 public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickartodoskits(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §9§lTODOS OS KITS §8(p\u00e1g. 1)")
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS ï¿½8(p\u00e1g. 1)")
 				&& e.getCurrentItem() != null && e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lSEUS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §2§lLOJA DE KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS")) {
 				e.setCancelled(true);
 				LojaMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lPROXIMA PAGINA")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lPROXIMA PAGINA")) {
 				e.setCancelled(true);
 				TodosKits2Menu.inventory(p);
 			}
@@ -43,25 +43,25 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickartodoskits2(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §9§lTODOS OS KITS §8(p\u00e1g. 2)")
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS ï¿½8(p\u00e1g. 2)")
 				&& e.getCurrentItem() != null && e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lSEUS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §2§lLOJA DE KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS")) {
 				e.setCancelled(true);
 				LojaMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §c§lPAGINA ANTERIOR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR")) {
 				e.setCancelled(true);
 				TodosKitsMenu.inventory(p);
 			}
@@ -71,28 +71,28 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarlojavips(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§aQual {VIP} deseja?") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½aQual {VIP} deseja?") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6Cookie§fNetwork§7] §f- §a§lVIP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6Cookieï¿½fNetworkï¿½7] ï¿½f- ï¿½aï¿½lVIP")) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fAcesse nossa loja: §6§lmc-cookie.com.br");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fAcesse nossa loja: ï¿½6ï¿½lmc-cookie.com.br");
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6Cookie§fNetwork§7] §f- §9§lMVP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6Cookieï¿½fNetworkï¿½7] ï¿½f- ï¿½9ï¿½lMVP")) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fAcesse nossa loja: §6§lmc-cookie.com.br");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fAcesse nossa loja: ï¿½6ï¿½lmc-cookie.com.br");
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6Cookie§fNetwork§7] §f- §6§lPRO")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6Cookieï¿½fNetworkï¿½7] ï¿½f- ï¿½6ï¿½lPRO")) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§6§lCookie§f§lNetwork §7» §fAcesse nossa loja: §6§lmc-cookie.com.br");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fAcesse nossa loja: ï¿½6ï¿½lmc-cookie.com.br");
 			}
 		}
 	}
@@ -100,57 +100,57 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarwarps(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §6§lWARPS") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½6ï¿½lWARPS") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lFPS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lFPS")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp fps");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§l1V1")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½l1V1")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp 1v1");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lKNOCKBACK")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lKNOCKBACK")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp knockback");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lMAIN")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lMAIN")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp main");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lFISHERMAN")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lFISHERMAN")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp fisherman");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lMLG")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lMLG")) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§cEsta warp est\u00e1 em manuten\u00e7\u00e3o.");
+				p.sendMessage("ï¿½cEsta warp est\u00e1 em manutenÃ§Ã£o.");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§c§lEM BREVE")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cï¿½lEM BREVE")) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§cEm breve...");
+				p.sendMessage("ï¿½cEm breve...");
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lCookie§lNetwork")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lCookieï¿½lNetwork")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lLAVACHALLENGE")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½6ï¿½lLAVACHALLENGE")) {
 				e.setCancelled(true);
 				p.closeInventory();
 				p.chat("/warp challenge");
@@ -161,65 +161,65 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarloja2(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §2§lLOJA DE KITS §8(p\u00e1g. 2)")
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS ï¿½8(p\u00e1g. 2)")
 				&& e.getCurrentItem() != null && e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lSEUS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §9§lTODOS OS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS")) {
 				e.setCancelled(true);
 				TodosKitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §c§lPAGINA ANTERIOR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR")) {
 				e.setCancelled(true);
 				LojaMenu.inventory(p);
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§lStrong§7] §f- §7Valor: §9§l30.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½lStrongï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l30.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 30000) {
-					p.sendMessage("§4§l(!) §cVoc\u00ea n\u00e3o possui XP o suficiente para finalizar a compra.");
+					p.sendMessage("ï¿½4ï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui XP o suficiente para finalizar a compra.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.strong", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Strong!");
+					cfPermissÃ£o.setarPermissao(p, "kit.strong", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Strong!");
 					cfStatus.RemoveMoney(p, 30000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Forcefield§7] §f- §7Valor: §9§l20.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Forcefieldï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l20.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 20000) {
 					p.sendMessage(
-							"§6§lNew§f§lPvP §6» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lNewï¿½fï¿½lPvP ï¿½6ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.forcefield", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Forcefield");
+					cfPermissÃ£o.setarPermissao(p, "kit.forcefield", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Forcefield");
 					cfStatus.RemoveMoney(p, 20000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Sumo§7] §f- §7Valor: §9§l15.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Sumoï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l15.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.sumo", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Sumo");
+					cfPermissÃ£o.setarPermissao(p, "kit.sumo", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Sumo");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
@@ -230,257 +230,257 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarloja(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §9§lTODOS OS KITS §8(p\u00e1g. 1)")
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS ï¿½8(p\u00e1g. 1)")
 				&& e.getCurrentItem() != null && e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lSEUS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §9§lTODOS OS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS")) {
 				e.setCancelled(true);
 				TodosKitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §c§lPAGINA ANTERIOR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR")) {
 				e.setCancelled(true);
 				Loja2Menu.inventory(p);
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Monk§7] §f- §7Valor: §9§l15.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Monkï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l15.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.monk", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Monk");
+					cfPermissÃ£o.setarPermissao(p, "kit.monk", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Monk");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Ninja§7] §f- §7Valor: §9§l17.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Ninjaï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l17.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 17000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.ninja", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Ninja");
+					cfPermissÃ£o.setarPermissao(p, "kit.ninja", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Ninja");
 					cfStatus.RemoveMoney(p, 17000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Phantom§7] §f- §7Valor: §9§l15.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Phantomï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l15.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.phantom", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Phantom");
+					cfPermissÃ£o.setarPermissao(p, "kit.phantom", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Phantom");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Grappler§7] §f- §7Valor: §9§l17.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Grapplerï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l17.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 17000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.grappler", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Grappler");
+					cfPermissÃ£o.setarPermissao(p, "kit.grappler", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Grappler");
 					cfStatus.RemoveMoney(p, 17000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Viper§7] §f- §7Valor: §9§l10.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Viperï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l10.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 10000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.viper", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Viper");
+					cfPermissÃ£o.setarPermissao(p, "kit.viper", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Viper");
 					cfStatus.RemoveMoney(p, 10000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Snail§7] §f- §7Valor: §9§l10.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Snailï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l10.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 10000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.snail", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Snail");
+					cfPermissÃ£o.setarPermissao(p, "kit.snail", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Snail");
 					cfStatus.RemoveMoney(p, 10000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§Hulk§7] §f- §7Valor: §9§l15.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½Hulkï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l15.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.hulk", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Hulk");
+					cfPermissÃ£o.setarPermissao(p, "kit.hulk", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Hulk");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§§7] §f- §7Valor: §9§l15.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½ï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l15.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lNew§f§lPvP §6» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lNewï¿½fï¿½lPvP ï¿½6ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.timelord", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Timelord");
+					cfPermissÃ£o.setarPermissao(p, "kit.timelord", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Timelord");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cThor §c§l15.000")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cThor ï¿½cï¿½l15.000")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.thor", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Thor");
+					cfPermissÃ£o.setarPermissao(p, "kit.thor", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Thor");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§l§7] §f- §7Valor: §9§l10.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½lï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l10.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 10000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.switcher", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Switcher");
+					cfPermissÃ£o.setarPermissao(p, "kit.switcher", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Switcher");
 					cfStatus.RemoveMoney(p, 10000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§lGladiator§7] §f- §7Valor: §9§l30.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½lGladiatorï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l30.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 30000) {
 					p.sendMessage(
-							"§6§lNew§f§lPvP §6» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lNewï¿½fï¿½lPvP ï¿½6ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.gladiator", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Gladiator");
+					cfPermissÃ£o.setarPermissao(p, "kit.gladiator", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Gladiator");
 					cfStatus.RemoveMoney(p, 30000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§lEndermage§7] §f- §7Valor: §9§l17.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½lEndermageï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l17.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 17000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.endermage", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Endermage");
+					cfPermissÃ£o.setarPermissao(p, "kit.endermage", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Endermage");
 					cfStatus.RemoveMoney(p, 17000);
 				}
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cStomper §c§l35.000")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cStomper ï¿½cï¿½l35.000")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 35000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.stomper", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Stomper");
+					cfPermissÃ£o.setarPermissao(p, "kit.stomper", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Stomper");
 					cfStatus.RemoveMoney(p, 35000);
 				}
 				p.closeInventory();
 				return;
 			}
 			if (e.getCurrentItem().getItemMeta().getDisplayName()
-					.equalsIgnoreCase("§7[§6§§7] §f- §7Valor: §9§l17.000XP")) {
+					.equalsIgnoreCase("ï¿½7[ï¿½6ï¿½ï¿½7] ï¿½f- ï¿½7Valor: ï¿½9ï¿½l17.000XP")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 17000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.magma", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Magma");
+					cfPermissÃ£o.setarPermissao(p, "kit.magma", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Magma");
 					cfStatus.RemoveMoney(p, 17000);
 				}
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cGrandpa §c§l10.000")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cGrandpa ï¿½cï¿½l10.000")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 10000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.grandpa", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Grandpa");
+					cfPermissÃ£o.setarPermissao(p, "kit.grandpa", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Grandpa");
 					cfStatus.RemoveMoney(p, 10000);
 				}
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cAjnin §c§l20.000")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cAjnin ï¿½cï¿½l20.000")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 20000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.ajnin", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Ajnin");
+					cfPermissÃ£o.setarPermissao(p, "kit.ajnin", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Ajnin");
 					cfStatus.RemoveMoney(p, 20000);
 				}
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cFireLauncher §c§l15.000")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cFireLauncher ï¿½cï¿½l15.000")) {
 				e.setCancelled(true);
 				if (cfStatus.getMoney(p) < 15000) {
 					p.sendMessage(
-							"§6§lCookie§f§lNetwork §7» §7Voc\u00ea n\u00e3o possui coins suficientes para comprar esse kit.");
+							"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7Voc\u00ea nÃ£o possui coins suficientes para comprar esse kit.");
 				} else {
-					cfPermiss\u00e3o.setarPermissao(p, "kit.firelauncher", "true");
-					p.sendMessage("§a§l(!) §aVoc\u00ea comprou o kit Firelauncher");
+					cfPermissÃ£o.setarPermissao(p, "kit.firelauncher", "true");
+					p.sendMessage("ï¿½aï¿½l(!) ï¿½aVoc\u00ea comprou o kit Firelauncher");
 					cfStatus.RemoveMoney(p, 15000);
 				}
 				p.closeInventory();
@@ -491,25 +491,25 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarkits2(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §a§lSEUS KITS §8(p\u00e1g. 2)") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS ï¿½8(p\u00e1g. 2)") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §9§lTODOS OS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS")) {
 				e.setCancelled(true);
 				TodosKitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §2§lLOJA DE KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS")) {
 				e.setCancelled(true);
 				LojaMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §c§lPAGINA ANTERIOR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
@@ -531,25 +531,25 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarkits(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §a§lSEUS KITS §8(p\u00e1g. 1)") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS ï¿½8(p\u00e1g. 1)") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §9§lTODOS OS KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS")) {
 				e.setCancelled(true);
 				TodosKitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §3§lKIT PADRAO")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §2§lLOJA DE KITS")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS")) {
 				e.setCancelled(true);
 				LojaMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lPROXIMA PAGINA")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lPROXIMA PAGINA")) {
 				e.setCancelled(true);
 				Kits2Menu.inventory(p);
 				return;
@@ -650,7 +650,7 @@ public class CliqueInventory implements Listener {
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aEndermage")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aEndermage")) {
 				e.setCancelled(true);
 				p.chat("/kit endermage");
 				p.closeInventory();
@@ -691,40 +691,40 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarkitspadrao2(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §3§lKIT PADRAO §8(p\u00e1g. 2)") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO ï¿½8(p\u00e1g. 2)") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§c§lVOLTAR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cï¿½lVOLTAR")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §c§lPAGINA ANTERIOR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½cï¿½lPAGINA ANTERIOR")) {
 				e.setCancelled(true);
 				PadraoMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aStrong")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aStrong")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Strong");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aForcefield")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aForcefield")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Forcefield");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSumo")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aSumo")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Sumo");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 			}
 		}
@@ -733,192 +733,192 @@ public class CliqueInventory implements Listener {
 	@EventHandler
 	public void clickarkitspadrao(final InventoryClickEvent e) {
 		final Player p = (Player) e.getWhoClicked();
-		if (e.getInventory().getTitle().equals("§7\u27b3 §3§lKIT PADRAO §8(p\u00e1g. 1)") && e.getCurrentItem() != null
+		if (e.getInventory().getTitle().equals("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO ï¿½8(p\u00e1g. 1)") && e.getCurrentItem() != null
 				&& e.getCurrentItem().getTypeId() != 0) {
 			e.setCancelled(true);
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§c§lVOLTAR")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½cï¿½lVOLTAR")) {
 				e.setCancelled(true);
 				KitsMenu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7\u27b3 §a§lPROXIMA PAGINA")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½7\u27b3 ï¿½aï¿½lPROXIMA PAGINA")) {
 				e.setCancelled(true);
 				Padrao2Menu.inventory(p);
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aPvP")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aPvP")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "PvP");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aArcher")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aArcher")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Archer");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aKangaroo")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aKangaroo")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Kangaroo");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aFisherman")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aFisherman")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Fisherman");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aCactus")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aCactus")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Cactus");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aMonk")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aMonk")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Monk");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aNinja")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aNinja")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Ninja");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aPhantom")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aPhantom")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Phantom");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aGrappler")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aGrappler")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Grappler");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aViper")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aViper")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Viper");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSnail")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aSnail")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Snail");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aHulk")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aHulk")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Hulk");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aTimelord")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aTimelord")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Timelord");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aThor")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aThor")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Thor");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSwitcher")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aSwitcher")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Switcher");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aGladiator")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aGladiator")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Gladiator");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aEndermage")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aEndermage")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Endermage");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aStomper")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aStomper")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Stomper");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aMagma")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aMagma")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Magma");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aGrandpa")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aGrandpa")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Grandpa");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aAjnin")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aAjnin")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "Ajnin");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 				return;
 			}
-			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aFireLauncher")) {
+			if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("ï¿½aFireLauncher")) {
 				e.setCancelled(true);
 				PadraoAPI.setKit(p, "FireLauncher");
-				p.sendMessage("§7Agora seu kit padr\u00e3o \u00e9 §6"
-						+ cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit"));
+				p.sendMessage("ï¿½7Agora seu kit padrÃ£o \u00e9 ï¿½6"
+						+ cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit"));
 				p.closeInventory();
 			}
 		}

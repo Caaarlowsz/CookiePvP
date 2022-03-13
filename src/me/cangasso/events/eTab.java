@@ -8,8 +8,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.spigotmc.ProtocolInjector;
 
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
+import me.cangasso.main.CookiePvP;
 import net.minecraft.server.v1_7_R4.ChatSerializer;
 import net.minecraft.server.v1_7_R4.IChatBaseComponent;
 import net.minecraft.server.v1_7_R4.Packet;
@@ -25,21 +25,21 @@ public class eTab implements Listener {
 	@EventHandler
 	void TabDoServidor(final PlayerJoinEvent evento) {
 		final Player jogador = evento.getPlayer();
-		Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final PlayerConnection connect = ((CraftPlayer) jogador).getHandle().playerConnection;
 				final IChatBaseComponent top = ChatSerializer.a(
-						"{'extra': [{text: '', color: 'aqua'}],'color': gold, 'text': '    §e§m------------------------------- §f     \n  §e§l> §6§lCookie§f§lNetwork §e§l<\n     '}");
+						"{'extra': [{text: '', color: 'aqua'}],'color': gold, 'text': '    ï¿½eï¿½m------------------------------- ï¿½f     \n  ï¿½eï¿½l> ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½l<\n     '}");
 				final IChatBaseComponent bottom = ChatSerializer
-						.a("{'extra': [{'color': 'aqua', 'text': ' \n      §f§lKills: §7" + cfStatus.getKills(jogador)
-								+ "  §7-  §f§lDeaths: §7" + cfStatus.getDeaths(jogador) + "§7  -  §f§lKillStreak: §7"
-								+ cfStatus.getKillStreak(jogador) + "\n" + "§f§lJogadores: §7"
-								+ Bukkit.getOnlinePlayers().length + "§7/§7120" + "  §7-  §f§lPing: §7"
-								+ ((CraftPlayer) jogador).getHandle().ping + "  §7-  §f§lXP: §b§l"
+						.a("{'extra': [{'color': 'aqua', 'text': ' \n      ï¿½fï¿½lKills: ï¿½7" + cfStatus.getKills(jogador)
+								+ "  ï¿½7-  ï¿½fï¿½lDeaths: ï¿½7" + cfStatus.getDeaths(jogador) + "ï¿½7  -  ï¿½fï¿½lKillStreak: ï¿½7"
+								+ cfStatus.getKillStreak(jogador) + "\n" + "ï¿½fï¿½lJogadores: ï¿½7"
+								+ Bukkit.getOnlinePlayers().length + "ï¿½7/ï¿½7120" + "  ï¿½7-  ï¿½fï¿½lPing: ï¿½7"
+								+ ((CraftPlayer) jogador).getHandle().ping + "  ï¿½7-  ï¿½fï¿½lXP: ï¿½bï¿½l"
 								+ cfStatus.getMoney(jogador) + "\n" + "\n"
-								+ "    §f§lLoja: §7§ohttp://mc-cookie.com.br\n     §f§lTwitter: §7§ohttps://twitter.com/_McCookie"
-								+ "\n" + "    §e§m--------------------------------"
+								+ "    ï¿½fï¿½lLoja: ï¿½7ï¿½ohttp://mc-cookie.com.br\n     ï¿½fï¿½lTwitter: ï¿½7ï¿½ohttps://twitter.com/_McCookie"
+								+ "\n" + "    ï¿½eï¿½m--------------------------------"
 								+ "', 'underline': 'true'}], 'color': 'gold', 'text': ''}");
 				if (((CraftPlayer) jogador).getHandle().playerConnection.networkManager.getVersion() < eTab.VERSION) {
 					return;

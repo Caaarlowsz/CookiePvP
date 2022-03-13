@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 import me.cangasso.events.CorGrupo;
 import me.cangasso.scoreboard.sScoreAPI;
 import me.cangasso.v_1_8.TituloAPI;
@@ -18,15 +18,15 @@ public class GiveVipCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("givevip")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0 && sender instanceof Player) {
-				p.sendMessage("§fUtilize §6§l/givevip §6(jogador) (vip)§f!");
+				p.sendMessage("ï¿½fUtilize ï¿½6ï¿½l/givevip ï¿½6(jogador) (vip)ï¿½f!");
 				return true;
 			}
 			if (args.length == 1 && sender instanceof Player) {
-				p.sendMessage("§fUtilize §6§l/givevip §6(jogador) (vip)§f!");
+				p.sendMessage("ï¿½fUtilize ï¿½6ï¿½l/givevip ï¿½6(jogador) (vip)ï¿½f!");
 				return true;
 			}
 			if (args.length == 2) {
@@ -37,7 +37,7 @@ public class GiveVipCommand implements CommandExecutor {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[0]);
 						if (arg.equalsIgnoreCase("vip")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §a§lVIP §fpara o jogador: §a§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½aï¿½lVIP ï¿½fpara o jogador: ï¿½aï¿½l"
 											+ off.getName());
 							cfGrupo.setarGrupo(off, "Light");
 							cfGrupo.salvarconfiguracao();
@@ -45,7 +45,7 @@ public class GiveVipCommand implements CommandExecutor {
 						}
 						if (arg.equalsIgnoreCase("mvp")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §9§lMVP §fpara o jogador: §9§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½9ï¿½lMVP ï¿½fpara o jogador: ï¿½9ï¿½l"
 											+ off.getName());
 							cfGrupo.setarGrupo(off, "Mvp");
 							cfGrupo.salvarconfiguracao();
@@ -53,7 +53,7 @@ public class GiveVipCommand implements CommandExecutor {
 						}
 						if (arg.equalsIgnoreCase("pro")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §6§lPRO §fpara o jogador: §6§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½6ï¿½lPRO ï¿½fpara o jogador: ï¿½6ï¿½l"
 											+ off.getName());
 							cfGrupo.setarGrupo(off, "Pro");
 							cfGrupo.salvarconfiguracao();
@@ -63,43 +63,43 @@ public class GiveVipCommand implements CommandExecutor {
 					if (k != null) {
 						if (arg.equalsIgnoreCase("vip")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §a§lVIP §fpara o jogador: §a§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½aï¿½lVIP ï¿½fpara o jogador: ï¿½aï¿½l"
 											+ k.getName());
-							k.sendMessage("§eVoc\u00ea recebeu o Vip. Seu grupo foi alterado para Vip.");
-							TituloAPI.MandarTitulo(k, "§a§lVIP");
-							TituloAPI.MandarSubTitulo(k, "§7Voc\u00ea recebeu o vip §a§lVIP");
+							k.sendMessage("ï¿½eVoc\u00ea recebeu o Vip. Seu grupo foi alterado para Vip.");
+							TituloAPI.MandarTitulo(k, "ï¿½aï¿½lVIP");
+							TituloAPI.MandarSubTitulo(k, "ï¿½7Voc\u00ea recebeu o vip ï¿½aï¿½lVIP");
 							cfGrupo.setarGrupo(k, "Light");
 							cfGrupo.salvarconfiguracao();
 							if (cfGrupo.ChecarGrupo(k, "Dono")) {
-								CorGrupo.setarTag(k, "§4§l");
+								CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-								CorGrupo.setarTag(k, "§3§l");
+								CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-								CorGrupo.setarTag(k, "§2§l");
+								CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-								CorGrupo.setarTag(k, "§b§l");
+								CorGrupo.setarTag(k, "ï¿½bï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-								CorGrupo.setarTag(k, "§e§l");
+								CorGrupo.setarTag(k, "ï¿½eï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-								CorGrupo.setarTag(k, "§6§l");
+								CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-								CorGrupo.setarTag(k, "§a§l");
+								CorGrupo.setarTag(k, "ï¿½aï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-								CorGrupo.setarTag(k, "§7§l");
+								CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 							}
 							sScoreAPI.scoreboard(k);
 							k.chat("/tag light");
@@ -107,43 +107,43 @@ public class GiveVipCommand implements CommandExecutor {
 						}
 						if (arg.equalsIgnoreCase("mvp")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §9§lMVP §fpara o jogador: §9§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½9ï¿½lMVP ï¿½fpara o jogador: ï¿½9ï¿½l"
 											+ k.getName());
-							k.sendMessage("§eVoc\u00ea recebeu o Vip Mvp. Seu grupo foi alterado para Mvp.");
-							TituloAPI.MandarTitulo(k, "§9§lMVP");
-							TituloAPI.MandarSubTitulo(k, "§7Voc\u00ea recebeu o vip §9§lMVP");
+							k.sendMessage("ï¿½eVoc\u00ea recebeu o Vip Mvp. Seu grupo foi alterado para Mvp.");
+							TituloAPI.MandarTitulo(k, "ï¿½9ï¿½lMVP");
+							TituloAPI.MandarSubTitulo(k, "ï¿½7Voc\u00ea recebeu o vip ï¿½9ï¿½lMVP");
 							cfGrupo.setarGrupo(k, "Mvp");
 							cfGrupo.salvarconfiguracao();
 							if (cfGrupo.ChecarGrupo(k, "Dono")) {
-								CorGrupo.setarTag(k, "§4§l");
+								CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-								CorGrupo.setarTag(k, "§3§l");
+								CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-								CorGrupo.setarTag(k, "§2§l");
+								CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-								CorGrupo.setarTag(k, "§b§l");
+								CorGrupo.setarTag(k, "ï¿½bï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-								CorGrupo.setarTag(k, "§e§l");
+								CorGrupo.setarTag(k, "ï¿½eï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-								CorGrupo.setarTag(k, "§6§l");
+								CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-								CorGrupo.setarTag(k, "§a§l");
+								CorGrupo.setarTag(k, "ï¿½aï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-								CorGrupo.setarTag(k, "§7§l");
+								CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 							}
 							sScoreAPI.scoreboard(k);
 							k.chat("/tag mvp");
@@ -151,43 +151,43 @@ public class GiveVipCommand implements CommandExecutor {
 						}
 						if (arg.equalsIgnoreCase("pro")) {
 							p.sendMessage(
-									"§6§lCookie§f§lNetwork §7» §fVoc\u00ea aplicou o vip §6§lPRO §fpara o jogador: §6§l"
+									"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea aplicou o vip ï¿½6ï¿½lPRO ï¿½fpara o jogador: ï¿½6ï¿½l"
 											+ k.getName());
-							k.sendMessage("§eVoc\u00ea recebeu o Vip Pro. Seu grupo foi alterado para Pro.");
-							TituloAPI.MandarTitulo(k, "§6§lPRO");
-							TituloAPI.MandarSubTitulo(k, "§7Voc\u00ea recebeu o vip §6§lPRO");
+							k.sendMessage("ï¿½eVoc\u00ea recebeu o Vip Pro. Seu grupo foi alterado para Pro.");
+							TituloAPI.MandarTitulo(k, "ï¿½6ï¿½lPRO");
+							TituloAPI.MandarSubTitulo(k, "ï¿½7Voc\u00ea recebeu o vip ï¿½6ï¿½lPRO");
 							cfGrupo.setarGrupo(k, "Pro");
 							cfGrupo.salvarconfiguracao();
 							if (cfGrupo.ChecarGrupo(k, "Dono")) {
-								CorGrupo.setarTag(k, "§4§l");
+								CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-								CorGrupo.setarTag(k, "§c§l");
+								CorGrupo.setarTag(k, "ï¿½cï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-								CorGrupo.setarTag(k, "§5§l");
+								CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-								CorGrupo.setarTag(k, "§3§l");
+								CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-								CorGrupo.setarTag(k, "§2§l");
+								CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-								CorGrupo.setarTag(k, "§b§l");
+								CorGrupo.setarTag(k, "ï¿½bï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-								CorGrupo.setarTag(k, "§e§l");
+								CorGrupo.setarTag(k, "ï¿½eï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-								CorGrupo.setarTag(k, "§6§l");
+								CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-								CorGrupo.setarTag(k, "§9§l");
+								CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-								CorGrupo.setarTag(k, "§a§l");
+								CorGrupo.setarTag(k, "ï¿½aï¿½l");
 							} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-								CorGrupo.setarTag(k, "§7§l");
+								CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 							}
 							sScoreAPI.scoreboard(k);
 							k.chat("/tag pro");

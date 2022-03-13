@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Tempo {
 	public static Integer Tempo;
@@ -30,9 +30,9 @@ public class Tempo {
 	}
 
 	private void mandarAvisos() {
-		mandarBroadcast("§7O evento inicia em §6§l" + FormatoTempo(me.cangasso.rdmautomatica.Tempo.Iniciando)
-				+ "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
-		mandarBroadcast("§7Para entrar no evento, use §9§l/entrar");
+		mandarBroadcast("ï¿½7O evento inicia em ï¿½6ï¿½l" + FormatoTempo(me.cangasso.rdmautomatica.Tempo.Iniciando)
+				+ "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
+		mandarBroadcast("ï¿½7Para entrar no evento, use ï¿½9ï¿½l/entrar");
 		Player[] onlinePlayers;
 		for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 			final Player Jogadores = onlinePlayers[i];
@@ -65,8 +65,8 @@ public class Tempo {
 	}
 
 	public Tempo(final Player Jogador) {
-		if (Main.Evento == Estado.INICIANDO) {
-			me.cangasso.rdmautomatica.Tempo.Tempo = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(),
+		if (CookiePvP.Evento == Estado.INICIANDO) {
+			me.cangasso.rdmautomatica.Tempo.Tempo = Bukkit.getScheduler().scheduleSyncRepeatingTask(CookiePvP.getPlugin(),
 					(Runnable) new Runnable() {
 						@Override
 						public void run() {
@@ -110,15 +110,15 @@ public class Tempo {
 							if (me.cangasso.rdmautomatica.Tempo.Iniciando == 0) {
 								if (PlayerAPI.Participando.size() < 2) {
 									me.cangasso.rdmautomatica.Tempo.mandarBroadcast(
-											"§cN\u00e3o foi obtido o n\u00famero m\u00ednimo de jogadores. Contagem reiniciada. ");
+											"ï¿½cN\u00e3o foi obtido o n\u00famero m\u00ednimo de jogadores. Contagem reiniciada. ");
 									me.cangasso.rdmautomatica.Tempo.mandarBroadcast(
-											"§aO evento atingiu um n\u00famero de jogadores plaus\u00edvel. Tempo alterado para §a§l2 minutos");
+											"ï¿½aO evento atingiu um n\u00famero de jogadores plaus\u00edvel. Tempo alterado para ï¿½aï¿½l2 minutos");
 									me.cangasso.rdmautomatica.Tempo.Iniciando = 121;
 									return;
 								}
-								me.cangasso.rdmautomatica.Tempo.mandarBroadcast("§7O evento foi §a§lINICIADO§7!");
+								me.cangasso.rdmautomatica.Tempo.mandarBroadcast("ï¿½7O evento foi ï¿½aï¿½lINICIADOï¿½7!");
 								me.cangasso.rdmautomatica.Tempo.mandarBroadcast(
-										"§7Boa sorte aos §6§l" + PlayerAPI.Participando.size() + " §7participantes!");
+										"ï¿½7Boa sorte aos ï¿½6ï¿½l" + PlayerAPI.Participando.size() + " ï¿½7participantes!");
 								Player[] onlinePlayers;
 								for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length,
 										i = 0; i < length; ++i) {
@@ -129,7 +129,7 @@ public class Tempo {
 								}
 								me.cangasso.rdmautomatica.Tempo.CancelarTempo();
 								me.cangasso.rdmautomatica.Tempo.Iniciando = 301;
-								Main.Evento = Estado.ANDAMENTO;
+								CookiePvP.Evento = Estado.ANDAMENTO;
 								PlayerAPI.SelecionarPrimeirosJogadores(Jogador);
 							}
 						}

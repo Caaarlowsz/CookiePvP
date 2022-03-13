@@ -19,8 +19,8 @@ import org.bukkit.potion.PotionEffectType;
 import me.cangasso.API.API;
 import me.cangasso.API.KitAPI;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.menus.WarpsMenu;
 import me.cangasso.scoreboard.sScoreAPI;
 
@@ -37,8 +37,8 @@ public class WarpCommand implements CommandExecutor, Listener {
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§lFPS§f!");
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½lFPSï¿½f!");
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.setGameMode(GameMode.SURVIVAL);
@@ -58,27 +58,27 @@ public class WarpCommand implements CommandExecutor, Listener {
 							p.getInventory().setItem(i, sopa);
 							p.updateInventory();
 						}
-						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "§a§lCogumelo!",
+						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "ï¿½aï¿½lCogumelo!",
 								new String[] { "" }, 64, (short) 0));
-						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "§e§lCogumelo!",
+						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "ï¿½eï¿½lCogumelo!",
 								new String[] { "" }, 64, (short) 0));
 						p.getInventory().setItem(15,
-								API.criarItem(p, Material.BOWL, "§9§lPote!", new String[] { "" }, 64, (short) 0));
+								API.criarItem(p, Material.BOWL, "ï¿½9ï¿½lPote!", new String[] { "" }, 64, (short) 0));
 						final ItemStack Espada = new ItemStack(Material.STONE_SWORD);
 						Espada.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 						final ItemMeta kEspada = Espada.getItemMeta();
-						kEspada.setDisplayName("§5§oEspeada");
+						kEspada.setDisplayName("ï¿½5ï¿½oEspeada");
 						Espada.setItemMeta(kEspada);
 						p.getInventory().setItem(0, Espada);
 					}
 				}, 60L);
 			} else if (Args[0].equalsIgnoreCase("1v1")) {
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§l1V1§f!");
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½l1V1ï¿½f!");
 				p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 99999, 99999));
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.removePotionEffect(PotionEffectType.BLINDNESS);
@@ -93,28 +93,28 @@ public class WarpCommand implements CommandExecutor, Listener {
 						KitAPI.removeKits(p);
 						WarpsAPI.Ir(p, "1v1");
 						API.setWarp(p, "1v1");
-						Prote\u00e7\u00e3o.setImortal(p, true);
+						ProteÃ§Ã£o.setImortal(p, true);
 						sScoreAPI.scoreboard(p);
 						WarpsAPI.segundos.remove(p.getName());
 						final ItemStack Espada = new ItemStack(Material.BLAZE_ROD);
 						final ItemMeta kEspada = Espada.getItemMeta();
-						kEspada.setDisplayName("§eDesafie um jogador! §8(bot\u00e3o direito)");
+						kEspada.setDisplayName("ï¿½eDesafie um jogador! ï¿½8(botÃ£o direito)");
 						Espada.setItemMeta(kEspada);
 						final ItemStack Espada2 = new ItemStack(Material.INK_SACK, 1, (short) 8);
 						final ItemMeta kEspada2 = Espada2.getItemMeta();
-						kEspada2.setDisplayName("§eDuelo r\u00e1pido! §8(bot\u00e3o direito)");
+						kEspada2.setDisplayName("ï¿½eDuelo r\u00e1pido! ï¿½8(botÃ£o direito)");
 						Espada2.setItemMeta(kEspada2);
 						p.getInventory().setItem(3, Espada);
 						p.getInventory().setItem(5, Espada2);
 					}
 				}, 60L);
 			} else if (Args[0].equalsIgnoreCase("challenge")) {
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§lLAVACHALLENGE§f!");
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½lLAVACHALLENGEï¿½f!");
 				p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 99999, 99999));
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.removePotionEffect(PotionEffectType.BLINDNESS);
@@ -134,12 +134,12 @@ public class WarpCommand implements CommandExecutor, Listener {
 							p.getInventory().setItem(i, sopa);
 							p.updateInventory();
 						}
-						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "§cCogumelo vermelho",
+						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "ï¿½cCogumelo vermelho",
 								new String[] { "" }, 64, (short) 0));
-						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "§eCogumelo marrom",
+						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "ï¿½eCogumelo marrom",
 								new String[] { "" }, 64, (short) 0));
 						p.getInventory().setItem(15,
-								API.criarItem(p, Material.BOWL, "§7Pote", new String[] { "" }, 64, (short) 0));
+								API.criarItem(p, Material.BOWL, "ï¿½7Pote", new String[] { "" }, 64, (short) 0));
 					}
 				}, 60L);
 			} else if (Args[0].equalsIgnoreCase("knockback")) {
@@ -147,8 +147,8 @@ public class WarpCommand implements CommandExecutor, Listener {
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§lKNOCKBACK§f!");
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½lKNOCKBACKï¿½f!");
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.setGameMode(GameMode.SURVIVAL);
@@ -163,21 +163,21 @@ public class WarpCommand implements CommandExecutor, Listener {
 						WarpsAPI.Ir(p, "Knockback");
 						API.setWarp(p, "Knockback");
 						sScoreAPI.scoreboard(p);
-						Prote\u00e7\u00e3o.setImortal(p, false);
+						ProteÃ§Ã£o.setImortal(p, false);
 						final ItemStack sopa = new ItemStack(Material.MUSHROOM_SOUP);
 						for (int i = 0; i < 36; ++i) {
 							p.getInventory().setItem(i, sopa);
 							p.updateInventory();
 						}
-						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "§cCogumelo vermelho",
+						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "ï¿½cCogumelo vermelho",
 								new String[] { "" }, 64, (short) 0));
-						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "§eCogumelo marrom",
+						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "ï¿½eCogumelo marrom",
 								new String[] { "" }, 64, (short) 0));
 						p.getInventory().setItem(15,
-								API.criarItem(p, Material.BOWL, "§7Pote", new String[] { "" }, 64, (short) 0));
+								API.criarItem(p, Material.BOWL, "ï¿½7Pote", new String[] { "" }, 64, (short) 0));
 						final ItemStack Espada = new ItemStack(Material.STICK);
 						final ItemMeta kEspada = Espada.getItemMeta();
-						kEspada.setDisplayName("§eKnockBack");
+						kEspada.setDisplayName("ï¿½eKnockBack");
 						kEspada.addEnchant(Enchantment.KNOCKBACK, 5, true);
 						Espada.setItemMeta(kEspada);
 						p.getInventory().setItem(0, Espada);
@@ -188,8 +188,8 @@ public class WarpCommand implements CommandExecutor, Listener {
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§lMAIN");
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½lMAIN");
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.setGameMode(GameMode.SURVIVAL);
@@ -204,7 +204,7 @@ public class WarpCommand implements CommandExecutor, Listener {
 						WarpsAPI.Ir(p, "Main");
 						API.setWarp(p, "Main");
 						sScoreAPI.scoreboard(p);
-						Prote\u00e7\u00e3o.setImortal(p, false);
+						ProteÃ§Ã£o.setImortal(p, false);
 						final ItemStack sopa = new ItemStack(Material.MUSHROOM_SOUP);
 						for (int i = 0; i < 36; ++i) {
 							p.getInventory().setItem(i, sopa);
@@ -213,37 +213,37 @@ public class WarpCommand implements CommandExecutor, Listener {
 						final ItemStack peitoral = new ItemStack(Material.IRON_CHESTPLATE);
 						final ItemMeta peitoralm = peitoral.getItemMeta();
 						peitoralm.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, true);
-						peitoralm.setDisplayName("§6§lPeitoral de Ferro");
+						peitoralm.setDisplayName("ï¿½6ï¿½lPeitoral de Ferro");
 						peitoral.setItemMeta(peitoralm);
 						final ItemStack capacete = new ItemStack(Material.IRON_HELMET);
 						final ItemMeta capacetem = capacete.getItemMeta();
 						capacetem.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, true);
-						capacetem.setDisplayName("§6§lCapacete de Ferro");
+						capacetem.setDisplayName("ï¿½6ï¿½lCapacete de Ferro");
 						capacete.setItemMeta(capacetem);
 						final ItemStack calca = new ItemStack(Material.IRON_LEGGINGS);
 						final ItemMeta calcam = peitoral.getItemMeta();
 						calcam.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, true);
-						calcam.setDisplayName("§6§lCal\u00e7a de Ferro");
+						calcam.setDisplayName("ï¿½6ï¿½lCalÃ§a de Ferro");
 						calca.setItemMeta(calcam);
 						final ItemStack bota = new ItemStack(Material.IRON_BOOTS);
 						final ItemMeta botam = bota.getItemMeta();
 						botam.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, true);
-						botam.setDisplayName("§6§lBotas de Ferro");
+						botam.setDisplayName("ï¿½6ï¿½lBotas de Ferro");
 						bota.setItemMeta(botam);
 						p.getInventory().setHelmet(capacete);
 						p.getInventory().setChestplate(peitoral);
 						p.getInventory().setLeggings(calca);
 						p.getInventory().setBoots(bota);
-						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "§a§lCogumelo!",
+						p.getInventory().setItem(13, API.criarItem(p, Material.RED_MUSHROOM, "ï¿½aï¿½lCogumelo!",
 								new String[] { "" }, 64, (short) 0));
-						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "§e§lCogumelo!",
+						p.getInventory().setItem(14, API.criarItem(p, Material.BROWN_MUSHROOM, "ï¿½eï¿½lCogumelo!",
 								new String[] { "" }, 64, (short) 0));
 						p.getInventory().setItem(15,
-								API.criarItem(p, Material.BOWL, "§9§lPote!", new String[] { "" }, 64, (short) 0));
+								API.criarItem(p, Material.BOWL, "ï¿½9ï¿½lPote!", new String[] { "" }, 64, (short) 0));
 						final ItemStack Espada = new ItemStack(Material.DIAMOND_SWORD);
 						Espada.addEnchantment(Enchantment.DAMAGE_ALL, 2);
 						final ItemMeta kEspada = Espada.getItemMeta();
-						kEspada.setDisplayName("§5§oEspada");
+						kEspada.setDisplayName("ï¿½5ï¿½oEspada");
 						Espada.setItemMeta(kEspada);
 						p.getInventory().setItem(0, Espada);
 					}
@@ -253,8 +253,8 @@ public class WarpCommand implements CommandExecutor, Listener {
 				p.closeInventory();
 				p.getInventory().clear();
 				p.getInventory().setArmorContents((ItemStack[]) null);
-				p.sendMessage("§fVoc\u00ea est\u00e1 sendo enviado para a warp §6§lFISHERMAN");
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo enviado para a warp ï¿½6ï¿½lFISHERMAN");
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						p.setGameMode(GameMode.SURVIVAL);
@@ -270,10 +270,10 @@ public class WarpCommand implements CommandExecutor, Listener {
 						API.setWarp(p, "Fisherman");
 						KitAPI.setKit(p, "Fisherman");
 						sScoreAPI.scoreboard(p);
-						Prote\u00e7\u00e3o.setImortal(p, false);
+						ProteÃ§Ã£o.setImortal(p, false);
 						final ItemStack Espada = new ItemStack(Material.FISHING_ROD);
 						final ItemMeta kEspada = Espada.getItemMeta();
-						kEspada.setDisplayName("§5§oVara de pesca");
+						kEspada.setDisplayName("ï¿½5ï¿½oVara de pesca");
 						Espada.setItemMeta(kEspada);
 						p.getInventory().setItem(0, Espada);
 					}

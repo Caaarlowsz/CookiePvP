@@ -21,28 +21,28 @@ public class WarpsMenu {
 	}
 
 	public static void inventory(final Player p) {
-		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 27, "§7\u27b3 §6§lWARPS");
-		menu.setItem(10, criarItemMenu(Material.GLASS, "§6§lFPS", new String[1]));
-		menu.setItem(12, criarItemMenu(Material.BLAZE_ROD, "§6§l1V1", new String[1]));
-		menu.setItem(14, criarItemMenu(Material.LAVA, "§6§lLAVACHALLENGE", new String[1]));
-		menu.setItem(16, criarItemMenu(Material.STICK, "§6§lKNOCKBACK", new String[1]));
-		menu.setItem(2, criarItemMenu(Material.FISHING_ROD, "§6§lFISHERMAN", new String[1]));
-		menu.setItem(0, criarItemMenu(Material.WATER_BUCKET, "§6§lMLG", new String[1]));
-		menu.setItem(18, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(4, criarItemMenu(Material.DIAMOND_SWORD, "§6§lMAIN", new String[1]));
-		menu.setItem(6, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(8, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(20, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(22, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(24, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
-		menu.setItem(26, criarItemMenu(Material.BEDROCK, "§c§lEM BREVE", new String[1]));
+		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 27, "ï¿½7\u27b3 ï¿½6ï¿½lWARPS");
+		menu.setItem(10, criarItemMenu(Material.GLASS, "ï¿½6ï¿½lFPS", new String[1]));
+		menu.setItem(12, criarItemMenu(Material.BLAZE_ROD, "ï¿½6ï¿½l1V1", new String[1]));
+		menu.setItem(14, criarItemMenu(Material.LAVA, "ï¿½6ï¿½lLAVACHALLENGE", new String[1]));
+		menu.setItem(16, criarItemMenu(Material.STICK, "ï¿½6ï¿½lKNOCKBACK", new String[1]));
+		menu.setItem(2, criarItemMenu(Material.FISHING_ROD, "ï¿½6ï¿½lFISHERMAN", new String[1]));
+		menu.setItem(0, criarItemMenu(Material.WATER_BUCKET, "ï¿½6ï¿½lMLG", new String[1]));
+		menu.setItem(18, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(4, criarItemMenu(Material.DIAMOND_SWORD, "ï¿½6ï¿½lMAIN", new String[1]));
+		menu.setItem(6, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(8, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(20, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(22, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(24, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
+		menu.setItem(26, criarItemMenu(Material.BEDROCK, "ï¿½cï¿½lEM BREVE", new String[1]));
 		final ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 1);
 		final ItemMeta vidrom = vidro.getItemMeta();
-		vidrom.setDisplayName("§6§lCookie§f§lNetwork");
+		vidrom.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(vidrom);
 		final ItemStack vidro2 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 0);
 		final ItemMeta vidro1m = vidro2.getItemMeta();
-		vidro1m.setDisplayName("§6§lCookie§f§lNetwork");
+		vidro1m.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(vidro1m);
 		menu.setItem(1, vidro);
 		menu.setItem(3, vidro2);

@@ -1,4 +1,4 @@
-package me.cangasso.configura\u00e7\u00e3o;
+package me.cangasso.configuração;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class cfConfig {
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}
-		cfConfig.configplayer = new File(plugin.getDataFolder(), "configura\u00e7ao.yml");
+		cfConfig.configplayer = new File(plugin.getDataFolder(), "configuraçao.yml");
 		if (cfConfig.configplayer.exists()) {
 			try {
 				cfConfig.configplayer.createNewFile();

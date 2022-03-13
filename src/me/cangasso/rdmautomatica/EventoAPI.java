@@ -16,7 +16,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class EventoAPI implements Listener {
 	public static ArrayList<Player> Teleportando;
@@ -30,38 +30,38 @@ public class EventoAPI implements Listener {
 	}
 
 	public static void SetarWarp(final Player Jogador, final String LocalDoEvento) {
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".Setado por",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".Setado por",
 				(Object) Jogador.getName());
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".X",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".X",
 				(Object) Jogador.getLocation().getX());
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".Y",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".Y",
 				(Object) Jogador.getLocation().getY());
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".Z",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".Z",
 				(Object) Jogador.getLocation().getZ());
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".Pitch",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".Pitch",
 				(Object) Jogador.getLocation().getPitch());
-		Configura\u00e7\u00e3o.getEvento().set(String.valueOf(LocalDoEvento) + ".Yaw",
+		Configuração.getEvento().set(String.valueOf(LocalDoEvento) + ".Yaw",
 				(Object) Jogador.getLocation().getYaw());
-		Configura\u00e7\u00e3o.salvarConfig();
+		Configuração.salvarConfig();
 	}
 
 	public static void TeleportarWarp(final Player Jogador, final String LocalDoEvento) {
-		if (Configura\u00e7\u00e3o.getEvento().get(LocalDoEvento) == null) {
-			Jogador.sendMessage("�fO local �6�l" + LocalDoEvento + " �fainda n\u00e3o foi setado!");
+		if (Configuração.getEvento().get(LocalDoEvento) == null) {
+			Jogador.sendMessage("�fO local �6�l" + LocalDoEvento + " �fainda não foi setado!");
 			return;
 		}
-		final double x = Configura\u00e7\u00e3o.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".X");
-		final double y = Configura\u00e7\u00e3o.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Y");
-		final double z = Configura\u00e7\u00e3o.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Z");
-		final float pitch = (float) Configura\u00e7\u00e3o.getEvento()
+		final double x = Configuração.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".X");
+		final double y = Configuração.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Y");
+		final double z = Configuração.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Z");
+		final float pitch = (float) Configuração.getEvento()
 				.getDouble(String.valueOf(LocalDoEvento) + ".Pitch");
-		final float yaw = (float) Configura\u00e7\u00e3o.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Yaw");
+		final float yaw = (float) Configuração.getEvento().getDouble(String.valueOf(LocalDoEvento) + ".Yaw");
 		Jogador.teleport(new Location(Jogador.getWorld(), x, y, z, yaw, pitch));
 	}
 
 	public static void AdicinarCooldown(final Player Jogador, final int Tempo) {
 		EventoAPI.Cooldown.put(Jogador, System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(Tempo));
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				EventoAPI.RemoverCooldown(Jogador);
@@ -90,7 +90,7 @@ public class EventoAPI implements Listener {
 			EventoAPI.AntiBug.remove(Jogador);
 			Jogador.setExp(0.0f);
 			Jogador.setLevel(0);
-			Jogador.sendMessage("�cO seu teleporte foi cancelado!");
+			Jogador.sendMessage("�cO seu teleporte foi cancelado!");
 			Jogador.playSound(Jogador.getLocation(), Sound.NOTE_PIANO, 10.0f, 10.0f);
 		}
 		if (PlayerAPI.Esperando.contains(Jogador)) {

@@ -16,7 +16,7 @@ import org.bukkit.util.Vector;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Sumo implements Listener {
 	public ArrayList<String> Cima;
@@ -50,7 +50,7 @@ public class Sumo implements Listener {
 							e.getPlayer().teleport(Local.add(0.0, 1.0, 0.0));
 							CooldownAPI.addCooldown(p, 35);
 							this.Cima.add(p.getName());
-							Bukkit.getServer().getScheduler().runTaskLater(Main.getPlugin(), (Runnable) new Runnable() {
+							Bukkit.getServer().getScheduler().runTaskLater(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 								@Override
 								public void run() {
 									a.setType(Material.AIR);
@@ -60,7 +60,7 @@ public class Sumo implements Listener {
 						}
 					}
 				} else {
-					p.sendMessage("§8§l<§e§l!§8§l> §7Seu cooldown acaba em " + CooldownAPI.Cooldown + " §7segundos!");
+					p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Seu cooldown acaba em " + CooldownAPI.Cooldown + " ï¿½7segundos!");
 				}
 			}
 		}

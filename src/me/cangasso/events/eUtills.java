@@ -58,9 +58,9 @@ import me.cangasso.API.API;
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.API.KitAPI;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class eUtills implements Listener {
@@ -72,7 +72,7 @@ public class eUtills implements Listener {
 
 	public static void addCooldown(final Player p, final int Tempo) {
 		eUtills.CooldownChat.put(p.getName(), System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(Tempo));
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				eUtills.CooldownChat.remove(p.getName());
@@ -105,13 +105,13 @@ public class eUtills implements Listener {
 	@EventHandler
 	public void chat(final AsyncPlayerChatEvent e) {
 		final Player p = e.getPlayer();
-		e.setFormat("§7(" + sScoreAPI.getRank(p) + "§7) " + p.getDisplayName() + "§7: §f"
+		e.setFormat("ï¿½7(" + sScoreAPI.getRank(p) + "ï¿½7) " + p.getDisplayName() + "ï¿½7: ï¿½f"
 				+ e.getMessage().replace("%", "Porcento(s)"));
 		if (cfGrupo.ChecarGrupo(p, "Dono") || cfGrupo.ChecarGrupo(p, "Gerente") || cfGrupo.ChecarGrupo(p, "Admin")
 				|| cfGrupo.ChecarGrupo(p, "Mod+") || cfGrupo.ChecarGrupo(p, "Mod") || cfGrupo.ChecarGrupo(p, "Trial")
 				|| cfGrupo.ChecarGrupo(p, "Youtuber+") || cfGrupo.ChecarGrupo(p, "Youtuber")
 				|| cfGrupo.ChecarGrupo(p, "S-Pro") || cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Mvp")) {
-			e.setFormat(e.getFormat().replace("&", "§"));
+			e.setFormat(e.getFormat().replace("&", "ï¿½"));
 		}
 	}
 
@@ -123,7 +123,7 @@ public class eUtills implements Listener {
 				&& !cfGrupo.ChecarGrupo(p, "Trial") && !cfGrupo.ChecarGrupo(p, "Helper")
 				&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Admin")) {
 			e.setCancelled(true);
-			p.sendMessage("§cVoc\u00ea n\u00e3o pode utilizar comandos que possuam §c§l: §c(dois pontos)");
+			p.sendMessage("ï¿½cVoc\u00ea nÃ£o pode utilizar comandos que possuam ï¿½cï¿½l: ï¿½c(dois pontos)");
 		}
 	}
 
@@ -310,7 +310,7 @@ public class eUtills implements Listener {
 					|| !cfGrupo.ChecarGrupo(p, "Mod") || !cfGrupo.ChecarGrupo(p, "Trial")
 					|| !cfGrupo.ChecarGrupo(p, "Youtuber+") || !cfGrupo.ChecarGrupo(p, "Helper")
 					|| !cfGrupo.ChecarGrupo(p, "Youtuber")) {
-				p.sendMessage("§cAguarde para enviar outra mensagem ao chat!");
+				p.sendMessage("ï¿½cAguarde para enviar outra mensagem ao chat!");
 				e.setCancelled(true);
 				return;
 			}
@@ -329,16 +329,16 @@ public class eUtills implements Listener {
 			WarpsAPI.Ir(p, "1v1");
 			API.setWarp(p, "1v1");
 			KitAPI.setKit(p, "1v1");
-			Prote\u00e7\u00e3o.setImortal(p, true);
+			ProteÃ§Ã£o.setImortal(p, true);
 			p.getInventory().clear();
 			p.getInventory().setArmorContents((ItemStack[]) null);
 			final ItemStack Espada = new ItemStack(Material.BLAZE_ROD);
 			final ItemMeta kEspada = Espada.getItemMeta();
-			kEspada.setDisplayName("§6§l1V1");
+			kEspada.setDisplayName("ï¿½6ï¿½l1V1");
 			Espada.setItemMeta(kEspada);
 			final ItemStack Espada2 = new ItemStack(Material.INK_SACK, 1, (short) 8);
 			final ItemMeta kEspada2 = Espada2.getItemMeta();
-			kEspada2.setDisplayName("§eDuelo r\u00e1pido §8(Bot\u00e3o direito)");
+			kEspada2.setDisplayName("ï¿½eDuelo r\u00e1pido ï¿½8(BotÃ£o direito)");
 			Espada2.setItemMeta(kEspada2);
 			p.getInventory().setItem(3, Espada);
 			p.getInventory().setItem(5, Espada2);
@@ -352,14 +352,14 @@ public class eUtills implements Listener {
 			e.setCancelled(true);
 			WarpsAPI.Ir(p, "Spawn");
 			API.setWarp(p, "Spawn");
-			p.sendMessage("§8§l<§e§l!§8§l> §7Voc\u00ea foi morto pelo §c§lVOID§7.");
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Voc\u00ea foi morto pelo ï¿½cï¿½lVOIDï¿½7.");
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					p.spigot().respawn();
 				}
 			}, 1L);
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					API.sendItems(p);
@@ -371,7 +371,7 @@ public class eUtills implements Listener {
 	@EventHandler
 	public void motd(final ServerListPingEvent e) {
 		e.setMotd(
-				"§6§lCookie§f§lNetwork §7» §a§lATUALIZADO! §f- §fServidor de §6§lKitPvP \n§6\u27a2 §fVenha conferir nossas §a§lNOVIDADES§f!");
+				"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½aï¿½lATUALIZADO! ï¿½f- ï¿½fServidor de ï¿½6ï¿½lKitPvP \nï¿½6\u27a2 ï¿½fVenha conferir nossas ï¿½aï¿½lNOVIDADESï¿½f!");
 	}
 
 	@EventHandler
@@ -487,7 +487,7 @@ public class eUtills implements Listener {
 				|| e.getMessage().toLowerCase().startsWith("/bukkit:?")
 				|| e.getMessage().toLowerCase().startsWith("/bukkit:help")) {
 			p.sendMessage(
-					"§7Plugin de §6§lKITPVP§7. Vers\u00e3o: §3§l3.0§f - §7Para o §6§lCookie§f§lNetwork §f- §4§lBY: §7MoradorDeRua & Cangasso ");
+					"ï¿½7Plugin de ï¿½6ï¿½lKITPVPï¿½7. VersÃ£o: ï¿½3ï¿½l3.0ï¿½f - ï¿½7Para o ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½f- ï¿½4ï¿½lBY: ï¿½7MoradorDeRua & Cangasso ");
 			e.setCancelled(true);
 		}
 	}
@@ -504,12 +504,12 @@ public class eUtills implements Listener {
 					}
 					parar = true;
 					e.getPlayer().setCompassTarget(entidades.getLocation());
-					e.getPlayer().sendMessage("§7B\u00fassula apontando para §6" + ((Player) entidades).getName());
+					e.getPlayer().sendMessage("ï¿½7B\u00fassula apontando para ï¿½6" + ((Player) entidades).getName());
 					return;
 				}
 			}
 			if (!parar) {
-				e.getPlayer().sendMessage("§7Nenhum jogador encontrado!");
+				e.getPlayer().sendMessage("ï¿½7Nenhum jogador encontrado!");
 				e.getPlayer().setCompassTarget(new Location(e.getPlayer().getWorld(), 0.0, 100.0, 0.0));
 			}
 		}
@@ -517,7 +517,7 @@ public class eUtills implements Listener {
 
 	@EventHandler
 	public void dropar(final ItemSpawnEvent e) {
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				e.getEntity().remove();
@@ -565,9 +565,9 @@ public class eUtills implements Listener {
 				API.inCombat.add(bateu);
 				API.inCombat.add(hitado);
 				API.mandarActionBar(bateu,
-						String.valueOf(hitado.getDisplayName()) + " §f- §eKit: §7" + KitAPI.getKit(hitado));
-				API.BarAPI(bateu, String.valueOf(hitado.getDisplayName()) + " §f- §eKit: §7" + KitAPI.getKit(hitado));
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+						String.valueOf(hitado.getDisplayName()) + " ï¿½f- ï¿½eKit: ï¿½7" + KitAPI.getKit(hitado));
+				API.BarAPI(bateu, String.valueOf(hitado.getDisplayName()) + " ï¿½f- ï¿½eKit: ï¿½7" + KitAPI.getKit(hitado));
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						API.inCombat.remove(bateu);

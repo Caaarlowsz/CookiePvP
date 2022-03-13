@@ -15,14 +15,14 @@ public class Join1v1 implements Listener {
 	static {
 		Join1v1.Item = new Itens();
 		Join1v1.Item_ = Join1v1.Item.createItem(Material.BLAZE_ROD, "BLAZE_ROD",
-				"§eDesafie um jogador! §8(bot\u00e3o direito)", new String[0], 1, (short) 0);
+				"ï¿½eDesafie um jogador! ï¿½8(bot\u00e3o direito)", new String[0], 1, (short) 0);
 		Join1v1.Cinza = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK",
-				"§eDuelo r\u00e1pido! §8(bot\u00e3o direito)", new String[0], 1, (short) 8);
-		Join1v1.Verde1 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "§eProcurando partidas", new String[0],
+				"ï¿½eDuelo r\u00e1pido! ï¿½8(bot\u00e3o direito)", new String[0], 1, (short) 8);
+		Join1v1.Verde1 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "ï¿½eProcurando partidas", new String[0],
 				1, (short) 10);
-		Join1v1.Verde2 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "§eProcurando partidas", new String[0],
+		Join1v1.Verde2 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "ï¿½eProcurando partidas", new String[0],
 				1, (short) 10);
-		Join1v1.Verde3 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "§eProcurando partidas", new String[0],
+		Join1v1.Verde3 = Join1v1.Item.createItem(Material.INK_SACK, "INK_SACK", "ï¿½eProcurando partidas", new String[0],
 				1, (short) 10);
 	}
 }

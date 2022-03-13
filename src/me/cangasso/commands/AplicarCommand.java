@@ -12,27 +12,27 @@ public class AplicarCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if ((cmd.getName().equalsIgnoreCase("aplicar") || cmd.getName().equalsIgnoreCase("virarstaff"))
 				&& args.length == 0) {
-			API.sendMsg((CommandSender) p, "§9§m>-------------------------<");
-			API.sendMsg((CommandSender) p, "            §6» §f§lAPLICAR §6«              ");
-			API.sendMsg((CommandSender) p, "§9§m>-------------------------<");
+			API.sendMsg((CommandSender) p, "ï¿½9ï¿½m>-------------------------<");
+			API.sendMsg((CommandSender) p, "            ï¿½6ï¿½ ï¿½fï¿½lAPLICAR ï¿½6ï¿½              ");
+			API.sendMsg((CommandSender) p, "ï¿½9ï¿½m>-------------------------<");
 			API.sendMsg((CommandSender) p, " ");
-			API.sendMsg((CommandSender) p, "§6\u2022 §fAplique-se para §5§lTRIAL §facessando: §c§o(Indispon\u00edvel)");
+			API.sendMsg((CommandSender) p, "ï¿½6\u2022 ï¿½fAplique-se para ï¿½5ï¿½lTRIAL ï¿½facessando: ï¿½cï¿½o(Indispon\u00edvel)");
 			API.sendMsg((CommandSender) p,
-					"§6\u2022 §fAplique-se para §e§lHELPER §facessando: §c§o(Indispon\u00edvel)");
+					"ï¿½6\u2022 ï¿½fAplique-se para ï¿½eï¿½lHELPER ï¿½facessando: ï¿½cï¿½o(Indispon\u00edvel)");
 			API.sendMsg((CommandSender) p,
-					"§6\u2022 §fAplique-se para §2§lBUILDER §facessando: §c§o(Indispon\u00edvel)");
+					"ï¿½6\u2022 ï¿½fAplique-se para ï¿½2ï¿½lBUILDER ï¿½facessando: ï¿½cï¿½o(Indispon\u00edvel)");
 			API.sendMsg((CommandSender) p,
-					"§6\u2022 §fAplique-se para o §6§lHRC §facessando: §7http://bit.ly/APPHrcCN");
+					"ï¿½6\u2022 ï¿½fAplique-se para o ï¿½6ï¿½lHRC ï¿½facessando: ï¿½7http://bit.ly/APPHrcCN");
 			API.sendMsg((CommandSender) p, "");
 			API.sendMsg((CommandSender) p,
-					"§fN\u00e3o sabe o que \u00e9 §6§lHRC§f? Use §8§o/hrc §fpar mais informa\u00e7\u00f5es!");
+					"ï¿½fN\u00e3o sabe o que \u00e9 ï¿½6ï¿½lHRCï¿½f? Use ï¿½8ï¿½o/hrc ï¿½fpar mais informa\u00e7\u00f5es!");
 			API.sendMsg((CommandSender) p, "");
 			API.sendMsg((CommandSender) p,
-					"§4§lATENCAO: §fAo solicitar a leitura de sua aplica\u00e7\u00e3o, suas chances s\u00e3o reduzidas em §c§l15%§f!");
+					"ï¿½4ï¿½lATENCAO: ï¿½fAo solicitar a leitura de sua aplica\u00e7\u00e3o, suas chances s\u00e3o reduzidas em ï¿½cï¿½l15%ï¿½f!");
 			API.sendMsg((CommandSender) p, " ");
 			API.sendMsg((CommandSender) p,
-					"§6\u2022 §7Atualiza\u00e7\u00f5es da equipe em tempo real: §bhttps://twitter.com/CookieStaff_");
-			API.sendMsg((CommandSender) p, "§9§m>-------------------------<");
+					"ï¿½6\u2022 ï¿½7Atualiza\u00e7\u00f5es da equipe em tempo real: ï¿½bhttps://twitter.com/CookieStaff_");
+			API.sendMsg((CommandSender) p, "ï¿½9ï¿½m>-------------------------<");
 		}
 		return false;
 	}

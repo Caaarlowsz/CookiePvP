@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class InvseeCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -20,21 +20,21 @@ public class InvseeCommand implements CommandExecutor {
 		if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente") && !cfGrupo.ChecarGrupo(p, "Admin")
 				&& !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")
 				&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-			p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando!");
+			p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando!");
 			return true;
 		}
 		if (args.length == 0) {
-			API.sendMsg((CommandSender) p, "§fUtilize §3§l/invsee §fou §3§l/inv §f(jogador).");
+			API.sendMsg((CommandSender) p, "ï¿½fUtilize ï¿½3ï¿½l/invsee ï¿½fou ï¿½3ï¿½l/inv ï¿½f(jogador).");
 			API.sendSound(p, Sound.NOTE_PLING, 10);
 			return true;
 		}
 		final Player inv = Bukkit.getPlayer(args[0]);
 		if (inv == null) {
-			p.sendMessage("§cO jogador em quest\u00e3o est\u00e1 offline ou nunca entrou no servidor!");
+			p.sendMessage("ï¿½cO jogador em questÃ£o est\u00e1 offline ou nunca entrou no servidor!");
 		}
-		p.sendMessage("§eVoc\u00ea abriu o invent\u00e1rio de: §c" + inv.getName());
+		p.sendMessage("ï¿½eVoc\u00ea abriu o invent\u00e1rio de: ï¿½c" + inv.getName());
 		me.cangasso.API.API
-				.sendWarn("§7§o[" + p.getName() + " §7§oabriu o invent\u00e1rio de " + inv.getName() + "§7§o]");
+				.sendWarn("ï¿½7ï¿½o[" + p.getName() + " ï¿½7ï¿½oabriu o invent\u00e1rio de " + inv.getName() + "ï¿½7ï¿½o]");
 		API.sendSound(p, Sound.NOTE_PLING, 10);
 		p.openInventory((Inventory) inv.getInventory());
 		return true;

@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class KickCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -23,28 +23,28 @@ public class KickCommand implements CommandExecutor {
 				&& !cfGrupo.ChecarGrupo(jogador, "Mod") && !cfGrupo.ChecarGrupo(jogador, "Trial")
 				&& !cfGrupo.ChecarGrupo(jogador, "Youtuber+")) {
 			API.sendMsg((CommandSender) jogador,
-					"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+					"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 			return true;
 		}
 		if (args.length == 0) {
-			API.sendMsg((CommandSender) jogador, "§cUse /kick (jogador) (motivo)");
+			API.sendMsg((CommandSender) jogador, "ï¿½cUse /kick (jogador) (motivo)");
 			API.sendSound(jogador, Sound.NOTE_PLING, 10);
 			return true;
 		}
 		final Player vitima = Bukkit.getPlayer(args[0]);
 		if (vitima == null) {
 			API.sendMsg((CommandSender) jogador,
-					"§cO jogador em quest\u00e3o est\u00e1 offline ou nunca entrou no servidor!");
+					"ï¿½cO jogador em questÃ£o est\u00e1 offline ou nunca entrou no servidor!");
 			API.sendSound(jogador, Sound.NOTE_PLING, 10);
 			return true;
 		}
 		if (vitima.getName() == jogador.getName()) {
-			API.sendMsg((CommandSender) jogador, "§cVoc\u00ea n\u00e3o pode kickar a si mesmo!");
+			API.sendMsg((CommandSender) jogador, "ï¿½cVoc\u00ea nÃ£o pode kickar a si mesmo!");
 			API.sendSound(jogador, Sound.NOTE_PLING, 10);
 			return true;
 		}
 		if (args.length == 1) {
-			API.sendMsg((CommandSender) jogador, "§cUse /kick (jogador) (motivo)");
+			API.sendMsg((CommandSender) jogador, "ï¿½cUse /kick (jogador) (motivo)");
 			API.sendSound(jogador, Sound.NOTE_PLING, 10);
 			return true;
 		}
@@ -52,10 +52,10 @@ public class KickCommand implements CommandExecutor {
 		for (int i = 1; i < args.length; ++i) {
 			Motivo = String.valueOf(Motivo) + args[i] + " ";
 		}
-		API.sendMsg((CommandSender) jogador, "§aVoc\u00ea kickou o jogador " + vitima.getName() + "§a.");
-		API.sendStaff("§c" + vitima.getName() + " §cfoi kickado por " + jogador.getName() + "§c. Motivo: §c" + Motivo);
-		vitima.kickPlayer("§7Voc\u00ea foi kickado §fdo servidor!\n§7Username kickado: §c§l" + vitima.getName() + "\n"
-				+ "§7Kickado por: §c§l" + jogador.getName() + "\n" + "§7Motivo: §c§l" + Motivo);
+		API.sendMsg((CommandSender) jogador, "ï¿½aVoc\u00ea kickou o jogador " + vitima.getName() + "ï¿½a.");
+		API.sendStaff("ï¿½c" + vitima.getName() + " ï¿½cfoi kickado por " + jogador.getName() + "ï¿½c. Motivo: ï¿½c" + Motivo);
+		vitima.kickPlayer("ï¿½7Voc\u00ea foi kickado ï¿½fdo servidor!\nï¿½7Username kickado: ï¿½cï¿½l" + vitima.getName() + "\n"
+				+ "ï¿½7Kickado por: ï¿½cï¿½l" + jogador.getName() + "\n" + "ï¿½7Motivo: ï¿½cï¿½l" + Motivo);
 		return true;
 	}
 }

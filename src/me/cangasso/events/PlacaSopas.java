@@ -17,9 +17,9 @@ public class PlacaSopas implements Listener {
 	@EventHandler
 	public void Escrever(final SignChangeEvent e) {
 		if (e.getLine(0).equalsIgnoreCase("sopas")) {
-			e.setLine(0, "§6Cookie§fPvP");
-			e.setLine(1, "§a§lSopas");
-			e.setLine(2, "§2§m>-----<");
+			e.setLine(0, "ï¿½6Cookieï¿½fPvP");
+			e.setLine(1, "ï¿½aï¿½lSopas");
+			e.setLine(2, "ï¿½2ï¿½m>-----<");
 			e.setLine(3, " ");
 		}
 	}
@@ -32,10 +32,10 @@ public class PlacaSopas implements Listener {
 						|| e.getClickedBlock().getType() == Material.SIGN_POST)) {
 			final Sign s = (Sign) e.getClickedBlock().getState();
 			final String[] lines = s.getLines();
-			if (lines.length > 0 && lines[0].equals("§6Cookie§fPvP") && lines.length > 1
-					&& lines[1].equals(" §a§lSopas") && lines.length > 2 && lines[2].equals(" §2§m>-----<")
+			if (lines.length > 0 && lines[0].equals("ï¿½6Cookieï¿½fPvP") && lines.length > 1
+					&& lines[1].equals(" ï¿½aï¿½lSopas") && lines.length > 2 && lines[2].equals(" ï¿½2ï¿½m>-----<")
 					&& lines.length > 3 && lines[3].equals("")) {
-				final Inventory inv = Bukkit.createInventory((InventoryHolder) p, 54, "§6Sopas");
+				final Inventory inv = Bukkit.createInventory((InventoryHolder) p, 54, "ï¿½6Sopas");
 				final ItemStack sopa = new ItemStack(Material.MUSHROOM_SOUP);
 				for (int i = 0; i != 54; ++i) {
 					inv.setItem(i, sopa);

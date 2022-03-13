@@ -2,7 +2,7 @@ name: CookiePvP
 version: 3.0
 author: Cangasso e MoradorDeRua
 description: Plugin de KitPvP
-main: me.cangasso.main.Main
+main: com.github.caaarlowsz.cookiemc.kitpvp.CookiePvP
 commands:
   groupset:
   friends:

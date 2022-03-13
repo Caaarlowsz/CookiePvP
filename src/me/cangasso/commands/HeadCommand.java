@@ -10,7 +10,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class HeadCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -19,11 +19,11 @@ public class HeadCommand implements CommandExecutor {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando.");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando.");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§fUtilize §2§l/head §2(jogador)§f.");
+				p.sendMessage("ï¿½fUtilize ï¿½2ï¿½l/head ï¿½2(jogador)ï¿½f.");
 				return true;
 			}
 			if (args.length == 1) {
@@ -34,7 +34,7 @@ public class HeadCommand implements CommandExecutor {
 				item.setItemMeta((ItemMeta) itemm);
 				p.getInventory().addItem(new ItemStack[] { item });
 				p.updateInventory();
-				p.sendMessage("§fVoc\u00ea pegou a cabe\u00e7a de: §a§l" + jogador);
+				p.sendMessage("ï¿½fVoc\u00ea pegou a cabeÃ§a de: ï¿½aï¿½l" + jogador);
 				return true;
 			}
 		}

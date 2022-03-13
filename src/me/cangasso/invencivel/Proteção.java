@@ -8,11 +8,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 
-public class Prote\u00e7\u00e3o implements Listener {
+public class Proteção implements Listener {
 	private static HashMap<Player, ImortalEnum> imortal;
 
 	static {
-		Prote\u00e7\u00e3o.imortal = new HashMap<Player, ImortalEnum>();
+		Proteção.imortal = new HashMap<Player, ImortalEnum>();
 	}
 
 	@EventHandler
@@ -40,7 +40,7 @@ public class Prote\u00e7\u00e3o implements Listener {
 	}
 
 	public static ImortalEnum getImortal(final Player p) {
-		return Prote\u00e7\u00e3o.imortal.get(p);
+		return Proteção.imortal.get(p);
 	}
 
 	public static boolean isImortal(final Player p) {
@@ -49,9 +49,9 @@ public class Prote\u00e7\u00e3o implements Listener {
 
 	public static void setImortal(final Player p, final boolean i) {
 		if (i) {
-			Prote\u00e7\u00e3o.imortal.put(p, ImortalEnum.ON);
+			Proteção.imortal.put(p, ImortalEnum.ON);
 		} else {
-			Prote\u00e7\u00e3o.imortal.put(p, ImortalEnum.OFF);
+			Proteção.imortal.put(p, ImortalEnum.OFF);
 		}
 	}
 }

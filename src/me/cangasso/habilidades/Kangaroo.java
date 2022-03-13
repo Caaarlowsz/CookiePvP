@@ -17,10 +17,10 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.util.Vector;
 
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Kangaroo implements Listener {
-	public static Main plugin;
+	public static CookiePvP plugin;
 	public static ArrayList<Player> kanga;
 	public static ArrayList<Player> fujao;
 	public static List<Player> kangacd;

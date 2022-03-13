@@ -13,7 +13,7 @@ public class RankCommand implements CommandExecutor {
 		if ((cmd.getName().equalsIgnoreCase("rank") || cmd.getName().equalsIgnoreCase("liga")) && args.length == 0) {
 			API.sendMsg((CommandSender) p, " ");
 			API.sendMsg((CommandSender) p,
-					"§8§l<§c§l!§8§l> §c§lComando desativado temporariamente para atualiza\u00e7\u00f5es!");
+					"ï¿½8ï¿½l<ï¿½cï¿½l!ï¿½8ï¿½l> ï¿½cï¿½lComando desativado temporariamente para atualiza\u00e7\u00f5es!");
 			API.sendMsg((CommandSender) p, " ");
 		}
 		return false;

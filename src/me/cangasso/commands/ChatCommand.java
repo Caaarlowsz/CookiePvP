@@ -9,7 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class ChatCommand implements CommandExecutor, Listener {
 	public static boolean pausado;
@@ -25,15 +25,15 @@ public class ChatCommand implements CommandExecutor, Listener {
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")
 					&& !cfGrupo.ChecarGrupo(p, "Youtuber+")) {
-				p.sendMessage("§4§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½4ï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (Args.length == 0) {
-				p.sendMessage(" §7Utilize alguns dos argumentos:");
+				p.sendMessage(" ï¿½7Utilize alguns dos argumentos:");
 				p.sendMessage(" ");
-				p.sendMessage("§f- §3§lCLEAR §8(Para limpar o chat)");
-				p.sendMessage("§f- §3§lON §8(Para ativar o chat)");
-				p.sendMessage("§f- §3§lOFF §8(Para desativar o chat)");
+				p.sendMessage("ï¿½f- ï¿½3ï¿½lCLEAR ï¿½8(Para limpar o chat)");
+				p.sendMessage("ï¿½f- ï¿½3ï¿½lON ï¿½8(Para ativar o chat)");
+				p.sendMessage("ï¿½f- ï¿½3ï¿½lOFF ï¿½8(Para desativar o chat)");
 				return true;
 			}
 			if (Args[0].equalsIgnoreCase("clear")) {
@@ -210,14 +210,14 @@ public class ChatCommand implements CommandExecutor, Listener {
 				Bukkit.getServer().broadcastMessage("  ");
 				Bukkit.getServer().broadcastMessage("  ");
 				Bukkit.getServer().broadcastMessage(
-						"§6§lCookie§f§lNetwork §7» §fO chat do servidor foi limpo por: §6§l" + p.getName());
+						"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO chat do servidor foi limpo por: ï¿½6ï¿½l" + p.getName());
 			} else if (Args[0].equalsIgnoreCase("off")) {
 				Bukkit.getServer()
-						.broadcastMessage("§6§lCookie§f§lNetwork §7» §fO chat do servidor foi §c§lDESATIVADO§f.");
+						.broadcastMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO chat do servidor foi ï¿½cï¿½lDESATIVADOï¿½f.");
 				ChatCommand.pausado = true;
 			} else if (Args[0].equalsIgnoreCase("on")) {
 				Bukkit.getServer()
-						.broadcastMessage("§6§lCookie§f§lNetwork §7» §fO chat do servidor foi §a§lATIVADO§f.");
+						.broadcastMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO chat do servidor foi ï¿½aï¿½lATIVADOï¿½f.");
 				ChatCommand.pausado = false;
 			}
 		}
@@ -232,7 +232,7 @@ public class ChatCommand implements CommandExecutor, Listener {
 				&& !cfGrupo.ChecarGrupo(p, "Trial") && !cfGrupo.ChecarGrupo(p, "Youtuber+")
 				&& !cfGrupo.ChecarGrupo(p, "Dono")) {
 			e.setCancelled(true);
-			p.sendMessage("§cO chat est\u00e1 desativado.");
+			p.sendMessage("ï¿½cO chat est\u00e1 desativado.");
 		}
 	}
 }

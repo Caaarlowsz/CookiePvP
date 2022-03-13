@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 import me.cangasso.events.CorGrupo;
 import me.cangasso.scoreboard.sScoreAPI;
 import me.cangasso.v_1_8.TituloAPI;
@@ -18,16 +18,16 @@ public class GiveCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("giveyoutuber")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§cVoc\u00ea n\u00e3o possui permiss\u00e3o para manipular este grupo!");
+				p.sendMessage("ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para manipular este grupo!");
 				return true;
 			}
 			if (args.length == 0) {
 				if (sender instanceof Player) {
-					p.sendMessage("§7Use §b§l/giveyoutuber §7(jogador)");
+					p.sendMessage("ï¿½7Use ï¿½bï¿½l/giveyoutuber ï¿½7(jogador)");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					sender.sendMessage("§7Use §b§l/giveyoutuber §7(jogador)");
+					sender.sendMessage("ï¿½7Use ï¿½bï¿½l/giveyoutuber ï¿½7(jogador)");
 					return true;
 				}
 			}
@@ -36,48 +36,48 @@ public class GiveCommand implements CommandExecutor {
 				if (sender instanceof Player) {
 					if (k == null) {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[1]);
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber para " + off.getName());
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber para " + off.getName());
 						cfGrupo.setarGrupo(off, "Youtuber");
 						cfGrupo.salvarconfiguracao();
 						return true;
 					}
 					if (k != null) {
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber para " + k.getName());
-						k.sendMessage("§eO seu grupo(Youtuber) foi alterdo para Youtuber com sucesso!");
-						TituloAPI.MandarTitulo(k, "§b§lYOUTUBER");
-						TituloAPI.MandarSubTitulo(k, "§7O seu grupo foi alterado para §b§lYOUTUBER§7!");
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber para " + k.getName());
+						k.sendMessage("ï¿½eO seu grupo(Youtuber) foi alterdo para Youtuber com sucesso!");
+						TituloAPI.MandarTitulo(k, "ï¿½bï¿½lYOUTUBER");
+						TituloAPI.MandarSubTitulo(k, "ï¿½7O seu grupo foi alterado para ï¿½bï¿½lYOUTUBERï¿½7!");
 						cfGrupo.setarGrupo(k, "Youtuber");
 						cfGrupo.salvarconfiguracao();
 						if (cfGrupo.ChecarGrupo(k, "Dono")) {
-							CorGrupo.setarTag(k, "§4§l");
+							CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-							CorGrupo.setarTag(k, "§3§l");
+							CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-							CorGrupo.setarTag(k, "§2§l");
+							CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-							CorGrupo.setarTag(k, "§b§l");
+							CorGrupo.setarTag(k, "ï¿½bï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-							CorGrupo.setarTag(k, "§e§l");
+							CorGrupo.setarTag(k, "ï¿½eï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-							CorGrupo.setarTag(k, "§6§l");
+							CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-							CorGrupo.setarTag(k, "§a§l");
+							CorGrupo.setarTag(k, "ï¿½aï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-							CorGrupo.setarTag(k, "§7§l");
+							CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 						}
 						sScoreAPI.scoreboard(k);
 						k.chat("/tag youtuber");
@@ -87,48 +87,48 @@ public class GiveCommand implements CommandExecutor {
 				if (!(sender instanceof Player)) {
 					if (k == null) {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[1]);
-						sender.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber para" + off.getName());
+						sender.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber para" + off.getName());
 						cfGrupo.setarGrupo(off, "Youtuber");
 						cfGrupo.salvarconfiguracao();
 						return true;
 					}
 					if (k != null) {
-						sender.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber para" + k.getName());
-						k.sendMessage("§eO seu grupo(Youtuber) foi alterado para Youtuber!");
-						TituloAPI.MandarTitulo(k, "§b§lYOUTUBER");
-						TituloAPI.MandarSubTitulo(k, "§7O seu grupo foi alterado para §b§lYOUTUBER§7!");
+						sender.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber para" + k.getName());
+						k.sendMessage("ï¿½eO seu grupo(Youtuber) foi alterado para Youtuber!");
+						TituloAPI.MandarTitulo(k, "ï¿½bï¿½lYOUTUBER");
+						TituloAPI.MandarSubTitulo(k, "ï¿½7O seu grupo foi alterado para ï¿½bï¿½lYOUTUBERï¿½7!");
 						cfGrupo.setarGrupo(k, "Youtuber");
 						cfGrupo.salvarconfiguracao();
 						if (cfGrupo.ChecarGrupo(k, "Dono")) {
-							CorGrupo.setarTag(k, "§4§l");
+							CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-							CorGrupo.setarTag(k, "§3§l");
+							CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-							CorGrupo.setarTag(k, "§2§l");
+							CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-							CorGrupo.setarTag(k, "§b§l");
+							CorGrupo.setarTag(k, "ï¿½bï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-							CorGrupo.setarTag(k, "§e§l");
+							CorGrupo.setarTag(k, "ï¿½eï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-							CorGrupo.setarTag(k, "§6§l");
+							CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-							CorGrupo.setarTag(k, "§a§l");
+							CorGrupo.setarTag(k, "ï¿½aï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-							CorGrupo.setarTag(k, "§7§l");
+							CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 						}
 						sScoreAPI.scoreboard(k);
 						k.chat("/tag youtuber");
@@ -140,16 +140,16 @@ public class GiveCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("giveyoutuberplus")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente") && !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§cVoc\u00ea n\u00e3o possui permiss\u00e3o para manipular este grupo!");
+				p.sendMessage("ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para manipular este grupo!");
 				return true;
 			}
 			if (args.length == 0) {
 				if (sender instanceof Player) {
-					p.sendMessage("§7Use §3§l/giveyoutuberplus §7(jogador)");
+					p.sendMessage("ï¿½7Use ï¿½3ï¿½l/giveyoutuberplus ï¿½7(jogador)");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					sender.sendMessage("§7Use §3§l/giveyoutuberplus §7(jogador)");
+					sender.sendMessage("ï¿½7Use ï¿½3ï¿½l/giveyoutuberplus ï¿½7(jogador)");
 					return true;
 				}
 			}
@@ -158,48 +158,48 @@ public class GiveCommand implements CommandExecutor {
 				if (sender instanceof Player) {
 					if (k == null) {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[1]);
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber+ para " + off.getName());
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber+ para " + off.getName());
 						cfGrupo.setarGrupo(off, "Youtuber+");
 						cfGrupo.salvarconfiguracao();
 						return true;
 					}
 					if (k != null) {
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber para " + k.getName());
-						k.sendMessage("§eO seu grupo(Youtuber+) foi alterdo para Youtuber+ com sucesso!");
-						TituloAPI.MandarTitulo(k, "§3§lYOUTUBER+");
-						TituloAPI.MandarSubTitulo(k, "§7O seu grupo foi alterado para §3§lYOUTUBER+§7!");
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber para " + k.getName());
+						k.sendMessage("ï¿½eO seu grupo(Youtuber+) foi alterdo para Youtuber+ com sucesso!");
+						TituloAPI.MandarTitulo(k, "ï¿½3ï¿½lYOUTUBER+");
+						TituloAPI.MandarSubTitulo(k, "ï¿½7O seu grupo foi alterado para ï¿½3ï¿½lYOUTUBER+ï¿½7!");
 						cfGrupo.setarGrupo(k, "Youtuber+");
 						cfGrupo.salvarconfiguracao();
 						if (cfGrupo.ChecarGrupo(k, "Dono")) {
-							CorGrupo.setarTag(k, "§4§l");
+							CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-							CorGrupo.setarTag(k, "§3§l");
+							CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-							CorGrupo.setarTag(k, "§2§l");
+							CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-							CorGrupo.setarTag(k, "§b§l");
+							CorGrupo.setarTag(k, "ï¿½bï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-							CorGrupo.setarTag(k, "§e§l");
+							CorGrupo.setarTag(k, "ï¿½eï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-							CorGrupo.setarTag(k, "§6§l");
+							CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-							CorGrupo.setarTag(k, "§a§l");
+							CorGrupo.setarTag(k, "ï¿½aï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-							CorGrupo.setarTag(k, "§7§l");
+							CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 						}
 						sScoreAPI.scoreboard(k);
 						k.chat("/tag youtuber+");
@@ -209,48 +209,48 @@ public class GiveCommand implements CommandExecutor {
 				if (!(sender instanceof Player)) {
 					if (k == null) {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[1]);
-						sender.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber+ para" + off.getName());
+						sender.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber+ para" + off.getName());
 						cfGrupo.setarGrupo(off, "Youtuber+");
 						cfGrupo.salvarconfiguracao();
 						return true;
 					}
 					if (k != null) {
-						sender.sendMessage("§eVoc\u00ea aplicou o grupo Youtuber+ para" + k.getName());
-						k.sendMessage("§eO seu grupo(Youtuber+) foi alterado para Youtuber+!");
-						TituloAPI.MandarTitulo(k, "§3§lYOUTUBER+");
-						TituloAPI.MandarSubTitulo(k, "§7O seu grupo foi alterado para §3§lYOUTUBER+§7!");
+						sender.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Youtuber+ para" + k.getName());
+						k.sendMessage("ï¿½eO seu grupo(Youtuber+) foi alterado para Youtuber+!");
+						TituloAPI.MandarTitulo(k, "ï¿½3ï¿½lYOUTUBER+");
+						TituloAPI.MandarSubTitulo(k, "ï¿½7O seu grupo foi alterado para ï¿½3ï¿½lYOUTUBER+ï¿½7!");
 						cfGrupo.setarGrupo(k, "Youtuber+");
 						cfGrupo.salvarconfiguracao();
 						if (cfGrupo.ChecarGrupo(k, "Dono")) {
-							CorGrupo.setarTag(k, "§4§l");
+							CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-							CorGrupo.setarTag(k, "§3§l");
+							CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-							CorGrupo.setarTag(k, "§2§l");
+							CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-							CorGrupo.setarTag(k, "§b§l");
+							CorGrupo.setarTag(k, "ï¿½bï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-							CorGrupo.setarTag(k, "§e§l");
+							CorGrupo.setarTag(k, "ï¿½eï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-							CorGrupo.setarTag(k, "§6§l");
+							CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-							CorGrupo.setarTag(k, "§a§l");
+							CorGrupo.setarTag(k, "ï¿½aï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-							CorGrupo.setarTag(k, "§7§l");
+							CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 						}
 						sScoreAPI.scoreboard(k);
 						k.chat("/tag youtuber+");
@@ -262,16 +262,16 @@ public class GiveCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("givebuilder")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§cVoc\u00ea n\u00e3o possui permiss\u00e3o para manipular este grupo!");
+				p.sendMessage("ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para manipular este grupo!");
 				return true;
 			}
 			if (args.length == 0) {
 				if (sender instanceof Player) {
-					p.sendMessage("§7Use §2§l/givebuilder §7(jogador)");
+					p.sendMessage("ï¿½7Use ï¿½2ï¿½l/givebuilder ï¿½7(jogador)");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					sender.sendMessage("§7Use §2§l/givebuilder §7(jogador)");
+					sender.sendMessage("ï¿½7Use ï¿½2ï¿½l/givebuilder ï¿½7(jogador)");
 					return true;
 				}
 			}
@@ -280,48 +280,48 @@ public class GiveCommand implements CommandExecutor {
 				if (sender instanceof Player) {
 					if (k == null) {
 						final OfflinePlayer off = Bukkit.getOfflinePlayer(args[1]);
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Builder para " + off.getName());
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Builder para " + off.getName());
 						cfGrupo.setarGrupo(off, "Builder");
 						cfGrupo.salvarconfiguracao();
 						return true;
 					}
 					if (k != null) {
-						p.sendMessage("§eVoc\u00ea aplicou o grupo Builder para " + k.getName());
-						k.sendMessage("§eO seu grupo(Builder) foi alterado para Builder!");
-						TituloAPI.MandarTitulo(k, "§a§lBUILDER");
-						TituloAPI.MandarSubTitulo(k, "§7O seu grupo foi alterado para §2§BUILDER§7!");
+						p.sendMessage("ï¿½eVoc\u00ea aplicou o grupo Builder para " + k.getName());
+						k.sendMessage("ï¿½eO seu grupo(Builder) foi alterado para Builder!");
+						TituloAPI.MandarTitulo(k, "ï¿½aï¿½lBUILDER");
+						TituloAPI.MandarSubTitulo(k, "ï¿½7O seu grupo foi alterado para ï¿½2ï¿½BUILDERï¿½7!");
 						cfGrupo.setarGrupo(k, "Builder");
 						cfGrupo.salvarconfiguracao();
 						if (cfGrupo.ChecarGrupo(k, "Dono")) {
-							CorGrupo.setarTag(k, "§4§l");
+							CorGrupo.setarTag(k, "ï¿½4ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Gerente")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Admin")) {
-							CorGrupo.setarTag(k, "§c§l");
+							CorGrupo.setarTag(k, "ï¿½cï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod+")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mod")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Trial")) {
-							CorGrupo.setarTag(k, "§5§l");
+							CorGrupo.setarTag(k, "ï¿½5ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber+")) {
-							CorGrupo.setarTag(k, "§3§l");
+							CorGrupo.setarTag(k, "ï¿½3ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Builder")) {
-							CorGrupo.setarTag(k, "§2§l");
+							CorGrupo.setarTag(k, "ï¿½2ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Helper")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Youtuber")) {
-							CorGrupo.setarTag(k, "§b§l");
+							CorGrupo.setarTag(k, "ï¿½bï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "S-Pro")) {
-							CorGrupo.setarTag(k, "§e§l");
+							CorGrupo.setarTag(k, "ï¿½eï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Pro")) {
-							CorGrupo.setarTag(k, "§6§l");
+							CorGrupo.setarTag(k, "ï¿½6ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Mvp")) {
-							CorGrupo.setarTag(k, "§9§l");
+							CorGrupo.setarTag(k, "ï¿½9ï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Light")) {
-							CorGrupo.setarTag(k, "§a§l");
+							CorGrupo.setarTag(k, "ï¿½aï¿½l");
 						} else if (cfGrupo.ChecarGrupo(k, "Membro")) {
-							CorGrupo.setarTag(k, "§7§l");
+							CorGrupo.setarTag(k, "ï¿½7ï¿½l");
 						}
 						sScoreAPI.scoreboard(k);
 						k.chat("/tag builder");

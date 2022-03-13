@@ -5,214 +5,214 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class TagsCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
 		final Player p = (Player) Sender;
 		if (Cmd.getName().equalsIgnoreCase("tags")) {
 			if (cfGrupo.ChecarGrupo(p, "Dono")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §4Dono");
-				p.sendMessage("§6\u2022 §4Dev");
-				p.sendMessage("§6\u2022 §cAdmin");
-				p.sendMessage("§6\u2022 §cGerente");
-				p.sendMessage("§6\u2022 §5Mod+");
-				p.sendMessage("§6\u2022 §5Mod");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §2Builder");
-				p.sendMessage("§6\u2022 §2BuilderPlus");
-				p.sendMessage("§6\u2022 §3YoutuberPlus");
-				p.sendMessage("§6\u2022 §bYoutuber");
-				p.sendMessage("§6\u2022 §eSemiyt");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½4Dono");
+				p.sendMessage("ï¿½6\u2022 ï¿½4Dev");
+				p.sendMessage("ï¿½6\u2022 ï¿½cAdmin");
+				p.sendMessage("ï¿½6\u2022 ï¿½cGerente");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod+");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½2Builder");
+				p.sendMessage("ï¿½6\u2022 ï¿½2BuilderPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½3YoutuberPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½bYoutuber");
+				p.sendMessage("ï¿½6\u2022 ï¿½eSemiyt");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Admin")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §cAdmin");
-				p.sendMessage("§6\u2022 §cGerente");
-				p.sendMessage("§6\u2022 §5Mod+");
-				p.sendMessage("§6\u2022 §5Mod");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §2Builder");
-				p.sendMessage("§6\u2022 §2BuilderPlus");
-				p.sendMessage("§6\u2022 §3YoutuberPlus");
-				p.sendMessage("§6\u2022 §bYoutuber");
-				p.sendMessage("§6\u2022 §eSemiyt");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½cAdmin");
+				p.sendMessage("ï¿½6\u2022 ï¿½cGerente");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod+");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½2Builder");
+				p.sendMessage("ï¿½6\u2022 ï¿½2BuilderPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½3YoutuberPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½bYoutuber");
+				p.sendMessage("ï¿½6\u2022 ï¿½eSemiyt");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §cGerente");
-				p.sendMessage("§6\u2022 §5Mod+");
-				p.sendMessage("§6\u2022 §5Mod");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §2Builder");
-				p.sendMessage("§6\u2022 §2BuilderPlus");
-				p.sendMessage("§6\u2022 §3YoutuberPlus");
-				p.sendMessage("§6\u2022 §bYoutuber");
-				p.sendMessage("§6\u2022 §eSemiyt");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½cGerente");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod+");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½2Builder");
+				p.sendMessage("ï¿½6\u2022 ï¿½2BuilderPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½3YoutuberPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½bYoutuber");
+				p.sendMessage("ï¿½6\u2022 ï¿½eSemiyt");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Mod+")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §5Mod+");
-				p.sendMessage("§6\u2022 §5Mod");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §2Builder");
-				p.sendMessage("§6\u2022 §2BuilderPlus");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod+");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½2Builder");
+				p.sendMessage("ï¿½6\u2022 ï¿½2BuilderPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Mod")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §5Mod");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½5Mod");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Trial")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §dTrial");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½dTrial");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Builder")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §2Builder");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½2Builder");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Helper")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §dHelper");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½dHelper");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Youtuber+")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §3YoutuberPlus");
-				p.sendMessage("§6\u2022 §bYoutuber");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½3YoutuberPlus");
+				p.sendMessage("ï¿½6\u2022 ï¿½bYoutuber");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Youtuber")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §bYoutuber");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½bYoutuber");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "S-Pro")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §eSemiyt");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½eSemiyt");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Pro")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §6Pro");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½6Pro");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Mvp")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §9Mvp");
-				p.sendMessage("§6\u2022 §aVip");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½9Mvp");
+				p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			if (cfGrupo.ChecarGrupo(p, "Light")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 			}
 			p.sendMessage(" ");
-			p.sendMessage("§6\u2022 §aVip");
-			p.sendMessage("§6\u2022 §7Normal");
+			p.sendMessage("ï¿½6\u2022 ï¿½aVip");
+			p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 			p.sendMessage(" ");
-			p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+			p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 			return true;
 		} else {
 			if (cfGrupo.ChecarGrupo(p, "Membro")) {
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				p.sendMessage(" ");
-				p.sendMessage("§6\u2022 §7Normal");
+				p.sendMessage("ï¿½6\u2022 ï¿½7Normal");
 				p.sendMessage(" ");
-				p.sendMessage("§e§m------- §f §6§lCookie§f§lNetwork §e§m-------");
+				p.sendMessage("ï¿½eï¿½m------- ï¿½f ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½eï¿½m-------");
 				return true;
 			}
 			return false;

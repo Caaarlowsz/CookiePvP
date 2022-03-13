@@ -8,14 +8,14 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class cfStatus {
 	public static File file;
 	public static FileConfiguration cfile;
 
 	public cfStatus() {
-		final Plugin plugin = Main.getPlugin();
+		final Plugin plugin = CookiePvP.getPlugin();
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}

@@ -22,45 +22,45 @@ public class TodosKitsMenu {
 
 	public static void inventory(final Player p) {
 		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 54,
-				"§7\u27b3 §9§lTODOS OS KITS §8(p\u00e1g. 1)");
+				"ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS ï¿½8(p\u00e1g. 1)");
 		final ItemStack maiskits = new ItemStack(Material.getMaterial(351), 1, (short) 10);
 		final ItemMeta kmaiskits = maiskits.getItemMeta();
-		kmaiskits.setDisplayName("§7\u27b3 §a§lPROXIMA PAGINA");
+		kmaiskits.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lPROXIMA PAGINA");
 		maiskits.setItemMeta(kmaiskits);
 		final ItemStack kits = new ItemStack(Material.getMaterial(54));
 		final ItemMeta kkits = kits.getItemMeta();
-		kkits.setDisplayName("§7\u27b3 §a§lSEUS KITS");
+		kkits.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lSEUS KITS");
 		kits.setItemMeta(kkits);
 		final ItemStack lojadekits = new ItemStack(Material.getMaterial(388));
 		final ItemMeta klojadekits = lojadekits.getItemMeta();
-		klojadekits.setDisplayName("§7\u27b3 §2§lLOJA DE KITS");
+		klojadekits.setDisplayName("ï¿½7\u27b3 ï¿½2ï¿½lLOJA DE KITS");
 		lojadekits.setItemMeta(klojadekits);
 		final ItemStack padraokit = new ItemStack(Material.getMaterial(351), 1, (short) 6);
 		final ItemMeta kpadraokit = padraokit.getItemMeta();
-		kpadraokit.setDisplayName("§7\u27b3 §3§lKIT PADRAO");
-		kpadraokit.setLore(Arrays.asList("§7Facilite seu modo de jogo", "§7usando o sistema §e§lPADRAO KIT.", " "));
+		kpadraokit.setDisplayName("ï¿½7\u27b3 ï¿½3ï¿½lKIT PADRAO");
+		kpadraokit.setLore(Arrays.asList("ï¿½7Facilite seu modo de jogo", "ï¿½7usando o sistema ï¿½eï¿½lPADRAO KIT.", " "));
 		padraokit.setItemMeta(kpadraokit);
 		final ItemStack todososkits = new ItemStack(Material.getMaterial(399));
 		final ItemMeta ktodososkits = todososkits.getItemMeta();
-		ktodososkits.setDisplayName("§7\u27b3 §9§lTODOS OS KITS");
+		ktodososkits.setDisplayName("ï¿½7\u27b3 ï¿½9ï¿½lTODOS OS KITS");
 		todososkits.setItemMeta(ktodososkits);
 		final ItemStack ConfigureKit = new ItemStack(Material.getMaterial(131));
 		final ItemMeta kConfigureKit = ConfigureKit.getItemMeta();
-		kConfigureKit.setDisplayName("§7\u27b3 §6§lCUSTOM KIT");
-		kConfigureKit.setLore(Arrays.asList("§c§l[§4§lEM BREVE§c§l] ", "§7Configure seu kit",
-				"§7para uma melhor jogabilidade.", " "));
+		kConfigureKit.setDisplayName("ï¿½7\u27b3 ï¿½6ï¿½lCUSTOM KIT");
+		kConfigureKit.setLore(Arrays.asList("ï¿½cï¿½l[ï¿½4ï¿½lEM BREVEï¿½cï¿½l] ", "ï¿½7Configure seu kit",
+				"ï¿½7para uma melhor jogabilidade.", " "));
 		ConfigureKit.setItemMeta(kConfigureKit);
 		final ItemStack vidro = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 1);
 		final ItemMeta kvidro = vidro.getItemMeta();
-		kvidro.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro.setItemMeta(kvidro);
 		final ItemStack vidro2 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 0);
 		final ItemMeta kvidro2 = vidro2.getItemMeta();
-		kvidro2.setDisplayName("§6§lCookie§f§lNetwork");
+		kvidro2.setDisplayName("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		vidro2.setItemMeta(kvidro2);
 		final ItemStack cake = new ItemStack(Material.COOKIE);
 		final ItemMeta kcake = cake.getItemMeta();
-		kcake.setDisplayName("§6§lCookie!");
+		kcake.setDisplayName("ï¿½6ï¿½lCookie!");
 		cake.setItemMeta(kcake);
 		menu.setItem(0, padraokit);
 		menu.setItem(8, padraokit);
@@ -96,50 +96,50 @@ public class TodosKitsMenu {
 		menu.setItem(4, kits);
 		menu.setItem(5, lojadekits);
 		menu.setItem(35, maiskits);
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.STONE_SWORD, "§7\u27b3 §6§lPvP", new String[] {
-				"§a§lHABILIDADE: §7Supere os advers\u00e1rios", "§7com a sua espada avan\u00e7ada!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.BOW, "§7\u27b3 §6§lArcher",
-				new String[] { "§a§lHABILIDADE: §7Use o seu Arco para", "§7combater seus inimigos!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREWORK, "§7\u27b3 §6§lKangaroo",
-				new String[] { "§a§lHABILIDADE: §7Use a sua habilidade e", "§7d\u00ea pulos como um canguru!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.FISHING_ROD, "§7\u27b3 §6§lFisherman",
-				new String[] { "§a§lHABILIDADE: §7Pesque os seus inimigos e puxe-os at\u00e9 voc\u00ea!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.CACTUS, "§7\u27b3 §6§lCactus",
-				new String[] { "§a§lHABILIDADE: §7Vire um cacto e espete", "§7os seus inimigos" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.BLAZE_ROD, "§7\u27b3 §6§lMonk",
-				new String[] { "§a§lHABILIDADE: §7Fa\u00e7a altera\u00e7\u00f5es no invet\u00e1rio", "§7inimigo!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.COMPASS, "§7\u27b3 §6§lNinja",
-				new String[] { "§a§lHABILIDADE: §7Use as suas habilidades", "§7e voe igual um p\u00e1ssaro!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.FEATHER, "§7\u27b3 §6§lPhantom",
-				new String[] { "§a§lHABILIDADE: §7Use as suas habilidades", "§7e voe igual um p\u00e1ssaro!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.LEASH, "§7\u27b3 §6§lGrappler",
-				new String[] { "§a§lHABILIDADE: §7Fisgue o seu la\u00e7o em algo", "§7e divirta-se!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.SPIDER_EYE, "§7\u27b3 §6§lViper",
-				new String[] { "§a§lHABILIDADE: §7Aplique veneno nos", "§7inimigos e obtenha vantagem!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.STRING, "§7\u27b3 §6§lSnail",
-				new String[] { "§a§lHABILIDADE: §7Deixe seus advers\u00e1rios cansados e ataque-os!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.SADDLE, "§7\u27b3 §6§lHulk", new String[] {
-				"§a§lHABILIDADE: §7Puxe seus inimigos para cima", "§7de voc\u00ea e os deixe im\u00f3veis!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "§7\u27b3 §6§lTimelord",
-				new String[] { "§a§lHABILIDADE: §7Congele os jogadores", "§7a sua volta" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.WOOD_AXE, "§7\u27b3 §6§lThor",
-				new String[] { "§a§lHABILIDADE: §7Fa\u00e7a uma chuva de", "§7raios e combata seus inimigos!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.SNOW_BALL, "§7\u27b3 §6§lSwitcher",
-				new String[] { "§a§lHABILIDADE: §7Troque de lugar com",
-						"§7seu advers\u00e1rio usando suas bolas de neve ( \u0361° \u035c\u0296 \u0361°)" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_FENCE, "§7\u27b3 §6§lGladiator",
-				new String[] { "§a§lHABILIDADE: §7Puxe seu advers\u00e1rio para um duelo", "§7nas alturas!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_BOOTS, "§7\u27b3 §6§lStomper",
-				new String[] { "§a§lHABILIDADE: §7Pise em seus inimigos e", "§7e esmague-os!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIRE, "§7\u27b3 §6§lMagma",
-				new String[] { "§a§lHABILIDADE: §7Acerte golpes nos seus inimigos",
-						"§7e receba §2§l30% §7de chance de queima-los!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.STICK, "§7\u27b3 §6§lGrandpa",
-				new String[] { "§a§lHABILIDADE: §7Lance os seus inimigos", "§7para longe utilizando seu graveto!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.NETHER_STAR, "§7\u27b3 §6§lAjnin",
-				new String[] { "§a§lHABILIDADE: §7Puxe at\u00e9 voc\u00ea o \u00faltimo", "§7jogador hitado!" }) });
-		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREBALL, "§7\u27b3 §6§lFireLauncher",
-				new String[] { "§a§lHABILIDADE: §7Use o seu kit", "§7para p\u00f4r chamas nos advers\u00e1rios!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.STONE_SWORD, "ï¿½7\u27b3 ï¿½6ï¿½lPvP", new String[] {
+				"ï¿½aï¿½lHABILIDADE: ï¿½7Supere os advers\u00e1rios", "ï¿½7com a sua espada avan\u00e7ada!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.BOW, "ï¿½7\u27b3 ï¿½6ï¿½lArcher",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Use o seu Arco para", "ï¿½7combater seus inimigos!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREWORK, "ï¿½7\u27b3 ï¿½6ï¿½lKangaroo",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Use a sua habilidade e", "ï¿½7d\u00ea pulos como um canguru!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.FISHING_ROD, "ï¿½7\u27b3 ï¿½6ï¿½lFisherman",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Pesque os seus inimigos e puxe-os at\u00e9 voc\u00ea!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.CACTUS, "ï¿½7\u27b3 ï¿½6ï¿½lCactus",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Vire um cacto e espete", "ï¿½7os seus inimigos" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.BLAZE_ROD, "ï¿½7\u27b3 ï¿½6ï¿½lMonk",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Fa\u00e7a altera\u00e7\u00f5es no invet\u00e1rio", "ï¿½7inimigo!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.COMPASS, "ï¿½7\u27b3 ï¿½6ï¿½lNinja",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Use as suas habilidades", "ï¿½7e voe igual um p\u00e1ssaro!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.FEATHER, "ï¿½7\u27b3 ï¿½6ï¿½lPhantom",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Use as suas habilidades", "ï¿½7e voe igual um p\u00e1ssaro!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.LEASH, "ï¿½7\u27b3 ï¿½6ï¿½lGrappler",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Fisgue o seu la\u00e7o em algo", "ï¿½7e divirta-se!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.SPIDER_EYE, "ï¿½7\u27b3 ï¿½6ï¿½lViper",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Aplique veneno nos", "ï¿½7inimigos e obtenha vantagem!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.STRING, "ï¿½7\u27b3 ï¿½6ï¿½lSnail",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Deixe seus advers\u00e1rios cansados e ataque-os!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.SADDLE, "ï¿½7\u27b3 ï¿½6ï¿½lHulk", new String[] {
+				"ï¿½aï¿½lHABILIDADE: ï¿½7Puxe seus inimigos para cima", "ï¿½7de voc\u00ea e os deixe im\u00f3veis!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.WATCH, "ï¿½7\u27b3 ï¿½6ï¿½lTimelord",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Congele os jogadores", "ï¿½7a sua volta" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.WOOD_AXE, "ï¿½7\u27b3 ï¿½6ï¿½lThor",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Fa\u00e7a uma chuva de", "ï¿½7raios e combata seus inimigos!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.SNOW_BALL, "ï¿½7\u27b3 ï¿½6ï¿½lSwitcher",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Troque de lugar com",
+						"ï¿½7seu advers\u00e1rio usando suas bolas de neve ( \u0361ï¿½ \u035c\u0296 \u0361ï¿½)" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_FENCE, "ï¿½7\u27b3 ï¿½6ï¿½lGladiator",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Puxe seu advers\u00e1rio para um duelo", "ï¿½7nas alturas!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.IRON_BOOTS, "ï¿½7\u27b3 ï¿½6ï¿½lStomper",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Pise em seus inimigos e", "ï¿½7e esmague-os!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIRE, "ï¿½7\u27b3 ï¿½6ï¿½lMagma",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Acerte golpes nos seus inimigos",
+						"ï¿½7e receba ï¿½2ï¿½l30% ï¿½7de chance de queima-los!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.STICK, "ï¿½7\u27b3 ï¿½6ï¿½lGrandpa",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Lance os seus inimigos", "ï¿½7para longe utilizando seu graveto!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.NETHER_STAR, "ï¿½7\u27b3 ï¿½6ï¿½lAjnin",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Puxe at\u00e9 voc\u00ea o \u00faltimo", "ï¿½7jogador hitado!" }) });
+		menu.addItem(new ItemStack[] { criarItemMenu(Material.FIREBALL, "ï¿½7\u27b3 ï¿½6ï¿½lFireLauncher",
+				new String[] { "ï¿½aï¿½lHABILIDADE: ï¿½7Use o seu kit", "ï¿½7para p\u00f4r chamas nos advers\u00e1rios!" }) });
 		p.openInventory(menu);
 	}
 }

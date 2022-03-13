@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class RemoveAllCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
@@ -14,21 +14,21 @@ public class RemoveAllCommand implements CommandExecutor {
 		if (Cmd.getName().equalsIgnoreCase("removeall")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")) {
 				p.sendMessage(
-						"§6§lCookie§f§lNetwork §7» §fVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando.");
+						"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando.");
 				return true;
 			}
 			if (Args.length == 0) {
-				p.sendMessage("§fUse §2§l/removeall <fullkit>§f!");
+				p.sendMessage("ï¿½fUse ï¿½2ï¿½l/removeall <fullkit>ï¿½f!");
 				return true;
 			}
 			if (Args[0].equalsIgnoreCase("fullkit")) {
 				if (GiveAllCommand.fullkit) {
-					p.sendMessage("§cVoc\u00ea removeu o FullKit de todos os jogadores!");
-					Bukkit.broadcastMessage("§fO benef\u00edcio de §6§lFULLKIT §ffoi removido!");
+					p.sendMessage("ï¿½cVoc\u00ea removeu o FullKit de todos os jogadores!");
+					Bukkit.broadcastMessage("ï¿½fO benef\u00edcio de ï¿½6ï¿½lFULLKIT ï¿½ffoi removido!");
 					GiveAllCommand.fullkit = false;
 					return true;
 				}
-				p.sendMessage("§cO benef\u00edcio FullKit n\u00e3o est\u00e1 liberado!");
+				p.sendMessage("ï¿½cO benef\u00edcio FullKit nÃ£o est\u00e1 liberado!");
 			}
 		}
 		return false;

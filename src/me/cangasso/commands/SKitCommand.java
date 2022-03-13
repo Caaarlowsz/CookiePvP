@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class SKitCommand implements CommandExecutor {
 	public static HashMap<String, ItemStack[]> itens;
@@ -28,42 +28,42 @@ public class SKitCommand implements CommandExecutor {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§cUse: /skit <criar | remover | aplicar> <nome>");
+				p.sendMessage("ï¿½cUse: /skit <criar | remover | aplicar> <nome>");
 				return true;
 			}
 			if (args.length == 1) {
-				p.sendMessage("§cUse: /skit <criar | remover | aplicar> <nome>");
+				p.sendMessage("ï¿½cUse: /skit <criar | remover | aplicar> <nome>");
 				return true;
 			}
 			if (args.length <= 2) {
 				if (args[0].equalsIgnoreCase("criar")) {
 					final String nome = args[1];
 					if (SKitCommand.itens.containsKey(nome) && SKitCommand.armadura.containsKey(nome)) {
-						p.sendMessage("§fO kit denominado de §2§l" + nome + " §fj\u00e1 existe!");
+						p.sendMessage("ï¿½fO kit denominado de ï¿½2ï¿½l" + nome + " ï¿½fj\u00e1 existe!");
 						return true;
 					}
 					SKitCommand.itens.put(nome, p.getInventory().getContents());
 					SKitCommand.armadura.put(nome, p.getInventory().getArmorContents());
-					p.sendMessage("§aVoc\u00ea criou um kit! Chama-se: §a§l" + nome);
+					p.sendMessage("ï¿½aVoc\u00ea criou um kit! Chama-se: ï¿½aï¿½l" + nome);
 					return true;
 				} else if (args[0].equalsIgnoreCase("remover")) {
 					final String nome = args[1];
 					if (!SKitCommand.itens.containsKey(nome) && !SKitCommand.armadura.containsKey(nome)) {
-						p.sendMessage("§fO kit §a§l" + nome + "§f n\u00e3o existe!");
+						p.sendMessage("ï¿½fO kit ï¿½aï¿½l" + nome + "ï¿½f nÃ£o existe!");
 						return true;
 					}
 					SKitCommand.itens.remove(nome);
 					SKitCommand.armadura.remove(nome);
-					p.sendMessage("§fVoc\u00ea §4§lDELETOU §fo kit §c§l" + nome);
+					p.sendMessage("ï¿½fVoc\u00ea ï¿½4ï¿½lDELETOU ï¿½fo kit ï¿½cï¿½l" + nome);
 					return true;
 				} else if (args[0].equalsIgnoreCase("aplicar")) {
 					final String nome = args[1];
 					if (!SKitCommand.itens.containsKey(nome) && !SKitCommand.armadura.containsKey(nome)) {
-						p.sendMessage("§fO kit §a§l" + nome + "§fn\u00e3o existe!");
+						p.sendMessage("ï¿½fO kit ï¿½aï¿½l" + nome + "ï¿½fnÃ£o existe!");
 						return true;
 					}
 					if (SKitCommand.itens.containsKey(nome) && SKitCommand.armadura.containsKey(nome)) {
@@ -74,9 +74,9 @@ public class SKitCommand implements CommandExecutor {
 								todos.getInventory().setContents((ItemStack[]) SKitCommand.itens.get(nome));
 								todos.getInventory().setArmorContents((ItemStack[]) SKitCommand.armadura.get(nome));
 								todos.updateInventory();
-								p.sendMessage("§aVoc\u00ea aplicou o kit §6§l" + nome + "§apara todos os jogadores!");
-								Bukkit.broadcastMessage("§7" + p.getDisplayName() + " §7aplicou o kit §6§l" + nome
-										+ "§7 para todos os jogadores!");
+								p.sendMessage("ï¿½aVoc\u00ea aplicou o kit ï¿½6ï¿½l" + nome + "ï¿½apara todos os jogadores!");
+								Bukkit.broadcastMessage("ï¿½7" + p.getDisplayName() + " ï¿½7aplicou o kit ï¿½6ï¿½l" + nome
+										+ "ï¿½7 para todos os jogadores!");
 								return true;
 							}
 						}

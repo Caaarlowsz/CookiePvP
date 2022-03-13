@@ -10,19 +10,19 @@ import org.bukkit.inventory.ItemStack;
 import me.cangasso.API.ArraysAPI;
 import me.cangasso.API.KitAPI;
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class ClearAllCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
 		final Player p = (Player) sender;
 		if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente") && !cfGrupo.ChecarGrupo(p, "Admin")) {
 			API.sendMsg((CommandSender) p,
-					"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+					"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 			return true;
 		}
 		if (cmd.getName().equalsIgnoreCase("clearall")) {
-			API.sendMsg((CommandSender) p, "§aVoc\u00ea limpou o invent\u00e1rio de todos os jogadores!");
-			me.cangasso.API.API.sendWarn("§a§l" + p.getName() + " §7acabou de limpar todos os invent\u00e1rios.");
+			API.sendMsg((CommandSender) p, "ï¿½aVoc\u00ea limpou o invent\u00e1rio de todos os jogadores!");
+			me.cangasso.API.API.sendWarn("ï¿½aï¿½l" + p.getName() + " ï¿½7acabou de limpar todos os invent\u00e1rios.");
 			Player[] onlinePlayers;
 			for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 				final Player todos = onlinePlayers[i];

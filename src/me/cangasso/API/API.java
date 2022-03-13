@@ -16,18 +16,18 @@ import org.spigotmc.ProtocolInjector;
 
 import me.cangasso.bossbar.api.BossBarAPI;
 import me.cangasso.commands.GiveAllCommand;
-import me.cangasso.configura\u00e7\u00e3o.cfConfig;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfKitdiario;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
-import me.cangasso.configura\u00e7\u00e3o.cfTempGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfConfig;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfKitdiario;
+import me.cangasso.configuraÃ§Ã£o.cfPermissÃ£o;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
+import me.cangasso.configuraÃ§Ã£o.cfTempGrupo;
 import me.cangasso.events.CorGrupo;
 import me.cangasso.habilidades.Ajnin;
 import me.cangasso.habilidades.Ninja;
 import me.cangasso.habilidades.Strong;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.nametag.Array;
 import me.cangasso.nametag.NametagManager;
 import me.cangasso.nametag.NametagUtils;
@@ -50,7 +50,7 @@ public class API {
 	public static void BarAPI(final Player p, final String menssagem) {
 		final int numero = 20;
 		BossBarAPI.setMessage(p, menssagem);
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				BossBarAPI.removeBar(p);
@@ -62,153 +62,153 @@ public class API {
 		if (cfGrupo.pegargrupo().get("grupos." + p.getUniqueId() + ".grupo") == null) {
 			cfGrupo.setarGrupo(p, "Membro");
 			cfGrupo.salvarconfiguracao();
-		} else if (cfGrupo.pegargrupo().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == null) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
+		} else if (cfGrupo.pegargrupo().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit") == null) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
 			cfConfig.salvarconfiguracao();
 		}
 	}
 
 	public static void setarKitPadrao(final Player p) {
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("PvP")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("PvP")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Archer")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Archer");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Archer")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Archer");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Kangaroo")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Kangaroo");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Kangaroo")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Kangaroo");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit")
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit")
 				.equals("Fisherman")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit",
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit",
 					(Object) "Fisherman");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Cactus")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Cactus");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Cactus")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Cactus");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Monk")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Monk");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Monk")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Monk");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Ninja")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Ninja");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Ninja")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Ninja");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Phantom")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Phantom");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Phantom")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Phantom");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Grappler")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Grappler");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Grappler")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Grappler");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Viper")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Viper");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Viper")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Viper");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Snail")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Snail");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Snail")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Snail");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Hulk")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Hulk");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Hulk")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Hulk");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Timelord")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Timelord");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Timelord")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Timelord");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Thor")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Thor");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Thor")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Thor");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Switcher")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Switcher");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Switcher")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Switcher");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit")
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit")
 				.equals("Gladiator")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit",
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit",
 					(Object) "Gladiator");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Stomper")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Stomper");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Stomper")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Stomper");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Magma")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Magma");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Magma")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Magma");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Grandpa")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Grandpa");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Grandpa")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Grandpa");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Ajnin")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Ajnin");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Ajnin")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Ajnin");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit")
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit")
 				.equals("FireLauncher")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit",
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit",
 					(Object) "FireLauncher");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Strong")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Strong");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Strong")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Strong");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals("Sumo")) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "Sumo");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals("Sumo")) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "Sumo");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit").equals(null)) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit").equals(null)) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
 			cfConfig.salvarconfiguracao();
 		}
 	}
 
 	public static void corGrupo(final Player p) {
 		if (cfGrupo.ChecarGrupo(p, "Dono")) {
-			CorGrupo.setarTag(p, "§4§l");
+			CorGrupo.setarTag(p, "ï¿½4ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Gerente")) {
-			CorGrupo.setarTag(p, "§3§l");
+			CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Admin")) {
-			CorGrupo.setarTag(p, "§c§l");
+			CorGrupo.setarTag(p, "ï¿½cï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Mod+")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Mod")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Trial")) {
-			CorGrupo.setarTag(p, "§5§l");
+			CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Youtuber+")) {
-			CorGrupo.setarTag(p, "§3§l");
+			CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Builder")) {
-			CorGrupo.setarTag(p, "§2§l");
+			CorGrupo.setarTag(p, "ï¿½2ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Helper")) {
-			CorGrupo.setarTag(p, "§9§l");
+			CorGrupo.setarTag(p, "ï¿½9ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Youtuber")) {
-			CorGrupo.setarTag(p, "§b§l");
+			CorGrupo.setarTag(p, "ï¿½bï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "S-Pro")) {
-			CorGrupo.setarTag(p, "§e§l");
+			CorGrupo.setarTag(p, "ï¿½eï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Pro")) {
-			CorGrupo.setarTag(p, "§6§l");
+			CorGrupo.setarTag(p, "ï¿½6ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Mvp")) {
-			CorGrupo.setarTag(p, "§9§l");
+			CorGrupo.setarTag(p, "ï¿½9ï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Light")) {
-			CorGrupo.setarTag(p, "§a§l");
+			CorGrupo.setarTag(p, "ï¿½aï¿½l");
 		} else if (cfGrupo.ChecarGrupo(p, "Membro")) {
-			CorGrupo.setarTag(p, "§7§l");
+			CorGrupo.setarTag(p, "ï¿½7ï¿½l");
 		}
 	}
 
 	public static void acharTag(final Player p) {
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				API.checarGrupo(p);
@@ -276,7 +276,7 @@ public class API {
 				&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Pro")
 				&& !cfGrupo.ChecarGrupo(p, "Youtuber")
 				&& cfKitdiario.pegargrupo().get("kitdiario." + p.getUniqueId() + ".dia") == null) {
-			p.sendMessage("§6§lCookie§f§lNetwork §7» §fVoc\u00ea j\u00e1 pode pegar o seu kit di\u00e1rio!");
+			p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fVoc\u00ea j\u00e1 pode pegar o seu kit di\u00e1rio!");
 		}
 		sendItems(p);
 		if (cfTempGrupo.pegargrupo().get("tempgrupos." + p.getUniqueId() + ".Dia") != null
@@ -321,14 +321,14 @@ public class API {
 								+ ".Segundos") == CalendarioAPI.PegarCalendario(CalendarioAPI.Calendario.Segundo)
 								&& (cfGrupo.ChecarGrupo(p, "Pro") || cfGrupo.ChecarGrupo(p, "Mvp")
 										|| cfGrupo.ChecarGrupo(p, "Light"))))) {
-			mandarTitulo(p, "§6§lCookie§f§lNetwork");
-			mandarSubTitulo(p, "§6§lCookie§f§lNetwork §7» O seu VIP "
-					+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + " §7acabou de expirar!");
+			mandarTitulo(p, "ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
+			mandarSubTitulo(p, "ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ O seu VIP "
+					+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + " ï¿½7acabou de expirar!");
 			cfGrupo.salvarconfiguracao();
 			Bukkit.getConsoleSender().sendMessage(
-					"§6§lCookie§f§lNetwork §7» §fO VIP do jogador §6§l" + p.getName() + " §facabou de expirar!");
-			p.sendMessage("§6§lCookie§f§lNetwork §7» §7O seu VIP "
-					+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "§7 acabou de expirar!");
+					"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO VIP do jogador ï¿½6ï¿½l" + p.getName() + " ï¿½facabou de expirar!");
+			p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½7O seu VIP "
+					+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo") + "ï¿½7 acabou de expirar!");
 			cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Nick", (Object) null);
 			cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".grupo", (Object) null);
 			cfTempGrupo.pegargrupo().set("tempgrupos." + p.getUniqueId() + ".Dia", (Object) null);
@@ -343,42 +343,42 @@ public class API {
 				final Player todos = onlinePlayers[i];
 				if (cfGrupo.ChecarGrupo(todos, "Dono") || cfGrupo.ChecarGrupo(todos, "Gerente")
 						|| cfGrupo.ChecarGrupo(todos, "Admin")) {
-					todos.sendMessage("§6§lCookie§f§lNetwork §7» §fO VIP "
+					todos.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fO VIP "
 							+ cfGrupo.pegargrupo().getString("grupos." + p.getUniqueId() + ".grupo")
-							+ "§f do jogador §6§l" + p.getName() + " §facagou de expirar!");
+							+ "ï¿½f do jogador ï¿½6ï¿½l" + p.getName() + " ï¿½facagou de expirar!");
 				}
 			}
 			cfGrupo.setarGrupo(p, "Membro");
 			if (cfGrupo.ChecarGrupo(p, "Dono")) {
-				CorGrupo.setarTag(p, "§4§l");
+				CorGrupo.setarTag(p, "ï¿½4ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Gerente")) {
-				CorGrupo.setarTag(p, "§3§l");
+				CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Admin")) {
-				CorGrupo.setarTag(p, "§c§l");
+				CorGrupo.setarTag(p, "ï¿½cï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Mod+")) {
-				CorGrupo.setarTag(p, "§5§l");
+				CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Mod")) {
-				CorGrupo.setarTag(p, "§5§l");
+				CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Trial")) {
-				CorGrupo.setarTag(p, "§5§l");
+				CorGrupo.setarTag(p, "ï¿½5ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Youtuber+")) {
-				CorGrupo.setarTag(p, "§3§l");
+				CorGrupo.setarTag(p, "ï¿½3ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Builder")) {
-				CorGrupo.setarTag(p, "§2§l");
+				CorGrupo.setarTag(p, "ï¿½2ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Helper")) {
-				CorGrupo.setarTag(p, "§e§l");
+				CorGrupo.setarTag(p, "ï¿½eï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Youtuber")) {
-				CorGrupo.setarTag(p, "§b§l");
+				CorGrupo.setarTag(p, "ï¿½bï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "S-Pro")) {
-				CorGrupo.setarTag(p, "§e§l");
+				CorGrupo.setarTag(p, "ï¿½eï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Pro")) {
-				CorGrupo.setarTag(p, "§6§l");
+				CorGrupo.setarTag(p, "ï¿½6ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Mvp")) {
-				CorGrupo.setarTag(p, "§9§l");
+				CorGrupo.setarTag(p, "ï¿½9ï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Light")) {
-				CorGrupo.setarTag(p, "§a§l");
+				CorGrupo.setarTag(p, "ï¿½aï¿½l");
 			} else if (cfGrupo.ChecarGrupo(p, "Membro")) {
-				CorGrupo.setarTag(p, "§7§l");
+				CorGrupo.setarTag(p, "ï¿½7ï¿½l");
 			}
 			sScoreAPI.scoreboard(p);
 			p.chat("/tag normal");
@@ -386,7 +386,7 @@ public class API {
 	}
 
 	public static void checarNameTag(final Player p) {
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				NametagManager.MandarTeamsParaJogador(p);
@@ -409,7 +409,7 @@ public class API {
 				}
 			}
 		}, 1L);
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				API.acharTag(p);
@@ -418,81 +418,81 @@ public class API {
 	}
 
 	public static void checarConfig(final Player p) {
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".Nick") == null) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".Nick", (Object) p.getName());
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".Nick") == null) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".Nick", (Object) p.getName());
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit") == null) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit") == null) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".PadraoKit", (Object) "PvP");
 			cfConfig.salvarconfiguracao();
 		}
-		if (cfConfig.pegarconfig().get("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell") == null) {
-			cfConfig.pegarconfig().set("configura\u00e7\u00e3o." + p.getUniqueId() + ".Tell", (Object) "Ativado");
+		if (cfConfig.pegarconfig().get("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell") == null) {
+			cfConfig.pegarconfig().set("configuraÃ§Ã£o." + p.getUniqueId() + ".Tell", (Object) "Ativado");
 			cfConfig.salvarconfiguracao();
 		}
 		cfConfig.salvarconfiguracao();
 	}
 
 	public static void checarPermissao(final Player p) {
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.monk") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.monk", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.monk") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.monk", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.ninja") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.ninja", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.ninja") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.ninja", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.phantom") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.phantom", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.phantom") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.phantom", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.grappler") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.grappler", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.grappler") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.grappler", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.viper") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.viper", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.viper") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.viper", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.snail") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.snail", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.snail") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.snail", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.hulk") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.hulk", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.hulk") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.hulk", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.timelord") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.timelord", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.timelord") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.timelord", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.thor") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.thor", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.thor") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.thor", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.switcher") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.switcher", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.switcher") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.switcher", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.gladiator") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.gladiator", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.gladiator") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.gladiator", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.endermage") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.endermage", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.endermage") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.endermage", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.stomper") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.stomper", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.stomper") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.stomper", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.magma") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.magma", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.magma") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.magma", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.grandpa") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.grandpa", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.grandpa") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.grandpa", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.ajnin") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.ajnin", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.ajnin") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.ajnin", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.firelauncher") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.firelauncher", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.firelauncher") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.firelauncher", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.strong") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.strong", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.strong") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.strong", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.forcefield") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.forcefield", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.forcefield") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.forcefield", "false");
 		}
-		if (cfPermiss\u00e3o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.sumo") == null) {
-			cfPermiss\u00e3o.setarPermissao(p, "kit.sumo", "false");
+		if (cfPermissÃ£o.pegarpermissao().get("permiss\u00f5es." + p.getUniqueId() + ".kit.sumo") == null) {
+			cfPermissÃ£o.setarPermissao(p, "kit.sumo", "false");
 		}
 	}
 
@@ -530,38 +530,38 @@ public class API {
 			setWarp(p, "Spawn");
 			final ItemStack Kits = new ItemStack(Material.CHEST);
 			final ItemMeta kKits = Kits.getItemMeta();
-			kKits.setDisplayName("§8\u27bc §a§lKITS");
-			kKits.setLore(Arrays.asList("§7Confira aqui os kits que voc\u00ea possui e afins!"));
+			kKits.setDisplayName("ï¿½8\u27bc ï¿½aï¿½lKITS");
+			kKits.setLore(Arrays.asList("ï¿½7Confira aqui os kits que voc\u00ea possui e afins!"));
 			Kits.setItemMeta(kKits);
 			final ItemStack Warps = new ItemStack(Material.NAME_TAG);
 			final ItemMeta kWarps = Warps.getItemMeta();
-			kWarps.setDisplayName("§8\u27bc §6§lWARPS");
-			kWarps.setLore(Arrays.asList("§7Confira aqui as Warps dispon\u00edveis em nosso servidor!"));
+			kWarps.setDisplayName("ï¿½8\u27bc ï¿½6ï¿½lWARPS");
+			kWarps.setLore(Arrays.asList("ï¿½7Confira aqui as Warps dispon\u00edveis em nosso servidor!"));
 			Warps.setItemMeta(kWarps);
 			final ItemStack Loja = new ItemStack(Material.EMERALD);
 			final ItemMeta kLoja = Loja.getItemMeta();
-			kLoja.setDisplayName("§8\u27bc §2§lLOJA");
-			kLoja.setLore(Arrays.asList("§7Clique neste item para obter a URL de nossa loja!"));
+			kLoja.setDisplayName("ï¿½8\u27bc ï¿½2ï¿½lLOJA");
+			kLoja.setLore(Arrays.asList("ï¿½7Clique neste item para obter a URL de nossa loja!"));
 			Loja.setItemMeta(kLoja);
 			final ItemStack Rank = new ItemStack(Material.FLOWER_POT_ITEM);
 			final ItemMeta kRank = Rank.getItemMeta();
-			kRank.setDisplayName("§8\u27bc §a§lAJUSTES");
-			kRank.setLore(Arrays.asList("§7Ajuste as suas configura\u00e7\u00f5es pessoais!"));
+			kRank.setDisplayName("ï¿½8\u27bc ï¿½aï¿½lAJUSTES");
+			kRank.setLore(Arrays.asList("ï¿½7Ajuste as suas configuraÃ§\u00f5es pessoais!"));
 			Rank.setItemMeta(kRank);
 			final ItemStack Heads = new ItemStack(Material.NOTE_BLOCK);
 			final ItemMeta kHeads = Heads.getItemMeta();
-			kHeads.setDisplayName("§8\u27bc §b§lHEADS");
-			kHeads.setLore(Arrays.asList("§7Selecione uma cabe\u00e7a!"));
+			kHeads.setDisplayName("ï¿½8\u27bc ï¿½bï¿½lHEADS");
+			kHeads.setLore(Arrays.asList("ï¿½7Selecione uma cabeÃ§a!"));
 			Heads.setItemMeta(kHeads);
 			final ItemStack Caixas = new ItemStack(Material.ENDER_CHEST);
 			final ItemMeta kCaixas = Caixas.getItemMeta();
-			kCaixas.setDisplayName("§8\u27bc §6§lKIT DIARIO");
-			kCaixas.setLore(Arrays.asList("§7A cada 24 horas, receba um kit aleat\u00f3rio!"));
+			kCaixas.setDisplayName("ï¿½8\u27bc ï¿½6ï¿½lKIT DIARIO");
+			kCaixas.setLore(Arrays.asList("ï¿½7A cada 24 horas, receba um kit aleat\u00f3rio!"));
 			Caixas.setItemMeta(kCaixas);
 			final ItemStack KitPadrao = new ItemStack(Material.getMaterial(351), 1, (short) 14);
 			final ItemMeta kKitPadrao = KitPadrao.getItemMeta();
-			kKitPadrao.setDisplayName("§8\u27bc §a§lKIT PADRAO");
-			kKitPadrao.setLore(Arrays.asList("§7Selecione um kit para ser \u00fanico!"));
+			kKitPadrao.setDisplayName("ï¿½8\u27bc ï¿½aï¿½lKIT PADRAO");
+			kKitPadrao.setLore(Arrays.asList("ï¿½7Selecione um kit para ser \u00fanico!"));
 			KitPadrao.setItemMeta(kKitPadrao);
 			final ItemStack Vidro = new ItemStack(Material.AIR, 1, (short) 7);
 			final ItemMeta kVidro = Caixas.getItemMeta();
@@ -570,7 +570,7 @@ public class API {
 			Vidro.setItemMeta(kVidro);
 			p.getInventory().clear();
 			p.getInventory().setArmorContents((ItemStack[]) null);
-			Prote\u00e7\u00e3o.setImortal(p, true);
+			ProteÃ§Ã£o.setImortal(p, true);
 			p.setHealth(20.0);
 			p.setMaxHealth(20.0);
 			sScoreAPI.scoreboard(p);
@@ -641,51 +641,51 @@ public class API {
 	public static void setHotbar(final Player p) {
 		final ItemStack Kits = new ItemStack(Material.CHEST);
 		final ItemMeta kKits = Kits.getItemMeta();
-		kKits.setDisplayName("§8\u27bc §a§KITS ");
-		kKits.setLore(Arrays.asList("§7Confira aqui os kits que voc\u00ea possui e afins!"));
+		kKits.setDisplayName("ï¿½8\u27bc ï¿½aï¿½KITS ");
+		kKits.setLore(Arrays.asList("ï¿½7Confira aqui os kits que voc\u00ea possui e afins!"));
 		Kits.setItemMeta(kKits);
 		final ItemStack Ranks = new ItemStack(Material.ENCHANTED_BOOK);
 		final ItemMeta kRanks = Ranks.getItemMeta();
-		kRanks.setDisplayName("§8\u27bc  §5§lRANKS");
-		kRanks.setLore(Arrays.asList("§7Confira a lista de ranks!"));
+		kRanks.setDisplayName("ï¿½8\u27bc  ï¿½5ï¿½lRANKS");
+		kRanks.setLore(Arrays.asList("ï¿½7Confira a lista de ranks!"));
 		Ranks.setItemMeta(kRanks);
 		final ItemStack Warps = new ItemStack(Material.NAME_TAG);
 		final ItemMeta kWarps = Warps.getItemMeta();
-		kWarps.setDisplayName("§8\u27bc §6§lWARPS");
-		kWarps.setLore(Arrays.asList("§7Confira as Warps dispon\u00edveis em nosso servidor!"));
+		kWarps.setDisplayName("ï¿½8\u27bc ï¿½6ï¿½lWARPS");
+		kWarps.setLore(Arrays.asList("ï¿½7Confira as Warps dispon\u00edveis em nosso servidor!"));
 		Warps.setItemMeta(kWarps);
 		final ItemStack Loja = new ItemStack(Material.EMERALD);
 		final ItemMeta kLoja = Loja.getItemMeta();
-		kLoja.setDisplayName("§8\u27bc §2§lLOJA");
-		kLoja.setLore(Arrays.asList("§7Clique §7§nneste item §7para obter a URL de nossa loja."));
+		kLoja.setDisplayName("ï¿½8\u27bc ï¿½2ï¿½lLOJA");
+		kLoja.setLore(Arrays.asList("ï¿½7Clique ï¿½7ï¿½nneste item ï¿½7para obter a URL de nossa loja."));
 		Loja.setItemMeta(kLoja);
 		final ItemStack Rank = new ItemStack(Material.FLOWER_POT_ITEM);
 		final ItemMeta kRank = Rank.getItemMeta();
-		kRank.setDisplayName("§a§nConfigura\u00e7\u00f5es pessoais!");
-		kRank.setLore(Arrays.asList("§7Ajuste as suas configura\u00e7\u00f5es pessoais!"));
+		kRank.setDisplayName("ï¿½aï¿½nConfiguraÃ§\u00f5es pessoais!");
+		kRank.setLore(Arrays.asList("ï¿½7Ajuste as suas configuraÃ§\u00f5es pessoais!"));
 		Rank.setItemMeta(kRank);
 		final ItemStack Heads = new ItemStack(Material.NOTE_BLOCK);
 		final ItemMeta kHeads = Heads.getItemMeta();
-		kHeads.setDisplayName("§8\u27bc §b§lHEADS");
-		kHeads.setLore(Arrays.asList("§7Selecione, neste menu", "§7uma cabeca para ser colocada"));
+		kHeads.setDisplayName("ï¿½8\u27bc ï¿½bï¿½lHEADS");
+		kHeads.setLore(Arrays.asList("ï¿½7Selecione, neste menu", "ï¿½7uma cabeca para ser colocada"));
 		Heads.setItemMeta(kHeads);
 		final ItemStack Caixas = new ItemStack(Material.ENDER_CHEST);
 		final ItemMeta kCaixas = Caixas.getItemMeta();
-		kCaixas.setDisplayName("§8\u27bc §aKIT DIARIO");
-		kCaixas.setLore(Arrays.asList("§7A cada 24 horas, receba um kit aleat\u00f3rio!"));
+		kCaixas.setDisplayName("ï¿½8\u27bc ï¿½aKIT DIARIO");
+		kCaixas.setLore(Arrays.asList("ï¿½7A cada 24 horas, receba um kit aleat\u00f3rio!"));
 		Caixas.setItemMeta(kCaixas);
 		final ItemStack KitPadrao = new ItemStack(Material.getMaterial(351), 1, (short) 14);
 		final ItemMeta kKitPadrao = KitPadrao.getItemMeta();
-		kKitPadrao.setDisplayName("§8\u27bc §a§lKIT PADRAO");
-		kKitPadrao.setLore(Arrays.asList("§7Escolha um kit para ser \u00fanico!"));
+		kKitPadrao.setDisplayName("ï¿½8\u27bc ï¿½aï¿½lKIT PADRAO");
+		kKitPadrao.setLore(Arrays.asList("ï¿½7Escolha um kit para ser \u00fanico!"));
 		KitPadrao.setItemMeta(kKitPadrao);
 		final ItemStack book = new ItemStack(Material.WRITTEN_BOOK, 1);
 		final BookMeta bm = (BookMeta) book.getItemMeta();
-		bm.setAuthor("§6§lCookie§f§lNetwork");
-		bm.setTitle("§a§lAtualiza\u00e7\u00f5es de 2017");
+		bm.setAuthor("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
+		bm.setTitle("ï¿½aï¿½lAtualizaÃ§\u00f5es de 2017");
 		final ArrayList<String> pages = new ArrayList<String>();
 		pages.add(
-				"§7Seja muito bem-vindo ao §6§lCookiep§f§lNetwork §3§l3.0§7. §7Gostar\u00edamos de inform\u00e1-los que ap\u00f3s \u00e1rduos dias de duro trabalho e dedica\u00e7\u00e3o de cada membro da equipe, conseguimos trazer uma grande atualiza\u00e7\u00e3o! §f- §7Foi implementada novas §6§lWARPS§7, §9§lTAGS §7e §a§lKITS§7! §7Caso voc\u00ea encontre algum erro, reporte-o em nosso §7Twiter§7: §b§l@_McCookie \n \n §7§oAtenciosamente, Cangasso §f- §4§oDesenvolvedor");
+				"ï¿½7Seja muito bem-vindo ao ï¿½6ï¿½lCookiepï¿½fï¿½lNetwork ï¿½3ï¿½l3.0ï¿½7. ï¿½7Gostar\u00edamos de inform\u00e1-los que ap\u00f3s \u00e1rduos dias de duro trabalho e dedicaÃ§Ã£o de cada membro da equipe, conseguimos trazer uma grande atualizaÃ§Ã£o! ï¿½f- ï¿½7Foi implementada novas ï¿½6ï¿½lWARPSï¿½7, ï¿½9ï¿½lTAGS ï¿½7e ï¿½aï¿½lKITSï¿½7! ï¿½7Caso voc\u00ea encontre algum erro, reporte-o em nosso ï¿½7Twiterï¿½7: ï¿½bï¿½l@_McCookie \n \n ï¿½7ï¿½oAtenciosamente, Cangasso ï¿½f- ï¿½4ï¿½oDesenvolvedor");
 		bm.setPages(pages);
 		book.setItemMeta((ItemMeta) bm);
 		final ItemStack Vidro = new ItemStack(Material.AIR, 1, (short) 7);

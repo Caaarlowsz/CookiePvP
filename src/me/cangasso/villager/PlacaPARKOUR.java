@@ -14,16 +14,16 @@ import org.bukkit.potion.PotionEffectType;
 
 import me.cangasso.API.API;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class PlacaPARKOUR implements Listener {
 	@EventHandler
 	public void Escrever(final SignChangeEvent e) {
 		if (e.getLine(0).equalsIgnoreCase("parkoursign")) {
-			e.setLine(0, "§6§lPARKOUR");
-			e.setLine(1, "§7Iniciar parkour");
-			e.setLine(2, " §7(Clique)");
+			e.setLine(0, "ï¿½6ï¿½lPARKOUR");
+			e.setLine(1, "ï¿½7Iniciar parkour");
+			e.setLine(2, " ï¿½7(Clique)");
 			e.setLine(3, " ");
 		}
 	}
@@ -37,11 +37,11 @@ public class PlacaPARKOUR implements Listener {
 				&& API.getWarp(p) == "Parkour") {
 			final Sign s = (Sign) e.getClickedBlock().getState();
 			final String[] lines = s.getLines();
-			if (lines.length > 0 && lines[0].equals(" ") && lines.length > 1 && lines[1].equals("§6§lPARKOUR")
-					&& lines.length > 2 && lines[2].equals(" §7(Clique)") && lines.length > 3 && lines[3].equals(" ")) {
-				p.sendMessage("§aParab\u00e9ns, voc\u00ea completou o parkour!");
+			if (lines.length > 0 && lines[0].equals(" ") && lines.length > 1 && lines[1].equals("ï¿½6ï¿½lPARKOUR")
+					&& lines.length > 2 && lines[2].equals(" ï¿½7(Clique)") && lines.length > 3 && lines[3].equals(" ")) {
+				p.sendMessage("ï¿½aParab\u00e9ns, voc\u00ea completou o parkour!");
 				cfStatus.setMoney(p, 100);
-				p.sendMessage("§aEm b\u00f4nus, voc\u00ea recebeu §a§l100 §ade XP!");
+				p.sendMessage("ï¿½aEm b\u00f4nus, voc\u00ea recebeu ï¿½aï¿½l100 ï¿½ade XP!");
 				API.setWarp(p, "Spawn");
 				WarpsAPI.Ir(p, "Spawn");
 				p.removePotionEffect(PotionEffectType.INVISIBILITY);

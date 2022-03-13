@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class GetIPCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -18,25 +18,25 @@ public class GetIPCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				API.sendMsg((CommandSender) p, "§fUtilize §8§l/getip §8(jogador)§f.");
+				API.sendMsg((CommandSender) p, "ï¿½fUtilize ï¿½8ï¿½l/getip ï¿½8(jogador)ï¿½f.");
 				API.sendSound(p, Sound.NOTE_PLING, 10);
 				return true;
 			}
 			final Player ip = Bukkit.getPlayer(args[0]);
 			if (ip == null) {
-				API.sendMsg((CommandSender) p, "§7O jogador §6§l " + args[0] + " est\u00e1 offline!");
+				API.sendMsg((CommandSender) p, "ï¿½7O jogador ï¿½6ï¿½l " + args[0] + " est\u00e1 offline!");
 				API.sendSound(p, Sound.NOTE_PLING, 10);
 				return true;
 			}
 			if (ip != null) {
-				API.sendMsg((CommandSender) p, "§6\u27a2 §aChecando informa\u00e7\u00f5es de: §6§l" + ip.getName());
+				API.sendMsg((CommandSender) p, "ï¿½6\u27a2 ï¿½aChecando informaÃ§\u00f5es de: ï¿½6ï¿½l" + ip.getName());
 				API.sendMsg((CommandSender) p, " ");
-				API.sendMsg((CommandSender) p, "§a§lIP: §7" + ip.getAddress().getHostString());
-				API.sendMsg((CommandSender) p, "§a§lIP §8(reverso): §7" + ip.getAddress().getHostName());
+				API.sendMsg((CommandSender) p, "ï¿½aï¿½lIP: ï¿½7" + ip.getAddress().getHostString());
+				API.sendMsg((CommandSender) p, "ï¿½aï¿½lIP ï¿½8(reverso): ï¿½7" + ip.getAddress().getHostName());
 				return true;
 			}
 		}

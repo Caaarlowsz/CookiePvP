@@ -8,7 +8,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class TpAllCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -17,14 +17,14 @@ public class TpAllCommand implements CommandExecutor {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Mod")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§7Voc\u00ea puxou §3§lTODOS §fos jogadores at\u00e9 voc\u00ea!");
+				p.sendMessage("ï¿½7Voc\u00ea puxou ï¿½3ï¿½lTODOS ï¿½fos jogadores at\u00e9 voc\u00ea!");
 				Bukkit.broadcastMessage(
-						"§4§lALERTA §7Todos os jogadores foram teleportados para §6§l" + p.getName() + "§7.");
-				API.sendWarn("§7§o[" + p.getName() + " §7§opuxou todos os jogadores]");
+						"ï¿½4ï¿½lALERTA ï¿½7Todos os jogadores foram teleportados para ï¿½6ï¿½l" + p.getName() + "ï¿½7.");
+				API.sendWarn("ï¿½7ï¿½o[" + p.getName() + " ï¿½7ï¿½opuxou todos os jogadores]");
 				Player[] onlinePlayers;
 				for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 					final Player todos = onlinePlayers[i];

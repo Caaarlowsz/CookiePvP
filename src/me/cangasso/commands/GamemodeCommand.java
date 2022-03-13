@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.API.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class GamemodeCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
@@ -16,22 +16,22 @@ public class GamemodeCommand implements CommandExecutor {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Dono")
 					&& !cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Dono")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (Args.length == 0) {
-				p.sendMessage("§fUse §9§l/gamemode §c§l(0 | 1) §fou §9§l/gm §c§l(0 | 1)");
+				p.sendMessage("ï¿½fUse ï¿½9ï¿½l/gamemode ï¿½cï¿½l(0 | 1) ï¿½fou ï¿½9ï¿½l/gm ï¿½cï¿½l(0 | 1)");
 				return true;
 			}
 			if (Args[0].equalsIgnoreCase("1")) {
 				p.setGameMode(GameMode.CREATIVE);
-				p.sendMessage("§fO seu §a§lGAMEMODE §ffoi alterado para o modo CRIATIVO");
-				API.sendWarn("§7§o[§7§o" + p.getName() + " §7§oentrou no modo CRIATIVO]");
+				p.sendMessage("ï¿½fO seu ï¿½aï¿½lGAMEMODE ï¿½ffoi alterado para o modo CRIATIVO");
+				API.sendWarn("ï¿½7ï¿½o[ï¿½7ï¿½o" + p.getName() + " ï¿½7ï¿½oentrou no modo CRIATIVO]");
 			}
 			if (Args[0].equalsIgnoreCase("0")) {
 				p.setGameMode(GameMode.SURVIVAL);
-				p.sendMessage("§fO seu §a§lGAMEMODE §ffoi alterado para o modo SOBREVIVENCIA");
-				API.sendWarn("§7§o[§7§o" + p.getName() + " §7§oentrou no modo SOBREVIVENCIA]");
+				p.sendMessage("ï¿½fO seu ï¿½aï¿½lGAMEMODE ï¿½ffoi alterado para o modo SOBREVIVENCIA");
+				API.sendWarn("ï¿½7ï¿½o[ï¿½7ï¿½o" + p.getName() + " ï¿½7ï¿½oentrou no modo SOBREVIVENCIA]");
 			}
 		}
 		return false;

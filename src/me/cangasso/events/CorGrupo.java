@@ -15,7 +15,7 @@ public class CorGrupo {
 		if (CorGrupo.tag.containsKey(player)) {
 			return CorGrupo.tag.get(player);
 		}
-		return "§7";
+		return "ï¿½7";
 	}
 
 	public static void setarTag(final Player player, final String Tag) {

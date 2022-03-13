@@ -14,9 +14,9 @@ public class PlacaRecraft implements Listener {
 	@EventHandler
 	public void Escrever(final SignChangeEvent e) {
 		if (e.getLine(0).equalsIgnoreCase("recraft")) {
-			e.setLine(0, "§6Cookie§fPvP");
-			e.setLine(1, " §a§lRecraft");
-			e.setLine(2, " §2§m>-----<");
+			e.setLine(0, "ï¿½6Cookieï¿½fPvP");
+			e.setLine(1, " ï¿½aï¿½lRecraft");
+			e.setLine(2, " ï¿½2ï¿½m>-----<");
 			e.setLine(3, "");
 		}
 	}
@@ -29,13 +29,13 @@ public class PlacaRecraft implements Listener {
 						|| e.getClickedBlock().getType() == Material.SIGN_POST)) {
 			final Sign s = (Sign) e.getClickedBlock().getState();
 			final String[] lines = s.getLines();
-			if (lines.length > 0 && lines[0].equals("§6Cookie§fPvP") && lines.length > 1
-					&& lines[1].equals(" §a§lRecraft") && lines.length > 2 && lines[2].equals(" §2§m>-----<")
+			if (lines.length > 0 && lines[0].equals("ï¿½6Cookieï¿½fPvP") && lines.length > 1
+					&& lines[1].equals(" ï¿½aï¿½lRecraft") && lines.length > 2 && lines[2].equals(" ï¿½2ï¿½m>-----<")
 					&& lines.length > 3 && lines[3].equals("")) {
 				final ItemStack cogu1 = new ItemStack(Material.BROWN_MUSHROOM, 64);
 				final ItemStack cogu2 = new ItemStack(Material.RED_MUSHROOM, 64);
 				final ItemStack pote = new ItemStack(Material.BOWL, 64);
-				p.sendMessage("§6\u27a2 §aO recraft foi enviado para o seu invent\u00e1rio!");
+				p.sendMessage("ï¿½6\u27a2 ï¿½aO recraft foi enviado para o seu invent\u00e1rio!");
 				p.getInventory().addItem(new ItemStack[] { cogu1 });
 				p.getInventory().addItem(new ItemStack[] { cogu2 });
 				p.getInventory().addItem(new ItemStack[] { pote });

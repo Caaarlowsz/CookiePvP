@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class CageCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -17,12 +17,12 @@ public class CageCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")
 					&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar esse comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar esse comando!");
 				return true;
 			}
 			if (args.length == 0) {
 				p.sendMessage(
-						"§7Use: §6§l/cage <nickname> §7para prender um jogador. Lembre-se: \u00c9 necess\u00e1rio que voc\u00ea seja no m\u00ednimo §3§lYOUTUBER+ §7ou §5§lMOD+ §7para executar este comando por espont\u00e2nea vontade ou poder\u00e1 sofrer consequ\u00eancias graves!");
+						"ï¿½7Use: ï¿½6ï¿½l/cage <nickname> ï¿½7para prender um jogador. Lembre-se: \u00c9 necess\u00e1rio que voc\u00ea seja no m\u00ednimo ï¿½3ï¿½lYOUTUBER+ ï¿½7ou ï¿½5ï¿½lMOD+ ï¿½7para executar este comando por espont\u00e2nea vontade ou poder\u00e1 sofrer consequ\u00eancias graves!");
 				return true;
 			}
 			if (args.length == 1) {
@@ -32,7 +32,7 @@ public class CageCommand implements CommandExecutor {
 					return true;
 				}
 				if (t.getName() == p.getName()) {
-					p.sendMessage("§cVoc\u00ea n\u00e3o pode prender a si mesmo!");
+					p.sendMessage("ï¿½cVoc\u00ea nÃ£o pode prender a si mesmo!");
 					return true;
 				}
 				t.getLocation().add(0.0, 13.0, 0.0).getBlock().setType(Material.BEDROCK);
@@ -43,7 +43,7 @@ public class CageCommand implements CommandExecutor {
 				t.getLocation().add(0.0, 10.0, 0.0).getBlock().setType(Material.BEDROCK);
 				t.teleport(t.getLocation().add(0.0, 11.0, -0.05));
 				p.teleport(t.getLocation().add(3.0, 0.0, 0.05));
-				p.sendMessage("§fVoc\u00ea prendeu o jogador: §a§l" + t.getName());
+				p.sendMessage("ï¿½fVoc\u00ea prendeu o jogador: ï¿½aï¿½l" + t.getName());
 				return true;
 			}
 		}

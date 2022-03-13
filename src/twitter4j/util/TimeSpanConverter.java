@@ -29,14 +29,14 @@ public final class TimeSpanConverter implements Serializable {
 			this.dateMonth = new SimpleDateFormat("d MMM", locale);
 			this.dateMonthYear = new SimpleDateFormat("d MMM yy", locale);
 		} else if ("kr".equals(language)) {
-			this.formats[0] = new MessageFormat("\u00ec§\u20ac\u00ea¸\u02c6");
-			this.formats[1] = new MessageFormat("{0}\u00ec´\u02c6 \u00ec \u201e");
-			this.formats[2] = new MessageFormat("1\u00eb¶\u201e \u00ec \u201e");
-			this.formats[3] = new MessageFormat("{0}\u00eb¶\u201e \u00ec \u201e");
-			this.formats[4] = new MessageFormat("1\u00ec\u2039\u0153\u00ea°\u201e \u00ec \u201e");
+			this.formats[0] = new MessageFormat("\u00ecï¿½\u20ac\u00eaï¿½\u02c6");
+			this.formats[1] = new MessageFormat("{0}\u00ecï¿½\u02c6 \u00ecï¿½\u201e");
+			this.formats[2] = new MessageFormat("1\u00ebï¿½\u201e \u00ecï¿½\u201e");
+			this.formats[3] = new MessageFormat("{0}\u00ebï¿½\u201e \u00ecï¿½\u201e");
+			this.formats[4] = new MessageFormat("1\u00ec\u2039\u0153\u00eaï¿½\u201e \u00ecï¿½\u201e");
 			this.formats[5] = new MessageFormat("{0} ore fa");
-			this.dateMonth = new SimpleDateFormat("M\u00ec\u203a\u201d d\u00ec\ufffd¼", locale);
-			this.dateMonthYear = new SimpleDateFormat("yy\u00eb\u2026\u201e M\u00ec\u203a\u201d d\u00ec\ufffd¼",
+			this.dateMonth = new SimpleDateFormat("M\u00ec\u203a\u201d d\u00ec\ufffdï¿½", locale);
+			this.dateMonthYear = new SimpleDateFormat("yy\u00eb\u2026\u201e M\u00ec\u203a\u201d d\u00ec\ufffdï¿½",
 					locale);
 		} else if ("es".equals(language)) {
 			this.formats[0] = new MessageFormat("Ahora");
@@ -66,14 +66,14 @@ public final class TimeSpanConverter implements Serializable {
 			this.dateMonth = new SimpleDateFormat("d MMM", locale);
 			this.dateMonthYear = new SimpleDateFormat("d MMM yy", locale);
 		} else if ("ja".equals(language)) {
-			this.formats[0] = new MessageFormat("\u00e4»\u0160");
-			this.formats[1] = new MessageFormat("{0}\u00e7§\u2019\u00e5\u2030\ufffd");
+			this.formats[0] = new MessageFormat("\u00e4ï¿½\u0160");
+			this.formats[1] = new MessageFormat("{0}\u00e7ï¿½\u2019\u00e5\u2030\ufffd");
 			this.formats[2] = new MessageFormat("1\u00e5\u02c6\u2020\u00e5\u2030\ufffd");
 			this.formats[3] = new MessageFormat("{0}\u00e5\u02c6\u2020\u00e5\u2030\ufffd");
 			this.formats[4] = new MessageFormat("1\u00e6\u2122\u201a\u00e9\u2013\u201c\u00e5\u2030\ufffd");
 			this.formats[5] = new MessageFormat("{0}\u00e6\u2122\u201a\u00e9\u2013\u201c\u00e5\u2030\ufffd");
-			this.dateMonth = new SimpleDateFormat("M\u00e6\u0153\u02c6d\u00e6\u2014¥", locale);
-			this.dateMonthYear = new SimpleDateFormat("yy\u00e5¹´M\u00e6\u0153\u02c6d\u00e6\u2014¥", locale);
+			this.dateMonth = new SimpleDateFormat("M\u00e6\u0153\u02c6d\u00e6\u2014ï¿½", locale);
+			this.dateMonthYear = new SimpleDateFormat("yy\u00e5ï¿½ï¿½M\u00e6\u0153\u02c6d\u00e6\u2014ï¿½", locale);
 		} else {
 			this.formats[0] = new MessageFormat("now");
 			this.formats[1] = new MessageFormat("{0} seconds ago");

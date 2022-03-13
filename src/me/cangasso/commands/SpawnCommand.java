@@ -12,17 +12,17 @@ import me.cangasso.API.API;
 import me.cangasso.API.KitAPI;
 import me.cangasso.API.TopKillStreak;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class SpawnCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender Sender, final Command Cmd, final String Label, final String[] Args) {
 		final Player p = (Player) Sender;
 		if (Cmd.getName().equalsIgnoreCase("spawn")) {
-			p.sendMessage("§fVoc\u00ea est\u00e1 sendo §6§lTELEPORTADO §fpara o Spawn!");
+			p.sendMessage("ï¿½fVoc\u00ea est\u00e1 sendo ï¿½6ï¿½lTELEPORTADO ï¿½fpara o Spawn!");
 			p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 9999, 9999));
 			p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 9999, 9999));
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					TopKillStreak.Ks.put(p, 0);

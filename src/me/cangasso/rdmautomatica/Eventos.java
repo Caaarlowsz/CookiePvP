@@ -12,27 +12,27 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 import me.cangasso.API.API;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 
 public class Eventos implements Listener {
 	@EventHandler
 	public void onPlayerQuitEvent(final PlayerQuitEvent Evento) {
 		final Player Jogador = Evento.getPlayer();
-		if (Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
-		if (Main.Evento == Estado.INICIANDO && PlayerAPI.Participando.contains(Jogador)) {
+		if (CookiePvP.Evento == Estado.INICIANDO && PlayerAPI.Participando.contains(Jogador)) {
 			PlayerAPI.RemoverRDM(Jogador);
 			PlayerAPI.Participando.remove(Jogador);
-			Tempo.mandarBroadcast("§7O jogador §6§l" + Jogador.getName() + " §7saiu do evento §e§l("
-					+ PlayerAPI.Participando.size() + "§e§l/30)");
-		} else if (Main.Evento == Estado.ANDAMENTO) {
+			Tempo.mandarBroadcast("ï¿½7O jogador ï¿½6ï¿½l" + Jogador.getName() + " ï¿½7saiu do evento ï¿½eï¿½l("
+					+ PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
+		} else if (CookiePvP.Evento == Estado.ANDAMENTO) {
 			if (!PlayerAPI.Batalhando.contains(Jogador) && PlayerAPI.Participando.contains(Jogador)) {
 				PlayerAPI.RemoverRDM(Jogador);
 				PlayerAPI.Participando.remove(Jogador);
-				Tempo.mandarBroadcast("§7O jogador §6§l" + Jogador.getName() + "§7 saiu do evento §e§l("
-						+ PlayerAPI.Participando.size() + "§e§l/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½6ï¿½l" + Jogador.getName() + "ï¿½7 saiu do evento ï¿½eï¿½l("
+						+ PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
 				return;
 			}
 			if (PlayerAPI.Batalhando.contains(Jogador) && PlayerAPI.Participando.contains(Jogador)
@@ -42,10 +42,10 @@ public class Eventos implements Listener {
 				PlayerAPI.Batalhando.remove(Jogador);
 				PlayerAPI.Participando.remove(Jogador);
 				Tempo.mandarBroadcast(
-						"§7O jogador §c§l" + Jogador.getName() + " §7n\u00e3o aguentou e desistiu do duelo contra §a§l"
-								+ Ganhador.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
-				Tempo.mandarBroadcast("§7O jogador §a§l" + Ganhador.getName() + " §7venceu o duelo contra §c§l"
-						+ Jogador.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
+						"ï¿½7O jogador ï¿½cï¿½l" + Jogador.getName() + " ï¿½7nÃ£o aguentou e desistiu do duelo contra ï¿½aï¿½l"
+								+ Ganhador.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Ganhador.getName() + " ï¿½7venceu o duelo contra ï¿½cï¿½l"
+						+ Jogador.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
 				Player[] onlinePlayers;
 				for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 					final Player Jogadores = onlinePlayers[i];
@@ -68,10 +68,10 @@ public class Eventos implements Listener {
 				PlayerAPI.Batalhando.remove(Jogador);
 				PlayerAPI.Participando.remove(Jogador);
 				Tempo.mandarBroadcast(
-						"§7O jogador §c§l" + Jogador.getName() + " §7n\u00e3o aguentou e desistiu do duelo contra §a§l"
-								+ Ganhador.getName() + "§7. §6(" + PlayerAPI.Participando.size() + "/30)");
-				Tempo.mandarBroadcast("§7O jogador §a§l" + Ganhador.getName() + " §7venceu o duelo contra §c§l"
-						+ Jogador.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
+						"ï¿½7O jogador ï¿½cï¿½l" + Jogador.getName() + " ï¿½7nÃ£o aguentou e desistiu do duelo contra ï¿½aï¿½l"
+								+ Ganhador.getName() + "ï¿½7. ï¿½6(" + PlayerAPI.Participando.size() + "/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Ganhador.getName() + " ï¿½7venceu o duelo contra ï¿½cï¿½l"
+						+ Jogador.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
 				Player[] onlinePlayers2;
 				for (int length2 = (onlinePlayers2 = Bukkit.getOnlinePlayers()).length, j = 0; j < length2; ++j) {
 					final Player Jogadores = onlinePlayers2[j];
@@ -94,10 +94,10 @@ public class Eventos implements Listener {
 				PlayerAPI.Batalhando.remove(Jogador);
 				PlayerAPI.Participando.remove(Jogador);
 				Tempo.mandarBroadcast(
-						"§7O jogador §c§l" + Jogador.getName() + " §7n\u00e3o aguentou e desistiu do duelo contra §a§l"
-								+ Ganhador.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
-				Tempo.mandarBroadcast("§7O jogador §a§l" + Ganhador.getName() + " §7venceu o duelo contra §c§l"
-						+ Jogador.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
+						"ï¿½7O jogador ï¿½cï¿½l" + Jogador.getName() + " ï¿½7nÃ£o aguentou e desistiu do duelo contra ï¿½aï¿½l"
+								+ Ganhador.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Ganhador.getName() + " ï¿½7venceu o duelo contra ï¿½cï¿½l"
+						+ Jogador.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
 				Player[] onlinePlayers3;
 				for (int length3 = (onlinePlayers3 = Bukkit.getOnlinePlayers()).length, k = 0; k < length3; ++k) {
 					final Player Jogadores = onlinePlayers3[k];
@@ -120,10 +120,10 @@ public class Eventos implements Listener {
 				PlayerAPI.Batalhando.remove(Jogador);
 				PlayerAPI.Participando.remove(Jogador);
 				Tempo.mandarBroadcast(
-						"§7O jogador §c§l" + Jogador.getName() + " §7n\u00e3o aguentou e desistiu do duelo contra §a§l"
-								+ Ganhador.getName() + "§7. §6(" + PlayerAPI.Participando.size() + "/30)");
-				Tempo.mandarBroadcast("§7O jogador §a§l" + Ganhador.getName() + " §7venceu o duelo contra §c§l"
-						+ Jogador.getName() + "§7. §6(" + PlayerAPI.Participando.size() + "/30)");
+						"ï¿½7O jogador ï¿½cï¿½l" + Jogador.getName() + " ï¿½7nÃ£o aguentou e desistiu do duelo contra ï¿½aï¿½l"
+								+ Ganhador.getName() + "ï¿½7. ï¿½6(" + PlayerAPI.Participando.size() + "/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Ganhador.getName() + " ï¿½7venceu o duelo contra ï¿½cï¿½l"
+						+ Jogador.getName() + "ï¿½7. ï¿½6(" + PlayerAPI.Participando.size() + "/30)");
 				Player[] onlinePlayers4;
 				for (int length4 = (onlinePlayers4 = Bukkit.getOnlinePlayers()).length, l = 0; l < length4; ++l) {
 					final Player Jogadores = onlinePlayers4[l];
@@ -149,10 +149,10 @@ public class Eventos implements Listener {
 		final Player Matador = Evento.getEntity().getKiller();
 		final Player Vitima = Evento.getEntity();
 		if (Matador != Vitima) {
-			if (Main.Evento == Estado.ANDAMENTO && PlayerAPI.Participando.contains(Matador)
+			if (CookiePvP.Evento == Estado.ANDAMENTO && PlayerAPI.Participando.contains(Matador)
 					&& PlayerAPI.Participando.contains(Vitima)) {
-				Matador.sendMessage("§fVoc\u00ea §a§lGANHOU §fa batalha contra §6§l" + Vitima.getName());
-				Vitima.sendMessage("§fVoc\u00ea §c§lPERDEU §fa batalha contra §6§l" + Matador.getName());
+				Matador.sendMessage("ï¿½fVoc\u00ea ï¿½aï¿½lGANHOU ï¿½fa batalha contra ï¿½6ï¿½l" + Vitima.getName());
+				Vitima.sendMessage("ï¿½fVoc\u00ea ï¿½cï¿½lPERDEU ï¿½fa batalha contra ï¿½6ï¿½l" + Matador.getName());
 				PlayerAPI.RemoverRDM(Vitima);
 				PlayerAPI.Batalhando1.remove(Matador);
 				PlayerAPI.Ganhador.put(Matador, Matador.getName());
@@ -171,13 +171,13 @@ public class Eventos implements Listener {
 					PlayerAPI.Batalhando2.remove(Jogadores);
 					PlayerAPI.Batalhando.remove(Jogadores);
 				}
-				Tempo.mandarBroadcast("§7O jogador §a§l" + Matador.getName() + " §7venceu o duelo contra §c§l"
-						+ Vitima.getName() + "§7. §e§l(" + PlayerAPI.Participando.size() + "§e§l/30)");
+				Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Matador.getName() + " ï¿½7venceu o duelo contra ï¿½cï¿½l"
+						+ Vitima.getName() + "ï¿½7. ï¿½eï¿½l(" + PlayerAPI.Participando.size() + "ï¿½eï¿½l/30)");
 				if (PlayerAPI.Ganhador.get(Matador) == Matador.getName()) {
-					Tempo.mandarBroadcast("§7O jogador §a§l" + Matador.getName() + " §7continua na lideran\u00e7a!");
+					Tempo.mandarBroadcast("ï¿½7O jogador ï¿½aï¿½l" + Matador.getName() + " ï¿½7continua na lideranÃ§a!");
 				} else {
 					Tempo.mandarBroadcast(
-							"§a§lGANHADOR: §fO jogador §2§l" + Matador.getName() + " §7\u00e9 o vencedor do evento!");
+							"ï¿½aï¿½lGANHADOR: ï¿½fO jogador ï¿½2ï¿½l" + Matador.getName() + " ï¿½7\u00e9 o vencedor do evento!");
 				}
 				if (PlayerAPI.Participando.size() >= 2) {
 					PlayerAPI.SelecionarProximoJogador(Matador);
@@ -194,19 +194,19 @@ public class Eventos implements Listener {
 	@EventHandler
 	public void onPlayerRespawnEvent(final PlayerRespawnEvent Evento) {
 		final Player Jogador = Evento.getPlayer();
-		if (Configura\u00e7\u00e3o.getEvento().get("Saida") == null) {
-			Jogador.sendMessage("§cO local de sa\u00edda ainda n\u00e3o foi setado!");
+		if (ConfiguraÃ§Ã£o.getEvento().get("Saida") == null) {
+			Jogador.sendMessage("ï¿½cO local de sa\u00edda ainda nÃ£o foi setado!");
 			return;
 		}
-		final double x = Configura\u00e7\u00e3o.getEvento().getDouble("Saida.X");
-		final double y = Configura\u00e7\u00e3o.getEvento().getDouble("Saida.Y");
-		final double z = Configura\u00e7\u00e3o.getEvento().getDouble("Saida.Z");
-		final float pitch = (float) Configura\u00e7\u00e3o.getEvento().getDouble("Saida.Pitch");
-		final float yaw = (float) Configura\u00e7\u00e3o.getEvento().getDouble("Saida.Yaw");
-		if (Main.Evento == Estado.ANDAMENTO && PlayerAPI.Participando.contains(Jogador)) {
+		final double x = ConfiguraÃ§Ã£o.getEvento().getDouble("Saida.X");
+		final double y = ConfiguraÃ§Ã£o.getEvento().getDouble("Saida.Y");
+		final double z = ConfiguraÃ§Ã£o.getEvento().getDouble("Saida.Z");
+		final float pitch = (float) ConfiguraÃ§Ã£o.getEvento().getDouble("Saida.Pitch");
+		final float yaw = (float) ConfiguraÃ§Ã£o.getEvento().getDouble("Saida.Yaw");
+		if (CookiePvP.Evento == Estado.ANDAMENTO && PlayerAPI.Participando.contains(Jogador)) {
 			Evento.setRespawnLocation(new Location(Jogador.getWorld(), x, y, z, yaw, pitch));
 			API.sendItems(Jogador);
-			Prote\u00e7\u00e3o.setImortal(Jogador, true);
+			ProteÃ§Ã£o.setImortal(Jogador, true);
 		}
 	}
 
@@ -215,7 +215,7 @@ public class Eventos implements Listener {
 		final Player Jogador = Evento.getPlayer();
 		if (PlayerAPI.Batalhando.contains(Jogador)) {
 			if (Evento.getMessage().toLowerCase().startsWith("/")) {
-				Jogador.sendMessage("§cVoc\u00ea n\u00e3o pode utilizar comandos durante o duelo!");
+				Jogador.sendMessage("ï¿½cVoc\u00ea nÃ£o pode utilizar comandos durante o duelo!");
 				Evento.setCancelled(true);
 			}
 			return;
@@ -223,10 +223,10 @@ public class Eventos implements Listener {
 		if (PlayerAPI.Participando.contains(Jogador) && !PlayerAPI.Batalhando.contains(Jogador)) {
 			if (!Evento.getMessage().startsWith("/sair") && !Evento.getMessage().startsWith("/rdm")) {
 				if (!Jogador.hasPermission("RDM.Admin")) {
-					Jogador.sendMessage("§cVoc\u00ea n\u00e3o pode executar este comando aqui!");
+					Jogador.sendMessage("ï¿½cVoc\u00ea nÃ£o pode executar este comando aqui!");
 				} else {
 					Jogador.sendMessage(
-							"§cVoc\u00ea s\u00f3 pode utilizar os comandos §c§l/sair §ce §c§l/rdm §cneste local.");
+							"ï¿½cVoc\u00ea s\u00f3 pode utilizar os comandos ï¿½cï¿½l/sair ï¿½ce ï¿½cï¿½l/rdm ï¿½cneste local.");
 				}
 				Evento.setCancelled(true);
 			}
@@ -235,11 +235,11 @@ public class Eventos implements Listener {
 
 	@EventHandler
 	public void onPlayerJoinEvent(final PlayerJoinEvent Evento) {
-		if (Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		final Player Jogador = Evento.getPlayer();
-		if (Main.Evento == Estado.INICIANDO || Main.Evento == Estado.ANDAMENTO) {
+		if (CookiePvP.Evento == Estado.INICIANDO || CookiePvP.Evento == Estado.ANDAMENTO) {
 			Player[] onlinePlayers;
 			for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 				final Player Jogadores = onlinePlayers[i];

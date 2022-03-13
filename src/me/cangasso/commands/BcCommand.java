@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class BcCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -14,11 +14,11 @@ public class BcCommand implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("bc")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Admin")
 					&& !cfGrupo.ChecarGrupo(p, "Gerente")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§aUse /bc (mensagem)");
+				p.sendMessage("ï¿½aUse /bc (mensagem)");
 				return true;
 			}
 			if (args.length >= 1) {
@@ -27,7 +27,7 @@ public class BcCommand implements CommandExecutor {
 					bc = String.valueOf(bc) + args[i] + " ";
 				}
 				Bukkit.broadcastMessage(" ");
-				Bukkit.broadcastMessage("§7[§cAVISO§7] §7» §f" + bc.replace("&", "§"));
+				Bukkit.broadcastMessage("ï¿½7[ï¿½cAVISOï¿½7] ï¿½7ï¿½ ï¿½f" + bc.replace("&", "ï¿½"));
 				Bukkit.broadcastMessage(" ");
 				return true;
 			}

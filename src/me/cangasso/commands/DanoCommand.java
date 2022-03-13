@@ -11,7 +11,7 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class DanoCommand implements CommandExecutor, Listener {
 	public static boolean dano;
@@ -26,31 +26,31 @@ public class DanoCommand implements CommandExecutor, Listener {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 					&& !cfGrupo.ChecarGrupo(p, "Admin") && !cfGrupo.ChecarGrupo(p, "Mod+")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§cUse §c§l/dano (on | off)");
+				p.sendMessage("ï¿½cUse ï¿½cï¿½l/dano (on | off)");
 				return true;
 			}
 			if (args.length == 1) {
 				if (args[0].equalsIgnoreCase("on")) {
 					if (DanoCommand.dano) {
-						p.sendMessage("§aO dano global foi ativado!");
+						p.sendMessage("ï¿½aO dano global foi ativado!");
 						return true;
 					}
 					DanoCommand.dano = true;
-					p.sendMessage("§fVoc\u00ea §a§lATIVOU §fo dano global.");
-					Bukkit.broadcastMessage("§4§lAVISO §fO dano global foi ativado por: §6§l " + p.getName());
+					p.sendMessage("ï¿½fVoc\u00ea ï¿½aï¿½lATIVOU ï¿½fo dano global.");
+					Bukkit.broadcastMessage("ï¿½4ï¿½lAVISO ï¿½fO dano global foi ativado por: ï¿½6ï¿½l " + p.getName());
 					return true;
 				} else if (args[0].equalsIgnoreCase("off")) {
 					if (!DanoCommand.dano) {
-						p.sendMessage("§cO dano global j\u00e1 est\u00e1 desativado!");
+						p.sendMessage("ï¿½cO dano global j\u00e1 est\u00e1 desativado!");
 						return true;
 					}
 					DanoCommand.dano = false;
-					p.sendMessage("§4§lAVISO §fVoc\u00ea §c§lDESATIVOU §fo dano global.");
-					Bukkit.broadcastMessage("§4§lAVISO §fO dano global foi desativado por: §6§l " + p.getName());
+					p.sendMessage("ï¿½4ï¿½lAVISO ï¿½fVoc\u00ea ï¿½cï¿½lDESATIVOU ï¿½fo dano global.");
+					Bukkit.broadcastMessage("ï¿½4ï¿½lAVISO ï¿½fO dano global foi desativado por: ï¿½6ï¿½l " + p.getName());
 					return true;
 				}
 			}

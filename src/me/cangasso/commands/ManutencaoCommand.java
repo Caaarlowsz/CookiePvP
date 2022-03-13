@@ -10,7 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
 import me.cangasso.bans.Config;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class ManutencaoCommand implements CommandExecutor, Listener {
 	public static boolean manutencao;
@@ -23,28 +23,28 @@ public class ManutencaoCommand implements CommandExecutor, Listener {
 		final Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("manutencao")) {
 			if (!cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Admin")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea nao possui permissao para executar este comando.");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nao possui permissao para executar este comando.");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§6§lCookie§f§lNetwork §f» §fUse §c§l/manutencao (on | off)");
+				p.sendMessage("ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½fï¿½ ï¿½fUse ï¿½cï¿½l/manutencao (on | off)");
 				return true;
 			}
 			if (args.length == 1) {
 				if (args[0].equalsIgnoreCase("on")) {
 					if (ManutencaoCommand.manutencao) {
-						p.sendMessage("§cO modo manuten\u00e7\u00e3o j\u00e1 est\u00e1 ativado!");
+						p.sendMessage("ï¿½cO modo manutenÃ§Ã£o j\u00e1 est\u00e1 ativado!");
 						return true;
 					}
 					ManutencaoCommand.manutencao = true;
-					p.sendMessage("§fVoc\u00ea §a§lATIVOU §fo modo manuten\u00e7\u00e3o!");
+					p.sendMessage("ï¿½fVoc\u00ea ï¿½aï¿½lATIVOU ï¿½fo modo manutenÃ§Ã£o!");
 					Player[] onlinePlayers;
 					for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 						final Player todos = onlinePlayers[i];
 						if (!cfGrupo.ChecarGrupo(todos, "Dono") && !cfGrupo.ChecarGrupo(todos, "Gerente")
 								&& !cfGrupo.ChecarGrupo(todos, "Admin")) {
 							todos.kickPlayer(
-									"§c§lSERVIDOR FECHADO!\n   §7O servidor acabou de ser fechado para manuten\u00e7\u00f5es\nAssim que poss\u00edvel, n\u00f3s estaremos de volta!\n§7Atenciosamente, CookieNetwork.");
+									"ï¿½cï¿½lSERVIDOR FECHADO!\n   ï¿½7O servidor acabou de ser fechado para manutenÃ§\u00f5es\nAssim que poss\u00edvel, n\u00f3s estaremos de volta!\nï¿½7Atenciosamente, CookieNetwork.");
 							return true;
 						}
 					}
@@ -52,11 +52,11 @@ public class ManutencaoCommand implements CommandExecutor, Listener {
 					return true;
 				} else if (args[0].equalsIgnoreCase("off")) {
 					if (!ManutencaoCommand.manutencao) {
-						p.sendMessage("§cO modo manuten\u00e7\u00e3o j\u00e1 est\u00e1 desativado!");
+						p.sendMessage("ï¿½cO modo manutenÃ§Ã£o j\u00e1 est\u00e1 desativado!");
 						return true;
 					}
 					ManutencaoCommand.manutencao = false;
-					p.sendMessage("§fVoc\u00ea §c§lDESATIVOU §fo modo manuten\u00e7\u00e3o!");
+					p.sendMessage("ï¿½fVoc\u00ea ï¿½cï¿½lDESATIVOU ï¿½fo modo manutenÃ§Ã£o!");
 					return true;
 				}
 			}
@@ -70,7 +70,7 @@ public class ManutencaoCommand implements CommandExecutor, Listener {
 		if (ManutencaoCommand.manutencao && !cfGrupo.ChecarGrupo(p, "Dono") && !cfGrupo.ChecarGrupo(p, "Gerente")
 				&& !cfGrupo.ChecarGrupo(p, "Admin")) {
 			e.disallow(PlayerLoginEvent.Result.KICK_OTHER,
-					"§c§lMANUTENCAO...\n§7O servidor est\u00e1 em manuten\u00e7\u00e3o. Estamos com certeza aprimorando\n§7a sua jogatina. Contamos com a compreens\u00e3o de todos\n§7Atenciosamente, §6§lCookie§f§lNetwork");
+					"ï¿½cï¿½lMANUTENCAO...\nï¿½7O servidor est\u00e1 em manutenÃ§Ã£o. Estamos com certeza aprimorando\nï¿½7a sua jogatina. Contamos com a compreensÃ£o de todos\nï¿½7Atenciosamente, ï¿½6ï¿½lCookieï¿½fï¿½lNetwork");
 		}
 	}
 }

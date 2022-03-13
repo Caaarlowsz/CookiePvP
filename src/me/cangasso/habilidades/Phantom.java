@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Phantom implements Listener {
 	public static HashMap<Player, ItemStack[]> salvarArmadura;
@@ -30,43 +30,43 @@ public class Phantom implements Listener {
 		if (KitAPI.getKit(p) == "Phantom" && CooldownAPI.Cooldown.containsKey(p.getName())
 				&& p.getItemInHand().getType() == Material.FEATHER) {
 			e.setCancelled(true);
-			p.sendMessage("§8§l<§e§l!§8§l> Aguarde para utilizar essa habilidade novamente!");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> Aguarde para utilizar essa habilidade novamente!");
 		} else if (KitAPI.getKit(p) == "Phantom" && !CooldownAPI.Cooldown.containsKey(p.getName())
 				&& p.getItemInHand().getType() == Material.FEATHER) {
 			Phantom.salvarArmadura.put(p, p.getInventory().getArmorContents());
 			p.getInventory().setArmorContents((ItemStack[]) null);
 			final ItemStack Peito = new ItemStack(Material.LEATHER_CHESTPLATE);
 			final LeatherArmorMeta kPeito = (LeatherArmorMeta) Peito.getItemMeta();
-			kPeito.setDisplayName("§f§lPhantom");
+			kPeito.setDisplayName("ï¿½fï¿½lPhantom");
 			kPeito.setColor(Color.WHITE);
 			Peito.setItemMeta((ItemMeta) kPeito);
-			final ItemStack Cal\u00e7a = new ItemStack(Material.LEATHER_LEGGINGS);
-			final LeatherArmorMeta kCa\u00e7a = (LeatherArmorMeta) Cal\u00e7a.getItemMeta();
-			kCa\u00e7a.setDisplayName("§f§lPhantom");
-			kCa\u00e7a.setColor(Color.WHITE);
-			Cal\u00e7a.setItemMeta((ItemMeta) kCa\u00e7a);
+			final ItemStack CalÃ§a = new ItemStack(Material.LEATHER_LEGGINGS);
+			final LeatherArmorMeta kCaÃ§a = (LeatherArmorMeta) CalÃ§a.getItemMeta();
+			kCaÃ§a.setDisplayName("ï¿½fï¿½lPhantom");
+			kCaÃ§a.setColor(Color.WHITE);
+			CalÃ§a.setItemMeta((ItemMeta) kCaÃ§a);
 			final ItemStack Bota = new ItemStack(Material.LEATHER_BOOTS);
 			final LeatherArmorMeta kBota = (LeatherArmorMeta) Bota.getItemMeta();
-			kBota.setDisplayName("§f§lPhantom");
+			kBota.setDisplayName("ï¿½fï¿½lPhantom");
 			kBota.setColor(Color.WHITE);
 			Bota.setItemMeta((ItemMeta) kBota);
 			final ItemStack Capacete = new ItemStack(Material.LEATHER_HELMET);
 			final LeatherArmorMeta kCasapete = (LeatherArmorMeta) Capacete.getItemMeta();
-			kCasapete.setDisplayName("§f§lPhantom");
+			kCasapete.setDisplayName("ï¿½fï¿½lPhantom");
 			kCasapete.setColor(Color.WHITE);
 			Capacete.setItemMeta((ItemMeta) kCasapete);
 			p.getInventory().setChestplate(Peito);
-			p.getInventory().setLeggings(Cal\u00e7a);
+			p.getInventory().setLeggings(CalÃ§a);
 			p.getInventory().setHelmet(Capacete);
 			p.getInventory().setBoots(Bota);
 			p.updateInventory();
-			p.sendMessage("§aVoc\u00ea pode voar por 5 segundos!");
+			p.sendMessage("ï¿½aVoc\u00ea pode voar por 5 segundos!");
 			CooldownAPI.addCooldown(p, 35);
 			p.setAllowFlight(true);
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
-					p.sendMessage("§cO seu modo p\u00e1ssaro acabou!");
+					p.sendMessage("ï¿½cO seu modo p\u00e1ssaro acabou!");
 					p.getInventory().setArmorContents((ItemStack[]) null);
 					p.closeInventory();
 					p.getInventory().remove(Material.LEATHER_BOOTS);

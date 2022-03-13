@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class PardonCommand implements CommandExecutor {
 	private static String ip(final OfflinePlayer vitima) {
@@ -22,31 +22,31 @@ public class PardonCommand implements CommandExecutor {
 		if (!cfGrupo.ChecarGrupo(jogador, "Dono") && !cfGrupo.ChecarGrupo(jogador, "Gerente")
 				&& !cfGrupo.ChecarGrupo(jogador, "Admin")) {
 			API.sendMsg((CommandSender) jogador,
-					"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para utilizar este comando!");
+					"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para utilizar este comando!");
 			return true;
 		}
 		if (args.length == 0) {
-			API.sendMsg((CommandSender) jogador, "§cUse /pardon (Ban | Ipban | Tempban | Mute | Tempmute) (Jogador)");
+			API.sendMsg((CommandSender) jogador, "ï¿½cUse /pardon (Ban | Ipban | Tempban | Mute | Tempmute) (Jogador)");
 			return true;
 		}
 		if (args[0].equalsIgnoreCase("ban")) {
 			if (args.length == 1) {
 				API.sendMsg((CommandSender) jogador,
-						"§cUse /pardon (Ban | Ipban | Tempban | Mute | Tempmute) (Jogador)");
+						"ï¿½cUse /pardon (Ban | Ipban | Tempban | Mute | Tempmute) (Jogador)");
 				return true;
 			}
 			final OfflinePlayer vitima = Bukkit.getOfflinePlayer(args[1]);
 			if (Config.getConfig().getBans().get("Bans." + vitima.getUniqueId()) == null) {
 				API.sendMsg((CommandSender) jogador,
-						"§fO jogador §6§l" + vitima.getName() + " §fn\u00e3o est\u00e1 §4§lBANIDO§f! ");
+						"ï¿½fO jogador ï¿½6ï¿½l" + vitima.getName() + " ï¿½fnÃ£o est\u00e1 ï¿½4ï¿½lBANIDOï¿½f! ");
 				return true;
 			}
 			if (!(sender instanceof Player)) {
-				API.sendStaff("§c" + vitima.getName() + " §cfoi desbanido por §c§lCONSOLE");
+				API.sendStaff("ï¿½c" + vitima.getName() + " ï¿½cfoi desbanido por ï¿½cï¿½lCONSOLE");
 			} else {
 				API.sendMsg((CommandSender) jogador,
-						"§6§lPARDON §fVoc\u00ea desbaniu o jogador: §6§l" + vitima.getName());
-				API.sendStaff("§6§lPARDON §f" + jogador.getName() + " desbaniu o jogador: §6§l" + vitima.getName());
+						"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desbaniu o jogador: ï¿½6ï¿½l" + vitima.getName());
+				API.sendStaff("ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desbaniu o jogador: ï¿½6ï¿½l" + vitima.getName());
 			}
 			final double l = Config.getConfig().getBans().getDouble("Players Banidos");
 			Config.getConfig().getBans().set("Players Banidos", (Object) (l - 1.0));
@@ -55,21 +55,21 @@ public class PardonCommand implements CommandExecutor {
 			return true;
 		} else if (args[0].equalsIgnoreCase("ipban")) {
 			if (args.length == 1) {
-				API.sendMsg(sender, "§6§lPARDON §fUtilize §2§l/pardon §2ipban (jogador)");
+				API.sendMsg(sender, "ï¿½6ï¿½lPARDON ï¿½fUtilize ï¿½2ï¿½l/pardon ï¿½2ipban (jogador)");
 				return true;
 			}
 			final OfflinePlayer vitima = Bukkit.getOfflinePlayer(args[1]);
 			if (Config.getConfig().getIpBans().get("IPBans." + vitima.getUniqueId()) == null) {
 				API.sendMsg((CommandSender) jogador,
-						"§fO jogador §6§l" + vitima.getName() + " §fn\u00e3o est\u00e1 §4§lBANIDO§f!");
+						"ï¿½fO jogador ï¿½6ï¿½l" + vitima.getName() + " ï¿½fnÃ£o est\u00e1 ï¿½4ï¿½lBANIDOï¿½f!");
 				return true;
 			}
 			if (!(sender instanceof Player)) {
-				API.sendStaff("§6§lPARDON §f" + vitima.getName() + " §ffoi §6§lDESBANIDO §fpor: §c§lCONSOLE");
+				API.sendStaff("ï¿½6ï¿½lPARDON ï¿½f" + vitima.getName() + " ï¿½ffoi ï¿½6ï¿½lDESBANIDO ï¿½fpor: ï¿½cï¿½lCONSOLE");
 			} else {
 				API.sendMsg((CommandSender) jogador,
-						"§6§lPARDON §fVoc\u00ea desbaniu o jogador §6§l" + vitima.getName());
-				API.sendStaff("§6§lPARDON §f" + jogador.getName() + " desbaniu o jogador " + vitima.getName());
+						"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desbaniu o jogador ï¿½6ï¿½l" + vitima.getName());
+				API.sendStaff("ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desbaniu o jogador " + vitima.getName());
 			}
 			Bukkit.unbanIP(ip(vitima));
 			Config.getConfig().getIpBans().set("IPBans." + vitima.getUniqueId(), (Object) null);
@@ -77,27 +77,27 @@ public class PardonCommand implements CommandExecutor {
 			return true;
 		} else if (args[0].equalsIgnoreCase("tempban")) {
 			if (args.length == 1) {
-				API.sendMsg(sender, "§6§lPARDON §fUtilize §3§l/pardon §3tempban (jogador)");
+				API.sendMsg(sender, "ï¿½6ï¿½lPARDON ï¿½fUtilize ï¿½3ï¿½l/pardon ï¿½3tempban (jogador)");
 				return true;
 			}
 			final OfflinePlayer vitima = Bukkit.getOfflinePlayer(args[1]);
 			if (Config.getConfig().getTempBans().get("TempBans." + vitima.getUniqueId()) == null) {
-				API.sendMsg(sender, "§7O jogador §6§l" + vitima.getName() + " §7n\u00e3o est\u00e1 §4§lBANIDO§f!");
+				API.sendMsg(sender, "ï¿½7O jogador ï¿½6ï¿½l" + vitima.getName() + " ï¿½7nÃ£o est\u00e1 ï¿½4ï¿½lBANIDOï¿½f!");
 				return true;
 			}
 			if (!(sender instanceof Player)) {
-				API.sendStaff("§6§lPARDON §f" + vitima.getName() + " §7foi desbanido por: §c§lCONSOLE");
+				API.sendStaff("ï¿½6ï¿½lPARDON ï¿½f" + vitima.getName() + " ï¿½7foi desbanido por: ï¿½cï¿½lCONSOLE");
 			} else {
 				API.sendMsg((CommandSender) jogador,
-						"§6§lPARDON §fVoc\u00ea desbaniu o jogador: §6§l" + vitima.getName());
-				API.sendStaff("§6§lPARDON §f" + jogador.getName() + " §fdesbaniu o jogador: §6§l" + vitima.getName());
+						"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desbaniu o jogador: ï¿½6ï¿½l" + vitima.getName());
+				API.sendStaff("ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " ï¿½fdesbaniu o jogador: ï¿½6ï¿½l" + vitima.getName());
 			}
 			Config.getConfig().getTempBans().set("TempBans." + vitima.getUniqueId(), (Object) null);
 			Config.getConfig().saveTempBans();
 			return true;
 		} else if (args[0].equalsIgnoreCase("mute")) {
 			if (args.length == 1) {
-				API.sendMsg((CommandSender) jogador, "§6§lPARDON §fUtilize §9§l/pardon §9mute (jogador)");
+				API.sendMsg((CommandSender) jogador, "ï¿½6ï¿½lPARDON ï¿½fUtilize ï¿½9ï¿½l/pardon ï¿½9mute (jogador)");
 				return true;
 			}
 			final Player vitima2 = Bukkit.getPlayer(args[1]);
@@ -105,16 +105,16 @@ public class PardonCommand implements CommandExecutor {
 				final OfflinePlayer vitimaoff = Bukkit.getOfflinePlayer(args[1]);
 				if (Config.getConfig().getMute().get("Mute." + vitimaoff.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + vitimaoff.getName() + "§f n\u00e3o est\u00e1 §9§lMUTADO§f!");
+							"ï¿½fO jogador ï¿½6ï¿½l" + vitimaoff.getName() + "ï¿½f nÃ£o est\u00e1 ï¿½9ï¿½lMUTADOï¿½f!");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					API.sendStaff("§6§lPARDON §fCONSOLE desmutou o jogador: §6§l" + vitimaoff.getName());
+					API.sendStaff("ï¿½6ï¿½lPARDON ï¿½fCONSOLE desmutou o jogador: ï¿½6ï¿½l" + vitimaoff.getName());
 				} else {
 					API.sendMsg((CommandSender) jogador,
-							"§6§lPARDON §fVoc\u00ea desmutou o jogador: §6§l" + vitimaoff.getName());
+							"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desmutou o jogador: ï¿½6ï¿½l" + vitimaoff.getName());
 					API.sendStaff(
-							"§6§lPARDON §f" + jogador.getName() + " desmutou o jogador: §c§" + vitimaoff.getName());
+							"ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desmutou o jogador: ï¿½cï¿½" + vitimaoff.getName());
 				}
 				Config.getConfig().getMute().set("Mute." + vitimaoff.getUniqueId(), (Object) null);
 				Config.getConfig().saveMute();
@@ -122,16 +122,16 @@ public class PardonCommand implements CommandExecutor {
 			} else {
 				if (Config.getConfig().getMute().get("Mute." + vitima2.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + vitima2.getName() + "§f n\u00e3o est\u00e1 §9§lMUTADO§f!");
+							"ï¿½fO jogador ï¿½6ï¿½l" + vitima2.getName() + "ï¿½f nÃ£o est\u00e1 ï¿½9ï¿½lMUTADOï¿½f!");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					API.sendStaff("§cCONSOLE desmutou " + vitima2.getName());
+					API.sendStaff("ï¿½cCONSOLE desmutou " + vitima2.getName());
 				} else {
 					API.sendMsg((CommandSender) jogador,
-							"§6§lPARDON §fVoc\u00ea desmutou o jogador: §c§l" + vitima2.getName());
+							"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desmutou o jogador: ï¿½cï¿½l" + vitima2.getName());
 					API.sendStaff(
-							"§6§lPARDON §f" + jogador.getName() + " desmutou o jogador: §c§l" + vitima2.getName());
+							"ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desmutou o jogador: ï¿½cï¿½l" + vitima2.getName());
 				}
 				Config.getConfig().getMute().set("Mute." + vitima2.getUniqueId(), (Object) null);
 				Config.getConfig().saveMute();
@@ -140,11 +140,11 @@ public class PardonCommand implements CommandExecutor {
 		} else {
 			if (!args[0].equalsIgnoreCase("tempmute")) {
 				API.sendMsg(sender,
-						"§6§lPARDON §fUtilize §6§l/pardon §6(Ban | Ipban | Tempban | Mute | Tempmute) <jogador>");
+						"ï¿½6ï¿½lPARDON ï¿½fUtilize ï¿½6ï¿½l/pardon ï¿½6(Ban | Ipban | Tempban | Mute | Tempmute) <jogador>");
 				return true;
 			}
 			if (args.length == 1) {
-				API.sendMsg((CommandSender) jogador, "§6§lPARDON §fUtilize §b/pardon §btempmute (jogador)");
+				API.sendMsg((CommandSender) jogador, "ï¿½6ï¿½lPARDON ï¿½fUtilize ï¿½b/pardon ï¿½btempmute (jogador)");
 				return true;
 			}
 			final Player vitima2 = Bukkit.getPlayer(args[1]);
@@ -152,16 +152,16 @@ public class PardonCommand implements CommandExecutor {
 				final OfflinePlayer vitimaoff = Bukkit.getOfflinePlayer(args[1]);
 				if (Config.getConfig().getTempMute().get("TempMute." + vitimaoff.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + vitimaoff.getName() + "§f n\u00e3o est\u00e1 §4§lMUTADO§f! ");
+							"ï¿½fO jogador ï¿½6ï¿½l" + vitimaoff.getName() + "ï¿½f nÃ£o est\u00e1 ï¿½4ï¿½lMUTADOï¿½f! ");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					API.sendStaff("§6§lPARDON §fCONSOLE desmutou o jogador: §c§l" + vitimaoff.getName());
+					API.sendStaff("ï¿½6ï¿½lPARDON ï¿½fCONSOLE desmutou o jogador: ï¿½cï¿½l" + vitimaoff.getName());
 				} else {
 					API.sendMsg((CommandSender) jogador,
-							"§6§lPARDON §fVoc\u00ea desmutou o jogador: §c§l" + vitimaoff.getName());
+							"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desmutou o jogador: ï¿½cï¿½l" + vitimaoff.getName());
 					API.sendStaff(
-							"§6§lPARDON §f" + jogador.getName() + " desmutou o jogador: §c§l" + vitimaoff.getName());
+							"ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desmutou o jogador: ï¿½cï¿½l" + vitimaoff.getName());
 				}
 				Config.getConfig().getTempMute().set("TempMute." + vitimaoff.getUniqueId(), (Object) null);
 				Config.getConfig().saveTempMute();
@@ -169,16 +169,16 @@ public class PardonCommand implements CommandExecutor {
 			} else {
 				if (Config.getConfig().getTempMute().get("TempMute." + vitima2.getUniqueId()) == null) {
 					API.sendMsg((CommandSender) jogador,
-							"§fO jogador §6§l" + vitima2.getName() + "§f n\u00e3o est\u00e1 §4§lMUTADO§f!");
+							"ï¿½fO jogador ï¿½6ï¿½l" + vitima2.getName() + "ï¿½f nÃ£o est\u00e1 ï¿½4ï¿½lMUTADOï¿½f!");
 					return true;
 				}
 				if (!(sender instanceof Player)) {
-					API.sendStaff("§6§lPARDON §fCONSOLE desmutou o jogador: §c§l" + vitima2.getName());
+					API.sendStaff("ï¿½6ï¿½lPARDON ï¿½fCONSOLE desmutou o jogador: ï¿½cï¿½l" + vitima2.getName());
 				} else {
 					API.sendMsg((CommandSender) jogador,
-							"§6§lPARDON §fVoc\u00ea desmutou o jogador: §c§l" + vitima2.getName());
+							"ï¿½6ï¿½lPARDON ï¿½fVoc\u00ea desmutou o jogador: ï¿½cï¿½l" + vitima2.getName());
 					API.sendStaff(
-							"§6§lPARDON §f" + jogador.getName() + " desmutou o jogador: §c§l" + vitima2.getName());
+							"ï¿½6ï¿½lPARDON ï¿½f" + jogador.getName() + " desmutou o jogador: ï¿½cï¿½l" + vitima2.getName());
 				}
 				Config.getConfig().getTempMute().set("TempMute." + vitima2.getUniqueId(), (Object) null);
 				Config.getConfig().saveTempMute();

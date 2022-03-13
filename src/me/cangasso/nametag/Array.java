@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class Array {
 	public static LinkedHashMap<String, LinkedHashMap<String, String>> groups;
@@ -38,7 +38,7 @@ public class Array {
 	}
 
 	public static void InciarTag() {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final LinkedHashMap<String, LinkedHashMap<String, String>> JogadorData2 = new LinkedHashMap<String, LinkedHashMap<String, String>>();
@@ -61,10 +61,10 @@ public class Array {
 	}
 
 	public static void SetarNameTagHard(final String Jogador, final String Prefix, final String Suffix,
-			final NameTagChangeEvento.NametagChangeReason Reac\u00e3o) {
+			final NameTagChangeEvento.NametagChangeReason reacao) {
 		final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
 				NametagAPI.PegarSuffix(Jogador), Prefix, Suffix, NameTagChangeEvento.NametagChangeType.HARD,
-				Reac\u00e3o);
+				reacao);
 		Bukkit.getServer().getPluginManager().callEvent((Event) e);
 		if (!e.isCancelled()) {
 			NametagManager.Overlap(Jogador, Prefix, Suffix);
@@ -72,10 +72,10 @@ public class Array {
 	}
 
 	public static void SetarNameTagSoft(final String Jogador, final String Prefix, final String Suffix,
-			final NameTagChangeEvento.NametagChangeReason Reac\u00e3o) {
+			final NameTagChangeEvento.NametagChangeReason Reacão) {
 		final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
 				NametagAPI.PegarSuffix(Jogador), Prefix, Suffix, NameTagChangeEvento.NametagChangeType.SOFT,
-				Reac\u00e3o);
+				Reacão);
 		Bukkit.getServer().getPluginManager().callEvent((Event) e);
 		if (!e.isCancelled()) {
 			NametagManager.Overlap(Jogador, Prefix, Suffix);

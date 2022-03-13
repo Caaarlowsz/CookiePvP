@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 
 public class NametagAPI {
 	public static String OVU;
@@ -16,7 +16,7 @@ public class NametagAPI {
 	}
 
 	public static void setPrefix(final String Jogador, final String Prefix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -32,7 +32,7 @@ public class NametagAPI {
 	}
 
 	public static void setSuffix(final String Jogador, final String Suffix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -48,7 +48,7 @@ public class NametagAPI {
 	}
 
 	public static void setNametagHard(final String Jogador, final String Prefix, final String Suffix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -64,7 +64,7 @@ public class NametagAPI {
 	}
 
 	public static void SetNameTagSoft(final String Jogador, final String Prefix, final String Suffix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -80,7 +80,7 @@ public class NametagAPI {
 	}
 
 	public static void UpdateNameTagHard(final String Jogador, final String Prefix, final String Suffix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -95,7 +95,7 @@ public class NametagAPI {
 	}
 
 	public static void UpdateNameTagSoft(final String Jogador, final String Prefix, final String Suffix) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				final NameTagChangeEvento e = new NameTagChangeEvento(Jogador, NametagAPI.PegarPrefix(Jogador),
@@ -110,7 +110,7 @@ public class NametagAPI {
 	}
 
 	public static void ResetarNameTag(final String Jogador) {
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 			@Override
 			public void run() {
 				NametagManager.Limpar(Jogador);
@@ -153,7 +153,7 @@ public class NametagAPI {
 	}
 
 	public static String PegarVersion() {
-		return Main.getPlugin().getDescription().getVersion();
+		return CookiePvP.getPlugin().getDescription().getVersion();
 	}
 
 	public static boolean PegarCustomName(final String Jogador) {

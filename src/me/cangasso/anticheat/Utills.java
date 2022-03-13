@@ -8,7 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class Utills {
 	public static HashMap<Player, Integer> FastAttackClicks;
@@ -85,42 +85,42 @@ public class Utills {
 
 	public enum Hack {
 		FASTCLICKTALVEZ("FASTCLICKTALVEZ", 0,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick"
 						+ " est\u00e1 clicando r\u00e1pido demais! (CPS: clicks) (" + "avisos" + ")."),
 		FASTCLICKPROVAVELMENTE("FASTCLICKPROVAVELMENTE", 1,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick"
 						+ " est\u00e1 clicando r\u00e1pido demais! (CPS: clicks) (" + "avisos" + ")."),
 		FASTCLICKDEFINITIVAMENTE("FASTCLICKDEFINITIVAMENTE", 2,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick"
 						+ " est\u00e1 clicando r\u00e1pido demais! (CPS: clicks) (" + "avisos" + ")."),
 		MACROTALVEZ("MACROTALVEZ", 3,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
 						+ "avisos" + ")."),
 		MACROPROVAVELMENTE("MACROPROVAVELMENTE", 4,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
 						+ "avisos" + ")."),
 		MACRODEFINITIVAMENTE("MACRODEFINITIVAMENTE", 5,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Macro (CPS: clicks) ("
 						+ "avisos" + ")."),
 		FORCEFIELDTALVEZ("FORCEFIELDTALVEZ", 6,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
 						+ ")."),
 		FORCEFIELDPROVAVELMENTE("FORCEFIELDPROVAVELMENTE", 7,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
 						+ ")."),
 		FORCEFIELDDEFINITIVAMENTE("FORCEFIELDDEFINITIVAMENTE", 8,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Forcefield (" + "avisos"
 						+ ")."),
 		FLY("FLY", 9,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Flight (" + "avisos" + ")."),
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Flight (" + "avisos" + ")."),
 		SPEED("SPEED", 10,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando Speed (" + "avisos" + ")."),
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando Speed (" + "avisos" + ")."),
 		AUTOSOUPTALVEZ("AUTOSOUPTALVEZ", 11,
-				ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick" + " est\u00e1 utilizando AUTOSOUP (" + "avisos"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick" + " est\u00e1 utilizando AUTOSOUP (" + "avisos"
 						+ ")."),
 		AUTOSOUPPROVAVELMENTE("AUTOSOUPPROVAVELMENTE", 12,
-				ChatColor.DARK_RED + "§c(AntiCheat)" + "nick" + " est\u00e1 utilizando AUTOSOUP (" + "avisos" + ")."),
-		AUTOSOUPDEFINITIVAMENTE("AUTOSOUPDEFINITIVAMENTE", 13, ChatColor.DARK_RED + "§c(AntiCheat) §c" + "nick"
+				ChatColor.DARK_RED + "ï¿½c(AntiCheat)" + "nick" + " est\u00e1 utilizando AUTOSOUP (" + "avisos" + ")."),
+		AUTOSOUPDEFINITIVAMENTE("AUTOSOUPDEFINITIVAMENTE", 13, ChatColor.DARK_RED + "ï¿½c(AntiCheat) ï¿½c" + "nick"
 				+ " est\u00e1 utilizando AUTOSOUP (" + "avisos" + ").");
 
 		private String Menssagem;

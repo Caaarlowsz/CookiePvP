@@ -7,8 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfStatus;
 
 public class CheckCommand implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -18,11 +18,11 @@ public class CheckCommand implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Gerente") && !cfGrupo.ChecarGrupo(p, "Mod+")
 					&& !cfGrupo.ChecarGrupo(p, "Dono")) {
 				API.sendMsg((CommandSender) p,
-						"§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+						"ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			if (args.length == 0) {
-				p.sendMessage("§fUtilize §a§l/check §a(jogador)§f.");
+				p.sendMessage("ï¿½fUtilize ï¿½aï¿½l/check ï¿½a(jogador)ï¿½f.");
 				return true;
 			}
 			final Player check = Bukkit.getPlayer(args[0]);
@@ -31,25 +31,25 @@ public class CheckCommand implements CommandExecutor {
 				return true;
 			}
 			p.sendMessage(" ");
-			p.sendMessage("§aChecando informa\u00e7\u00f5es de " + check.getName() + "§a...");
+			p.sendMessage("ï¿½aChecando informaÃ§\u00f5es de " + check.getName() + "ï¿½a...");
 			p.sendMessage(" ");
-			p.sendMessage("§6\u2022 §fRanking: " + CheckUtils.Grupo(check));
-			p.sendMessage("§6\u2022 §fNickname: §7" + CheckUtils.Nickname(check));
-			p.sendMessage("§6\u2022 §fUUID: §7" + CheckUtils.UUID(check));
-			p.sendMessage("§6\u2022 §fIP: §7" + CheckUtils.IP(check));
-			p.sendMessage("§6\u2022 §fIP §8(reverso): §7" + CheckUtils.IPReverso(check));
-			p.sendMessage("§6\u2022 §fGEOIP: §7" + CheckUtils.GeoIP(check));
-			p.sendMessage("§6\u2022 §fGamemode: §7" + CheckUtils.Gamemode(check));
-			p.sendMessage("§6\u2022 §fFly: §7" + CheckUtils.Fly(check));
-			p.sendMessage("§6\u2022 §fVida: §7" + CheckUtils.Vida(check));
-			p.sendMessage("§6\u2022 §fFome: §7" + CheckUtils.Fome(check));
-			p.sendMessage("§6\u2022 §fKit: §7" + CheckUtils.Kit(check));
-			p.sendMessage("§6\u2022 §fWarp: §7" + CheckUtils.Warp(check));
-			p.sendMessage("§6\u2022 §fElo: " + CheckUtils.Rank(check));
-			p.sendMessage("§6\u2022 §fXP: §7" + cfStatus.getMoney(check));
-			p.sendMessage("§6\u2022 §fKills: §7" + cfStatus.getKills(check));
-			p.sendMessage("§6\u2022 §fDeaths: §7" + cfStatus.getDeaths(check));
-			p.sendMessage("§6\u2022 §fKillStreak: §7" + cfStatus.getKillStreak(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fRanking: " + CheckUtils.Grupo(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fNickname: ï¿½7" + CheckUtils.Nickname(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fUUID: ï¿½7" + CheckUtils.UUID(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fIP: ï¿½7" + CheckUtils.IP(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fIP ï¿½8(reverso): ï¿½7" + CheckUtils.IPReverso(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fGEOIP: ï¿½7" + CheckUtils.GeoIP(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fGamemode: ï¿½7" + CheckUtils.Gamemode(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fFly: ï¿½7" + CheckUtils.Fly(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fVida: ï¿½7" + CheckUtils.Vida(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fFome: ï¿½7" + CheckUtils.Fome(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fKit: ï¿½7" + CheckUtils.Kit(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fWarp: ï¿½7" + CheckUtils.Warp(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fElo: " + CheckUtils.Rank(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fXP: ï¿½7" + cfStatus.getMoney(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fKills: ï¿½7" + cfStatus.getKills(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fDeaths: ï¿½7" + cfStatus.getDeaths(check));
+			p.sendMessage("ï¿½6\u2022 ï¿½fKillStreak: ï¿½7" + cfStatus.getKillStreak(check));
 			p.sendMessage(" ");
 		}
 		return false;

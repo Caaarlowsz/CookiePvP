@@ -13,7 +13,7 @@ public class LojaCommand implements CommandExecutor {
 		if ((cmd.getName().equalsIgnoreCase("loja") || cmd.getName().equalsIgnoreCase("store")) && args.length == 0) {
 			API.sendMsg((CommandSender) p, " ");
 			API.sendMsg((CommandSender) p,
-					"§6§lCookie§f§lNetwork §7» §fCompre pacotes de §a§lVIP §fou §6§lKITS §facessando: §6§lmc-cookie.com.br");
+					"ï¿½6ï¿½lCookieï¿½fï¿½lNetwork ï¿½7ï¿½ ï¿½fCompre pacotes de ï¿½aï¿½lVIP ï¿½fou ï¿½6ï¿½lKITS ï¿½facessando: ï¿½6ï¿½lmc-cookie.com.br");
 			API.sendMsg((CommandSender) p, " ");
 		}
 		return false;

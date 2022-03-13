@@ -12,20 +12,20 @@ public class SemiytCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if ((cmd.getName().equalsIgnoreCase("semiyt") || cmd.getName().equalsIgnoreCase("semiyt"))
 				&& args.length == 0) {
-			API.sendMsg((CommandSender) p, "§e§m>-------------------------<");
-			API.sendMsg((CommandSender) p, "               §6» §f§lSEMIYT §6«     ");
-			API.sendMsg((CommandSender) p, "§e§m>-------------------------<");
+			API.sendMsg((CommandSender) p, "ï¿½eï¿½m>-------------------------<");
+			API.sendMsg((CommandSender) p, "               ï¿½6ï¿½ ï¿½fï¿½lSEMIYT ï¿½6ï¿½     ");
+			API.sendMsg((CommandSender) p, "ï¿½eï¿½m>-------------------------<");
 			p.sendMessage("");
-			p.sendMessage("§fTer no m\u00ednimo §3§l3.000 §finscritos.");
-			p.sendMessage("§fTer um v\u00eddeo no servidor, de no m\u00ednimo §a§l3 minutos§f.");
-			p.sendMessage("§fTer um feedback aceit\u00e1vel.");
+			p.sendMessage("ï¿½fTer no m\u00ednimo ï¿½3ï¿½l3.000 ï¿½finscritos.");
+			p.sendMessage("ï¿½fTer um v\u00eddeo no servidor, de no m\u00ednimo ï¿½aï¿½l3 minutosï¿½f.");
+			p.sendMessage("ï¿½fTer um feedback aceit\u00e1vel.");
 			p.sendMessage("");
 			p.sendMessage(
-					"§6§lCOMO ENTRAR EM CONTATO? §fVoc\u00ea pode entrar em contato conosco pelo Twitter §3§o@Cookie_Suporte §fe solicitar sua tag. Caso a sua solicita\u00e7\u00e3o for aceita, voc\u00ea receber\u00e1 a tag, juntamente as permiss\u00f5es em 48 horas.");
+					"ï¿½6ï¿½lCOMO ENTRAR EM CONTATO? ï¿½fVoc\u00ea pode entrar em contato conosco pelo Twitter ï¿½3ï¿½o@Cookie_Suporte ï¿½fe solicitar sua tag. Caso a sua solicita\u00e7\u00e3o for aceita, voc\u00ea receber\u00e1 a tag, juntamente as permiss\u00f5es em 48 horas.");
 			p.sendMessage("");
-			p.sendMessage("§fUse §b§l/youtuber §fe §6§l/pro");
+			p.sendMessage("ï¿½fUse ï¿½bï¿½l/youtuber ï¿½fe ï¿½6ï¿½l/pro");
 			p.sendMessage("");
-			API.sendMsg((CommandSender) p, "§e§m>-------------------------<");
+			API.sendMsg((CommandSender) p, "ï¿½eï¿½m>-------------------------<");
 		}
 		return false;
 	}

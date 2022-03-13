@@ -26,8 +26,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import me.cangasso.API.CooldownAPI;
 import me.cangasso.API.KitAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.main.CookiePvP;
 
 public class Gladiator implements Listener {
 	public boolean generateGlass;
@@ -66,7 +66,7 @@ public class Gladiator implements Listener {
 			final Player r = (Player) event.getRightClicked();
 			if (p.getItemInHand().getType() == Material.IRON_FENCE && KitAPI.getKit(p) == "Gladiator"
 					&& CooldownAPI.Cooldown.containsKey(p.getName())) {
-				p.sendMessage("§fO seu §3§lCOOLDOWN §facaba em: §c§l" + CooldownAPI.Cooldown(p) + "s");
+				p.sendMessage("ï¿½fO seu ï¿½3ï¿½lCOOLDOWN ï¿½facaba em: ï¿½cï¿½l" + CooldownAPI.Cooldown(p) + "s");
 				return;
 			}
 			if (p.getItemInHand().getType() == Material.IRON_FENCE && KitAPI.getKit(p) == "Gladiator"
@@ -101,7 +101,7 @@ public class Gladiator implements Listener {
 								final Block b = loc.clone().add((double) bX, (double) bY, (double) bZ).getBlock();
 								if (!b.isEmpty()) {
 									event.setCancelled(true);
-									p.sendMessage("§cVoc\u00ea n\u00e3o pode puxar para o Gladiator neste local!");
+									p.sendMessage("ï¿½cVoc\u00ea nÃ£o pode puxar para o Gladiator neste local!");
 									return;
 								}
 								if (bY == 10) {
@@ -127,15 +127,15 @@ public class Gladiator implements Listener {
 					p.getInventory().remove(Material.IRON_FENCE);
 					r.getInventory().remove(Material.IRON_FENCE);
 					p.sendMessage(
-							"§fVoc\u00ea puxou um jogador para um duelo, portanto o item de seu kit foi §c§lREMOVIDO§f!");
+							"ï¿½fVoc\u00ea puxou um jogador para um duelo, portanto o item de seu kit foi ï¿½cï¿½lREMOVIDOï¿½f!");
 					p.sendMessage(
-							"§fAssim que o duelo for §e§lFINALIZADO§f, o item voltar\u00e1 para o seu invent\u00e1rio!");
+							"ï¿½fAssim que o duelo for ï¿½eï¿½lFINALIZADOï¿½f, o item voltar\u00e1 para o seu invent\u00e1rio!");
 					CooldownAPI.addCooldown(p, 35);
 					Gladiator.noExecut.add(p);
 					Gladiator.noExecut.add(r);
 					Gladiator.fighting.put(p.getName(), r.getName());
 					Gladiator.fighting.put(r.getName(), p.getName());
-					Gladiator.id2 = Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(),
+					Gladiator.id2 = Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(),
 							(Runnable) new Runnable() {
 								@Override
 								public void run() {
@@ -146,7 +146,7 @@ public class Gladiator implements Listener {
 									}
 								}
 							}, 2400L);
-					Gladiator.id1 = Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(),
+					Gladiator.id1 = Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(),
 							(Runnable) new Runnable() {
 								@Override
 								public void run() {
@@ -208,7 +208,7 @@ public class Gladiator implements Listener {
 				&& Gladiator.fighting.containsKey(e.getPlayer().getName())) {
 			e.setCancelled(true);
 			e.getClickedBlock().setType(Material.GLASS);
-			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (Gladiator.fighting.containsKey(e.getPlayer().getName())) {
@@ -230,7 +230,7 @@ public class Gladiator implements Listener {
 			Gladiator.noExecut.remove(t);
 			final ItemStack Item = new ItemStack(Material.IRON_FENCE);
 			final ItemMeta kItem = Item.getItemMeta();
-			kItem.setDisplayName("§7\u27b3 §a§lGladiator" + KitAPI.getKit(p));
+			kItem.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lGladiator" + KitAPI.getKit(p));
 			Item.setItemMeta(kItem);
 			Gladiator.fighting.remove(t.getName());
 			Gladiator.fighting.remove(p.getName());
@@ -290,7 +290,7 @@ public class Gladiator implements Listener {
 			k.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 10));
 			final ItemStack Item = new ItemStack(Material.IRON_FENCE);
 			final ItemMeta kItem = Item.getItemMeta();
-			kItem.setDisplayName("§7\u27b3 §a§lGladiator" + KitAPI.getKit(p));
+			kItem.setDisplayName("ï¿½7\u27b3 ï¿½aï¿½lGladiator" + KitAPI.getKit(p));
 			Item.setItemMeta(kItem);
 			Gladiator.fighting.remove(k.getName());
 			Gladiator.fighting.remove(p.getName());
@@ -334,7 +334,7 @@ public class Gladiator implements Listener {
 				&& (!cfGrupo.ChecarGrupo(p, "Dono") || !cfGrupo.ChecarGrupo(p, "Gerente")
 						|| !cfGrupo.ChecarGrupo(p, "Admin"))) {
 			e.setCancelled(true);
-			p.sendMessage("§cVoc\u00ea n\u00e3o pode executar comandos no Gladiator!");
+			p.sendMessage("ï¿½cVoc\u00ea nÃ£o pode executar comandos no Gladiator!");
 		}
 	}
 }

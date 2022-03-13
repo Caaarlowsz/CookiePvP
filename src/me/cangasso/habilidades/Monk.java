@@ -23,7 +23,7 @@ public class Monk implements Listener {
 		if (p.getItemInHand().getType() == Material.BLAZE_ROD && KitAPI.getKit(p) == "Monk"
 				&& CooldownAPI.Cooldown.containsKey(p.getName())) {
 			e.setCancelled(true);
-			p.sendMessage("§8§l<§e§l!§8§l> §7Aguarde para utilizar sua habilidade novamente!");
+			p.sendMessage("ï¿½8ï¿½l<ï¿½eï¿½l!ï¿½8ï¿½l> ï¿½7Aguarde para utilizar sua habilidade novamente!");
 			return;
 		}
 		if (p.getItemInHand().getType() == Material.BLAZE_ROD && KitAPI.getKit(p) == "Monk"
@@ -34,7 +34,7 @@ public class Monk implements Listener {
 			jogadorClicado.setItemInHand(ItemSelecionado);
 			jogadorClicado.getInventory().setItem(random, ItemMudado);
 			jogadorClicado.sendMessage(
-					"§cVoc\u00ea acaba de ser monkado. Certifique-se que nada no seu invent\u00e1rio foi alterado!");
+					"ï¿½cVoc\u00ea acaba de ser monkado. Certifique-se que nada no seu invent\u00e1rio foi alterado!");
 			CooldownAPI.addCooldown(p, 35);
 		}
 	}

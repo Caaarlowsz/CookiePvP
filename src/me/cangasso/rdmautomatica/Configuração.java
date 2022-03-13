@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-public class Configura\u00e7\u00e3o {
+public class Configuração {
 	private static FileConfiguration Evento;
 	private static File EventoFile;
 
@@ -15,25 +15,25 @@ public class Configura\u00e7\u00e3o {
 		if (!plugin.getDataFolder().exists()) {
 			plugin.getDataFolder().mkdir();
 		}
-		Configura\u00e7\u00e3o.EventoFile = new File(plugin.getDataFolder(), "Evento.yml");
-		if (Configura\u00e7\u00e3o.EventoFile.exists()) {
+		Configuração.EventoFile = new File(plugin.getDataFolder(), "Evento.yml");
+		if (Configuração.EventoFile.exists()) {
 			try {
-				Configura\u00e7\u00e3o.EventoFile.createNewFile();
+				Configuração.EventoFile.createNewFile();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		Configura\u00e7\u00e3o.Evento = (FileConfiguration) YamlConfiguration
-				.loadConfiguration(Configura\u00e7\u00e3o.EventoFile);
+		Configuração.Evento = (FileConfiguration) YamlConfiguration
+				.loadConfiguration(Configuração.EventoFile);
 	}
 
 	public static FileConfiguration getEvento() {
-		return Configura\u00e7\u00e3o.Evento;
+		return Configuração.Evento;
 	}
 
 	public static void salvarConfig() {
 		try {
-			Configura\u00e7\u00e3o.Evento.save(Configura\u00e7\u00e3o.EventoFile);
+			Configuração.Evento.save(Configuração.EventoFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

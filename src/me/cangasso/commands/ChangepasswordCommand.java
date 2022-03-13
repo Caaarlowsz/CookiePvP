@@ -12,10 +12,10 @@ public class ChangepasswordCommand implements CommandExecutor {
 				&& args.length == 0) {
 			p.sendMessage(" ");
 			p.sendMessage(
-					"§6§lCOMO TROCAR DE SENHA? §f\u00c9 simples. Caso voc\u00ea tenha perdido ou esquecido a sua senha, entre em contato pelo Twitter §3§ohttps://twitter.com/Cookie_Suporte §fou §3§ohttps://twitter.com/Cangassow §fe solicite uma altera\u00e7\u00e3o! ");
-			p.sendMessage("§fVoc\u00ea ser\u00e1 respondido em at\u00e9 §9§l24 horas§f.");
+					"ï¿½6ï¿½lCOMO TROCAR DE SENHA? ï¿½f\u00c9 simples. Caso voc\u00ea tenha perdido ou esquecido a sua senha, entre em contato pelo Twitter ï¿½3ï¿½ohttps://twitter.com/Cookie_Suporte ï¿½fou ï¿½3ï¿½ohttps://twitter.com/Cangassow ï¿½fe solicite uma altera\u00e7\u00e3o! ");
+			p.sendMessage("ï¿½fVoc\u00ea ser\u00e1 respondido em at\u00e9 ï¿½9ï¿½l24 horasï¿½f.");
 			p.sendMessage(" ");
-			p.sendMessage("§f§oAntenciosamente, CookieNetwork. ");
+			p.sendMessage("ï¿½fï¿½oAntenciosamente, CookieNetwork. ");
 			p.sendMessage(" ");
 		}
 		return false;

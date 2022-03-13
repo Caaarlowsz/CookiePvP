@@ -51,6 +51,6 @@ public class TopKillStreak implements Listener {
 	}
 
 	public static String formatTopKillStreak(final Player player) {
-		return "§3" + getNameTop(player) + " §f-§3 " + getKsTop(player);
+		return "ï¿½3" + getNameTop(player) + " ï¿½f-ï¿½3 " + getKsTop(player);
 	}
 }

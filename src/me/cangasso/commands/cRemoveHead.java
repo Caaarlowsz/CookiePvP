@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 import me.cangasso.API.HatAPI;
 import me.cangasso.bans.API;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
 
 public class cRemoveHead implements CommandExecutor {
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -21,12 +21,12 @@ public class cRemoveHead implements CommandExecutor {
 					&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Youtuber")
 					&& !cfGrupo.ChecarGrupo(p, "S-Pro") && !cfGrupo.ChecarGrupo(p, "Pro")
 					&& !cfGrupo.ChecarGrupo(p, "Mvp") && !cfGrupo.ChecarGrupo(p, "Helper")) {
-				p.sendMessage("§c§l(!) §cVoc\u00ea n\u00e3o possui permiss\u00e3o para executar este comando!");
+				p.sendMessage("ï¿½cï¿½l(!) ï¿½cVoc\u00ea nÃ£o possui permissÃ£o para executar este comando!");
 				return true;
 			}
 			HatAPI.removeHat(p);
 			API.sendSound(p, Sound.LEVEL_UP, 10);
-			p.sendMessage("§aCabe\u00e7a removida com sucesso!");
+			p.sendMessage("ï¿½aCabeÃ§a removida com sucesso!");
 		}
 		return false;
 	}

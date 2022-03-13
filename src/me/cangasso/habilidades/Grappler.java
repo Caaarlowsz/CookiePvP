@@ -17,11 +17,11 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.util.Vector;
 
 import me.cangasso.API.KitAPI;
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import net.minecraft.server.v1_7_R4.EntityHuman;
 
 public class Grappler implements Listener {
-	public static Main plugin;
+	public static CookiePvP plugin;
 	Map<Player, Cordinha> hooks;
 
 	public Grappler() {

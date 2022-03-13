@@ -27,9 +27,9 @@ import org.bukkit.potion.PotionEffect;
 import me.cangasso.API.API;
 import me.cangasso.API.KitAPI;
 import me.cangasso.API.WarpsAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 
 public class Events1v1 implements Listener {
 	public static List<Player> ChamouDuelo;
@@ -56,15 +56,15 @@ public class Events1v1 implements Listener {
 		}
 		if (p.getItemInHand().equals((Object) Join1v1.Item_)) {
 			if (Events1v1.ChamouDuelo.contains(p)) {
-				p.sendMessage("§cAguarde para desafiar outro jogador...");
+				p.sendMessage("ï¿½cAguarde para desafiar outro jogador...");
 				return;
 			}
 			final Player Player2 = (Player) event.getRightClicked();
 			Events1v1.AceitarDuelo.add(Player2);
 			Events1v1.ChamouDuelo.add(p);
-			p.sendMessage("§fVoc\u00ea desafiou o jogador: §6§l" + Player2.getName() + " §fpara um duelo!");
-			Player2.sendMessage("§fVoc\u00ea foi desafiado por: §6§l" + p.getName() + " §fpara um duelo!");
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+			p.sendMessage("ï¿½fVoc\u00ea desafiou o jogador: ï¿½6ï¿½l" + Player2.getName() + " ï¿½fpara um duelo!");
+			Player2.sendMessage("ï¿½fVoc\u00ea foi desafiado por: ï¿½6ï¿½l" + p.getName() + " ï¿½fpara um duelo!");
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					if (Events1v1.ChamouDuelo.contains(p)) {
@@ -81,7 +81,7 @@ public class Events1v1 implements Listener {
 		final Player player = event.getPlayer();
 		if (Events1v1.congelar.contains(player)) {
 			event.setTo(player.getLocation());
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+			Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 				@Override
 				public void run() {
 					Events1v1.congelar.remove(player);
@@ -105,8 +105,8 @@ public class Events1v1 implements Listener {
 				Events1v1.JogandoSair.put(Player2.getName(), p.getName());
 				Events1v1.congelar.add(p);
 				Events1v1.congelar.add(Player2);
-				Prote\u00e7\u00e3o.setImortal(Player2, false);
-				Prote\u00e7\u00e3o.setImortal(p, false);
+				ProteÃ§Ã£o.setImortal(Player2, false);
+				ProteÃ§Ã£o.setImortal(p, false);
 				WarpsAPI.Ir(Player2, "1v1loc2");
 				WarpsAPI.Ir(p, "1v1loc1");
 				Events1v1.ChamouDuelo.remove(Player2);
@@ -120,7 +120,7 @@ public class Events1v1 implements Listener {
 				final ItemStack Espada = new ItemStack(Material.DIAMOND_SWORD);
 				Espada.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1);
 				final ItemMeta Espada2 = Espada.getItemMeta();
-				Espada2.setDisplayName("§5§oEspada");
+				Espada2.setDisplayName("ï¿½5ï¿½oEspada");
 				Espada.setItemMeta(Espada2);
 				p.getInventory().addItem(new ItemStack[] { Espada });
 				Player2.getInventory().addItem(new ItemStack[] { Espada });
@@ -146,7 +146,7 @@ public class Events1v1 implements Listener {
 						Speed1v1.Iniciou.remove(Player2);
 						Speed1v1.Partida1 = false;
 					}
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							Player[] onlinePlayers;
@@ -160,7 +160,7 @@ public class Events1v1 implements Listener {
 							}
 						}
 					}, 2L);
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							if (Events1v1.congelar.contains(p)) {
@@ -171,7 +171,7 @@ public class Events1v1 implements Listener {
 							}
 						}
 					}, 20L);
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							if (Events1v1.congelar.contains(p)) {
@@ -182,7 +182,7 @@ public class Events1v1 implements Listener {
 							}
 						}
 					}, 40L);
-					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.plugin, (Runnable) new Runnable() {
+					Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.plugin, (Runnable) new Runnable() {
 						@Override
 						public void run() {
 							if (Events1v1.congelar.contains(p)) {
@@ -219,13 +219,13 @@ public class Events1v1 implements Listener {
 				Events1v1.inPvP.remove(v);
 				m.sendMessage("     ");
 				m.sendMessage(
-						"§aVoc\u00ea ganhou o duelo contra " + v.getName() + "§a com §a§l" + amountv + " §asopas.");
+						"ï¿½aVoc\u00ea ganhou o duelo contra " + v.getName() + "ï¿½a com ï¿½aï¿½l" + amountv + " ï¿½asopas.");
 				m.sendMessage("     ");
-				Prote\u00e7\u00e3o.setImortal(v, true);
-				Prote\u00e7\u00e3o.setImortal(m, true);
+				ProteÃ§Ã£o.setImortal(v, true);
+				ProteÃ§Ã£o.setImortal(m, true);
 				v.sendMessage("     ");
-				v.sendMessage("§cVoc\u00ea perdeu o duelo contra " + m.getName() + ". §cO jogador estava com §c§l"
-						+ amountm + " §csopas.");
+				v.sendMessage("ï¿½cVoc\u00ea perdeu o duelo contra " + m.getName() + ". ï¿½cO jogador estava com ï¿½cï¿½l"
+						+ amountm + " ï¿½csopas.");
 				v.sendMessage("     ");
 				WarpsAPI.Ir(m, "1v1");
 				m.setGameMode(GameMode.SURVIVAL);
@@ -234,7 +234,7 @@ public class Events1v1 implements Listener {
 				for (final PotionEffect effect : m.getActivePotionEffects()) {
 					m.removePotionEffect(effect.getType());
 				}
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						WarpsAPI.Ir(v, "1v1");
@@ -252,7 +252,7 @@ public class Events1v1 implements Listener {
 				Events1v1.Jogando1v1Player.remove(m);
 				Events1v1.JogandoSair.remove(m.getName());
 				Events1v1.JogandoSair.remove(v.getName());
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						v.getInventory().clear();
@@ -299,15 +299,15 @@ public class Events1v1 implements Listener {
 						new Material[] { Material.MUSHROOM_SOUP });
 				m.sendMessage("     ");
 				m.sendMessage(
-						"§aVoc\u00ea ganhou o duelo contra " + v.getName() + "§a com §a§l" + amountv + " §asopas.");
+						"ï¿½aVoc\u00ea ganhou o duelo contra " + v.getName() + "ï¿½a com ï¿½aï¿½l" + amountv + " ï¿½asopas.");
 				m.sendMessage("     ");
 				Events1v1.inPvP.remove(m);
 				Events1v1.inPvP.remove(v);
-				Prote\u00e7\u00e3o.setImortal(v, true);
-				Prote\u00e7\u00e3o.setImortal(m, true);
+				ProteÃ§Ã£o.setImortal(v, true);
+				ProteÃ§Ã£o.setImortal(m, true);
 				v.sendMessage("     ");
-				v.sendMessage("§cVoc\u00ea perdeu o duelo contra " + m.getName() + ". §cO jogador estava com §c§l"
-						+ amountm + " §csopas.");
+				v.sendMessage("ï¿½cVoc\u00ea perdeu o duelo contra " + m.getName() + ". ï¿½cO jogador estava com ï¿½cï¿½l"
+						+ amountm + " ï¿½csopas.");
 				v.sendMessage("     ");
 				WarpsAPI.Ir(m, "1v1");
 				m.setGameMode(GameMode.SURVIVAL);
@@ -316,7 +316,7 @@ public class Events1v1 implements Listener {
 				for (final PotionEffect effect : m.getActivePotionEffects()) {
 					m.removePotionEffect(effect.getType());
 				}
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						WarpsAPI.Ir(v, "1v1");
@@ -332,7 +332,7 @@ public class Events1v1 implements Listener {
 				Events1v1.Jogando1v1Player.remove(m);
 				Events1v1.JogandoSair.remove(m.getName());
 				Events1v1.JogandoSair.remove(v.getName());
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), (Runnable) new Runnable() {
+				Bukkit.getScheduler().scheduleSyncDelayedTask(CookiePvP.getPlugin(), (Runnable) new Runnable() {
 					@Override
 					public void run() {
 						v.getInventory().clear();
@@ -376,14 +376,14 @@ public class Events1v1 implements Listener {
 			Events1v1.inPvP.remove(t);
 			t.setMaxHealth(20.0);
 			t.setHealth(20.0);
-			Prote\u00e7\u00e3o.setImortal(t, true);
+			ProteÃ§Ã£o.setImortal(t, true);
 			t.setGameMode(GameMode.SURVIVAL);
 			t.getInventory().setArmorContents((ItemStack[]) null);
 			t.getInventory().clear();
 			for (final PotionEffect effect : t.getActivePotionEffects()) {
 				t.removePotionEffect(effect.getType());
 			}
-			t.sendMessage("§fO jogador §e§l" + p.getName() + " §fdeslogou durante o duelo!");
+			t.sendMessage("ï¿½fO jogador ï¿½eï¿½l" + p.getName() + " ï¿½fdeslogou durante o duelo!");
 			t.getInventory().setItem(3, Join1v1.Item_);
 			t.getInventory().setItem(5, Join1v1.Cinza);
 			KitAPI.setKit(t, "1v1");
@@ -407,7 +407,7 @@ public class Events1v1 implements Listener {
 				&& !cfGrupo.ChecarGrupo(p, "Mod") && !cfGrupo.ChecarGrupo(p, "Trial")
 				&& !cfGrupo.ChecarGrupo(p, "Youtuber+") && !cfGrupo.ChecarGrupo(p, "Helper")) {
 			event.getPlayer()
-					.sendMessage("§cVoc\u00ea n\u00e3o pode utilizar comandos na §6§l1V1§f. Use §3§l/SPAWN§f!");
+					.sendMessage("ï¿½cVoc\u00ea nÃ£o pode utilizar comandos na ï¿½6ï¿½l1V1ï¿½f. Use ï¿½3ï¿½l/SPAWNï¿½f!");
 			event.setCancelled(true);
 		}
 	}
@@ -421,7 +421,7 @@ public class Events1v1 implements Listener {
 				&& !cfGrupo.ChecarGrupo(p, "Mod+") && !cfGrupo.ChecarGrupo(p, "Mod")
 				&& !cfGrupo.ChecarGrupo(p, "Trial")) {
 			event.getPlayer()
-					.sendMessage("§cVoc\u00ea est\u00e1 impossibilitado de utilizar comandos durante o duelo!");
+					.sendMessage("ï¿½cVoc\u00ea est\u00e1 impossibilitado de utilizar comandos durante o duelo!");
 			event.setCancelled(true);
 		}
 	}

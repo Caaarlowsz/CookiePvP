@@ -2,6 +2,7 @@ package me.cangasso.main;
 
 import java.util.ArrayList;
 
+import com.github.caaarlowsz.kitpvpapi.KitPvP;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandExecutor;
@@ -91,14 +92,14 @@ import me.cangasso.commands.VisCommand;
 import me.cangasso.commands.WarpCommand;
 import me.cangasso.commands.YoutuberCommand;
 import me.cangasso.commands.cRemoveHead;
-import me.cangasso.configura\u00e7\u00e3o.WarpsConfig;
-import me.cangasso.configura\u00e7\u00e3o.cfConfig;
-import me.cangasso.configura\u00e7\u00e3o.cfEntrou;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfKitdiario;
-import me.cangasso.configura\u00e7\u00e3o.cfPermiss\u00e3o;
-import me.cangasso.configura\u00e7\u00e3o.cfStatus;
-import me.cangasso.configura\u00e7\u00e3o.cfTempGrupo;
+import me.cangasso.configuração.WarpsConfig;
+import me.cangasso.configuração.cfConfig;
+import me.cangasso.configuração.cfEntrou;
+import me.cangasso.configuração.cfGrupo;
+import me.cangasso.configuração.cfKitdiario;
+import me.cangasso.configuração.cfPermissão;
+import me.cangasso.configuração.cfStatus;
+import me.cangasso.configuração.cfTempGrupo;
 import me.cangasso.events.ColorSigns;
 import me.cangasso.events.PlacaLC;
 import me.cangasso.events.PlacaRecraft;
@@ -128,7 +129,7 @@ import me.cangasso.habilidades.Switcher;
 import me.cangasso.habilidades.Thor;
 import me.cangasso.habilidades.Timelord;
 import me.cangasso.habilidades.Viper;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
+import me.cangasso.invencivel.Proteção;
 import me.cangasso.jumps.Diamante;
 import me.cangasso.jumps.Esmeralda;
 import me.cangasso.jumps.Esponja;
@@ -147,7 +148,7 @@ import me.cangasso.packets.PacketSendEvent;
 import me.cangasso.packets.ReceivedPacket;
 import me.cangasso.packets.SentPacket;
 import me.cangasso.rdmautomatica.Comando;
-import me.cangasso.rdmautomatica.Configura\u00e7\u00e3o;
+import me.cangasso.rdmautomatica.Configuração;
 import me.cangasso.rdmautomatica.Estado;
 import me.cangasso.rdmautomatica.EventoAPI;
 import me.cangasso.rdmautomatica.PlayerAPI;
@@ -157,9 +158,28 @@ import me.cangasso.umVum.CmdsSpeed;
 import me.cangasso.umVum.Events1v1;
 import me.cangasso.umVum.Speed1v1;
 
-public class Main extends JavaPlugin {
+public class CookiePvP extends JavaPlugin implements KitPvP {
+
+	@Override
+	public void onEnable() {
+		super.onEnable();
+
+		// TODO: Remover quando melhorar a classe principal
+		this.enable();
+	}
+
+	@Override
+	public void onDisable() {
+		super.onDisable();
+
+		// TODO: Remover quando melhorar a classe principal
+		this.disable();
+	}
+
+	// TODO: Melhorar a classe principal
+
 	public static final String Menssagens;
-	public static Main main;
+	public static CookiePvP main;
 	public static Plugin plugin;
 	public static Estado Evento;
 	public static Injector injector;
@@ -170,29 +190,29 @@ public class Main extends JavaPlugin {
 
 	static {
 		Menssagens = null;
-		Main.disableEvents = false;
-		Main.JogadoresLogados = new ArrayList<String>();
+		CookiePvP.disableEvents = false;
+		CookiePvP.JogadoresLogados = new ArrayList<String>();
 	}
 
-	public static Main getInstance() {
-		return Main.main;
+	public static CookiePvP getInstance() {
+		return CookiePvP.main;
 	}
 
 	public static Plugin getPlugin() {
-		return Main.plugin;
+		return CookiePvP.plugin;
 	}
 
-	public void onEnable() {
-		Main.plugin = (Plugin) this;
-		Bukkit.getConsoleSender().sendMessage("�aPlugin ativado com sucesso!");
-		Bukkit.getConsoleSender().sendMessage("�aBy: Cangasso and MoradorDeRua");
+	public void enable() {
+		CookiePvP.plugin = (Plugin) this;
+		Bukkit.getConsoleSender().sendMessage("�aPlugin ativado com sucesso!");
+		Bukkit.getConsoleSender().sendMessage("�aBy: Cangasso and MoradorDeRua");
 		Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask((Plugin) this, (Runnable) new MoveCheck(), 41L,
 				40L);
 		Player[] onlinePlayers;
 		for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 			final Player todos = onlinePlayers[i];
 			todos.kickPlayer(
-					"   �c�lSERVIDOR REINICIANDO... \n�7Aguarde! \n�7Estamos melhorando a sua jogabilidade, espero que entenda!");
+					"   �c�lSERVIDOR REINICIANDO... \n�7Aguarde! \n�7Estamos melhorando a sua jogabilidade, espero que entenda!");
 		}
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(getPlugin(), (Runnable) new Runnable() {
 			@Override
@@ -201,7 +221,7 @@ public class Main extends JavaPlugin {
 		}, 0L, 2400L);
 		this.LoadConfig();
 		GrupoAPI.Checando = true;
-		Main.Evento = Estado.FECHADO;
+		CookiePvP.Evento = Estado.FECHADO;
 		Tempo.CancelarTempo();
 		Tempo.Iniciando = 301;
 		OfflinePlayer[] offlinePlayers;
@@ -227,10 +247,10 @@ public class Main extends JavaPlugin {
 		PvPCommand.pvp = true;
 	}
 
-	public void onDisable() {
+	public void disable() {
 		PacketsDesabilitar();
-		Bukkit.getConsoleSender().sendMessage("�cPlugin desativado com sucesso!");
-		Bukkit.getConsoleSender().sendMessage("�cBy: Cangasso and MoradorDeRua");
+		Bukkit.getConsoleSender().sendMessage("�cPlugin desativado com sucesso!");
+		Bukkit.getConsoleSender().sendMessage("�cBy: Cangasso and MoradorDeRua");
 	}
 
 	private void CarregarComandosRDM() {
@@ -243,10 +263,10 @@ public class Main extends JavaPlugin {
 	}
 
 	public void onLoad() {
-		Main.injector = new Injector();
-		final boolean injected = Main.injector.inject();
+		CookiePvP.injector = new Injector();
+		final boolean injected = CookiePvP.injector.inject();
 		if (injected) {
-			Main.injector.addServerConnectionChannel();
+			CookiePvP.injector.addServerConnectionChannel();
 		}
 	}
 
@@ -255,7 +275,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents((Listener) new Eventos(), (Plugin) this);
 		pm.registerEvents((Listener) new eEvents(), (Plugin) this);
 		pm.registerEvents((Listener) new eUtills(), (Plugin) this);
-		pm.registerEvents((Listener) new Prote\u00e7\u00e3o(), (Plugin) this);
+		pm.registerEvents((Listener) new Proteção(), (Plugin) this);
 		pm.registerEvents((Listener) new OpenInventory(), (Plugin) this);
 		pm.registerEvents((Listener) new CliqueInventory(), (Plugin) this);
 		pm.registerEvents((Listener) new HeadsMenu(), (Plugin) this);
@@ -402,16 +422,16 @@ public class Main extends JavaPlugin {
 		cfGrupo.setarconfig((Plugin) this);
 		cfKitdiario.setarconfig((Plugin) this);
 		cfTempGrupo.setarconfig((Plugin) this);
-		cfPermiss\u00e3o.setarconfig((Plugin) this);
-		Configura\u00e7\u00e3o.getConfig((Plugin) this);
+		cfPermissão.setarconfig((Plugin) this);
+		Configuração.getConfig((Plugin) this);
 		cfConfig.setarConfig((Plugin) this);
 		new cfStatus();
 		new WarnCommand();
 	}
 
 	public static void PacketsIniciar() {
-		if (Main.cleanupTask == null) {
-			(Main.cleanupTask = new BukkitRunnable() {
+		if (CookiePvP.cleanupTask == null) {
+			(CookiePvP.cleanupTask = new BukkitRunnable() {
 				public void run() {
 				}
 			}).runTaskTimer(getPlugin(), 6000L, 6000L);
@@ -422,7 +442,7 @@ public class Main extends JavaPlugin {
 		Player[] onlinePlayers;
 		for (int length = (onlinePlayers = Bukkit.getOnlinePlayers()).length, i = 0; i < length; ++i) {
 			final Player p = onlinePlayers[i];
-			Main.injector.removeChannel(p);
+			CookiePvP.injector.removeChannel(p);
 		}
 		while (!PacketHandler.getHandlers().isEmpty()) {
 			PacketHandler.removeHandler(PacketHandler.getHandlers().get(0));
@@ -438,7 +458,7 @@ public class Main extends JavaPlugin {
 	}
 
 	private void callEvent(final Event e) {
-		if (Main.disableEvents) {
+		if (CookiePvP.disableEvents) {
 			return;
 		}
 		if (!this.isEnabled()) {
@@ -461,7 +481,7 @@ public class Main extends JavaPlugin {
 		if (!packet.getClass().getName().startsWith("net.minecraft.server.")) {
 			return packet;
 		}
-		if (!Main.disableEvents) {
+		if (!CookiePvP.disableEvents) {
 			final PacketReceiveEvent event = new PacketReceiveEvent(packet, cancellable, p);
 			this.callEvent(event);
 		}
@@ -474,7 +494,7 @@ public class Main extends JavaPlugin {
 		if (!packet.getClass().getName().startsWith("net.minecraft.server.")) {
 			return packet;
 		}
-		if (!Main.disableEvents) {
+		if (!CookiePvP.disableEvents) {
 			final PacketSendEvent event = new PacketSendEvent(packet, cancellable, p);
 			this.callEvent(event);
 		}

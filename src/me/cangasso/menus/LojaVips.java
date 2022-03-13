@@ -21,23 +21,23 @@ public class LojaVips {
 	}
 
 	public static void inventory(final Player p) {
-		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 9, "§7Qual §6[VIP] §7deseja?");
-		menu.setItem(2, criarItemMenu(Material.EMERALD_BLOCK, "§7[VIP] §a§lLIGHT",
-				new String[] { " ", "                   §7\u25ff §7§lBeneficios §7\u25ff",
-						"§7- §7§lSLOT EXCLUSIVO EM NOSSO SERVIDOR", "§7- §7§lTAG §a§lLIGHT §7§lPARA SER DIFRENCIADO",
-						"§7- §7§lACESSO A 11 KITS DO SERVIDOR", " " }));
+		final Inventory menu = Bukkit.createInventory((InventoryHolder) p, 9, "ï¿½7Qual ï¿½6[VIP] ï¿½7deseja?");
+		menu.setItem(2, criarItemMenu(Material.EMERALD_BLOCK, "ï¿½7[VIP] ï¿½aï¿½lLIGHT",
+				new String[] { " ", "                   ï¿½7\u25ff ï¿½7ï¿½lBeneficios ï¿½7\u25ff",
+						"ï¿½7- ï¿½7ï¿½lSLOT EXCLUSIVO EM NOSSO SERVIDOR", "ï¿½7- ï¿½7ï¿½lTAG ï¿½aï¿½lLIGHT ï¿½7ï¿½lPARA SER DIFRENCIADO",
+						"ï¿½7- ï¿½7ï¿½lACESSO A 11 KITS DO SERVIDOR", " " }));
 		menu.setItem(4,
-				criarItemMenu(Material.LAPIS_BLOCK, "§7[VIP] §9§lMVP",
-						new String[] { " ", "                   §7\u25ff §7§lBeneficios §7\u25ff",
-								"§7- §7§lSLOT EXCLUSIVO EM NOSSO SERVIDOR",
-								"§7- §7§lTAG §a§lLIGHT §7e §9§lMVP §7§lPARA SER DIFRENCIADO",
-								"§7- §7§lACESSO A 16 KITS DO SERVIDOR", " " }));
+				criarItemMenu(Material.LAPIS_BLOCK, "ï¿½7[VIP] ï¿½9ï¿½lMVP",
+						new String[] { " ", "                   ï¿½7\u25ff ï¿½7ï¿½lBeneficios ï¿½7\u25ff",
+								"ï¿½7- ï¿½7ï¿½lSLOT EXCLUSIVO EM NOSSO SERVIDOR",
+								"ï¿½7- ï¿½7ï¿½lTAG ï¿½aï¿½lLIGHT ï¿½7e ï¿½9ï¿½lMVP ï¿½7ï¿½lPARA SER DIFRENCIADO",
+								"ï¿½7- ï¿½7ï¿½lACESSO A 16 KITS DO SERVIDOR", " " }));
 		menu.setItem(6,
-				criarItemMenu(Material.GOLD_BLOCK, "§7[VIP] §6§lPRO",
-						new String[] { " ", "                   §7\u25ff §7§lBeneficios §7\u25ff",
-								"§7- §7§lSLOT EXCLUSIVO EM NOSSO SERVIDOR",
-								"§7- §7§lTAG §a§lLIGHT§7, §9§lMVP §7e §6§lPRO §7§lPARA SER DIFRENCIADO",
-								"§7- §7§lACESSO A TODOS KITS DO SERVIDOR", " " }));
+				criarItemMenu(Material.GOLD_BLOCK, "ï¿½7[VIP] ï¿½6ï¿½lPRO",
+						new String[] { " ", "                   ï¿½7\u25ff ï¿½7ï¿½lBeneficios ï¿½7\u25ff",
+								"ï¿½7- ï¿½7ï¿½lSLOT EXCLUSIVO EM NOSSO SERVIDOR",
+								"ï¿½7- ï¿½7ï¿½lTAG ï¿½aï¿½lLIGHTï¿½7, ï¿½9ï¿½lMVP ï¿½7e ï¿½6ï¿½lPRO ï¿½7ï¿½lPARA SER DIFRENCIADO",
+								"ï¿½7- ï¿½7ï¿½lACESSO A TODOS KITS DO SERVIDOR", " " }));
 		p.openInventory(menu);
 	}
 }

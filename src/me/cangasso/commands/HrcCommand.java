@@ -12,19 +12,19 @@ public class HrcCommand implements CommandExecutor {
 		final Player p = (Player) sender;
 		if ((cmd.getName().equalsIgnoreCase("hrc") || cmd.getName().equalsIgnoreCase("hackreportchat"))
 				&& args.length == 0) {
-			API.sendMsg((CommandSender) p, "§6§m>-------------------------<");
-			API.sendMsg((CommandSender) p, "               §6» §f§lHRC §6«     ");
-			API.sendMsg((CommandSender) p, "§6§m>-------------------------<");
+			API.sendMsg((CommandSender) p, "ï¿½6ï¿½m>-------------------------<");
+			API.sendMsg((CommandSender) p, "               ï¿½6ï¿½ ï¿½fï¿½lHRC ï¿½6ï¿½     ");
+			API.sendMsg((CommandSender) p, "ï¿½6ï¿½m>-------------------------<");
 			API.sendMsg((CommandSender) p, " ");
 			API.sendMsg((CommandSender) p,
-					"§6§lHRC §fO HRC \u00e9 um chat via §b§lSkype §fdesenvolvido com o intuito de recrutar jogadores para que enviem den\u00fancias ao chat.");
+					"ï¿½6ï¿½lHRC ï¿½fO HRC \u00e9 um chat via ï¿½bï¿½lSkype ï¿½fdesenvolvido com o intuito de recrutar jogadores para que enviem den\u00fancias ao chat.");
 			API.sendMsg((CommandSender) p, "");
-			API.sendMsg((CommandSender) p, "§6\u2022 §fAplica\u00e7\u00e3o para o HRC: §7http://bit.ly/APPHrcCN");
+			API.sendMsg((CommandSender) p, "ï¿½6\u2022 ï¿½fAplica\u00e7\u00e3o para o HRC: ï¿½7http://bit.ly/APPHrcCN");
 			API.sendMsg((CommandSender) p, " ");
 			API.sendMsg((CommandSender) p,
-					"§c§lOBS: §fCaso voc\u00ea seja §a§lAPROVADO§f, ser\u00e1 contatado por um membro da equipe!");
+					"ï¿½cï¿½lOBS: ï¿½fCaso voc\u00ea seja ï¿½aï¿½lAPROVADOï¿½f, ser\u00e1 contatado por um membro da equipe!");
 			API.sendMsg((CommandSender) p, "");
-			API.sendMsg((CommandSender) p, "§6§m>-------------------------<");
+			API.sendMsg((CommandSender) p, "ï¿½6ï¿½m>-------------------------<");
 		}
 		return false;
 	}

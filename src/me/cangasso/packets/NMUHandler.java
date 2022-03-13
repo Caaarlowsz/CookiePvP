@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 
-import me.cangasso.main.Main;
+import me.cangasso.main.CookiePvP;
 import net.minecraft.util.io.netty.channel.Channel;
 import net.minecraft.util.io.netty.channel.ChannelDuplexHandler;
 import net.minecraft.util.io.netty.channel.ChannelHandlerContext;
@@ -176,7 +176,7 @@ public class NMUHandler implements Handler {
 			final Cancellable cancellable = new Cancellable();
 			Object pckt = msg;
 			if (NMUHandler.packet.isAssignableFrom(msg.getClass())) {
-				pckt = ((Main) Main.getPlugin()).onPacketSend(this.player, msg, cancellable);
+				pckt = ((CookiePvP) CookiePvP.getPlugin()).onPacketSend(this.player, msg, cancellable);
 			}
 			if (cancellable.isCancelled()) {
 				return;
@@ -188,7 +188,7 @@ public class NMUHandler implements Handler {
 			final Cancellable cancellable = new Cancellable();
 			Object pckt = msg;
 			if (NMUHandler.packet.isAssignableFrom(msg.getClass())) {
-				pckt = ((Main) Main.getPlugin()).onPacketReceive(this.player, msg, cancellable);
+				pckt = ((CookiePvP) CookiePvP.getPlugin()).onPacketReceive(this.player, msg, cancellable);
 			}
 			if (cancellable.isCancelled()) {
 				return;

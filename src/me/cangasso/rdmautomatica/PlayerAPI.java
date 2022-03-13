@@ -19,10 +19,10 @@ import org.bukkit.util.Vector;
 import me.cangasso.API.API;
 import me.cangasso.API.CalendarioAPI;
 import me.cangasso.API.GrupoAPI;
-import me.cangasso.configura\u00e7\u00e3o.cfGrupo;
-import me.cangasso.configura\u00e7\u00e3o.cfTempGrupo;
-import me.cangasso.invencivel.Prote\u00e7\u00e3o;
-import me.cangasso.main.Main;
+import me.cangasso.configuraÃ§Ã£o.cfGrupo;
+import me.cangasso.configuraÃ§Ã£o.cfTempGrupo;
+import me.cangasso.invencivel.ProteÃ§Ã£o;
+import me.cangasso.main.CookiePvP;
 import me.cangasso.scoreboard.sScoreAPI;
 
 public class PlayerAPI {
@@ -287,7 +287,7 @@ public class PlayerAPI {
 	}
 
 	public static void SelecionarPrimeirosJogadores(final Player Jogador) {
-		if (Main.Evento == Estado.INICIANDO || Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.INICIANDO || CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		if (PlayerAPI.RDM1) {
@@ -2994,7 +2994,7 @@ public class PlayerAPI {
 	}
 
 	public static void IrParaPrimeiraBatalha(final Player Jogador1, final Player Jogador2) {
-		if (Main.Evento == Estado.INICIANDO || Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.INICIANDO || CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
@@ -3002,7 +3002,7 @@ public class PlayerAPI {
 		new BukkitRunnable() {
 			public void run() {
 				Jogador1.sendMessage(
-						ChatColor.GREEN + "§7Voc\u00ea \u00e9 o §e§lPRIMEIRO §7jogador do evento §a§lREI DA MESA");
+						ChatColor.GREEN + "ï¿½7Voc\u00ea \u00e9 o ï¿½eï¿½lPRIMEIRO ï¿½7jogador do evento ï¿½aï¿½lREI DA MESA");
 				Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
 						+ "Primeiro Jogador: " + ChatColor.RED + Jogador1.getName() + ChatColor.GRAY + "!");
 				Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
@@ -3016,7 +3016,7 @@ public class PlayerAPI {
 				}
 				PlayerAPI.RemoverSoBoolean(Jogador1);
 				PlayerAPI.Batalhando.add(Jogador1);
-				Prote\u00e7\u00e3o.setImortal(Jogador1, false);
+				ProteÃ§Ã£o.setImortal(Jogador1, false);
 				for (final PotionEffect Efeito : Jogador1.getActivePotionEffects()) {
 					Jogador1.removePotionEffect(Efeito.getType());
 				}
@@ -3036,7 +3036,7 @@ public class PlayerAPI {
 				new BukkitRunnable() {
 					public void run() {
 						Jogador1.sendMessage(ChatColor.GREEN
-								+ "§7Voc\u00ea \u00e9 o §6§lSEGUNDO §7jogador do evento §a§lREI DA MESA");
+								+ "ï¿½7Voc\u00ea \u00e9 o ï¿½6ï¿½lSEGUNDO ï¿½7jogador do evento ï¿½aï¿½lREI DA MESA");
 						Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
 								+ "Segundo Jogador: " + ChatColor.RED + Jogador2.getName() + ChatColor.GRAY + "!");
 						Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: "
@@ -3051,7 +3051,7 @@ public class PlayerAPI {
 						}
 						PlayerAPI.RemoverSoBoolean(Jogador2);
 						PlayerAPI.Batalhando.add(Jogador2);
-						Prote\u00e7\u00e3o.setImortal(Jogador2, false);
+						ProteÃ§Ã£o.setImortal(Jogador2, false);
 						for (final PotionEffect Efeito : Jogador2.getActivePotionEffects()) {
 							Jogador2.removePotionEffect(Efeito.getType());
 						}
@@ -3087,20 +3087,20 @@ public class PlayerAPI {
 								CriarItem(Jogador2, Material.STONE_SWORD, 1, (short) 0, new String[0],
 										ChatColor.RED + "Rei da Mesa", 0, 0);
 							}
-						}.runTaskLater(Main.getPlugin(), 20L);
+						}.runTaskLater(CookiePvP.getPlugin(), 20L);
 					}
-				}.runTaskLaterAsynchronously(Main.getPlugin(), 20L);
+				}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 20L);
 			}
-		}.runTaskLater(Main.getPlugin(), 20L);
+		}.runTaskLater(CookiePvP.getPlugin(), 20L);
 	}
 
 	public static void IrParaProximaBatalha(final Player Jogador) {
-		if (Main.Evento == Estado.INICIANDO || Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.INICIANDO || CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		final Player Jogador2 = Bukkit.getPlayer((String) PlayerAPI.Ganhador.get(Jogador));
 		Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
-				+ "§aEscolhendo o pr\u00f3ximo jogador" + ChatColor.GRAY + "§a...");
+				+ "ï¿½aEscolhendo o pr\u00f3ximo jogador" + ChatColor.GRAY + "ï¿½a...");
 		EventoAPI.TeleportarWarp(Jogador2, "Loc1");
 		PlayerAPI.Batalhando1.put(Jogador2, Jogador2.getName());
 		Player[] onlinePlayers;
@@ -3109,8 +3109,8 @@ public class PlayerAPI {
 			PlayerAPI.Batalhando1.put(Jogadores, Jogador2.getName());
 		}
 		RemoverSoBoolean(Jogador2);
-		Prote\u00e7\u00e3o.setImortal(Jogador2, false);
-		Prote\u00e7\u00e3o.setImortal(Jogador, false);
+		ProteÃ§Ã£o.setImortal(Jogador2, false);
+		ProteÃ§Ã£o.setImortal(Jogador, false);
 		for (final PotionEffect Efeito : Jogador2.getActivePotionEffects()) {
 			Jogador2.removePotionEffect(Efeito.getType());
 		}
@@ -3129,7 +3129,7 @@ public class PlayerAPI {
 		PlayerAPI.Esperando.add(Jogador2);
 		new BukkitRunnable() {
 			public void run() {
-				Jogador.sendMessage(ChatColor.GREEN + "§aVoc\u00ea \u00e9 o pr\u00f3ximo jogador da RDM!");
+				Jogador.sendMessage(ChatColor.GREEN + "ï¿½aVoc\u00ea \u00e9 o pr\u00f3ximo jogador da RDM!");
 				Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.GRAY
 						+ "Pr\u00f3ximo Jogador: " + ChatColor.RED + Jogador.getName() + ChatColor.GRAY + "!");
 				Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "RDM: " + ChatColor.YELLOW
@@ -3143,7 +3143,7 @@ public class PlayerAPI {
 					PlayerAPI.Batalhando2.put(Jogadores, Jogador.getName());
 				}
 				PlayerAPI.RemoverSoBoolean(Jogador);
-				Prote\u00e7\u00e3o.setImortal(Jogador, false);
+				ProteÃ§Ã£o.setImortal(Jogador, false);
 				for (final PotionEffect Efeito : Jogador.getActivePotionEffects()) {
 					Jogador.removePotionEffect(Efeito.getType());
 				}
@@ -3181,13 +3181,13 @@ public class PlayerAPI {
 						CriarItem(Jogador, Material.STONE_SWORD, 1, (short) 0, new String[0],
 								ChatColor.RED + "Rei da Mesa", 0, 0);
 					}
-				}.runTaskLater(Main.getPlugin(), 20L);
+				}.runTaskLater(CookiePvP.getPlugin(), 20L);
 			}
-		}.runTaskLaterAsynchronously(Main.getPlugin(), 20L);
+		}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 20L);
 	}
 
 	public static void AdicionarRDM(final Player Jogador) {
-		if (Main.Evento == Estado.ANDAMENTO || Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.ANDAMENTO || CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		if (!PlayerAPI.RDM1) {
@@ -3404,7 +3404,7 @@ public class PlayerAPI {
 	}
 
 	public static void AdicionarRDMCheio(final Player Jogador) {
-		if (Main.Evento == Estado.ANDAMENTO || Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.ANDAMENTO || CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		if (PlayerAPI.RDM1) {
@@ -3609,21 +3609,21 @@ public class PlayerAPI {
 			if (!Expulso.hasPermission("RDM.Full")) {
 				PlayerAPI.Participando.remove(Expulso);
 				EventoAPI.TeleportarWarp(Expulso, "Saida");
-				Expulso.sendMessage(ChatColor.RED + "§c§l(!) §cVoc\u00ea foi expulso do evento!");
-				Expulso.sendMessage(ChatColor.RED + "§c§l(!) §cMotivo: " + ChatColor.WHITE
+				Expulso.sendMessage(ChatColor.RED + "ï¿½cï¿½l(!) ï¿½cVoc\u00ea foi expulso do evento!");
+				Expulso.sendMessage(ChatColor.RED + "ï¿½cï¿½l(!) ï¿½cMotivo: " + ChatColor.WHITE
 						+ "Um jogador com algum grupo VIP ocupou a sua vaga e infelizmente voc\u00ea teve que ser retirado!");
-				Jogador.sendMessage(ChatColor.GREEN + "§aTeleporte foi conclu\u00eddo com sucesso!");
-				Jogador.sendMessage(ChatColor.GREEN + "§7Voc\u00ea expulsou o jogador §c§l" + ChatColor.WHITE
-						+ Expulso.getName() + ChatColor.GREEN + " §7do evento e obteve a vaga dele.");
+				Jogador.sendMessage(ChatColor.GREEN + "ï¿½aTeleporte foi conclu\u00eddo com sucesso!");
+				Jogador.sendMessage(ChatColor.GREEN + "ï¿½7Voc\u00ea expulsou o jogador ï¿½cï¿½l" + ChatColor.WHITE
+						+ Expulso.getName() + ChatColor.GREEN + " ï¿½7do evento e obteve a vaga dele.");
 				Jogador.sendMessage(ChatColor.GREEN + "Agora voc\u00ea est\u00e1 participando do Evento!");
 				EventoAPI.TeleportarWarp(Jogador, "Spawn");
 				PlayerAPI.Participando.add(Jogador);
 				EventoAPI.AntiBug.remove(Jogador);
 				EventoAPI.Teleportando.remove(Jogador);
 				Tempo.mandarBroadcast(ChatColor.DARK_RED + ChatColor.BOLD.toString() + " " + ChatColor.GRAY
-						+ "O jogador §6§l" + ChatColor.RED + Jogador.getName() + ChatColor.GRAY
-						+ " §7entrou no evento! " + ChatColor.WHITE + "§e§l(" + PlayerAPI.Participando.size()
-						+ "§e§l/30)" + ChatColor.GRAY + "§7!");
+						+ "O jogador ï¿½6ï¿½l" + ChatColor.RED + Jogador.getName() + ChatColor.GRAY
+						+ " ï¿½7entrou no evento! " + ChatColor.WHITE + "ï¿½eï¿½l(" + PlayerAPI.Participando.size()
+						+ "ï¿½eï¿½l/30)" + ChatColor.GRAY + "ï¿½7!");
 				PlayerAPI.RDM7 = true;
 				Player[] onlinePlayers7;
 				for (int length7 = (onlinePlayers7 = Bukkit.getOnlinePlayers()).length, n3 = 0; n3 < length7; ++n3) {
@@ -4416,12 +4416,12 @@ public class PlayerAPI {
 				&& PlayerAPI.RDM22 && PlayerAPI.RDM23 && PlayerAPI.RDM24 && PlayerAPI.RDM25 && PlayerAPI.RDM26
 				&& PlayerAPI.RDM27 && PlayerAPI.RDM28 && PlayerAPI.RDM29 && PlayerAPI.RDM30) {
 			Jogador.sendMessage(ChatColor.RED
-					+ "Desculpe, todos os participantes do Evento s\u00e3o vips, e voc\u00ea n\u00e3o pode expusar eles.");
+					+ "Desculpe, todos os participantes do Evento sÃ£o vips, e voc\u00ea nÃ£o pode expusar eles.");
 		}
 	}
 
 	public static void RemoverRDM(final Player Jogador) {
-		if (Main.Evento == Estado.FECHADO) {
+		if (CookiePvP.Evento == Estado.FECHADO) {
 			return;
 		}
 		if (PlayerAPI.jogador1.get(Jogador) == Jogador.getName()) {
@@ -4797,8 +4797,8 @@ public class PlayerAPI {
 
 	public static void CheckarGanhador(final Player Jogador) {
 		if (PlayerAPI.Participando.size() == 1) {
-			Jogador.sendMessage("§7Voc\u00ea \u00e9 o §2§lVENCEDOR §7do evento!");
-			Prote\u00e7\u00e3o.setImortal(Jogador, true);
+			Jogador.sendMessage("ï¿½7Voc\u00ea \u00e9 o ï¿½2ï¿½lVENCEDOR ï¿½7do evento!");
+			ProteÃ§Ã£o.setImortal(Jogador, true);
 			Jogador.setMaxHealth(20);
 			Jogador.setHealth(20.0);
 			Jogador.setFoodLevel(20);
@@ -4812,7 +4812,7 @@ public class PlayerAPI {
 			Jogador.getInventory().setHelmet((ItemStack) null);
 			Jogador.getInventory().setLeggings((ItemStack) null);
 			Tempo.mandarBroadcast(
-					" \n§4§lAVISO: §fO jogador §2§l" + Jogador.getName() + " §ffoi o vencedor do evento!" + "\n" + " ");
+					" \nï¿½4ï¿½lAVISO: ï¿½fO jogador ï¿½2ï¿½l" + Jogador.getName() + " ï¿½ffoi o vencedor do evento!" + "\n" + " ");
 			Jogador.playSound(Jogador.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 			final Vector Vector = Jogador.getLocation().getDirection().multiply(0).setY(4);
 			Jogador.setVelocity(Vector);
@@ -4823,38 +4823,38 @@ public class PlayerAPI {
 			}
 			new BukkitRunnable() {
 				public void run() {
-					Jogador.sendMessage("§7Voc\u00ea \u00e9 o §2§lVENCEDOR §7do evento!");
-					Tempo.mandarBroadcast(" \n§4§lAVISO: §fO jogador §2§l" + Jogador.getName()
-							+ " §ffoi o vencedor do evento!" + "\n" + " ");
+					Jogador.sendMessage("ï¿½7Voc\u00ea \u00e9 o ï¿½2ï¿½lVENCEDOR ï¿½7do evento!");
+					Tempo.mandarBroadcast(" \nï¿½4ï¿½lAVISO: ï¿½fO jogador ï¿½2ï¿½l" + Jogador.getName()
+							+ " ï¿½ffoi o vencedor do evento!" + "\n" + " ");
 					Jogador.playSound(Jogador.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 				}
-			}.runTaskLaterAsynchronously(Main.getPlugin(), 20L);
+			}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 20L);
 			new BukkitRunnable() {
 				public void run() {
-					Jogador.sendMessage("§7Voc\u00ea \u00e9 o §2§lVENCEDOR §7do evento!");
-					Tempo.mandarBroadcast(" \n§4§lAVISO: §fO jogador §2§l" + Jogador.getName()
-							+ " §ffoi o vencedor do evento!" + "\n" + " ");
+					Jogador.sendMessage("ï¿½7Voc\u00ea \u00e9 o ï¿½2ï¿½lVENCEDOR ï¿½7do evento!");
+					Tempo.mandarBroadcast(" \nï¿½4ï¿½lAVISO: ï¿½fO jogador ï¿½2ï¿½l" + Jogador.getName()
+							+ " ï¿½ffoi o vencedor do evento!" + "\n" + " ");
 					Jogador.playSound(Jogador.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 				}
-			}.runTaskLaterAsynchronously(Main.getPlugin(), 60L);
+			}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 60L);
 			new BukkitRunnable() {
 				public void run() {
-					Jogador.sendMessage("§7Voc\u00ea \u00e9 o §2§lVENCEDOR §7do evento!");
-					Tempo.mandarBroadcast(" \n§4§lAVISO: §fO jogador §2§l" + Jogador.getName()
-							+ " §ffoi o vencedor do evento!" + "\n" + " ");
+					Jogador.sendMessage("ï¿½7Voc\u00ea \u00e9 o ï¿½2ï¿½lVENCEDOR ï¿½7do evento!");
+					Tempo.mandarBroadcast(" \nï¿½4ï¿½lAVISO: ï¿½fO jogador ï¿½2ï¿½l" + Jogador.getName()
+							+ " ï¿½ffoi o vencedor do evento!" + "\n" + " ");
 					Jogador.playSound(Jogador.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
 				}
-			}.runTaskLaterAsynchronously(Main.getPlugin(), 100L);
+			}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 100L);
 			new BukkitRunnable() {
 				public void run() {
-					Jogador.sendMessage("§7Voc\u00ea \u00e9 o §2§lVENCEDOR §7do evento!");
-					Tempo.mandarBroadcast(" \n§4§lAVISO: §fO jogador §2§l" + Jogador.getName()
-							+ " §ffoi o vencedor do evento!" + "\n" + " ");
-					Tempo.mandarBroadcast("§5§lFIM: §fO evento foi finalizado com sucesso!");
+					Jogador.sendMessage("ï¿½7Voc\u00ea \u00e9 o ï¿½2ï¿½lVENCEDOR ï¿½7do evento!");
+					Tempo.mandarBroadcast(" \nï¿½4ï¿½lAVISO: ï¿½fO jogador ï¿½2ï¿½l" + Jogador.getName()
+							+ " ï¿½ffoi o vencedor do evento!" + "\n" + " ");
+					Tempo.mandarBroadcast("ï¿½5ï¿½lFIM: ï¿½fO evento foi finalizado com sucesso!");
 					EventoAPI.TeleportarWarp(Jogador, "Saida");
 					PlayerAPI.LimparPlayers();
 					PlayerAPI.LimparPlayer(Jogador);
-					Main.Evento = Estado.FECHADO;
+					CookiePvP.Evento = Estado.FECHADO;
 					Tempo.Iniciando = 301;
 					Tempo.CancelarTempo();
 					Jogador.playSound(Jogador.getLocation(), Sound.LEVEL_UP, 20.0f, 20.0f);
@@ -4873,18 +4873,18 @@ public class PlayerAPI {
 						sScoreAPI.scoreboard(Jogador);
 						Jogador.setAllowFlight(false);
 						Jogador.sendMessage(
-								"§7Parab\u00e9ns! Voc\u00ea foi o §2§lVENCEDOR §7do evento e como recompensa recebeu o grupo §6§lPRO §7por §e§l1 §7dia.");
+								"ï¿½7Parab\u00e9ns! Voc\u00ea foi o ï¿½2ï¿½lVENCEDOR ï¿½7do evento e como recompensa recebeu o grupo ï¿½6ï¿½lPRO ï¿½7por ï¿½eï¿½l1 ï¿½7dia.");
 						if (CalendarioAPI.PegarCalendario(CalendarioAPI.Calendario.Dia) == 30) {
 							cfTempGrupo.pegargrupo().set("tempgrupo." + Jogador.getUniqueId() + ".dia", (Object) 1);
 						}
 					} else if (!cfGrupo.ChecarGrupo(Jogador, "Membro") || !cfGrupo.ChecarGrupo(Jogador, "Light")
 							|| !cfGrupo.ChecarGrupo(Jogador, "Mvp")) {
 						Jogador.sendMessage(
-								"§cVoc\u00ea n\u00e3o recebeu um pr\u00eamio por ganhar pois o seu grupo \u00e9 maior do que a recompensa! §7§o(Mais vale um VIP eterno do que um PRO tempor\u00e1rio)");
+								"ï¿½cVoc\u00ea nÃ£o recebeu um pr\u00eamio por ganhar pois o seu grupo \u00e9 maior do que a recompensa! ï¿½7ï¿½o(Mais vale um VIP eterno do que um PRO tempor\u00e1rio)");
 					}
 					API.sendItems(Jogador);
 				}
-			}.runTaskLaterAsynchronously(Main.getPlugin(), 140L);
+			}.runTaskLaterAsynchronously(CookiePvP.getPlugin(), 140L);
 		}
 	}
 }

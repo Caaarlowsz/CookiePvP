@@ -12,7 +12,7 @@ public class NameTagChangeEvento extends Event implements Cancellable {
 	private String NewPrefix;
 	private String NewSuffix;
 	private NametagChangeType Tipo;
-	private NametagChangeReason Rea\u00e7\u00e3o;
+	private NametagChangeReason Reação;
 	private boolean Cancelar;
 
 	static {
@@ -29,7 +29,7 @@ public class NameTagChangeEvento extends Event implements Cancellable {
 
 	public NameTagChangeEvento(final String Jogador, final String OldPrefix, final String OldSuffix,
 			final String NewPrefix, final String NewSuffix, final NametagChangeType Tipo,
-			final NametagChangeReason Rea\u00e7\u00e3o) {
+			final NametagChangeReason Reação) {
 		this.Cancelar = false;
 		this.OldJogador = Jogador;
 		this.OldPrefix = OldPrefix;
@@ -37,7 +37,7 @@ public class NameTagChangeEvento extends Event implements Cancellable {
 		this.NewPrefix = NewPrefix;
 		this.NewSuffix = NewSuffix;
 		this.Tipo = Tipo;
-		this.Rea\u00e7\u00e3o = Rea\u00e7\u00e3o;
+		this.Reação = Reação;
 	}
 
 	public String PegarPlayerName() {
@@ -73,7 +73,7 @@ public class NameTagChangeEvento extends Event implements Cancellable {
 	}
 
 	public NametagChangeReason PegarReason() {
-		return this.Rea\u00e7\u00e3o;
+		return this.Reação;
 	}
 
 	public void setCancelled(final boolean Cancelar) {
