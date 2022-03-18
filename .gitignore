@@ -1,1 +1,6 @@
 /bin/
+
+# IntelliJ IDEA
+*.iml
+/.idea/
+/META-INF/
